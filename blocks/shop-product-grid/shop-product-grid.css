@@ -182,3 +182,14 @@
     display: flex;
   }
 }
+
+/* product-page rail (row `source | recommendations`): theme resource-list gap 12px, card gap 8px,
+   same values as the gated PDP prototype's .shop-product__recommendations */
+.shop-product-grid.shop-product-grid--recommendations .shop-product-grid__list {
+  column-gap: 12px;
+}
+
+.shop-product-grid.shop-product-grid--recommendations .shop-product-grid__card {
+  gap: 8px;
+  padding-bottom: 8px;
+}

@@ -265,6 +265,8 @@ export default async function decorate(block) {
     header.append(heading);
   }
   const list = renderProductListPlaceholder(limit);
+  // product-page rail: the theme's product-recommendations section spaces cards wider
+  if (source === 'recommendations') block.classList.add('shop-product-grid--recommendations');
   block.replaceChildren(header, list);
   if (!heading) header.remove();
 
