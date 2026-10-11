@@ -12,7 +12,7 @@ import { createShopBlock, createMetadata } from './parsers/shop-blocks.js';
 
 const SHOP_HOST = 't8bnc1-5b.myshopify.com';
 
-const text = (el) => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '');
+const text = (node) => (node ? node.textContent.replace(/\s+/g, ' ').trim() : '');
 
 function el(document, tag, content, attrs = {}) {
   const node = document.createElement(tag);
