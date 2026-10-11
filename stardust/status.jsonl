@@ -7,3 +7,4 @@
 {"ts":"2026-10-10T17:46:04Z","skill":"stardust:replica","phase":"recreate","event":"end","detail":"10 prototypes / 8 page types; canon + 9 block stylesheets"}
 {"ts":"2026-10-10T17:46:04Z","skill":"stardust:replica","phase":"source-fidelity-gate","event":"end","detail":"all archetypes <=0.85% pixel, dh 0 at 1440/360 except policy 360 (R-05); 0 structural red; clipped 0; cap-probe PASS except collections (pairing artefact)"}
 {"ts":"2026-10-10T17:46:04Z","skill":"stardust:replica","phase":"handoff","event":"start"}
+{"ts":"2026-10-11T05:38:31Z","skill":"stardust:replica","phase":"handoff","event":"end","detail":"branch shopify-replica; 24 docs live; gate-all 1440 22/22, 360 21/22 (policy = R-05)"}

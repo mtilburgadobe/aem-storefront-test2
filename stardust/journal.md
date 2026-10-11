@@ -22,3 +22,11 @@
 - Fan-out (3 agents, one interrupted by a service restart and resumed): collections-all 0.02/0.09 %, collections-running 0.02/0.22 %, collections 0.01/0.19 % (cap-probe 2/3 FAIL = section-pairing artefact, accepted residual), search 0.03/0.11 %, search-running 0.02/0.08 %, product 0.60/0.17 %, cart 0.00/0.11 % (+ filled cart 0.02/0.13 % vs a same-session capture), contact 0.00/0.09 %, policy 0.00 % at 1440; at 360 14.93 % / −4250px from a live overflow bug → register R-05.
 - Interaction parity: drawers, search modal, cart drawer, currency popover, facets/sort/grid toggle, quantity, sticky add-to-cart, hovers — observed on live, implemented, compared.
 - Residuals: R-index-1 (one off-screen checkmark icon inside the closed drawer on live, shifts icon pairing at 360), keyframe renames for lint, canon requests queued in stardust/replica/canon-requests.md.
+
+## Handoff — code on branch shopify-replica, 24 documents + config sheet in DA, published; all-pages gate 22/22 at 1440, 21/22 at 360 (2026-10-11)
+
+- Foundation: scripts/shopify/{page,storefront,cart}.js; scripts.js imports commerce.js only on non-Shopify pages; head.html boots/preloads Adobe Commerce only when the page is not `template: shopify`. Regression check: a non-Shopify page still requests commerce.js, initializers and drop-ins; Shopify pages request none (8/8 page types on preview, 0 console errors).
+- Blocks: shop-header, shop-footer, shop-hero, shop-product-grid, shop-collection, shop-collection-list, shop-product, shop-search, shop-cart, shop-contact, shop-policy. Live behaviour checked: card quick add and PDP add to cart do not open the drawer.
+- Content: thin shells via tools/importer/import-shopify.js + run-bulk-import (chrome documents via ?eds-doc=); staged to DA source format, PUT 201, preview 200, live 200, 0 about:error. /shopify-config.json sheet published (token empty → tokenless).
+- Published-origin gate (gate-all, branch host): 1440 22/22 PASS (product pages 0.61–0.64 % after the recommendations-rail spacing fix, all others ≤ 0.03 %); 360 21/22 PASS (products 0.09–0.19 %), the one FAIL = policy, register R-05 (live overflow bug).
+- Local lint uses stardust/.work/eslintrc.local.cjs: the repo's node_modules can't load eslint-plugin-import / babel parser (missing es-abstract/browserslist files); CI runs the full config.
