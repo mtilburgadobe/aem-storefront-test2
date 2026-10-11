@@ -1,0 +1,3 @@
+motion header scroll-morph: dead on live — not required (header static across the scroll traversal on both sides)
+motion hover .resource-list__item:nth-child(1) .collection-card → .shop-collection-list__item:nth-child(1) .shop-collection-list__card: dead on live — not required (no measured hover diff)
+motion summary: 0 parity, 0 missing, 0 extra, 0 advisory (0 out of tolerance, 2 dead or unobserved on live — not required; tolerance 150ms / 8px)

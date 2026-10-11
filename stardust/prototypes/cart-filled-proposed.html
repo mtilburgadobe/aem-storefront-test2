@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dein Warenkorb – Mein Shop</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="/styles/shopify.css">
+  <link rel="stylesheet" href="/blocks/shop-header/shop-header.css">
+  <link rel="stylesheet" href="/blocks/shop-footer/shop-footer.css">
+  <link rel="stylesheet" href="/blocks/shop-product-grid/shop-product-grid.css">
+  <link rel="stylesheet" href="/blocks/shop-cart/shop-cart.css">
+</head>
+<body class="shopify appear">
+  <aside class="shop-header-announcement" aria-label="Ankündigung">
+    <p class="shop-header-announcement__text">Welcome to our store</p>
+  </aside>
+  <header class="shop-header-wrapper"><div class="shop-header block" data-block-name="shop-header" data-block-status="loaded">
+    <div class="shop-header__row">
+      <button class="shop-header__menu-toggle" type="button" aria-label="Menü" aria-expanded="false" aria-controls="shop-header-drawer"><span class="shop-header__menu-icon shop-header__menu-icon--open"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3.5H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M1 10.5H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="shop-header__menu-icon shop-header__menu-icon--close"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 3.75L10.25 10.25M10.25 3.75L3.75 10.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+      <button class="shop-header__action shop-header__action--search shop-header__action--search-mobile" type="button" aria-label="Suchen" aria-haspopup="dialog" aria-controls="shop-header-search"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="4.75" stroke="currentColor" stroke-width="1.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.5 12.5 3.25 3.25"/></svg></button>
+      <a class="shop-header__logo" href="/"><span>Mein Shop</span></a>
+      <nav class="shop-header__nav" aria-label="Primär">
+        <ul class="shop-header__menu">
+          <li><a class="shop-header__link" href="/"><span class="shop-header__link-title">Startseite</span></a></li>
+          <li><a class="shop-header__link" href="/collections/all"><span class="shop-header__link-title">Katalog</span></a></li>
+          <li><a class="shop-header__link" href="/pages/contact"><span class="shop-header__link-title">Kontakt</span></a></li>
+        </ul>
+      </nav>
+      <div class="shop-header__localization">
+        <button class="shop-header__currency" type="button" aria-expanded="false" aria-controls="shop-header-localization"><span>EUR</span> <span class="shop-visually-hidden">Region- und Sprachwahl</span><svg class="shop-header__caret" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5.5L7 9.5L3 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="shop-header__localization-panel" id="shop-header-localization" hidden>
+            <form class="shop-header__localization-form" method="post" action="/localization" aria-label="Region und Sprache">
+              <h2 class="shop-visually-hidden" id="shop-header-dropdown-country-label">Land/Region</h2>
+              <ul class="shop-header__countries" role="listbox" aria-labelledby="shop-header-dropdown-country-label">
+                <li class="shop-header__country" role="option" aria-label="Deutschland" aria-current="true" aria-selected="true"><svg class="shop-header__country-check" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.75439 10.7485L7.68601 14.5888C7.79288 14.7288 7.84632 14.7988 7.91174 14.8242C7.96907 14.8466 8.03262 14.8469 8.09022 14.8253C8.15596 14.8007 8.21026 14.7314 8.31886 14.5927L15.2475 5.74658" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Deutschland</span><span hidden> EUR €</span></li>
+                <li class="shop-header__country" role="option" aria-label="Österreich" aria-selected="false"><svg class="shop-header__country-check" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.75439 10.7485L7.68601 14.5888C7.79288 14.7288 7.84632 14.7988 7.91174 14.8242C7.96907 14.8466 8.03262 14.8469 8.09022 14.8253C8.15596 14.8007 8.21026 14.7314 8.31886 14.5927L15.2475 5.74658" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Österreich</span><span hidden> EUR €</span></li>
+              </ul>
+            </form>
+        </div>
+      </div>
+      <button class="shop-header__action shop-header__action--search shop-header__action--search-desktop" type="button" aria-label="Suchen" aria-haspopup="dialog" aria-controls="shop-header-search"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="4.75" stroke="currentColor" stroke-width="1.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.5 12.5 3.25 3.25"/></svg></button>
+      <a class="shop-header__action shop-header__action--account" href="/account" aria-label="Konto"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none"><path stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M10.375 3.813a3.063 3.063 0 1 1-6.125 0 3.063 3.063 0 0 1 6.125 0ZM7.313 9.5c-3.667 0-6.24 2.691-6.563 6.125h13.125C13.552 12.191 10.979 9.5 7.312 9.5Z"/></svg></a>
+      <a class="shop-header__action shop-header__action--cart" href="/cart" aria-label="Warenkorb"><span hidden>Warenkorb</span> <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.392 6.875h13.216v8.016c0 .567-.224 1.112-.624 1.513-.4.402-.941.627-1.506.627H5.522a2.13 2.13 0 0 1-1.506-.627 2.15 2.15 0 0 1-.624-1.513zM8.818 2.969h2.333c.618 0 1.211.247 1.649.686a2.35 2.35 0 0 1 .683 1.658v1.562H6.486V5.313c0-.622.246-1.218.683-1.658a2.33 2.33 0 0 1 1.65-.686"/></svg> <span class="shop-header__cart-count">1</span></a>
+    </div>
+    <div class="shop-header__drawer" id="shop-header-drawer">
+      <div class="shop-header__drawer-main">
+        <button class="shop-header__drawer-close" type="button" aria-label="Schließen"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 3.75L10.25 10.25M10.25 3.75L3.75 10.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <nav class="shop-header__drawer-nav" aria-label="Primär">
+          <ul>
+            <li><a class="shop-header__drawer-link" href="/"><span>Startseite</span></a></li>
+            <li><a class="shop-header__drawer-link" href="/collections/all"><span>Katalog</span></a></li>
+            <li><a class="shop-header__drawer-link" href="/pages/contact"><span>Kontakt</span></a></li>
+          </ul>
+        </nav>
+        <div class="shop-header__drawer-utility"><button class="shop-header__drawer-currency" type="button" aria-expanded="false" aria-controls="shop-header-drawer-localization"><span>EUR</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5.5L7 9.5L3 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+        <ul class="shop-header__featured">
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/road-bike-helmet"><span class="shop-visually-hidden">Road Bike Helmet</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=1200 1200w" sizes="40vw" width="3840" height="4249" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Road Bike Helmet</p><span class="shop-header-resource__price">€99,99</span></div>
+            </div></li>
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/road-running-shoes"><span class="shop-visually-hidden">Road Running Shoes</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=1200 1200w" sizes="40vw" width="3840" height="4800" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Road Running Shoes</p><span class="shop-header-resource__price">€119,99</span></div>
+            </div></li>
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/running-shorts"><span class="shop-visually-hidden">Running Shorts</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=1200 1200w" sizes="40vw" width="3840" height="4800" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Running Shorts</p><span class="shop-header-resource__price">€44,99</span></div>
+            </div></li>
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/trail-running-shoes"><span class="shop-visually-hidden">Trail Running Shoes</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=1200 1200w" sizes="40vw" width="3840" height="3840" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Trail Running Shoes</p><span class="shop-header-resource__price">€129,99</span></div>
+            </div></li>
+        </ul>
+      </div>
+      <div class="shop-header__drawer-submenu" id="shop-header-drawer-localization" hidden>
+        <div class="shop-header__drawer-submenu-bar">
+          <button class="shop-header__drawer-back" type="button" aria-label="Zurück zum Hauptmenü"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5.5L7 9.5L3 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <span class="shop-header__drawer-title">Region und Sprache</span>
+          <button class="shop-header__drawer-close" type="button" aria-label="Schließen"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 3.75L10.25 10.25M10.25 3.75L3.75 10.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+            <form class="shop-header__localization-form" method="post" action="/localization" aria-label="Region und Sprache">
+              <h2 class="shop-visually-hidden" id="shop-header-drawer-country-label">Land/Region</h2>
+              <ul class="shop-header__countries" role="listbox" aria-labelledby="shop-header-drawer-country-label">
+                <li class="shop-header__country" role="option" aria-label="Deutschland" aria-current="true" aria-selected="true"><svg class="shop-header__country-check" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.75439 10.7485L7.68601 14.5888C7.79288 14.7288 7.84632 14.7988 7.91174 14.8242C7.96907 14.8466 8.03262 14.8469 8.09022 14.8253C8.15596 14.8007 8.21026 14.7314 8.31886 14.5927L15.2475 5.74658" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Deutschland</span><span hidden> EUR €</span></li>
+                <li class="shop-header__country" role="option" aria-label="Österreich" aria-selected="false"><svg class="shop-header__country-check" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.75439 10.7485L7.68601 14.5888C7.79288 14.7288 7.84632 14.7988 7.91174 14.8242C7.96907 14.8466 8.03262 14.8469 8.09022 14.8253C8.15596 14.8007 8.21026 14.7314 8.31886 14.5927L15.2475 5.74658" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Österreich</span><span hidden> EUR €</span></li>
+              </ul>
+            </form>
+      </div>
+    </div>
+    <div class="shop-header__backdrop"></div>
+  </div></header>
+  <main>
+  <div class="section" data-section-status="loaded">
+    <div class="shop-cart-wrapper"><div class="shop-cart block" data-block-name="shop-cart" data-block-status="loaded" data-state="filled">
+      <div class="shop-cart__page">
+        <div class="shop-cart__title"><h1 class="shop-cart__heading shop-h4">Cart <span class="shop-cart__bubble"><span class="shop-cart__bubble-count" aria-hidden="true">1</span><span class="shop-visually-hidden">Gesamtzahl der Artikel im Warenkorb: 1</span></span></h1></div>
+        <div class="shop-cart__items">
+          <form class="shop-cart__form" id="shop-cart-form" action="/cart" method="post">
+            <table class="shop-cart__table">
+              <caption class="shop-visually-hidden">Gesamtbetrag im Warenkorb <span>€129,99 EUR</span></caption>
+              <thead class="shop-visually-hidden"><tr><th id="shop-cart-product-image">Produktbild</th><th id="shop-cart-product-information">Produktinformationen</th><th id="shop-cart-quantity">Anzahl</th><th id="shop-cart-product-total">Produkt insgesamt</th></tr></thead>
+              <tbody>
+                <tr class="shop-cart__line">
+                  <td class="shop-cart__line-media" headers="shop-cart-product-image"><a href="/products/trail-running-shoes?variant=59663407186245"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=250" alt="" width="250" height="250"></a></td>
+                  <td class="shop-cart__line-details" headers="shop-cart-product-information">
+                    <div class="shop-cart__line-title-row"><a class="shop-cart__line-title" href="/products/trail-running-shoes?variant=59663407186245">Trail Running Shoes</a></div>
+                    <p class="shop-cart__line-unit-price"><span class="shop-visually-hidden">Preis</span> <span>€129,99</span></p>
+                  </td>
+                  <td class="shop-cart__line-quantity" headers="shop-cart-quantity">
+                    <div class="shop-cart__quantity">
+                      <button class="shop-cart__quantity-button shop-cart__quantity-button--minus" type="button" name="minus" disabled><span class="shop-visually-hidden">Menge verringern</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 7H11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                      <input class="shop-cart__quantity-input" type="number" name="updates[]" value="1" min="1" step="1" aria-label="Anzahl">
+                      <button class="shop-cart__quantity-button shop-cart__quantity-button--plus" type="button" name="plus"><span class="shop-visually-hidden">Menge erhöhen</span><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 7H11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M7 2.75L7 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                    </div>
+                    <button class="shop-cart__remove" type="button" aria-label="Entferne Trail Running Shoes"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="shop-cart__remove-bottom" d="M11.5 9v4.25M8.5 9v4.25M5.75 12.2V6h8.5c0 2.421 0 3.779 0 6.2 0 .853 0 1.447-.038 1.91-.037.453-.106.714-.207.911a2.498 2.498 0 0 1-.983 1.017c-.197.1-.458.17-.911.207-.463.037-1.057.038-1.91.038h-.4c-.853 0-1.447 0-1.91-.038-.453-.037-.714-.106-.911-.207a2.498 2.498 0 0 1-.984-1.017c-.1-.197-.17-.458-.207-.911C5.75 13.647 5.75 13.053 5.75 12.2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path class="shop-cart__remove-top" d="M4.25 6h11.5M8 5.25a2 2 0 1 1 4 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="shop-visually-hidden">Entfernen</span></button>
+                  </td>
+                  <td class="shop-cart__line-price" headers="shop-cart-product-total"><span>€129,99</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        <div class="shop-cart__summary">
+          <div class="shop-cart__summary-inner">
+            <div class="shop-cart__totals">
+              <div class="shop-cart__actions">
+                <details class="shop-cart__discount">
+                  <summary><span class="shop-cart__discount-label">Rabatt</span><svg class="shop-cart__discount-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.75 7H11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M7 2.75L7 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+                  <div class="shop-cart__discount-content">
+                  <form class="shop-cart__discount-form">
+                    <label class="shop-visually-hidden" for="shop-cart-discount">Rabattcode anwenden</label>
+                    <input class="shop-cart__discount-input" id="shop-cart-discount" type="text" name="discount" placeholder="Rabattcode" required>
+                    <button class="shop-button shop-button--primary shop-cart__discount-button" type="submit">Anwenden</button>
+                  </form>
+                  </div>
+                </details>
+              </div>
+              <div class="shop-cart__totals-container">
+                <div class="shop-cart__total"><span class="shop-cart__total-label">Geschätzter Gesamtbetrag</span><span class="shop-cart__total-value">€129,99 EUR</span></div>
+                <p class="shop-cart__tax-note"><small>Inkl. Zollgebühren und Steuern. Versand wird beim Checkout berechnet.</small></p>
+              </div>
+            </div>
+            <div class="shop-cart__ctas">
+              <a class="shop-button shop-button--primary shop-cart__checkout" href="#checkout">Auschecken</a>
+              <div class="shop-cart__wallets">
+                <a class="shop-cart__wallet shop-cart__wallet--shop-pay" href="#checkout" aria-label="Shop Pay"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="20" aria-hidden="true" viewBox="0 -2 206 81"><path fill="#fff" d="M29.514 35.18c-7.934-1.697-11.469-2.36-11.469-5.374 0-2.834 2.392-4.246 7.176-4.246 4.207 0 7.283 1.813 9.546 5.363.171.274.524.369.812.222l8.927-4.447a.616.616 0 0 0 .256-.864c-3.705-6.332-10.55-9.798-19.562-9.798-11.843 0-19.2 5.752-19.2 14.898 0 9.714 8.96 12.169 16.904 13.865 7.944 1.697 11.49 2.36 11.49 5.373 0 3.014-2.584 4.436-7.742 4.436-4.763 0-8.297-2.15-10.433-6.321a.63.63 0 0 0-.843-.274L6.47 52.364a.623.623 0 0 0-.278.843c3.535 7.006 10.785 10.947 20.47 10.947 12.334 0 19.787-5.658 19.787-15.088s-9.001-12.169-16.935-13.865v-.021ZM77.353 16.036c-5.062 0-9.536 1.77-12.75 4.92-.203.19-.534.053-.534-.221V.622a.62.62 0 0 0-.63-.622h-11.17a.62.62 0 0 0-.63.622v62.426a.62.62 0 0 0 .63.621h11.17a.62.62 0 0 0 .63-.621V35.664c0-5.289 4.11-9.345 9.653-9.345 5.542 0 9.557 3.972 9.557 9.345v27.384a.62.62 0 0 0 .63.621h11.17a.62.62 0 0 0 .63-.621V35.664c0-11.505-7.646-19.618-18.356-19.618v-.01ZM118.389 14.255c-6.065 0-11.767 1.823-15.847 4.467a.618.618 0 0 0-.202.833l4.922 8.292c.182.295.566.4.865.22a19.82 19.82 0 0 1 10.262-2.78c9.749 0 16.914 6.785 16.914 15.75 0 7.64-5.734 13.297-13.006 13.297-5.926 0-10.037-3.403-10.037-8.207 0-2.75 1.185-5.005 4.271-6.596a.607.607 0 0 0 .246-.864l-4.645-7.754a.632.632 0 0 0-.759-.264c-6.225 2.276-10.593 7.755-10.593 15.109 0 11.126 8.981 19.428 21.507 19.428 14.629 0 25.147-9.998 25.147-24.338 0-15.372-12.237-26.603-29.066-26.603l.021.01ZM180.098 15.951c-5.649 0-10.689 2.055-14.373 5.68a.313.313 0 0 1-.534-.222v-4.362a.62.62 0 0 0-.63-.621H153.68a.62.62 0 0 0-.63.621v62.331a.62.62 0 0 0 .63.622h11.169a.62.62 0 0 0 .631-.622v-20.44c0-.274.331-.41.533-.231 3.674 3.371 8.532 5.342 14.096 5.342 13.102 0 23.321-10.463 23.321-24.054 0-13.592-10.23-24.054-23.321-24.054l-.011.01Zm-2.103 37.54c-7.454 0-13.103-5.847-13.103-13.58 0-7.734 5.638-13.582 13.103-13.582 7.464 0 13.091 5.753 13.091 13.581 0 7.829-5.553 13.581-13.102 13.581h.011Z"></path></svg></a>
+                <a class="shop-cart__wallet shop-cart__wallet--paypal" href="#checkout" aria-label="PayPal"><svg class="shop-cart__wallet-logo" aria-hidden="true" viewBox="0 0 101 32" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg"><path fill="#003087" d="M 12.237 2.8 L 4.437 2.8 C 3.937 2.8 3.437 3.2 3.337 3.7 L 0.237 23.7 C 0.137 24.1 0.437 24.4 0.837 24.4 L 4.537 24.4 C 5.037 24.4 5.537 24 5.637 23.5 L 6.437 18.1 C 6.537 17.6 6.937 17.2 7.537 17.2 L 10.037 17.2 C 15.137 17.2 18.137 14.7 18.937 9.8 C 19.237 7.7 18.937 6 17.937 4.8 C 16.837 3.5 14.837 2.8 12.237 2.8 Z M 13.137 10.1 C 12.737 12.9 10.537 12.9 8.537 12.9 L 7.337 12.9 L 8.137 7.7 C 8.137 7.4 8.437 7.2 8.737 7.2 L 9.237 7.2 C 10.637 7.2 11.937 7.2 12.637 8 C 13.137 8.4 13.337 9.1 13.137 10.1 Z"/><path fill="#003087" d="M 35.437 10 L 31.737 10 C 31.437 10 31.137 10.2 31.137 10.5 L 30.937 11.5 L 30.637 11.1 C 29.837 9.9 28.037 9.5 26.237 9.5 C 22.137 9.5 18.637 12.6 17.937 17 C 17.537 19.2 18.037 21.3 19.337 22.7 C 20.437 24 22.137 24.6 24.037 24.6 C 27.337 24.6 29.237 22.5 29.237 22.5 L 29.037 23.5 C 28.937 23.9 29.237 24.3 29.637 24.3 L 33.037 24.3 C 33.537 24.3 34.037 23.9 34.137 23.4 L 36.137 10.6 C 36.237 10.4 35.837 10 35.437 10 Z M 30.337 17.2 C 29.937 19.3 28.337 20.8 26.137 20.8 C 25.037 20.8 24.237 20.5 23.637 19.8 C 23.037 19.1 22.837 18.2 23.037 17.2 C 23.337 15.1 25.137 13.6 27.237 13.6 C 28.337 13.6 29.137 14 29.737 14.6 C 30.237 15.3 30.437 16.2 30.337 17.2 Z"/><path fill="#003087" d="M 55.337 10 L 51.637 10 C 51.237 10 50.937 10.2 50.737 10.5 L 45.537 18.1 L 43.337 10.8 C 43.237 10.3 42.737 10 42.337 10 L 38.637 10 C 38.237 10 37.837 10.4 38.037 10.9 L 42.137 23 L 38.237 28.4 C 37.937 28.8 38.237 29.4 38.737 29.4 L 42.437 29.4 C 42.837 29.4 43.137 29.2 43.337 28.9 L 55.837 10.9 C 56.137 10.6 55.837 10 55.337 10 Z"/><path fill="#009cde" d="M 67.737 2.8 L 59.937 2.8 C 59.437 2.8 58.937 3.2 58.837 3.7 L 55.737 23.6 C 55.637 24 55.937 24.3 56.337 24.3 L 60.337 24.3 C 60.737 24.3 61.037 24 61.037 23.7 L 61.937 18 C 62.037 17.5 62.437 17.1 63.037 17.1 L 65.537 17.1 C 70.637 17.1 73.637 14.6 74.437 9.7 C 74.737 7.6 74.437 5.9 73.437 4.7 C 72.237 3.5 70.337 2.8 67.737 2.8 Z M 68.637 10.1 C 68.237 12.9 66.037 12.9 64.037 12.9 L 62.837 12.9 L 63.637 7.7 C 63.637 7.4 63.937 7.2 64.237 7.2 L 64.737 7.2 C 66.137 7.2 67.437 7.2 68.137 8 C 68.637 8.4 68.737 9.1 68.637 10.1 Z"/><path fill="#009cde" d="M 90.937 10 L 87.237 10 C 86.937 10 86.637 10.2 86.637 10.5 L 86.437 11.5 L 86.137 11.1 C 85.337 9.9 83.537 9.5 81.737 9.5 C 77.637 9.5 74.137 12.6 73.437 17 C 73.037 19.2 73.537 21.3 74.837 22.7 C 75.937 24 77.637 24.6 79.537 24.6 C 82.837 24.6 84.737 22.5 84.737 22.5 L 84.537 23.5 C 84.437 23.9 84.737 24.3 85.137 24.3 L 88.537 24.3 C 89.037 24.3 89.537 23.9 89.637 23.4 L 91.637 10.6 C 91.637 10.4 91.337 10 90.937 10 Z M 85.737 17.2 C 85.337 19.3 83.737 20.8 81.537 20.8 C 80.437 20.8 79.637 20.5 79.037 19.8 C 78.437 19.1 78.237 18.2 78.437 17.2 C 78.737 15.1 80.537 13.6 82.637 13.6 C 83.737 13.6 84.537 14 85.137 14.6 C 85.737 15.3 85.937 16.2 85.737 17.2 Z"/><path fill="#009cde" d="M 95.337 3.3 L 92.137 23.6 C 92.037 24 92.337 24.3 92.737 24.3 L 95.937 24.3 C 96.437 24.3 96.937 23.9 97.037 23.4 L 100.237 3.5 C 100.337 3.1 100.037 2.8 99.637 2.8 L 96.037 2.8 C 95.637 2.8 95.437 3 95.337 3.3 Z"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+  <div class="section" data-section-status="loaded">
+    <div class="shop-product-grid-wrapper"><div class="shop-product-grid block" data-block-name="shop-product-grid" data-block-status="loaded">
+      <div class="shop-product-grid__header"><h3 class="shop-product-grid__heading">You may also like</h3></div>
+      <ul class="shop-product-grid__list">
+        <li class="shop-product-grid__item">
+          <div class="shop-product-grid__card">
+            <a class="shop-product-grid__link" href="/products/road-bike-helmet" aria-label="Road Bike Helmet"></a>
+            <div class="shop-product-grid__media">
+              <a href="/products/road-bike-helmet" aria-label="Road Bike Helmet"><img class="shop-product-grid__image" src="//t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=3840" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=1200 1200w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=1600 1600w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=1920 1920w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=2560 2560w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=3840 3840w" sizes="(min-width: 750px) 25.0vw, 100vw" width="3840" height="4249" alt="Road Bike Helmet"></a>
+              <button class="shop-product-grid__quick-add" type="button"><svg class="shop-product-grid__quick-add-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.608 9.421V6.906H3.392v8.016c0 .567.224 1.112.624 1.513.4.402.941.627 1.506.627H8.63M8.818 3h2.333c.618 0 1.212.247 1.649.686a2.35 2.35 0 0 1 .683 1.658v1.562H6.486V5.344c0-.622.246-1.218.683-1.658A2.33 2.33 0 0 1 8.82 3"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M14.608 12.563v5m2.5-2.5h-5"/></svg><span class="shop-product-grid__quick-add-text">Hinzufügen</span><span class="shop-product-grid__quick-add-added"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.75L11.25 15L15 9.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><g><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(0 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(45 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(90 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(135 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(180 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(225 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(270 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(315 12 12)"/></g></svg></span></button>
+            </div>
+            <h3 class="shop-product-grid__zoom-title">Road Bike Helmet</h3>
+            <a class="shop-product-grid__title-link" href="/products/road-bike-helmet"><p class="shop-product-grid__title" role="heading">Road Bike Helmet</p></a>
+            <div class="shop-product-grid__price"><span class="shop-product-grid__amount">€99,99</span></div>
+          </div>
+        </li>
+        <li class="shop-product-grid__item">
+          <div class="shop-product-grid__card">
+            <a class="shop-product-grid__link" href="/products/road-running-shoes" aria-label="Road Running Shoes"></a>
+            <div class="shop-product-grid__media">
+              <a href="/products/road-running-shoes" aria-label="Road Running Shoes"><img class="shop-product-grid__image" src="//t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=3840" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=1200 1200w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=1600 1600w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=1920 1920w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=2560 2560w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=3840 3840w" sizes="(min-width: 750px) 25.0vw, 100vw" width="3840" height="4800" alt="Road Running Shoes"></a>
+              <button class="shop-product-grid__quick-add" type="button"><svg class="shop-product-grid__quick-add-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.608 9.421V6.906H3.392v8.016c0 .567.224 1.112.624 1.513.4.402.941.627 1.506.627H8.63M8.818 3h2.333c.618 0 1.212.247 1.649.686a2.35 2.35 0 0 1 .683 1.658v1.562H6.486V5.344c0-.622.246-1.218.683-1.658A2.33 2.33 0 0 1 8.82 3"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M14.608 12.563v5m2.5-2.5h-5"/></svg><span class="shop-product-grid__quick-add-text">Hinzufügen</span><span class="shop-product-grid__quick-add-added"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.75L11.25 15L15 9.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><g><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(0 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(45 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(90 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(135 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(180 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(225 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(270 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(315 12 12)"/></g></svg></span></button>
+            </div>
+            <h3 class="shop-product-grid__zoom-title">Road Running Shoes</h3>
+            <a class="shop-product-grid__title-link" href="/products/road-running-shoes"><p class="shop-product-grid__title" role="heading">Road Running Shoes</p></a>
+            <div class="shop-product-grid__price"><span class="shop-product-grid__amount">€119,99</span></div>
+          </div>
+        </li>
+        <li class="shop-product-grid__item">
+          <div class="shop-product-grid__card">
+            <a class="shop-product-grid__link" href="/products/running-shorts" aria-label="Running Shorts"></a>
+            <div class="shop-product-grid__media">
+              <a href="/products/running-shorts" aria-label="Running Shorts"><img class="shop-product-grid__image" src="//t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=3840" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=1200 1200w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=1600 1600w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=1920 1920w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=2560 2560w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=3840 3840w" sizes="(min-width: 750px) 25.0vw, 100vw" width="3840" height="4800" alt="Running Shorts"></a>
+              <button class="shop-product-grid__quick-add" type="button"><svg class="shop-product-grid__quick-add-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.608 9.421V6.906H3.392v8.016c0 .567.224 1.112.624 1.513.4.402.941.627 1.506.627H8.63M8.818 3h2.333c.618 0 1.212.247 1.649.686a2.35 2.35 0 0 1 .683 1.658v1.562H6.486V5.344c0-.622.246-1.218.683-1.658A2.33 2.33 0 0 1 8.82 3"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M14.608 12.563v5m2.5-2.5h-5"/></svg><span class="shop-product-grid__quick-add-text">Hinzufügen</span><span class="shop-product-grid__quick-add-added"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.75L11.25 15L15 9.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><g><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(0 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(45 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(90 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(135 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(180 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(225 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(270 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(315 12 12)"/></g></svg></span></button>
+            </div>
+            <h3 class="shop-product-grid__zoom-title">Running Shorts</h3>
+            <a class="shop-product-grid__title-link" href="/products/running-shorts"><p class="shop-product-grid__title" role="heading">Running Shorts</p></a>
+            <div class="shop-product-grid__price"><span class="shop-product-grid__amount">€44,99</span></div>
+          </div>
+        </li>
+        <li class="shop-product-grid__item">
+          <div class="shop-product-grid__card">
+            <a class="shop-product-grid__link" href="/products/trail-running-shoes" aria-label="Trail Running Shoes"></a>
+            <div class="shop-product-grid__media">
+              <a href="/products/trail-running-shoes" aria-label="Trail Running Shoes"><img class="shop-product-grid__image" src="//t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=3840" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=1200 1200w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=1600 1600w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=1920 1920w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=2560 2560w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=3840 3840w" sizes="(min-width: 750px) 25.0vw, 100vw" width="3840" height="3840" alt="Trail Running Shoes"></a>
+              <button class="shop-product-grid__quick-add" type="button"><svg class="shop-product-grid__quick-add-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.608 9.421V6.906H3.392v8.016c0 .567.224 1.112.624 1.513.4.402.941.627 1.506.627H8.63M8.818 3h2.333c.618 0 1.212.247 1.649.686a2.35 2.35 0 0 1 .683 1.658v1.562H6.486V5.344c0-.622.246-1.218.683-1.658A2.33 2.33 0 0 1 8.82 3"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M14.608 12.563v5m2.5-2.5h-5"/></svg><span class="shop-product-grid__quick-add-text">Hinzufügen</span><span class="shop-product-grid__quick-add-added"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.75L11.25 15L15 9.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><g><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(0 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(45 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(90 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(135 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(180 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(225 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(270 12 12)"/><line stroke-linecap="round" pathLength="1" x1="12" y1="8.5" x2="12" y2="15.5" stroke="currentColor" transform="rotate(315 12 12)"/></g></svg></span></button>
+            </div>
+            <h3 class="shop-product-grid__zoom-title">Trail Running Shoes</h3>
+            <a class="shop-product-grid__title-link" href="/products/trail-running-shoes"><p class="shop-product-grid__title" role="heading">Trail Running Shoes</p></a>
+            <div class="shop-product-grid__price"><span class="shop-product-grid__amount">€129,99</span></div>
+          </div>
+        </li>
+      </ul>
+    </div></div>
+  </div>
+  </main>
+  <footer class="shop-footer-wrapper"><div class="shop-footer block" data-block-name="shop-footer" data-block-status="loaded">
+    <div class="shop-footer__signup">
+      <div class="shop-footer__intro">
+        <h2 class="shop-footer__heading">Join our email list</h2>
+        <p class="shop-footer__text">Get exclusive deals and early access to new products.</p>
+      </div>
+      <form class="shop-footer__form" method="post" action="/contact#contact_form">
+        <div class="shop-footer__field">
+          <label class="shop-visually-hidden" for="shop-footer-email">E-Mail</label>
+          <input class="shop-footer__input" id="shop-footer-email" type="email" name="contact[email]" placeholder="E-Mail-Adresse" autocomplete="email" required>
+          <button class="shop-footer__submit" type="submit" aria-label="Registrieren"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true"><path clip-rule="evenodd" fill-rule="evenodd" fill="currentColor" d="m11.246 5.31759c.0322-.07821.0833-.14723.1486-.20093.0654-.0537.143-.09041.2259-.10686.083-.01645.1688-.01214.2497.01257.0808.0247.1544.06902.214.12902l4.104 4.104c.0478.04765.0857.10426.1115.16659.0259.06232.0392.12913.0392.19661 0 .06747-.0133.13429-.0392.19661-.0258.06233-.0637.11893-.1115.16659l-4.104 4.10401c-.0963.0963-.227.1504-.3632.1504s-.2669-.0541-.3632-.1504-.1504-.227-.1504-.3632.0541-.2669.1504-.3632l3.2288-3.2278h-11.0736c-.13606 0-.26654-.0541-.36275-.15027-.0962-.0962-.15025-.22669-.15025-.36274 0-.13606.05405-.26654.15025-.36275.09621-.0962.22669-.15025.36275-.15025h11.0736l-3.2288-3.2278c-.0721-.07178-.1212-.16335-.1411-.2631s-.0097-.20316.0293-.2971z"/></svg></button>
+        </div>
+      </form>
+    </div>
+    <div class="shop-footer__utilities">
+      <div class="shop-footer__utilities-inner">
+        <div class="shop-footer__copyright"><span>© 2026 <a href="/">Mein Shop</a>, Powered by Shopify</span></div>
+        <div class="shop-footer__policies">
+          <button class="shop-footer__policies-trigger" type="button" popovertarget="shop-footer-policies">Geschäftsbedingungen und Richtlinien</button>
+          <div class="shop-footer__policies-popover" id="shop-footer-policies" popover>
+            <ul><li><a href="/policies/privacy-policy">Datenschutzerklärung</a></li></ul>
+          </div>
+        </div>
+        <div class="shop-footer__social"></div>
+      </div>
+    </div>
+  </div></footer>
+  <div class="shop-header-search" id="shop-header-search" role="dialog" aria-modal="true" aria-label="Suche" hidden>
+    <div class="shop-header-search__backdrop"></div>
+    <div class="shop-header-search__panel">
+      <form class="shop-header-search__form" action="/search" method="get" role="search">
+        <div class="shop-header-search__bar">
+          <label class="shop-visually-hidden" for="shop-header-search-input">Suchen</label>
+          <input class="shop-header-search__input" id="shop-header-search-input" type="search" name="q" placeholder="Suchen" autocomplete="off">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="4.75" stroke="currentColor" stroke-width="1.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.5 12.5 3.25 3.25"/></svg>
+          <button class="shop-header-search__close" type="button" aria-label="Schließen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1765 12.025C11.4108 12.2594 11.7907 12.2594 12.025 12.025C12.2594 11.7907 12.2594 11.4108 12.025 11.1765L8.84931 8.00078L12.025 4.82505C12.2594 4.59073 12.2594 4.21083 12.025 3.97652C11.7907 3.7422 11.4108 3.7422 11.1765 3.97652L8.00078 7.15225L4.82505 3.97652C4.59073 3.7422 4.21083 3.7422 3.97652 3.97652C3.7422 4.21083 3.7422 4.59073 3.97652 4.82505L7.15225 8.00078L3.97652 11.1765C3.7422 11.4108 3.7422 11.7907 3.97652 12.025C4.21083 12.2594 4.59073 12.2594 4.82505 12.025L8.00078 8.84931L11.1765 12.025Z" fill="currentColor"/></svg></button>
+        </div>
+        <div class="shop-header-search__results">
+          <h4 class="shop-header-search__title">Produkte</h4>
+          <ul class="shop-header-search__list">
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/road-bike-helmet"><span class="shop-visually-hidden">Road Bike Helmet</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/trek-velocis-mips-road-bike-helmet_9875.jpg?v=1791630839&amp;width=1200 1200w" sizes="(min-width: 750px) 150px, 50vw" width="3840" height="4249" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Road Bike Helmet</p><span class="shop-header-resource__price">€99,99</span></div>
+            </div></li>
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/road-running-shoes"><span class="shop-visually-hidden">Road Running Shoes</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/pegasus-41-road-running-shoes-RZm89S_dfc9308a-3758-4688-82fe-158bbda6960c.avif?v=1791630963&amp;width=1200 1200w" sizes="(min-width: 750px) 150px, 50vw" width="3840" height="4800" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Road Running Shoes</p><span class="shop-header-resource__price">€119,99</span></div>
+            </div></li>
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/running-shorts"><span class="shop-visually-hidden">Running Shorts</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/M_NK_DFADV_AROSWFT_4INBF_SHORT.avif?v=1791630889&amp;width=1200 1200w" sizes="(min-width: 750px) 150px, 50vw" width="3840" height="4800" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Running Shorts</p><span class="shop-header-resource__price">€44,99</span></div>
+            </div></li>
+            <li><div class="shop-header-resource">
+              <a class="shop-header-resource__link" href="/products/trail-running-shoes"><span class="shop-visually-hidden">Trail Running Shoes</span></a>
+              <div class="shop-header-resource__media"><img src="//t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=1200" srcset="//t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=240 240w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=352 352w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=640 640w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=832 832w, //t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&amp;width=1200 1200w" sizes="(min-width: 750px) 150px, 50vw" width="3840" height="3840" alt="" loading="lazy"></div>
+              <div class="shop-header-resource__content"><p class="shop-header-resource__title">Trail Running Shoes</p><span class="shop-header-resource__price">€129,99</span></div>
+            </div></li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="shop-header-cart" id="shop-header-cart" role="dialog" aria-label="Warenkorb" hidden>
+    <div class="shop-header-cart__header"><button class="shop-header-cart__close" type="button" aria-label="Schließen"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1765 12.025C11.4108 12.2594 11.7907 12.2594 12.025 12.025C12.2594 11.7907 12.2594 11.4108 12.025 11.1765L8.84931 8.00078L12.025 4.82505C12.2594 4.59073 12.2594 4.21083 12.025 3.97652C11.7907 3.7422 11.4108 3.7422 11.1765 3.97652L8.00078 7.15225L4.82505 3.97652C4.59073 3.7422 4.21083 3.7422 3.97652 3.97652C3.7422 4.21083 3.7422 4.59073 3.97652 4.82505L7.15225 8.00078L3.97652 11.1765C3.7422 11.4108 3.7422 11.7907 3.97652 12.025C4.21083 12.2594 4.59073 12.2594 4.82505 12.025L8.00078 8.84931L11.1765 12.025Z" fill="currentColor"/></svg></button></div>
+    <div class="shop-header-cart__content">
+      <h2 class="shop-header-cart__title">Dein Warenkorb ist leer</h2>
+      <p>Hast du ein Konto? <a href="https://t8bnc1-5b.myshopify.com/customer_authentication/redirect?locale=de&amp;region_country=DE">Logge dich ein</a>, damit es beim Checkout schneller geht.</p>
+      <a class="shop-button shop-button--primary" href="/collections/all">Weiter einkaufen</a>
+    </div>
+  </div>
+  <script>
+  (() => {
+    const block = document.querySelector('.shop-header');
+    const drawer = document.getElementById('shop-header-drawer');
+    const submenu = document.getElementById('shop-header-drawer-localization');
+    const search = document.getElementById('shop-header-search');
+    const cart = document.getElementById('shop-header-cart');
+    const loc = document.getElementById('shop-header-localization');
+    const menuBtn = block.querySelector('.shop-header__menu-toggle');
+    const cartBtn = block.querySelector('.shop-header__action--cart');
+    const curBtn = block.querySelector('.shop-header__currency');
+    const closeAll = () => {
+      drawer.removeAttribute('data-open'); submenu.hidden = true; menuBtn.setAttribute('aria-expanded', 'false');
+      search.hidden = true; cart.hidden = true; cartBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('shop-drawer-open'); delete block.dataset.overlay;
+    };
+    menuBtn.addEventListener('click', () => { closeAll(); drawer.setAttribute('data-open', ''); menuBtn.setAttribute('aria-expanded', 'true'); block.dataset.overlay = 'menu'; });
+    block.querySelectorAll('.shop-header__action--search').forEach((b) => b.addEventListener('click', () => { closeAll(); search.hidden = false; search.querySelector('input').focus(); }));
+    cartBtn.addEventListener('click', () => { closeAll(); cart.hidden = false; cartBtn.setAttribute('aria-expanded', 'true'); document.body.classList.add('shop-drawer-open'); });
+    curBtn.addEventListener('click', () => { const open = loc.hidden; loc.hidden = !open; curBtn.setAttribute('aria-expanded', String(open)); });
+    block.querySelector('.shop-header__drawer-currency').addEventListener('click', () => { submenu.hidden = false; });
+    block.querySelector('.shop-header__drawer-back').addEventListener('click', () => { submenu.hidden = true; });
+    document.querySelectorAll('.shop-header__drawer-close, .shop-header__backdrop, .shop-header-search__close, .shop-header-search__backdrop, .shop-header-cart__close').forEach((el) => el.addEventListener('click', closeAll));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeAll(); loc.hidden = true; curBtn.setAttribute('aria-expanded', 'false'); } });
+  })();
+  </script>
+</body>
+</html>

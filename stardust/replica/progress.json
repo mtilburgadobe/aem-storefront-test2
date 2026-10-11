@@ -1,0 +1,1000 @@
+{
+  "index": {
+    "archetype": "index",
+    "prototype": "stardust/prototypes/index-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 3,
+      "1440": 3
+    },
+    "iterationNote": "rounds iter1 (first map), iter2 + iter3 (fixes), then a final --full confirmation round; evidence in stardust/replica/gates/index-<w>/",
+    "gates": {
+      "360": {
+        "pixel": 0.08,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeCrop": {
+          "header": 0.15,
+          "footer": 0.22
+        },
+        "chromeParity": "4 deltas, all one live artifact (see residuals R-index-1)"
+      },
+      "1440": {
+        "pixel": 0.03,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeCrop": {
+          "header": 0,
+          "footer": 0
+        },
+        "chromeParity": "quiet"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 3 rows failed) — stardust/replica/gates/index-2560/cap-iter.json",
+    "residuals": [
+      {
+        "id": "R-index-1",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Live renders one extra 13.6px checkmark box at x=-294 from the closed menu drawer's <details> localization list (content of a closed <details> still reports a box). Icons pair by order, so the extra live icon shifts pairs #1-#3. Build icons (menu, search, account, cart) match live in size, signature and position; header crop 99.85% match.",
+        "justified": true
+      },
+      {
+        "id": "R-index-2",
+        "breakpoint": "1440, 360",
+        "probe": "visual-diff STRETCHED IMAGE",
+        "cause": "intentional-cover-crop",
+        "detail": "hero-placeholder.png (2880x1617) rendered object-fit: cover, object-position 100% 50% — reproduces the live SVG's preserveAspectRatio xMaxYMid slice.",
+        "justified": true
+      },
+      {
+        "id": "R-index-3",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff 🟡 (22)",
+        "cause": "non-content",
+        "detail": "Live inline <script>/<style>/JSON-LD text, display:none duplicate labels (\"Suche\", \"Konto\", \"Warenkorb\", \"Mehr\", \"Keine Ergebnisse gefunden\"), the hero SVG (shipped as an authored PNG), editable-count (theme text-block wrappers), and aria-label=\"Konto\" on the account link (live: a display:none text span). No authored copy missing.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "header sticky top:-1px, no scroll morph (dead on both sides)",
+        "menu drawer open (360): menu-drawer-nav-open on 5 items, fadeIn on 4 featured cards, class menu-open",
+        "search modal open: search-element-slide-in-bottom, search-element-slide-up on 4 results, fadeIn on 4 result cards, backdropFilter (1440)",
+        "cart drawer open: drawer-slide-in; >= 750px page pushed (margin-right 0.125s)",
+        "localization popover (1440): caret transform 0.125s, panel opacity + translate 0.3s",
+        "close-button outline-color 0.15s focus transition (360 cart)"
+      ],
+      "implemented": [
+        "sticky header (CSS only)",
+        "menu-drawer-nav-open, drawer-slide-in, search-element-slide-in-bottom, search-element-slide-up (same names, durations, easings)",
+        "resource-card fadeIn as shop-header-fade-in and dialog backdropFilter as shop-header-backdrop-in (renamed for the kebab-case keyframe lint rule; same element counts 8/8 and 4/4, same timing)",
+        "page push via body.shop-drawer-open margin-right transition (parity 125ms)",
+        "localization caret transform + panel opacity/translate transitions (parity 125ms / 300ms, @starting-style)",
+        "state mechanism: attributes ([data-open], [hidden], data-overlay) + body.shop-drawer-open instead of the theme's menu-open / theme-drawer__dialog--opening / page-wrapper--drawer-open classes (advisory class lines)"
+      ],
+      "dead": [
+        "header scroll morph",
+        "widget frame samples for menu / search / cart / currency pokes (no track/box change; behaviours read from the animation/transition/class channels)",
+        "product-card hover (no measured diff; quick-add opacity rule kept as lifted CSS)",
+        "outline-color focus transition on the cart close button (not reproduced; focus styling only)"
+      ],
+      "evidence": [
+        "stardust/replica/motion/index-live-360.json",
+        "stardust/replica/motion/index-live-1440.json",
+        "stardust/replica/motion/index-proto-360.json",
+        "stardust/replica/motion/index-proto-1440.json",
+        "stardust/replica/motion/index-compare-360.txt",
+        "stardust/replica/motion/index-compare-1440.txt"
+      ],
+      "prototypeScript": "inline <script> in index-proposed.html toggles drawer/search/cart/localization; reproduce in blocks/shop-header JS (see the DOM contract in shop-header.css)"
+    },
+    "liveDataUsed": {
+      "Road Bike Helmet": "€99,99",
+      "Road Running Shoes": "€119,99",
+      "Running Shorts": "€44,99",
+      "Trail Running Shoes": "€129,99"
+    },
+    "files": [
+      "styles/shopify.css",
+      "blocks/shop-header/shop-header.css",
+      "blocks/shop-footer/shop-footer.css",
+      "blocks/shop-hero/shop-hero.css",
+      "blocks/shop-product-grid/shop-product-grid.css",
+      "stardust/prototypes/index-proposed.html",
+      "stardust/current/assets/media/hero-placeholder.png"
+    ]
+  },
+  "cart": {
+    "archetype": "cart",
+    "prototype": "stardust/prototypes/cart-proposed.html",
+    "prototypeFilled": "stardust/prototypes/cart-filled-proposed.html",
+    "block": "blocks/shop-cart/shop-cart.css (+ canon shop-product-grid for 'You may also like')",
+    "regime": "prototype",
+    "iterations": {
+      "360": 2,
+      "1440": 2
+    },
+    "iterationNote": "iter1 (Δh -13px: canon .shop-button margin/padding beat the block's 2-class selector on 'Weiter einkaufen'; 🔴 header cart link) -> iter2 (fixed: 3-class selector, header cart action as a[href=/cart]) -> final --full round (after the motion CSS). Prototypes are assembled from the canon skeleton by stardust/.work/cart/build.mjs. Evidence stardust/replica/gates/cart-<w>/",
+    "gates": {
+      "360": {
+        "pixel": 0.11,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = canon live artifact R-index-1 (closed drawer <details> checkmark)",
+        "chromeCrop": {
+          "header": 0.15,
+          "footer": 0.37
+        }
+      },
+      "1440": {
+        "pixel": 0,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet",
+        "chromeCrop": {
+          "header": 0,
+          "footer": 0
+        }
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 3 rows failed; 2 sections both sides, 1440 cap) — stardust/replica/gates/cart-2560/cap-iter.json",
+    "filledState": {
+      "360": {
+        "docHeight": "1605 live = 1605 build (Δh 0)",
+        "pixel": 0.13,
+        "crop": {
+          "header y0+103": 0.2,
+          "cart y103+545": 0.21,
+          "footer y1272+333": 0.22
+        },
+        "scrollWidth": 360
+      },
+      "1440": {
+        "docHeight": "1383 live = 1383 build (Δh 0)",
+        "pixel": 0.02,
+        "crop": {
+          "header y0+111": 0.01,
+          "cart y111+450": 0.06,
+          "footer y1175+208": 0
+        },
+        "scrollWidth": 1440
+      },
+      "method": "one Playwright session on live: PDP add-to-cart click (anonymous cart, POST /cart/add.js 200, cart.js 1x trail-running-shoes 12999), then /cart stitched at 1440 and 360 in that same context; the prototype captured with the identical routine (stardust/.work/cart/filled-session.mjs). No checkout started, no form submitted, cart never modified afterwards (hover/disclosure pokes only).",
+      "liveCaptures": [
+        "stardust/.work/cart/filled-live-1440.png",
+        "stardust/.work/cart/filled-live-360.png"
+      ],
+      "protoCaptures": [
+        "stardust/.work/cart/filled-proto-1440.png",
+        "stardust/.work/cart/filled-proto-360.png"
+      ],
+      "iterations": "2 (first capture 0.09% / 0.19%: line image 118x148 because the generic td padding out-ranked the media cell reset; fixed to 120x150)",
+      "recreated": "title 'Cart' + count bubble, line item (4:5 cover image 120px / 15cqi, title, unit price, 105x36 / 126x46 quantity stepper with disabled minus, remove icon, line total), container-query row layout >= 720px, Rabatt disclosure + code form, Geschätzter Gesamtbetrag €129,99 EUR, tax note, Auschecken button, Shop Pay + PayPal wallet look (R-02/R-04), grey summary panel extended to the viewport edge >= 750 (subgrid rows), header count bubble 1. No order-notes field exists on the live cart."
+    },
+    "residuals": [
+      {
+        "id": "R-cart-1",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Same as R-index-1; header crop 99.85% (empty) / 99.80% (filled).",
+        "justified": true
+      },
+      {
+        "id": "R-cart-2",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff 🟡 (19)",
+        "cause": "non-content",
+        "detail": "Live inline <style>/<script>/JSON-LD, display:none chrome labels (Suche, Konto, Mehr, Keine Ergebnisse gefunden), theme text-block wrappers (editable count 11 vs 4), canon aria-label Konto. All authored copy present.",
+        "justified": true
+      },
+      {
+        "id": "R-cart-3",
+        "breakpoint": "all",
+        "probe": "header markup",
+        "cause": "canon",
+        "detail": "On /cart the header cart action is a[href=/cart] with a hidden 'Warenkorb' label (no drawer) and the bubble text is 10px/400; the prototypes patch the canon markup in build.mjs and compensate the font in shop-cart.css — two canon requests filed. The copied canon header script still binds the drawer to the link (a click opens the drawer and then navigates); Phase 5 shop-header JS renders the plain link on /cart.",
+        "justified": true
+      },
+      {
+        "id": "R-cart-4",
+        "breakpoint": "all",
+        "probe": "filled-state wallets",
+        "cause": "platform-delta (register R-02/R-04)",
+        "detail": "Shop Pay (closed shadow root, logo pierced via CDP) and PayPal (iframe, same wordmark as the PDP) are recreated as links to cart.checkoutUrl with the live look (#5433eb / #ffc439, 52px, radius 14px, logos 51x20 / 75.75x24).",
+        "justified": true
+      },
+      {
+        "id": "R-cart-5",
+        "breakpoint": "all",
+        "probe": "filled-state header drawer",
+        "cause": "static prototype",
+        "detail": "The canon cart drawer portal still holds its empty-state content in cart-filled-proposed.html; it is not opened on /cart (link, not drawer). Phase 5 renders the drawer from the same Storefront cart.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "empty: 'Weiter einkaufen' hover background #000 -> #262626 + 0px inset box-shadow colour, 125ms ease-in-out (1440, 360)",
+        "empty: login link hover colour -> rgb(0 0 0 / 70%), color + text-decoration-color 125ms",
+        "filled: Auschecken hover background + box-shadow 125ms",
+        "filled: remove hover — lid translate(-1.5px, 1.5px) rotate(-15deg), can translateY(1.5px), transform 125ms",
+        "filled: Rabatt summary hover colour -> rgb(0 0 0 / 80%), no transition",
+        "filled: Rabatt click — disclosure content block-size + opacity transitions, open height 103.19px",
+        "header scroll morph dead (canon)"
+      ],
+      "implemented": [
+        "all of the above in shop-cart.css (CSS only, no script): .shop-cart .shop-button--primary box-shadow colour, link transitions, remove-icon transforms, summary hover colour, disclosure block-size/opacity with @starting-style"
+      ],
+      "dead": [
+        "filled: quantity + hover, line title hover, Shop Pay / PayPal hover (no change on live)",
+        "header scroll morph"
+      ],
+      "summary": "empty 1440/360: 5 parity, 0 missing (motion-compare); filled 1440/360: 4 parity, 0 diff, 4 dead on live (stardust/.work/cart/filled-motion-compare.mjs — motion-observe cannot carry the cart session)",
+      "evidence": [
+        "stardust/replica/motion/cart-compare-1440.txt",
+        "stardust/replica/motion/cart-compare-360.txt",
+        "stardust/replica/motion/cart-filled-compare-1440.txt",
+        "stardust/replica/motion/cart-filled-compare-360.txt"
+      ],
+      "prototypeScript": "none of its own (header script copied verbatim from index-proposed.html)"
+    },
+    "canonRequests": [
+      "products-trail-running-shoes, cart: shop-header nav-link colour + home-only h1/aria-current (already filed)",
+      "cart: shop-header cart action is a[href=/cart] on /cart (new)",
+      "cart: shop-header cart-count 10px / 400 (new)"
+    ],
+    "files": [
+      "blocks/shop-cart/shop-cart.css",
+      "stardust/prototypes/cart-proposed.html",
+      "stardust/prototypes/cart-filled-proposed.html",
+      "stardust/.work/cart/build.mjs (prototype assembly), main-empty.html, main-filled.html"
+    ]
+  },
+  "collections-all": {
+    "archetype": "collections-all",
+    "liveUrl": "https://t8bnc1-5b.myshopify.com/collections/all",
+    "block": "shop-collection",
+    "prototype": "stardust/prototypes/collections-all-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 3,
+      "1440": 3
+    },
+    "iterationNote": "fix rounds iter1, iter1b, iter2, then --full final (killed mid-probe by the service restart, re-run) and a --full final2 after the cap-probe fix (header + results wrapper capped at the content width, skip link moved into the body). Evidence stardust/replica/gates/collections-all-<w>/ (*-final2.*).",
+    "gates": {
+      "360": {
+        "pixel": 0.09,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = canon live artifact R-index-1 (closed drawer <details> checkmark icon)"
+      },
+      "1440": {
+        "pixel": 0.02,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 3 rows failed: wrapper 1440 = 1440, module rows 1440 = 1440, 360 = 362) — stardust/replica/gates/collections-all-2560/cap-iter.json",
+    "residuals": [
+      {
+        "id": "R-call-1",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Same as R-index-1: live's closed menu drawer localization <details> reports an extra 14px checkmark box, shifting icon pairing. Page pixel diff 0.09 %.",
+        "justified": true
+      },
+      {
+        "id": "R-call-2",
+        "breakpoint": 360,
+        "probe": "visual-diff advisory FLUSH-LEFT TEXT",
+        "cause": "matches-live",
+        "detail": "Card titles at left 8px: the live mobile grid is full-bleed with 8px text padding; live reports the same two flush-left <p> at 8px.",
+        "justified": true
+      },
+      {
+        "id": "R-call-3",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff yellow (59)",
+        "cause": "non-content",
+        "detail": "Live inline <style>/<script>/JSON-LD text and display:none chrome labels; 0 structural.",
+        "justified": true
+      },
+      {
+        "id": "R-call-4",
+        "breakpoint": 1440,
+        "probe": "motion-compare entrance fadeInUp vs fade-in-up",
+        "cause": "naming",
+        "detail": "Same keyframe (opacity 0 -> 1, translateY 10px -> 0, 0.125s, delay 0.15s on ::view-transition-new(product-grid)), renamed to kebab-case per the canon keyframe rule / stylelint.",
+        "justified": true
+      },
+      {
+        "id": "R-call-5",
+        "breakpoint": 360,
+        "probe": "motion-compare class theme-drawer__dialog--opening",
+        "cause": "mechanism",
+        "detail": "Live triggers the filter drawer animation with a class; the build uses the [hidden] attribute state (canon: states are attributes). The animation it triggers, drawer-slide-in, is in parity.",
+        "justified": true
+      },
+      {
+        "id": "R-call-6",
+        "breakpoint": "all",
+        "probe": "stylelint",
+        "cause": "lint",
+        "detail": "8 no-descending-specificity reports in blocks/shop-collection/shop-collection.css (pre-existing; different elements, no cascade conflict). Reorder or disable the rule in Phase 5 before npm run lint.",
+        "justified": false
+      }
+    ],
+    "motion": {
+      "observed": [
+        "facet summary hover: caret colour rgb(0 0 0 / 50%) -> #000, 125ms ease-in-out",
+        "facet / sort <details> open: panel grid-template-rows + opacity 200ms, caret rotate transform 125ms",
+        "grid-density toggle (desktop): product-grid view transition with named groups product-grid, footer, product-card-<id> (no root group), new grid fade-in-up after 0.15s",
+        "mobile filter toggle: drawer-slide-in; close button outline-color 150ms",
+        "mobile column toggle: no transition (switches instantly)",
+        "header scroll morph dead (canon)"
+      ],
+      "implemented": [
+        "caret hover colour transition (CSS)",
+        "exclusive <details name> dropdowns with outside-click / Escape close (inline script -> Phase 5 JS)",
+        "startViewTransition({types:['product-grid']}) with view-transition-name product-card-<data-product-id>; :active-view-transition-type(product-grid) names grid + footer, root none (CSS + script)",
+        "filter drawer open/close with drawer-slide-in (CSS + script)"
+      ],
+      "dead": [
+        "facet / sort / column widget pokes (no sampled track/box change on live)",
+        "product card hover (live probe selector not found; canon card has no hover motion)",
+        "header scroll morph"
+      ],
+      "compare": "1440: 15 parity, 1 missing + 1 extra (fadeInUp rename); 360: 4 parity, 1 class missing (R-call-5)",
+      "evidence": [
+        "stardust/replica/motion/collections-all-live-1440.json",
+        "stardust/replica/motion/collections-all-proto-1440.json",
+        "stardust/replica/motion/collections-all-compare-1440.txt",
+        "stardust/replica/motion/collections-all-live-360.json",
+        "stardust/replica/motion/collections-all-proto-360.json",
+        "stardust/replica/motion/collections-all-compare-360.txt"
+      ],
+      "prototypeScript": "inline shop-collection script (documented in the shop-collection.css DOM-contract Behaviour paragraph)"
+    },
+    "files": [
+      "blocks/shop-collection/shop-collection.css",
+      "stardust/prototypes/collections-all-proposed.html"
+    ]
+  },
+  "collections-running": {
+    "archetype": "collections-running",
+    "variantOf": "collections-all (empty state of shop-collection)",
+    "liveUrl": "https://t8bnc1-5b.myshopify.com/collections/running",
+    "block": "shop-collection",
+    "prototype": "stardust/prototypes/collections-running-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 3,
+      "1440": 3
+    },
+    "iterationNote": "fix rounds iter1, iter1b, iter2 (shared shop-collection.css), then --full final (1440; 360 killed by the restart, re-run) and --full final2 after the cap-probe fix. Evidence stardust/replica/gates/collections-running-<w>/ (*-final2.*).",
+    "gates": {
+      "360": {
+        "pixel": 0.22,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = canon live artifact R-index-1"
+      },
+      "1440": {
+        "pixel": 0.02,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 3 rows failed: content cap 1440 = 1440, both module rows 1440 = 1440; was FAIL 575/455 before the header/body cap) — stardust/replica/gates/collections-running-2560/cap-iter.json",
+    "residuals": [
+      {
+        "id": "R-crun-1",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Same as R-index-1.",
+        "justified": true
+      },
+      {
+        "id": "R-crun-2",
+        "breakpoint": 1440,
+        "probe": "footer pinned to viewport bottom",
+        "cause": "canon-gap",
+        "detail": "Live page-wrapper is a min-height:100dvh flex column; compensated in shop-collection.css via body.shopify:has(.shop-collection) (canon request filed earlier).",
+        "justified": true
+      },
+      {
+        "id": "R-crun-3",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff yellow (57)",
+        "cause": "non-content",
+        "detail": "Live inline style/script/JSON-LD text and hidden chrome labels; 0 structural.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "not observed separately: same block, same inline script and same facet bar / drawer as collections-all (the empty state has no grid, so no grid-density transition)"
+      ],
+      "implemented": [
+        "shared shop-collection behaviour (see progress-collections-all.json)"
+      ],
+      "dead": [
+        "header scroll morph (canon)"
+      ]
+    },
+    "files": [
+      "blocks/shop-collection/shop-collection.css",
+      "stardust/prototypes/collections-running-proposed.html"
+    ]
+  },
+  "collections": {
+    "archetype": "collections",
+    "liveUrl": "https://t8bnc1-5b.myshopify.com/collections",
+    "block": "shop-collection-list",
+    "prototype": "stardust/prototypes/collections-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 1,
+      "1440": 1
+    },
+    "iterationNote": "iter1 passed on pixels at both widths; one markup touch-up before the --full final round (killed by the restart, re-run). Evidence stardust/replica/gates/collections-<w>/ (*-final.*).",
+    "gates": {
+      "360": {
+        "pixel": 0.19,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = canon live artifact R-index-1"
+      },
+      "1440": {
+        "pixel": 0.01,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet"
+      }
+    },
+    "capProbe": "FAIL at 2560 (2 of 3 rows) — wrapper row PASS (1440 = 1440); both module rows fail only on section ORDER: live counts an empty div.section-background colour layer as section 1 (full-bleed) and its content column as section 2 (1440), the build has h1 (1440) + ul shell. See R-clist-1. stardust/replica/gates/collections-2560/cap-iter.json",
+    "residuals": [
+      {
+        "id": "R-clist-1",
+        "breakpoint": 2560,
+        "probe": "cap-probe module rows",
+        "cause": "live-artifact",
+        "detail": "Live /collections section = [div.section-background (empty colour layer, no text), div.section--page-width (heading 1440 + resource-list 1440)]. The build's caps are the same values (h1 1440 = live heading content 1440, ul shell 1440 = live resource-list shell 1440) but the probe pairs sections by order, so the empty live layer shifts both rows. Passing would need a fake empty full-bleed sibling div in the block; not added (DOM mimicry for an instrument). Orchestrator decision: accept or add the layer.",
+        "justified": true
+      },
+      {
+        "id": "R-clist-2",
+        "breakpoint": 360,
+        "probe": "pixel hot band y 1500-1814 (1.0 %)",
+        "cause": "canon-chrome-aa",
+        "detail": "Anti-aliasing on the canon footer e-mail field ring only; footer, input and main boxes are identical in position and size on both sides (measure.mjs 360). Page total 0.19 %.",
+        "justified": true
+      },
+      {
+        "id": "R-clist-3",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff yellow (40)",
+        "cause": "non-content",
+        "detail": "Live inline style/script/JSON-LD text and hidden chrome labels; 0 structural.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "collection tile hover: no measured change on live",
+        "header scroll morph dead (canon)"
+      ],
+      "implemented": [],
+      "dead": [
+        "tile hover",
+        "header scroll morph"
+      ],
+      "evidence": [
+        "stardust/replica/motion/collections-live-1440.json",
+        "stardust/replica/motion/collections-proto-1440.json",
+        "stardust/replica/motion/collections-compare-1440.txt"
+      ]
+    },
+    "files": [
+      "blocks/shop-collection-list/shop-collection-list.css",
+      "stardust/prototypes/collections-proposed.html"
+    ]
+  },
+  "pages-contact": {
+    "archetype": "pages-contact",
+    "prototype": "stardust/prototypes/pages-contact-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 2,
+      "1440": 2
+    },
+    "iterationNote": "iter1 + final --full round per breakpoint; one fix between them (aria-current=page moved to the Kontakt nav/drawer link). Evidence stardust/replica/gates/pages-contact-<w>/",
+    "gates": {
+      "360": {
+        "pixel": 0.09,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = the canon's known live artifact R-index-1 (closed drawer <details> checkmark icon)"
+      },
+      "1440": {
+        "pixel": 0,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 3 rows failed) — stardust/replica/gates/pages-contact-2560/cap-iter.json",
+    "residuals": [
+      {
+        "id": "R-contact-1",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Same as R-index-1: the closed menu drawer's localization <details> reports an extra 14px checkmark box on live, shifting icon pairing. Header/footer pixels match (0.09% page diff).",
+        "justified": true
+      },
+      {
+        "id": "R-contact-2",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff 🟡 (19)",
+        "cause": "non-content",
+        "detail": "Live inline <style>/<script>/JSON-LD text and display:none chrome labels (Suche, Konto, Warenkorb, Mehr, Keine Ergebnisse gefunden), aria-label Konto (canon), same class as R-index-3. Main: 1/1 heading, 4/4 placeholders.",
+        "justified": true
+      },
+      {
+        "id": "R-contact-3",
+        "breakpoint": "all",
+        "probe": "form markup",
+        "cause": "platform-delta",
+        "detail": "The hidden contact[id] input (theme section id, used only for the #anchor redirect) is not reproduced; action is absolute https://t8bnc1-5b.myshopify.com/contact (native POST, Shopify answers with its own confirmation page). The form was never submitted.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "submit hover: background-color #000 -> #262626 + 0px inset box-shadow colour, 125ms ease-in-out (1440, 360)",
+        "input click/focus: outline 1.5px currentcolor at 0.2em, no transition, no box change (widget poke dead)",
+        "header scroll morph dead (canon)"
+      ],
+      "implemented": [
+        "button background transition (canon .shop-button--primary)",
+        "box-shadow colour on hover (block CSS; canon request filed)",
+        "input :focus-visible outline 1.5px currentcolor offset 0.2em (CSS only)"
+      ],
+      "dead": [
+        "#ContactForm-name widget poke (no sampled change)",
+        "header scroll morph"
+      ],
+      "evidence": [
+        "stardust/replica/motion/pages-contact-live-1440.json",
+        "stardust/replica/motion/pages-contact-proto-1440.json",
+        "stardust/replica/motion/pages-contact-compare-1440.txt",
+        "stardust/replica/motion/pages-contact-live-360.json",
+        "stardust/replica/motion/pages-contact-proto-360.json",
+        "stardust/replica/motion/pages-contact-compare-360.txt"
+      ],
+      "prototypeScript": "none of its own (header script copied verbatim from index-proposed.html)"
+    },
+    "files": [
+      "blocks/shop-contact/shop-contact.css",
+      "stardust/prototypes/pages-contact-proposed.html"
+    ]
+  },
+  "policies-privacy-policy": {
+    "archetype": "policies-privacy-policy",
+    "prototype": "stardust/prototypes/policies-privacy-policy-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 2,
+      "1440": 2
+    },
+    "iterationNote": "a pre-gate flow probe fixed the rte margins (p 1em block margins collapsing, title gap not collapsing, last child flush); iter1 + final --full round per breakpoint, one fix between them (header nav colour with no active link). Evidence stardust/replica/gates/policies-privacy-policy-<w>/",
+    "gates": {
+      "360": {
+        "pixel": 14.93,
+        "heightDelta": -4250,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360; live overflows +177px)",
+        "chromeParity": "header 4 = R-index-1 artifact; footer 7 = the R-policy-1 height shift"
+      },
+      "1440": {
+        "pixel": 0,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "header quiet; footer 4 deltas = live lazy-render artifact R-policy-2"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 4 rows failed; advisory: live 2 vs build 41 top-level sections because default-content children are counted) — stardust/replica/gates/policies-privacy-policy-2560/cap-iter.json",
+    "contentCounts": {
+      "h1": "1/1",
+      "h2": "13/13",
+      "p": "21/21",
+      "ul": "6/6",
+      "li": "28/28",
+      "strong": "24/24",
+      "a": "3/3",
+      "textChars": "18554/18554 (whitespace-normalised, identical)"
+    },
+    "residuals": [
+      {
+        "id": "R-policy-1",
+        "breakpoint": 360,
+        "probe": "pixel 14.93% + height delta -4250px",
+        "cause": "live-defect / hard overflow assert",
+        "detail": "Live /policies/privacy-policy overflows at 360 (scrollWidth 537): .shopify-policy__container is a fit-content flex item whose min-content is the unbreakable 48px h1 'Datenschutzerklärung' (497px), so the whole 497px text column runs off-screen. The build caps the column at the viewport (no horizontal overflow is a hard assert), the h1 breaks via overflow-wrap as it does live at 1440, and the text reflows to 320px, hence +4250px. Proposed register entry R-05 appended to canon-requests.md for the orchestrator. 1440 is pixel-identical.",
+        "justified": true
+      },
+      {
+        "id": "R-policy-2",
+        "breakpoint": 1440,
+        "probe": "chrome-parity footer Δh +60",
+        "cause": "live-artifact",
+        "detail": "The live newsletter footer section renders 60px until scrolled into view and 120px after (probe stardust/.work/contact-policy/ft.mjs); chrome-parity measures without scrolling on the 8.6k page. Stitched capture: identical height, 0.00% diff.",
+        "justified": true
+      },
+      {
+        "id": "R-policy-3",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff 🟡 (17)",
+        "cause": "non-content",
+        "detail": "Inline style/script text and display:none chrome labels only (as R-index-3); main 89/89 text nodes, 14/14 headings, 41/41 editable texts.",
+        "justified": true
+      },
+      {
+        "id": "R-policy-4",
+        "breakpoint": "all",
+        "probe": "markup",
+        "cause": "platform-delta",
+        "detail": "The rte's anonymous nested <div> (around the 'Ihre Rechte' lists) is flattened: EDS default content has no divs; it carries no styling, so layout is unchanged.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "rte link hover: color -> rgb(0 0 0 / 70%), text-decoration-color + color transition 0.125s ease-in-out (direct hover probe; motion-observe's hover probe reads it dead on the long live page)",
+        "header scroll morph dead"
+      ],
+      "implemented": [
+        "link hover colour + 0.125s transitions (styles/shopify-policy.css)",
+        "header nav full-colour state with no active link (compensation; canon request filed)"
+      ],
+      "dead": [
+        "header scroll morph"
+      ],
+      "evidence": [
+        "stardust/replica/motion/policies-privacy-policy-live-1440.json",
+        "stardust/replica/motion/policies-privacy-policy-proto-1440.json",
+        "stardust/replica/motion/policies-privacy-policy-compare-1440.txt",
+        "stardust/replica/motion/policies-privacy-policy-live-360.json",
+        "stardust/replica/motion/policies-privacy-policy-proto-360.json",
+        "stardust/replica/motion/policies-privacy-policy-compare-360.txt",
+        "stardust/.work/contact-policy/hov.mjs"
+      ],
+      "prototypeScript": "none of its own"
+    },
+    "files": [
+      "styles/shopify-policy.css",
+      "stardust/prototypes/policies-privacy-policy-proposed.html"
+    ]
+  },
+  "products-trail-running-shoes": {
+    "archetype": "products-trail-running-shoes",
+    "prototype": "stardust/prototypes/products-trail-running-shoes-proposed.html",
+    "block": "blocks/shop-product/shop-product.css",
+    "regime": "prototype",
+    "iterations": {
+      "360": 2,
+      "1440": 3
+    },
+    "iterationNote": "1440: iter1 (1.17%) -> iter2 (0.25%) -> final --full (0.85%, settle re-capture 0.60%); 360: iter1 (0.17%) -> iter2 -> final --full (0.17%). iter1b logs = iter1 re-run after the first capture died. Evidence stardust/replica/gates/products-trail-running-shoes-<w>/, logs stardust/.work/replica/bg/pdp-*.log",
+    "gates": {
+      "360": {
+        "pixel": 0.17,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = canon live artifact R-index-1 (closed drawer <details> checkmark)",
+        "chromeCrop": {
+          "header": 0.15,
+          "footer": 1.13
+        },
+        "expressCrop": "0.00% (y721+83, boxes identical 328x52 / 328x19)"
+      },
+      "1440": {
+        "pixel": 0.85,
+        "pixelSettle": 0.6,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet",
+        "chromeCrop": {
+          "header": 0
+        },
+        "expressCrop": "0.67% (y329+83: PayPal + Weitere Bezahlmöglichkeiten, boxes identical 429x52 / 429x19; glyph sub-pixel offset only)"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 4 rows failed; module rows advisory: live 2 sections vs build 4 incl. the fixed sticky bar + skip link) — stardust/replica/gates/products-trail-running-shoes-2560/cap-iter.json",
+    "siblingCheck": {
+      "source": "live /products/<handle>.js 2026-10-10, stardust/.work/pdp/siblings.txt",
+      "result": "all four products: 1 image, 1 variant (Default Title, no picker), no compare-at, available, description h2+p+ul(4-5 li)+p (487-542 chars). Only the image ratio varies (1:1, 4:5, 4:5, 2104x2328) -> --shop-product-media-ratio; >= 750 the max(500px,100vh-header) cap gives 883x832 for all (measured live helmet + shorts). Recorded in the shop-product.css DOM contract."
+    },
+    "residuals": [
+      {
+        "id": "R-pdp-1",
+        "breakpoint": 1440,
+        "probe": "pixel band y1500-1778 3.8%",
+        "cause": "live capture artifact",
+        "detail": "live.png caught the fixed quick-add bar (.sticky-add-to-cart__bar) in the last stitched chunk; its observer state flips during the capture's frozen-timer scroll replay (stitch-trace: live stuck=true at y=0 after freeze). Settled state at the page bottom is stuck=false on both sides (stitch-trace after settle). Rest of the page 0.0-0.5% per band.",
+        "justified": true
+      },
+      {
+        "id": "R-pdp-2",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Same as R-index-1; header crop 99.85% match.",
+        "justified": true
+      },
+      {
+        "id": "R-pdp-3",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff 🟡 (35)",
+        "cause": "non-content",
+        "detail": "Live inline <style>/<script>/JSON-LD, PayPal iframe CSS, hidden 'Schließen' labels and the 7th img (zoom-dialog duplicate); build EXTRA 'Mit' = the PayPal label recreated as text+SVG (live renders it inside the PayPal iframe, R-02).",
+        "justified": true
+      },
+      {
+        "id": "R-pdp-4",
+        "breakpoint": "all",
+        "probe": "register text",
+        "cause": "naming",
+        "detail": "Register R-03 is titled 'Weitere Zahlungsoptionen' but the live link text is 'Weitere Bezahlmöglichkeiten' (all four PDPs); the prototype uses the live text verbatim. Look verified by crop (above).",
+        "justified": true
+      },
+      {
+        "id": "R-pdp-5",
+        "breakpoint": 1440,
+        "probe": "motion keyframe name",
+        "cause": "lint rename",
+        "detail": "Live zoom thumbnails animate with camelCase thumbnailsSlideInTop; the build uses shop-product-thumbnails-slide-in-top (kebab-case keyframe lint), same element, duration and easing — reported MISSING+EXTRA by name only.",
+        "justified": true
+      },
+      {
+        "id": "R-pdp-6",
+        "breakpoint": 360,
+        "probe": "motion after add-to-cart",
+        "cause": "canon (shop-header)",
+        "detail": "cart-icon--has-cart, cart-bubble--animating, grow, move-and-fade and the view transition named sticky-header all run on the header cart icon (y=239); canon request already filed (cart bubble). The PDP block only emits the fly chip.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "add-to-cart (main + sticky): atc-slide, checkmark burst (stroke-dashoffset 320ms x8, scale 200ms, filter 200ms, colour 125ms), fly-to-cart chip travel-x / travel-y / travel-scale",
+        "zoom button: dialog opens in a view transition (gallery-item-open group, fade-in/out, plus-lighter), thumbnails slide in from the top",
+        "sticky quick-add bar: data-stuck toggles when the buy buttons leave the viewport / footer within 200px (opacity + transform 300ms)",
+        "quantity +/-: value change only (no animated frames); minus disabled + opacity .5 at 1",
+        "after ATC at 360: header cart bubble grow / move-and-fade (canon)"
+      ],
+      "implemented": [
+        "quantity stepper, sticky bar state machine (two IntersectionObservers), ATC burst + fly chip, zoom dialog with startViewTransition — inline script in the prototype, documented in the shop-product.css DOM contract",
+        "PayPal / Weitere Bezahlmöglichkeiten look (R-02/R-03), click inert in the prototype (Phase 5: cartCreate -> checkoutUrl)"
+      ],
+      "dead": [
+        "header scroll morph",
+        "hover diffs on ATC, quantity +, more-options, gallery item (none measured on live)",
+        "drawer does NOT open after ATC on live (bubble only)"
+      ],
+      "summary": "1440: 6 parity, 1 missing/1 extra = rename (R-pdp-5); 1440 ATC: 10 parity, 0 missing; 360: 10 parity, 8 missing = header bubble/view transition (canon, R-pdp-6)",
+      "evidence": [
+        "stardust/replica/motion/products-trail-running-shoes-compare-1440.txt",
+        "stardust/replica/motion/products-trail-running-shoes-compare-1440-atc.txt",
+        "stardust/replica/motion/products-trail-running-shoes-compare-360.txt"
+      ]
+    },
+    "canonRequests": [
+      "products-trail-running-shoes, cart: shop-header nav-link colour + home-only h1/aria-current (filed)",
+      "products-trail-running-shoes: shop-header cart bubble after ATC (filed)"
+    ],
+    "files": [
+      "blocks/shop-product/shop-product.css",
+      "stardust/prototypes/products-trail-running-shoes-proposed.html"
+    ]
+  },
+  "search-running": {
+    "archetype": "search-running",
+    "variantOf": "search (results state, composes shop-collection --search)",
+    "liveUrl": "https://t8bnc1-5b.myshopify.com/search?q=running",
+    "block": "shop-search + shop-collection (--search)",
+    "prototype": "stardust/prototypes/search-running-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 2,
+      "1440": 2
+    },
+    "iterationNote": "iter1, --full final (killed by the restart, re-run), then --full final2 after the shared shop-collection changes (skip link moved into the body, product-id view-transition names). Evidence stardust/replica/gates/search-running-<w>/ (*-final2.*).",
+    "gates": {
+      "360": {
+        "pixel": 0.08,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = canon live artifact R-index-1"
+      },
+      "1440": {
+        "pixel": 0.02,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 3 rows failed) — stardust/replica/gates/search-running-2560/cap-iter.json",
+    "residuals": [
+      {
+        "id": "R-srun-1",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Same as R-index-1.",
+        "justified": true
+      },
+      {
+        "id": "R-srun-2",
+        "breakpoint": 360,
+        "probe": "visual-diff advisory FLUSH-LEFT TEXT",
+        "cause": "matches-live",
+        "detail": "Card titles at 8px in the full-bleed mobile grid; live reports the same.",
+        "justified": true
+      },
+      {
+        "id": "R-srun-3",
+        "breakpoint": "1440, 360",
+        "probe": "content-diff yellow (41)",
+        "cause": "non-content",
+        "detail": "Live inline style/script/JSON-LD text and hidden chrome labels; 0 structural.",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "not observed separately: the results state is the shop-collection facet bar / sort / grid toggle / drawer (same inline script as collections-all, so the same behaviour) plus the search field (see progress-search.json)"
+      ],
+      "implemented": [
+        "shared shop-collection behaviour incl. product-card-<data-product-id> view-transition names",
+        "search field reset reveal + :focus-visible outline (shop-search.css)"
+      ],
+      "dead": [
+        "header scroll morph (canon)"
+      ]
+    },
+    "files": [
+      "blocks/shop-search/shop-search.css",
+      "blocks/shop-collection/shop-collection.css",
+      "stardust/prototypes/search-running-proposed.html"
+    ]
+  },
+  "search": {
+    "archetype": "search",
+    "liveUrl": "https://t8bnc1-5b.myshopify.com/search",
+    "block": "shop-search",
+    "prototype": "stardust/prototypes/search-proposed.html",
+    "regime": "prototype",
+    "iterations": {
+      "360": 2,
+      "1440": 2
+    },
+    "iterationNote": "iter1, a --full final (killed by the restart, re-run: 0.93 % / Δh -1), then fix 2 (h4 'Produkte' margin-bottom 32 -> 31.92px as measured live) and --full final2. Evidence stardust/replica/gates/search-<w>/ (*-final2.*).",
+    "gates": {
+      "360": {
+        "pixel": 0.11,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 360)",
+        "chromeParity": "4 deltas = canon live artifact R-index-1"
+      },
+      "1440": {
+        "pixel": 0.03,
+        "heightDelta": 0,
+        "structuralRed": 0,
+        "clipped": 0,
+        "overflow": "ok (scrollWidth 1440)",
+        "chromeParity": "quiet"
+      }
+    },
+    "capProbe": "PASS at 2560 (0 of 3 rows failed) — stardust/replica/gates/search-2560/cap-iter.json",
+    "residuals": [
+      {
+        "id": "R-srch-1",
+        "breakpoint": 360,
+        "probe": "chrome-parity header icons",
+        "cause": "live-artifact",
+        "detail": "Same as R-index-1.",
+        "justified": true
+      },
+      {
+        "id": "R-srch-2",
+        "breakpoint": 360,
+        "probe": "visual-diff advisory FLUSH-LEFT TEXT",
+        "cause": "matches-live",
+        "detail": "Card titles at 8px in the full-bleed mobile grid; live reports the same.",
+        "justified": true
+      },
+      {
+        "id": "R-srch-3",
+        "breakpoint": "1440, 360",
+        "probe": "card image height (sub-pixel)",
+        "cause": "canon-gap",
+        "detail": "Live sets aspect-ratio from the Shopify media ratio (0.90378) on the card image; the canon card uses the intrinsic ratio: 287.672 vs 287.328px at 1440. Canon request filed; not compensated (0.03 %).",
+        "justified": true
+      }
+    ],
+    "motion": {
+      "observed": [
+        "typing in the page search field (ad-hoc Playwright probe, live + prototype, 'run'): reset button opacity/visibility 0 -> 1, transition 0.125s ease-in-out (CSS :has(:not(:placeholder-shown)))",
+        "field focus (click): outline 1.5px solid currentcolor, offset 0.2em (theme *:focus-visible)",
+        "no predictive results on the page field: no /search/suggest request, no dropdown; the predictive-search-component in the DOM is the header search modal (canon)",
+        "field hover: no measured change (motion-observe)",
+        "header scroll morph dead (canon)"
+      ],
+      "implemented": [
+        "reset button reveal with the 0.125s opacity/visibility transition (CSS, verified by the same probe)",
+        "input :focus-visible outline 1.5px currentcolor / 0.2em (CSS; added this run)"
+      ],
+      "dead": [
+        "predictive search on the page field",
+        "field hover",
+        "header scroll morph"
+      ],
+      "evidence": [
+        "stardust/replica/motion/search-live-1440.json",
+        "stardust/replica/motion/search-proto-1440.json",
+        "stardust/replica/motion/search-compare-1440.txt",
+        "probe script stardust/.work/coll/type-probe.mjs"
+      ]
+    },
+    "files": [
+      "blocks/shop-search/shop-search.css",
+      "stardust/prototypes/search-proposed.html"
+    ]
+  }
+}

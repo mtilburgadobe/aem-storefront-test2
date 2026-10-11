@@ -15,3 +15,7 @@ scripts/__dropins__/**/*.map
 # Ensure these files are tracked
 !CLAUDE.md
 !AGENTS.md
+
+# stardust replica: generated import artefacts
+tools/importer/*.bundle.js
+tools/importer/reports/

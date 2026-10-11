@@ -1,0 +1,4316 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:dynamics detect",
+  "writtenAt": "2026-10-10T14:47:38.642Z",
+  "settleMs": 5000,
+  "width": 1440,
+  "urls": [
+   "https://t8bnc1-5b.myshopify.com/",
+   "https://t8bnc1-5b.myshopify.com/collections/all",
+   "https://t8bnc1-5b.myshopify.com/collections",
+   "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+   "https://t8bnc1-5b.myshopify.com/search",
+   "https://t8bnc1-5b.myshopify.com/cart",
+   "https://t8bnc1-5b.myshopify.com/pages/contact",
+   "https://t8bnc1-5b.myshopify.com/policies/privacy-policy"
+  ],
+  "reachSource": "stardust/current/pages"
+ },
+ "pages": {
+  "/": {
+   "url": "https://t8bnc1-5b.myshopify.com/",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Warenkorb 0",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "theme-drawer",
+      "heading": "Dein Warenkorb ist leer",
+      "textLen": 114,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "Dein Warenkorb ist leer",
+     "textLen": 114,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 6,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 4
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [
+    {
+     "cls": "\n ",
+     "cards": 4,
+     "sameSite": 4,
+     "hasDate": false
+    }
+   ],
+   "inlineScripts": 31,
+   "inlineFetch": true,
+   "mainText": 189,
+   "domAddedAfterLoad": 146,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 251,
+    "cdn.shopify.com": 84,
+    "otlp-http-production.shopifysvc.com": 16,
+    "monorail-edge.shopifysvc.com": 4,
+    "shop.app": 3,
+    "error-analytics-sessions-production.shopifysvc.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "shop.app",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "scripts": [
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.StyleProvider_CnCOSdZ0.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.I18n_DmjW-5yp.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.buildUrlSearchParams_AG1B310F.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.zoom_BbS3Dsx_.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.css_D5Nl6bUC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.colors_DaZ4JgHO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopIcon_B_zpnWjN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopLogin_Czn02v13.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.context_IZTYG4gY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.debounce_C-IIq26m.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/speculationrules+json",
+     "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/fec/produce",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/fec/produce"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST error-analytics-sessions-production.shopifysvc.com/"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643659258000000,\"observedTimeUnixNano\":1791643659258000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"7783e7c5-b7b5-4598-b0d5-dae58f19ff84\",\"event_created_at_ms\":1791643659854}}"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"4fcd815a-ca90-407f-831d-21b76a6e582d\",\"visit_token\":\"d03770f5-b6f3-4427-b8ae-e868e6758f8d\",\"analytics_trace_id\":\"77e02774-9d6a-400b-8594-d73fdce3d09c\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643660022000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643660025000000,\"observedTimeUnixNano\":1791643660025000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643660030}},{\"schema_id\":\"web_pixels_manager_event_publish/1.7\",\"paylo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643660079000000,\"timeUnixNano\":17916436600790"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_cart_sync_transfer_session_attempted\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643660189000000,\"timeUnixNan"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_pixel_register/3.8\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"pixel_id\":\"shopify-custom-pixel\",\"pixel_app_id\":\"shopify-pixel\",\"pixel_source\":\"CUSTOM\",\"pixel_runtime_context\":\"LAX\",\"pixel_script_version\":\"0530\",\"pixel_event_schema_version"
+    }
+   ],
+   "textAtLoad": 189,
+   "mainEmptyAtLoad": false
+  },
+  "/collections/all": {
+   "url": "https://t8bnc1-5b.myshopify.com/collections/all",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Produkte – Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "FacetFiltersForm--template--32544931774789__main-desktop",
+     "action": "https://t8bnc1-5b.myshopify.com/collections/all",
+     "method": "get",
+     "role": "",
+     "inChrome": false,
+     "fields": 16,
+     "signature": [
+      "checkbox:filter.v.availability",
+      "checkbox:filter.v.availability",
+      "text:filter.v.price.gte",
+      "text:filter.v.price.lte",
+      "select:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by"
+     ],
+     "hidden": [],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "FacetFiltersForm--template--32544931774789__main-overflow",
+     "action": "https://t8bnc1-5b.myshopify.com/collections/all",
+     "method": "get",
+     "role": "",
+     "inChrome": false,
+     "fields": 14,
+     "signature": [
+      "checkbox:filter.v.availability",
+      "checkbox:filter.v.availability",
+      "text:filter.v.price.gte",
+      "text:filter.v.price.lte",
+      "select:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by",
+      "radio:sort_by"
+     ],
+     "hidden": [],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Warenkorb 0",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "theme-drawer",
+      "heading": "Dein Warenkorb ist leer",
+      "textLen": 114,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    },
+    {
+     "text": "Filtern",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": false,
+     "titleOnTrigger": null,
+     "target": null
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "Filtern 0",
+     "textLen": 504,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Dein Warenkorb ist leer",
+     "textLen": 114,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 7,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/collections/all",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/collections/all",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 4
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 31,
+   "inlineFetch": true,
+   "mainText": 234,
+   "domAddedAfterLoad": 148,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 259,
+    "cdn.shopify.com": 83,
+    "otlp-http-production.shopifysvc.com": 15,
+    "monorail-edge.shopifysvc.com": 4,
+    "shop.app": 3,
+    "error-analytics-sessions-production.shopifysvc.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "shop.app",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "scripts": [
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/paginated-list-aspect-ratio.js?v=25254270272143792451791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/paginated-list.js?v=71290058904108491691791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.StyleProvider_CnCOSdZ0.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.buildUrlSearchParams_AG1B310F.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.zoom_BbS3Dsx_.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.I18n_DmjW-5yp.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.css_D5Nl6bUC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.context_IZTYG4gY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopLogin_Czn02v13.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.colors_DaZ4JgHO.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/speculationrules+json",
+     "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/collections/all",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/collections/all"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/fec/produce",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/fec/produce"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST error-analytics-sessions-production.shopifysvc.com/"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/collections/all\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"b22dbf0f-bd42-4d1d-9ca3-96aec55f887e\",\"event_created_at_ms\":1791643671754}}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643671264000000,\"observedTimeUnixNano\":1791643671264000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"31ca1eb3-6ffd-4615-9e5c-5e7c28dc0c86\",\"visit_token\":\"f552c861-f2cc-4ec3-ae37-7e875a2fbe48\",\"analytics_trace_id\":\"a87c1ef7-418a-4db6-b425-81b886afdb62\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643671997000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643672001000000,\"observedTimeUnixNano\":1791643672001000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/collections/all\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643672007}},{\"schema_id\":\"web_pixels_manager_event_publ"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643672100000000,\"timeUnixNano\":17916436721000"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_cart_sync_transfer_session_attempted\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643672185000000,\"timeUnixNan"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_pixel_register/3.8\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/collections/all\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"pixel_id\":\"shopify-custom-pixel\",\"pixel_app_id\":\"shopify-pixel\",\"pixel_source\":\"CUSTOM\",\"pixel_runtime_context\":\"LAX\",\"pixel_script_version\":\"0530\",\"pixel_event"
+    }
+   ],
+   "textAtLoad": 234,
+   "mainEmptyAtLoad": false
+  },
+  "/collections": {
+   "url": "https://t8bnc1-5b.myshopify.com/collections",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Kollektionen – Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Warenkorb 0",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "theme-drawer",
+      "heading": "Dein Warenkorb ist leer",
+      "textLen": 114,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "Dein Warenkorb ist leer",
+     "textLen": 114,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 6,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/collections",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/collections",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [
+    {
+     "cls": "\n ",
+     "cards": 11,
+     "sameSite": 11,
+     "hasDate": false
+    }
+   ],
+   "inlineScripts": 30,
+   "inlineFetch": true,
+   "mainText": 311,
+   "domAddedAfterLoad": 146,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 247,
+    "cdn.shopify.com": 83,
+    "otlp-http-production.shopifysvc.com": 12,
+    "monorail-edge.shopifysvc.com": 4,
+    "shop.app": 3,
+    "error-analytics-sessions-production.shopifysvc.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "shop.app",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "scripts": [
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/cart-discount.js?v=131878396574145547181791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/quick-add.js?v=43224368435069079051791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/accordion-custom.js?v=105323356731531709191791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/overflow-list.js?v=46858356770684902511791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/product-price.js?v=179333985604099329921791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/media.js?v=147729010330982515121791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/variant-picker.js?v=76692244208061220611791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.StyleProvider_CnCOSdZ0.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.zoom_BbS3Dsx_.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopIcon_B_zpnWjN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/speculationrules+json",
+     "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/collections",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/collections"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST error-analytics-sessions-production.shopifysvc.com/"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/collections\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"2338b2b8-a7f7-4049-b018-b18345dc35b2\",\"event_created_at_ms\":1791643683654}}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643683243000000,\"observedTimeUnixNano\":1791643683243000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643683808000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643683813000000,\"observedTimeUnixNano\":1791643683813000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/collections\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643683819}},{\"schema_id\":\"web_pixels_manager_event_publish/"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"99692735-8515-48ac-b1d0-14cd136ee068\",\"visit_token\":\"c0282cd6-d86c-42f7-a5fd-43dd8d3d387c\",\"analytics_trace_id\":\"95c50710-c82b-4cc5-b75a-062b8bfdca0a\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643684013000000,\"timeUnixNano\":17916436840130"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_cart_sync_transfer_session_attempted\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643684080000000,\"timeUnixNan"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_pixel_register/3.8\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/collections\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"pixel_id\":\"shopify-custom-pixel\",\"pixel_app_id\":\"shopify-pixel\",\"pixel_source\":\"CUSTOM\",\"pixel_runtime_context\":\"LAX\",\"pixel_script_version\":\"0530\",\"pixel_event_sch"
+    }
+   ],
+   "textAtLoad": 311,
+   "mainEmptyAtLoad": false
+  },
+  "/products/trail-running-shoes": {
+   "url": "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Trail Running Shoes – Grip & Cushion for Off-Road Runners – Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "number:quantity"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Warenkorb 0",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "theme-drawer",
+      "heading": "Dein Warenkorb ist leer",
+      "textLen": 114,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "",
+     "textLen": 9,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Dein Warenkorb ist leer",
+     "textLen": 114,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 5218,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 5218,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 8,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/products/trail-running-shoes",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": null,
+     "title": "PayPal-paypal",
+     "w": 429,
+     "h": 52
+    },
+    {
+     "src": null,
+     "title": null,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/products/trail-running-shoes",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 5
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [
+    {
+     "cls": "product-recommendations",
+     "attrs": [
+      "data-url=/recommendations/products?limit=4"
+     ],
+     "text": ".color-custom-template--32544931545413__product_recommendati"
+    }
+   ],
+   "listingCandidates": [
+    {
+     "cls": "\n ",
+     "cards": 3,
+     "sameSite": 3,
+     "hasDate": false
+    }
+   ],
+   "inlineScripts": 33,
+   "inlineFetch": true,
+   "mainText": 817,
+   "domAddedAfterLoad": 146,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 263,
+    "cdn.shopify.com": 84,
+    "otlp-http-production.shopifysvc.com": 19,
+    "monorail-edge.shopifysvc.com": 11,
+    "shop.app": 3,
+    "www.paypal.com": 6,
+    "error-analytics-sessions-production.shopifysvc.com": 2,
+    "www.paypalobjects.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "shop.app",
+    "www.paypal.com",
+    "error-analytics-sessions-production.shopifysvc.com",
+    "www.paypalobjects.com"
+   ],
+   "scripts": [
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.de.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/zoom-dialog.js?v=102268456213388948961791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/drag-zoom-wrapper.js?v=49654226587051563631791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.StyleProvider_CnCOSdZ0.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.buildUrlSearchParams_AG1B310F.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.css_D5Nl6bUC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.zoom_BbS3Dsx_.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.context_IZTYG4gY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.colors_DaZ4JgHO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.debounce_C-IIq26m.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/speculationrules+json",
+     "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/products/trail-running-shoes",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/recommendations/products",
+     "query": [
+      "intent",
+      "limit",
+      "product_id",
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/recommendations/products"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/search",
+     "query": [
+      "q",
+      "resources[type]",
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/search"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/fec/produce",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/fec/produce"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST error-analytics-sessions-production.shopifysvc.com/observeonly",
+    "POST error-analytics-sessions-production.shopifysvc.com/",
+    "POST www.paypal.com/xoplatform/logger/api/logger"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643695052000000,\"observedTimeUnixNano\":1791643695052000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/products/trail-running-shoes\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"53b6d15d-61f9-44a1-8bfd-98b21f63ba2b\",\"event_created_at_ms\":1791643695651}}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643695707000000,\"timeUnixNano\":17916436957070"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"e1bf142e-3786-49b3-a374-65ac0d50c0ed\",\"visit_token\":\"52e9f4ee-301a-4458-865b-e5f9a3fed2d3\",\"analytics_trace_id\":\"9e7a9956-994e-472a-ab72-263e014c31a7\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643695956000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643695960000000,\"observedTimeUnixNano\":1791643695960000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/products/trail-running-shoes\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643695966}},{\"schema_id\":\"web_pixels_manag"
+    },
+    {
+     "url": "https://error-analytics-sessions-production.shopifysvc.com/observeonly",
+     "body": "{\"notifier\":{\"name\":\"Bugsnag JavaScript\",\"version\":\"7.22.2\",\"url\":\"https://github.com/bugsnag/bugsnag-js\"},\"app\":{\"version\":\"0.1.98\",\"releaseStage\":\"production\"},\"device\":{\"id\":\"portable-wallets\",\"locale\":\"de\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/145.0.7632.6 Safari/537.36\"},\"sessions\":[{\"id\":\"92d7c212-2ece-436c-a86e-1590f0943c05\",\"star"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_wallet_checkout_track/6.3\",\"payload\":{\"app_name\":\"storefront\",\"page_type\":\"product\",\"checkout_one\":true,\"event\":\"portable_wallets_init_called\",\"uniq_token\":\"e1bf142e-3786-49b3-a374-65ac0d50c0ed\",\"visit_token\":\"52e9f4ee-301a-4458-865b-e5f9a3fed2d3\",\"micro_session_id\":\"2649402e-87FF-403F-2E1E-CB3EBFB566ED\",\"micro_session_count\":3,\"shop_id\":110471348549,\"theme_id\":208259187013,\""
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    }
+   ],
+   "textAtLoad": 683,
+   "mainEmptyAtLoad": false
+  },
+  "/search": {
+   "url": "https://t8bnc1-5b.myshopify.com/search",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Suchen – Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "search-page-input__parent",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "type"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Warenkorb 0",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "theme-drawer",
+      "heading": "Dein Warenkorb ist leer",
+      "textLen": 114,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "Dein Warenkorb ist leer",
+     "textLen": 114,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 6,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/search",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/search",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 4
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 31,
+   "inlineFetch": true,
+   "mainText": 193,
+   "domAddedAfterLoad": 146,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 257,
+    "cdn.shopify.com": 84,
+    "otlp-http-production.shopifysvc.com": 15,
+    "monorail-edge.shopifysvc.com": 4,
+    "shop.app": 3,
+    "error-analytics-sessions-production.shopifysvc.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "shop.app",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "scripts": [
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/search-page-input.js?v=75415526569643471571791629756",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/paginated-list.js?v=71290058904108491691791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/paginated-list-aspect-ratio.js?v=25254270272143792451791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.StyleProvider_CnCOSdZ0.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.I18n_DmjW-5yp.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.buildUrlSearchParams_AG1B310F.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.zoom_BbS3Dsx_.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopLogin_Czn02v13.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.colors_DaZ4JgHO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.context_IZTYG4gY.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/search",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/search"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST error-analytics-sessions-production.shopifysvc.com/"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643707152000000,\"observedTimeUnixNano\":1791643707152000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/search\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"974a5fba-2f26-4d21-97ce-4b9825d39051\",\"event_created_at_ms\":1791643707743}}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643707817000000,\"timeUnixNano\":17916437078170"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643707907000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643707912000000,\"observedTimeUnixNano\":1791643707912000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/search\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643707918}},{\"schema_id\":\"web_pixels_manager_event_publish/1.7\","
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"b880fc3d-f16a-4a41-9129-ab3bcc925b3d\",\"visit_token\":\"2325f368-7aa4-4329-9b13-4aec37ade819\",\"analytics_trace_id\":\"ee895f17-e045-4843-ba96-bbd0806ac1fb\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_cart_sync_transfer_session_attempted\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643708188000000,\"timeUnixNan"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_pixel_register/3.8\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/search\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"pixel_id\":\"shopify-custom-pixel\",\"pixel_app_id\":\"shopify-pixel\",\"pixel_source\":\"CUSTOM\",\"pixel_runtime_context\":\"LAX\",\"pixel_script_version\":\"0530\",\"pixel_event_schema_v"
+    }
+   ],
+   "textAtLoad": 193,
+   "mainEmptyAtLoad": false
+  },
+  "/cart": {
+   "url": "https://t8bnc1-5b.myshopify.com/cart",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Dein Warenkorb – Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ref: <Node>",
+     "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "id",
+      "quantity",
+      "product-id",
+      "section-id"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 5,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/cart",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/cart",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 4
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [
+    {
+     "cls": "\n ",
+     "cards": 4,
+     "sameSite": 4,
+     "hasDate": false
+    }
+   ],
+   "inlineScripts": 30,
+   "inlineFetch": true,
+   "mainText": 277,
+   "domAddedAfterLoad": 146,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 251,
+    "cdn.shopify.com": 83,
+    "otlp-http-production.shopifysvc.com": 15,
+    "monorail-edge.shopifysvc.com": 4,
+    "shop.app": 3,
+    "error-analytics-sessions-production.shopifysvc.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "shop.app",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "scripts": [
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.colors_DaZ4JgHO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.I18n_DmjW-5yp.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopLogin_Czn02v13.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.buildUrlSearchParams_AG1B310F.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.StyleProvider_CnCOSdZ0.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.context_IZTYG4gY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopIcon_B_zpnWjN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.css_D5Nl6bUC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.Button_Ctk63-OL.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_gaUnm3wc.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/speculationrules+json",
+     "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cart",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/cart"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/fec/produce",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/fec/produce"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST error-analytics-sessions-production.shopifysvc.com/"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643719436000000,\"observedTimeUnixNano\":1791643719436000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/cart\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"8fadeed0-7813-4c82-84a3-596a636a28d7\",\"event_created_at_ms\":1791643719947}}"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"ebab135e-d8bb-46bf-9e0b-5d97795b76b8\",\"visit_token\":\"e87dff55-1809-4dc8-b9c6-61ed3ad33d3e\",\"analytics_trace_id\":\"f5649de0-4cbb-44fd-abab-f1cb0757520f\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643720122000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643720125000000,\"observedTimeUnixNano\":1791643720125000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"consent-tracking-api\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"consent-tracking-api-opentelemetry\",\"version\":\"1.0.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"consent_tracking_api_tracking_token_read\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"asDouble\":1,\"startTimeUnixNano\":17"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/cart\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643720130}},{\"schema_id\":\"web_pixels_manager_event_publish/1.7\",\"p"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643720221000000,\"timeUnixNano\":17916437202210"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_cart_sync_transfer_session_attempted\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643720295000000,\"timeUnixNan"
+    }
+   ],
+   "textAtLoad": 277,
+   "mainEmptyAtLoad": false
+  },
+  "/pages/contact": {
+   "url": "https://t8bnc1-5b.myshopify.com/pages/contact",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Kontakt – Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "ContactForm-AQytPbFN3U0lieFNCT__contact_form_UwiCkQ",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#ContactForm-AQytPbFN3U0lieFNCT__contact_form_UwiCkQ",
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 4,
+     "signature": [
+      "text:contact[name]",
+      "email:contact[email]",
+      "tel:contact[phone]",
+      "textarea:contact[body]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "contact[id]"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Warenkorb 0",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "theme-drawer",
+      "heading": "Dein Warenkorb ist leer",
+      "textLen": 114,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "Dein Warenkorb ist leer",
+     "textLen": 114,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 6,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/pages/contact",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/pages/contact",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 30,
+   "inlineFetch": true,
+   "mainText": 59,
+   "domAddedAfterLoad": 146,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 245,
+    "cdn.shopify.com": 83,
+    "otlp-http-production.shopifysvc.com": 12,
+    "monorail-edge.shopifysvc.com": 4,
+    "shop.app": 3,
+    "error-analytics-sessions-production.shopifysvc.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "shop.app",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "scripts": [
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.buildUrlSearchParams_AG1B310F.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.zoom_BbS3Dsx_.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopLogin_Czn02v13.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.colors_DaZ4JgHO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.I18n_DmjW-5yp.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_gaUnm3wc.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.debounce_C-IIq26m.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.context_IZTYG4gY.esm.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scroll-container.js?v=127018149358875384221791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.css_D5Nl6bUC.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/speculationrules+json",
+     "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/pages/contact",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/pages/contact"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST error-analytics-sessions-production.shopifysvc.com/"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/pages/contact\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"9cfac4bb-d64c-45ce-a6a1-a03ade6b09cc\",\"event_created_at_ms\":1791643731897}}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643731394000000,\"observedTimeUnixNano\":1791643731394000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"147706c0-e94e-4667-b72a-32b84bc49839\",\"visit_token\":\"457f7c86-9b01-4ba8-b939-69590c8d3bf2\",\"analytics_trace_id\":\"374a0144-a954-4e31-9520-c5416c3477ae\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643732051000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643732054000000,\"observedTimeUnixNano\":1791643732054000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/pages/contact\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643732060}},{\"schema_id\":\"web_pixels_manager_event_publis"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643732099000000,\"timeUnixNano\":17916437320990"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_cart_sync_transfer_session_attempted\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643732281000000,\"timeUnixNan"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_pixel_register/3.8\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/pages/contact\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"pixel_id\":\"shopify-custom-pixel\",\"pixel_app_id\":\"shopify-pixel\",\"pixel_source\":\"CUSTOM\",\"pixel_runtime_context\":\"LAX\",\"pixel_script_version\":\"0530\",\"pixel_event_s"
+    }
+   ],
+   "textAtLoad": 59,
+   "mainEmptyAtLoad": false
+  },
+  "/policies/privacy-policy": {
+   "url": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+   "status": 200,
+   "host": "t8bnc1-5b.myshopify.com",
+   "title": "Datenschutzerklärung – Mein Shop",
+   "forms": [
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "LocalizationForm",
+     "action": "https://t8bnc1-5b.myshopify.com/localization",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "form_type",
+      "utf8",
+      "_method",
+      "country_code"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "contact_form",
+     "action": "https://t8bnc1-5b.myshopify.com/contact#contact_form",
+     "method": "post",
+     "role": "",
+     "inChrome": true,
+     "fields": 1,
+     "signature": [
+      "email:contact[email]"
+     ],
+     "hidden": [
+      "form_type",
+      "utf8"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "predictive-search-form",
+     "action": "https://t8bnc1-5b.myshopify.com/search",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "search:q"
+     ],
+     "hidden": [
+      "options[prefix]"
+     ],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Mehr",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Suche",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": null
+    },
+    {
+     "text": "Warenkorb 0",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "theme-drawer",
+      "heading": "Dein Warenkorb ist leer",
+      "textLen": 114,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "Dein Warenkorb ist leer",
+     "textLen": 114,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog-component",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Suche",
+     "textLen": 214,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 6,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/policies/privacy-policy",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://t8bnc1-5b.myshopify.com/web-pixels@7ec887c8w14f9f074p854094e1m1370c602/custom/web-pixel-shopify-custom-pixel@0530/sandbox/modern/policies/privacy-policy",
+     "title": null,
+     "w": 4,
+     "h": 4
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": true,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "de",
+    "hreflang": [],
+    "switcher": [
+     "https://privacy.shopify.com/en"
+    ]
+   },
+   "cms": {
+    "Shopify": [
+     "shop",
+     "locale",
+     "currency",
+     "country",
+     "theme",
+     "cdnHost",
+     "routes",
+     "shopJsCdnBaseUrl",
+     "SignInWithShop",
+     "loadFeatures",
+     "autoloadFeatures",
+     "featureAssets",
+     "ce_forms",
+     "captcha",
+     "MCP",
+     "PaymentButton",
+     "analytics",
+     "evids",
+     "modules",
+     "actions"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "Shopify"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 31,
+   "inlineFetch": true,
+   "mainText": 18552,
+   "domAddedAfterLoad": 146,
+   "hosts": {
+    "t8bnc1-5b.myshopify.com": 250,
+    "cdn.shopify.com": 84,
+    "monorail-edge.shopifysvc.com": 4,
+    "otlp-http-production.shopifysvc.com": 13,
+    "shop.app": 3,
+    "error-analytics-sessions-production.shopifysvc.com": 1
+   },
+   "thirdPartyHosts": [
+    "cdn.shopify.com",
+    "monorail-edge.shopifysvc.com",
+    "otlp-http-production.shopifysvc.com",
+    "shop.app",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "scripts": [
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.de.esm.js",
+    "https://cdn.shopify.com/storefront/standard-actions.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/standard-actions-override.js?v=171683365447094389611791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/page-view-event.js?v=12823247316348680231791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/header.js?v=146686092481561649561791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/dialog.js?v=144816527575655702281791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/utilities.js?v=128964188705738871001791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/component.js?v=175690430936884589731791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.document_DMcRsBXN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.tslib-es6_CHHZATl5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.networkErrorMessages_DIkDbO6W.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.window_CAbVMZox.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.register_Cxs_K5wz.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.init-shop-cart-sync_VQv__N-t.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.defineInitFunction_CIjOjzsO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-cart-sync_Bvbpf6F4.de.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.casing_U_9x-Om3.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.init_Y-qHeD6A.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.v4_D2VNBPfk.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.authorize_DINGMyE5.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useEventListener_DTq8AI6V.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_CPbkKXUY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.validators_09U1U9sZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.utils_CY1J4tRu.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.storage_DQF5v-OM.esm.js",
+    "https://cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/focus.js?v=60436577539430446401791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-hydration.js?v=108434990705342316311791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/recently-viewed-products.js?v=94729125001750262651791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/event_observer_reporter-ed358274.js",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/section-renderer.js?v=165897709872489896681791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/morph.js?v=163551064521986254391791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/scrolling.js?v=166966481516020134501791629756",
+    "https://t8bnc1-5b.myshopify.com/cdn/shop/t/1/assets/events.js?v=164878410936539277451791629756",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useUserRecognitionSignal_Dwelwsuo.esm.js",
+    "https://cdn.shopify.com/storefront/standard-events.js",
+    "https://cdn.shopify.com/storefront/web-components/account.js",
+    "https://cdn.shopify.com/storefront/web-components/account/observe-logger-impl-CvnPPqr9.js",
+    "https://cdn.shopify.com/storefront/web-components/account/account-dialog-WF45V3jv.js",
+    "https://cdn.shopify.com/storefront/web-components/account/store-BTEHG3Hd.js",
+    "https://cdn.shopify.com/storefront/web-components/login-form.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.shop-login.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.BrandedButtonIcon_DtpOr3Vq.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.StyleProvider_CnCOSdZ0.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.toast_CWbAqBdC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useDispatchEvent_D5GEtPKY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.hooks_B0z5wQcZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useWindoidMessageHandler_CjnBwN1b.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useElementEventListener_B2A6OVba.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.buildUrlSearchParams_AG1B310F.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.useCompleteLogin_Cz2pK7ww.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.colors_DaZ4JgHO.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.zoom_BbS3Dsx_.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.context_IZTYG4gY.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/client.shop-login_MR2URETZ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.windoid_BkiqS_xQ.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopLogin_Czn02v13.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.css_D5Nl6bUC.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.ShopIcon_B_zpnWjN.esm.js",
+    "https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.Button_Ctk63-OL.esm.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/speculationrules+json",
+     "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/2026-01/graphql.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+     "query": [],
+     "status": 200,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/collect",
+     "query": [],
+     "status": 204,
+     "contentType": "",
+     "example": "https://t8bnc1-5b.myshopify.com/api/collect"
+    },
+    {
+     "method": "GET",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/policies/privacy-policy",
+     "query": [
+      "section_id"
+     ],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy"
+    },
+    {
+     "method": "POST",
+     "host": "t8bnc1-5b.myshopify.com",
+     "path": "/api/event/collect",
+     "query": [],
+     "status": 200,
+     "contentType": "text/html",
+     "example": "https://t8bnc1-5b.myshopify.com/api/event/collect"
+    }
+   ],
+   "thirdPartyXhr": [
+    "POST monorail-edge.shopifysvc.com/v1/produce",
+    "POST otlp-http-production.shopifysvc.com/v1/metrics",
+    "POST otlp-http-production.shopifysvc.com/v1/logs",
+    "POST error-analytics-sessions-production.shopifysvc.com/"
+   ],
+   "postBodies": [
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+     "body": "{\"query\":\"query GetStorefrontData( $handle: String! $includeMenu: Boolean! $includeShop: Boolean! $includeCustomer: Boolean! $country: CountryCode $language: LanguageCode $customerAccessToken: String! ) @inContext(country: $country, language: $language) { menu(handle: $handle) @include(if: $includeMenu) { id title items { id title url items { id title url items { id title url } } } } shop @include"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"privacy_banner_initialized/1.2\",\"payload\":{\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"session_token\":\"deprecated\",\"regulation\":\"CMP\",\"path\":\"/policies/privacy-policy\",\"server_region\":\"USVA\"},\"metadata\":{\"client_message_id\":\"a296774e-3c7a-423b-9bd5-2892eec95e27\",\"event_created_at_ms\":1791643743906}}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643743432000000,\"observedTimeUnixNano\":1791643743432000000,\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringValue\":\"production\"}},{\"key\":\"mobile\",\"value\":{\"boo"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shopify-account\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"ShopifyAccount_data_loaded_duration\",\"unit\":\"ms\",\"exponentialHistogram\":{\"aggregationTemporality\":1,\"dataPoints\":[{\"attributes\":[{\"key\":\"environment\",\"value\":{\"stringVal"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_feature_initialized\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643744066000000,\"timeUnixNano\":17916437440660"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"web_pixels_manager_feature_usage\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643744398000000,\"timeUnixNano"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/logs",
+     "body": "{\"resourceLogs\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"web-pixels-manager\"}}]},\"scopeLogs\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"logRecords\":[{\"timeUnixNano\":1791643744402000000,\"observedTimeUnixNano\":1791643744402000000,\"attributes\":[{\"key\":\"surface\",\"value\":{\"stringValue\":\"storefront-renderer\"}},{\"key\":\"schema_id\",\"v"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+     "body": "{\"events\":[{\"schema_id\":\"web_pixels_manager_init/3.2\",\"payload\":{\"version\":\"7ec887c8w14f9f074p854094e1m1370c602\",\"bundle_target\":\"modern\",\"page_url\":\"https://t8bnc1-5b.myshopify.com/policies/privacy-policy\",\"shop_id\":110471348549,\"surface\":\"storefront-renderer\",\"status\":\"initialized\",\"user_can_be_tracked\":\"true\"},\"metadata\":{\"event_created_at_ms\":1791643744409}},{\"schema_id\":\"web_pixels_manager_ev"
+    },
+    {
+     "url": "https://monorail-edge.shopifysvc.com/v1/produce",
+     "body": "{\"schema_id\":\"shopify_pay_login_with_shop_sdk_feature_initialize/1.1\",\"payload\":{\"is_persistent_cookie\":true,\"uniq_token\":\"f58e86fc-0de6-4e16-ba00-1cae2bd64fc2\",\"visit_token\":\"f47abf80-0f07-4b97-b28e-4635e2313159\",\"analytics_trace_id\":\"178e1810-06a6-46d7-b409-5dca90aeca0a\",\"flow\":\"embed\",\"flow_version\":\"account_menu\",\"sdk_version\":\"1.1.0-beta\",\"shop_permanent_domain\":\"t8bnc1-5b.myshopify.com\",\"sou"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/collect",
+     "body": "{\"v\":1,\"s\":{\"wd\":false,\"ua\":false,\"cf\":true,\"be\":true,\"nm\":false,\"nc\":false,\"ka\":false,\"sa\":false,\"ta\":false,\"pt\":false,\"mp\":false,\"sd\":false},\"r\":\"change\",\"l\":\"2.5.1\"}"
+    },
+    {
+     "url": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+     "body": "{\"resourceMetrics\":[{\"resource\":{\"attributes\":[{\"key\":\"service.name\",\"value\":{\"stringValue\":\"shop-js\"}}]},\"scopeMetrics\":[{\"scope\":{\"name\":\"open-telemetry-mini-client\",\"version\":\"1.1.0\",\"attributes\":[]},\"metrics\":[{\"name\":\"shop_js_cart_sync_transfer_session_attempted\",\"unit\":\"1\",\"sum\":{\"aggregationTemporality\":1,\"isMonotonic\":true,\"dataPoints\":[{\"startTimeUnixNano\":1791643744518000000,\"timeUnixNan"
+    },
+    {
+     "url": "https://t8bnc1-5b.myshopify.com/api/event/collect",
+     "body": "{\"schema_id\":\"storefront_observer_events/1.1\",\"payload\":{\"page_url\":\"https://t8bnc1-5b.myshopify.com/policies/privacy-policy\",\"shop_id\":110471348549,\"batch_start_time\":1791643743347,\"batch_end_time\":1791643744529,\"listener_registrations\":[\"{\\\"source\\\":{\\\"script_url\\\":\\\"inline-script#captcha-bootstrap\\\"},\\\"listener\\\":{\\\"event_type\\\":\\\"submit\\\",\\\"target\\\":\\\"htmldocument\\\"},\\\"confidence\\\":\\\"high\\\",\\\""
+    }
+   ],
+   "textAtLoad": 18552,
+   "mainEmptyAtLoad": false
+  }
+ },
+ "findings": [
+  {
+   "id": "a-first-party-api-post-api-2026-01-graphql-json",
+   "class": "A",
+   "feature": "first-party API POST /api/2026-01/graphql.json",
+   "api": {
+    "method": "POST",
+    "path": "/api/2026-01/graphql.json"
+   },
+   "hint": "api",
+   "evidence": [
+    "POST /api/2026-01/graphql.json → 200"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/cart",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ],
+   "reach": {
+    "pages": 22,
+    "of": 22
+   }
+  },
+  {
+   "id": "a-first-party-api-post-api-collect",
+   "class": "A",
+   "feature": "first-party API POST /api/collect",
+   "api": {
+    "method": "POST",
+    "path": "/api/collect"
+   },
+   "hint": "api",
+   "evidence": [
+    "POST /api/collect → 204"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/cart",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ],
+   "reach": {
+    "pages": 22,
+    "of": 22
+   }
+  },
+  {
+   "id": "a-cms-app-settings-object-shopify",
+   "class": "A",
+   "feature": "CMS / app settings object Shopify",
+   "hint": "settings",
+   "evidence": [
+    "shopJsCdnBaseUrl",
+    "ce_forms",
+    "analytics"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/cart",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ]
+  },
+  {
+   "id": "a-first-party-api-post-well-known-shopify-fec-produce",
+   "class": "A",
+   "feature": "first-party API POST /.well-known/shopify/fec/produce",
+   "api": {
+    "method": "POST",
+    "path": "/.well-known/shopify/fec/produce"
+   },
+   "hint": "api",
+   "evidence": [
+    "POST /.well-known/shopify/fec/produce → 200"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/products/trail-running-shoes",
+    "/cart"
+   ],
+   "reach": {
+    "pages": 18,
+    "of": 22
+   }
+  },
+  {
+   "id": "a-first-party-api-post-api-event-collect",
+   "class": "A",
+   "feature": "first-party API POST /api/event/collect",
+   "api": {
+    "method": "POST",
+    "path": "/api/event/collect"
+   },
+   "hint": "api",
+   "evidence": [
+    "POST /api/event/collect → 200"
+   ],
+   "pages": [
+    "/policies/privacy-policy"
+   ]
+  },
+  {
+   "id": "cr-client-rendered-slot-product-recommendations",
+   "class": "CR",
+   "feature": "client-rendered slot product-recommendations",
+   "hint": "client-rendered",
+   "evidence": [
+    "data-url=/recommendations/products?limit=4"
+   ],
+   "pages": [
+    "/products/trail-running-shoes"
+   ]
+  },
+  {
+   "id": "f-form-contact-form-origin-contact-1-fields",
+   "class": "F",
+   "feature": "form \"contact_form\" → origin /contact (1 fields)",
+   "signature": [
+    "email:contact[email]"
+   ],
+   "hint": "forms",
+   "evidence": [
+    "email:contact[email]",
+    "form_type,utf8"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/cart",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ]
+  },
+  {
+   "id": "f-form-facetfiltersform-template-32544931774789-main-desktop",
+   "class": "F",
+   "feature": "form \"FacetFiltersForm--template--32544931774789__main-desktop\" → origin /collections/all (16 fields)",
+   "signature": [
+    "checkbox:filter.v.availability",
+    "checkbox:filter.v.availability",
+    "text:filter.v.price.gte",
+    "text:filter.v.price.lte",
+    "select:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by"
+   ],
+   "hint": "forms",
+   "evidence": [
+    "checkbox:filter.v.availability,checkbox:filter.v.availability,text:filter.v.price.gte,text:filter.v.price.lte,select:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by"
+   ],
+   "pages": [
+    "/collections/all"
+   ]
+  },
+  {
+   "id": "f-form-facetfiltersform-template-32544931774789-main-overflo",
+   "class": "F",
+   "feature": "form \"FacetFiltersForm--template--32544931774789__main-overflow\" → origin /collections/all (14 fields)",
+   "signature": [
+    "checkbox:filter.v.availability",
+    "checkbox:filter.v.availability",
+    "text:filter.v.price.gte",
+    "text:filter.v.price.lte",
+    "select:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by",
+    "radio:sort_by"
+   ],
+   "hint": "forms",
+   "evidence": [
+    "checkbox:filter.v.availability,checkbox:filter.v.availability,text:filter.v.price.gte,text:filter.v.price.lte,select:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by"
+   ],
+   "pages": [
+    "/collections/all"
+   ]
+  },
+  {
+   "id": "f-form-ref-node-origin-cart-add-1-fields",
+   "class": "F",
+   "feature": "form \"ref: <Node>\" → origin /cart/add (1 fields)",
+   "signature": [
+    "number:quantity"
+   ],
+   "hint": "forms",
+   "evidence": [
+    "number:quantity",
+    "form_type,utf8,id,product-id,section-id"
+   ],
+   "pages": [
+    "/products/trail-running-shoes"
+   ]
+  },
+  {
+   "id": "f-form-contactform-aqytpbfn3u0liefnct-contact-form-uwickq-or",
+   "class": "F",
+   "feature": "form \"ContactForm-AQytPbFN3U0lieFNCT__contact_form_UwiCkQ\" → origin /contact (4 fields)",
+   "signature": [
+    "text:contact[name]",
+    "email:contact[email]",
+    "tel:contact[phone]",
+    "textarea:contact[body]"
+   ],
+   "hint": "forms",
+   "evidence": [
+    "text:contact[name],email:contact[email],tel:contact[phone],textarea:contact[body]",
+    "form_type,utf8,contact[id]"
+   ],
+   "pages": [
+    "/pages/contact"
+   ]
+  },
+  {
+   "id": "i18n-locale-variants-en",
+   "class": "I18N",
+   "feature": "locale variants en",
+   "hint": "locale",
+   "evidence": [
+    "https://privacy.shopify.com/en"
+   ],
+   "pages": [
+    "/policies/privacy-policy"
+   ]
+  },
+  {
+   "id": "l-listing-candidate-11-cards",
+   "class": "L",
+   "feature": "listing candidate \n  (11 cards)",
+   "hint": "listings",
+   "evidence": [],
+   "pages": [
+    "/collections"
+   ]
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-chrome-only-theme-drawer-conte",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup (chrome only) → theme-drawer:content",
+   "hint": "chrome-interaction",
+   "evidence": [
+    "Suche",
+    "Mehr",
+    "Warenkorb 0"
+   ],
+   "pages": [
+    "/",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ],
+   "reach": {
+    "pages": 99,
+    "of": 22
+   }
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-theme-drawer-content",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup → theme-drawer:content",
+   "hint": "modal",
+   "evidence": [
+    "Suche",
+    "Mehr",
+    "Warenkorb 0"
+   ],
+   "pages": [
+    "/collections/all"
+   ],
+   "reach": {
+    "pages": 99,
+    "of": 22
+   }
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-chrome-only-target-outside-dom",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup (chrome only) → target outside DOM at capture",
+   "hint": "chrome-interaction",
+   "evidence": [
+    "Suche",
+    "Mehr"
+   ],
+   "pages": [
+    "/cart"
+   ],
+   "reach": {
+    "pages": 99,
+    "of": 22
+   }
+  },
+  {
+   "id": "s-site-search-form-search",
+   "class": "S",
+   "feature": "site search form → /search",
+   "hint": "search",
+   "evidence": [
+    "search:q"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/cart",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ],
+   "reach": {
+    "pages": 1,
+    "of": 22
+   }
+  },
+  {
+   "id": "s-first-party-api-get-search",
+   "class": "S",
+   "feature": "first-party API GET /search",
+   "api": {
+    "method": "GET",
+    "path": "/search"
+   },
+   "hint": "search",
+   "evidence": [
+    "GET /search?q,resources[type],section_id → 200",
+    "GET /search?section_id → 200"
+   ],
+   "pages": [
+    "/products/trail-running-shoes",
+    "/search"
+   ],
+   "reach": {
+    "pages": 8,
+    "of": 22
+   }
+  },
+  {
+   "id": "t-unknown-third-party-host-shop-app",
+   "class": "T",
+   "feature": "unknown third-party host shop.app",
+   "hint": "inspect",
+   "evidence": [
+    "shop.app"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/cart",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-www-paypalobjects-com",
+   "class": "T",
+   "feature": "unknown third-party host www.paypalobjects.com",
+   "hint": "inspect",
+   "evidence": [
+    "www.paypalobjects.com"
+   ],
+   "pages": [
+    "/products/trail-running-shoes"
+   ]
+  },
+  {
+   "id": "v-iframe-without-src-runtime-injected-embed",
+   "class": "V",
+   "feature": "iframe without src (runtime-injected embed)",
+   "hint": "embed-runtime",
+   "evidence": [
+    "PayPal-paypal",
+    "0×0"
+   ],
+   "pages": [
+    "/products/trail-running-shoes"
+   ]
+  },
+  {
+   "id": "x-commerce-platform",
+   "class": "X",
+   "feature": "commerce: platform",
+   "role": "commerce: platform",
+   "hint": "decided-out",
+   "evidence": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/collections",
+    "/products/trail-running-shoes",
+    "/search",
+    "/cart",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ]
+  },
+  {
+   "id": "x-commerce-signals-cart-true-prices-4",
+   "class": "X",
+   "feature": "commerce signals (cart: true, prices: 4)",
+   "hint": "decided-out",
+   "evidence": [],
+   "pages": [
+    "/",
+    "/collections/all",
+    "/search",
+    "/cart"
+   ]
+  },
+  {
+   "id": "x-commerce-signals-cart-true-prices-0",
+   "class": "X",
+   "feature": "commerce signals (cart: true, prices: 0)",
+   "hint": "decided-out",
+   "evidence": [],
+   "pages": [
+    "/collections",
+    "/pages/contact",
+    "/policies/privacy-policy"
+   ]
+  },
+  {
+   "id": "x-commerce-payments",
+   "class": "X",
+   "feature": "commerce: payments",
+   "role": "commerce: payments",
+   "hint": "decided-out",
+   "evidence": [
+    "www.paypal.com"
+   ],
+   "pages": [
+    "/products/trail-running-shoes"
+   ]
+  },
+  {
+   "id": "x-commerce-signals-cart-true-prices-5",
+   "class": "X",
+   "feature": "commerce signals (cart: true, prices: 5)",
+   "hint": "decided-out",
+   "evidence": [],
+   "pages": [
+    "/products/trail-running-shoes"
+   ]
+  }
+ ],
+ "reach": {
+  "pagesWithEvidence": 22,
+  "of": 22,
+  "endpoints": {
+   "GET t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json": 22,
+   "POST otlp-http-production.shopifysvc.com/v1/metrics": 22,
+   "POST otlp-http-production.shopifysvc.com/v1/logs": 22,
+   "POST monorail-edge.shopifysvc.com/v1/produce": 22,
+   "POST t8bnc1-5b.myshopify.com/api/2026-01/graphql.json": 22,
+   "POST t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch": 22,
+   "POST error-analytics-sessions-production.shopifysvc.com/": 22,
+   "POST t8bnc1-5b.myshopify.com/api/collect": 22,
+   "POST t8bnc1-5b.myshopify.com/.well-known/shopify/fec/produce": 18,
+   "GET t8bnc1-5b.myshopify.com/cart": 1,
+   "GET t8bnc1-5b.myshopify.com/search": 8,
+   "GET t8bnc1-5b.myshopify.com/collections/all": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/camping-hiking": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/cycling": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/fan-gear-apparel": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/fitness-training": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/frontpage": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/golf": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/running": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/team-sports": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/tennis-racquet-sports": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/water-sports": 1,
+   "GET t8bnc1-5b.myshopify.com/collections/winter-sports": 1,
+   "GET t8bnc1-5b.myshopify.com/collections": 1,
+   "GET t8bnc1-5b.myshopify.com/": 1,
+   "GET t8bnc1-5b.myshopify.com/pages/contact": 1,
+   "GET t8bnc1-5b.myshopify.com/policies/privacy-policy": 1,
+   "POST error-analytics-sessions-production.shopifysvc.com/observeonly": 4,
+   "GET t8bnc1-5b.myshopify.com/products/road-bike-helmet": 1,
+   "GET t8bnc1-5b.myshopify.com/recommendations/products": 4,
+   "POST www.paypal.com/xoplatform/logger/api/logger": 4,
+   "GET t8bnc1-5b.myshopify.com/products/road-running-shoes": 1,
+   "GET t8bnc1-5b.myshopify.com/products/running-shorts": 1,
+   "GET t8bnc1-5b.myshopify.com/products/trail-running-shoes": 1
+  },
+  "searchFormPages": 1,
+  "formPages": 22,
+  "triggerPages": {
+   "aria-haspopup": 99
+  }
+ }
+}

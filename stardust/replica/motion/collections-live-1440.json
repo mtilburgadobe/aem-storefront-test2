@@ -1,0 +1,241 @@
+{
+  "url": "https://t8bnc1-5b.myshopify.com/collections",
+  "width": 1440,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 655,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 669,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1241,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1200,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 926,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 586,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 311,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [],
+  "hoverSamples": [
+    {
+      "sel": ".resource-list__item:nth-child(1) .collection-card",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "transform 0.25s ease-out, box-shadow 0.25s ease-out"
+        },
+        "subs": [
+          {
+            "el": "a.collection-card__link",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+          }
+        ]
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "transform 0.25s ease-out, box-shadow 0.25s ease-out"
+        },
+        "subs": [
+          {
+            "el": "a.collection-card__link",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+          }
+        ]
+      }
+    }
+  ],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [],
+    "transitions": [],
+    "classMutations": []
+  }
+}

@@ -1,0 +1,9 @@
+{"ts":"2026-10-10T14:29:49Z","skill":"stardust:replica","phase":"extract","event":"start","detail":"extract --prep --dynamics https://t8bnc1-5b.myshopify.com/"}
+{"ts":"2026-10-10T14:46:17Z","skill":"stardust:replica","phase":"extract","event":"end","detail":"22/22 live, provenance 22/22; uncaptured first-level targets: none; types landing1 listing14 unique5+cart form1 static1"}
+{"ts":"2026-10-10T14:46:26Z","skill":"stardust:replica","phase":"preserve-direction","event":"start"}
+{"ts":"2026-10-10T14:51:27Z","skill":"stardust:replica","phase":"preserve-direction","event":"end","detail":"verbatim promotion; register R-01..R-04 (platform deltas, applied); dynamics 13 features, 0 without disposition; decision batch 4"}
+{"ts":"2026-10-10T15:41:18Z","skill":"stardust:replica","phase":"recreate","event":"start","detail":"8 archetypes; canon+home first"}
+{"ts":"2026-10-10T15:41:18Z","skill":"stardust:replica","phase":"source-fidelity-gate","event":"start"}
+{"ts":"2026-10-10T17:46:04Z","skill":"stardust:replica","phase":"recreate","event":"end","detail":"10 prototypes / 8 page types; canon + 9 block stylesheets"}
+{"ts":"2026-10-10T17:46:04Z","skill":"stardust:replica","phase":"source-fidelity-gate","event":"end","detail":"all archetypes <=0.85% pixel, dh 0 at 1440/360 except policy 360 (R-05); 0 structural red; clipped 0; cap-probe PASS except collections (pairing artefact)"}
+{"ts":"2026-10-10T17:46:04Z","skill":"stardust:replica","phase":"handoff","event":"start"}

@@ -1,0 +1,84 @@
+{
+  "archetype": "pages-contact",
+  "prototype": "stardust/prototypes/pages-contact-proposed.html",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 2,
+    "360": 2
+  },
+  "iterationNote": "iter1 + final --full round per breakpoint; one fix between them (aria-current=page moved to the Kontakt nav/drawer link). Evidence stardust/replica/gates/pages-contact-<w>/",
+  "gates": {
+    "1440": {
+      "pixel": 0.0,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "quiet"
+    },
+    "360": {
+      "pixel": 0.09,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360)",
+      "chromeParity": "4 deltas = the canon's known live artifact R-index-1 (closed drawer <details> checkmark icon)"
+    }
+  },
+  "capProbe": "PASS at 2560 (0 of 3 rows failed) — stardust/replica/gates/pages-contact-2560/cap-iter.json",
+  "residuals": [
+    {
+      "id": "R-contact-1",
+      "breakpoint": 360,
+      "probe": "chrome-parity header icons",
+      "cause": "live-artifact",
+      "detail": "Same as R-index-1: the closed menu drawer's localization <details> reports an extra 14px checkmark box on live, shifting icon pairing. Header/footer pixels match (0.09% page diff).",
+      "justified": true
+    },
+    {
+      "id": "R-contact-2",
+      "breakpoint": "1440, 360",
+      "probe": "content-diff 🟡 (19)",
+      "cause": "non-content",
+      "detail": "Live inline <style>/<script>/JSON-LD text and display:none chrome labels (Suche, Konto, Warenkorb, Mehr, Keine Ergebnisse gefunden), aria-label Konto (canon), same class as R-index-3. Main: 1/1 heading, 4/4 placeholders.",
+      "justified": true
+    },
+    {
+      "id": "R-contact-3",
+      "breakpoint": "all",
+      "probe": "form markup",
+      "cause": "platform-delta",
+      "detail": "The hidden contact[id] input (theme section id, used only for the #anchor redirect) is not reproduced; action is absolute https://t8bnc1-5b.myshopify.com/contact (native POST, Shopify answers with its own confirmation page). The form was never submitted.",
+      "justified": true
+    }
+  ],
+  "motion": {
+    "observed": [
+      "submit hover: background-color #000 -> #262626 + 0px inset box-shadow colour, 125ms ease-in-out (1440, 360)",
+      "input click/focus: outline 1.5px currentcolor at 0.2em, no transition, no box change (widget poke dead)",
+      "header scroll morph dead (canon)"
+    ],
+    "implemented": [
+      "button background transition (canon .shop-button--primary)",
+      "box-shadow colour on hover (block CSS; canon request filed)",
+      "input :focus-visible outline 1.5px currentcolor offset 0.2em (CSS only)"
+    ],
+    "dead": [
+      "#ContactForm-name widget poke (no sampled change)",
+      "header scroll morph"
+    ],
+    "evidence": [
+      "stardust/replica/motion/pages-contact-live-1440.json",
+      "stardust/replica/motion/pages-contact-proto-1440.json",
+      "stardust/replica/motion/pages-contact-compare-1440.txt",
+      "stardust/replica/motion/pages-contact-live-360.json",
+      "stardust/replica/motion/pages-contact-proto-360.json",
+      "stardust/replica/motion/pages-contact-compare-360.txt"
+    ],
+    "prototypeScript": "none of its own (header script copied verbatim from index-proposed.html)"
+  },
+  "files": [
+    "blocks/shop-contact/shop-contact.css",
+    "stardust/prototypes/pages-contact-proposed.html"
+  ]
+}

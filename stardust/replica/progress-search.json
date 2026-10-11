@@ -1,0 +1,85 @@
+{
+  "archetype": "search",
+  "liveUrl": "https://t8bnc1-5b.myshopify.com/search",
+  "block": "shop-search",
+  "prototype": "stardust/prototypes/search-proposed.html",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 2,
+    "360": 2
+  },
+  "iterationNote": "iter1, a --full final (killed by the restart, re-run: 0.93 % / Δh -1), then fix 2 (h4 'Produkte' margin-bottom 32 -> 31.92px as measured live) and --full final2. Evidence stardust/replica/gates/search-<w>/ (*-final2.*).",
+  "gates": {
+    "1440": {
+      "pixel": 0.03,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "quiet"
+    },
+    "360": {
+      "pixel": 0.11,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360)",
+      "chromeParity": "4 deltas = canon live artifact R-index-1"
+    }
+  },
+  "capProbe": "PASS at 2560 (0 of 3 rows failed) — stardust/replica/gates/search-2560/cap-iter.json",
+  "residuals": [
+    {
+      "id": "R-srch-1",
+      "breakpoint": 360,
+      "probe": "chrome-parity header icons",
+      "cause": "live-artifact",
+      "detail": "Same as R-index-1.",
+      "justified": true
+    },
+    {
+      "id": "R-srch-2",
+      "breakpoint": 360,
+      "probe": "visual-diff advisory FLUSH-LEFT TEXT",
+      "cause": "matches-live",
+      "detail": "Card titles at 8px in the full-bleed mobile grid; live reports the same.",
+      "justified": true
+    },
+    {
+      "id": "R-srch-3",
+      "breakpoint": "1440, 360",
+      "probe": "card image height (sub-pixel)",
+      "cause": "canon-gap",
+      "detail": "Live sets aspect-ratio from the Shopify media ratio (0.90378) on the card image; the canon card uses the intrinsic ratio: 287.672 vs 287.328px at 1440. Canon request filed; not compensated (0.03 %).",
+      "justified": true
+    }
+  ],
+  "motion": {
+    "observed": [
+      "typing in the page search field (ad-hoc Playwright probe, live + prototype, 'run'): reset button opacity/visibility 0 -> 1, transition 0.125s ease-in-out (CSS :has(:not(:placeholder-shown)))",
+      "field focus (click): outline 1.5px solid currentcolor, offset 0.2em (theme *:focus-visible)",
+      "no predictive results on the page field: no /search/suggest request, no dropdown; the predictive-search-component in the DOM is the header search modal (canon)",
+      "field hover: no measured change (motion-observe)",
+      "header scroll morph dead (canon)"
+    ],
+    "implemented": [
+      "reset button reveal with the 0.125s opacity/visibility transition (CSS, verified by the same probe)",
+      "input :focus-visible outline 1.5px currentcolor / 0.2em (CSS; added this run)"
+    ],
+    "dead": [
+      "predictive search on the page field",
+      "field hover",
+      "header scroll morph"
+    ],
+    "evidence": [
+      "stardust/replica/motion/search-live-1440.json",
+      "stardust/replica/motion/search-proto-1440.json",
+      "stardust/replica/motion/search-compare-1440.txt",
+      "probe script stardust/.work/coll/type-probe.mjs"
+    ]
+  },
+  "files": [
+    "blocks/shop-search/shop-search.css",
+    "stardust/prototypes/search-proposed.html"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "archetype": "cart",
+  "prototype": "stardust/prototypes/cart-proposed.html",
+  "prototypeFilled": "stardust/prototypes/cart-filled-proposed.html",
+  "block": "blocks/shop-cart/shop-cart.css (+ canon shop-product-grid for 'You may also like')",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 2,
+    "360": 2
+  },
+  "iterationNote": "iter1 (Δh -13px: canon .shop-button margin/padding beat the block's 2-class selector on 'Weiter einkaufen'; 🔴 header cart link) -> iter2 (fixed: 3-class selector, header cart action as a[href=/cart]) -> final --full round (after the motion CSS). Prototypes are assembled from the canon skeleton by stardust/.work/cart/build.mjs. Evidence stardust/replica/gates/cart-<w>/",
+  "gates": {
+    "1440": {
+      "pixel": 0.0,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "quiet",
+      "chromeCrop": { "header": 0.0, "footer": 0.0 }
+    },
+    "360": {
+      "pixel": 0.11,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360)",
+      "chromeParity": "4 deltas = canon live artifact R-index-1 (closed drawer <details> checkmark)",
+      "chromeCrop": { "header": 0.15, "footer": 0.37 }
+    }
+  },
+  "capProbe": "PASS at 2560 (0 of 3 rows failed; 2 sections both sides, 1440 cap) — stardust/replica/gates/cart-2560/cap-iter.json",
+  "filledState": {
+    "method": "one Playwright session on live: PDP add-to-cart click (anonymous cart, POST /cart/add.js 200, cart.js 1x trail-running-shoes 12999), then /cart stitched at 1440 and 360 in that same context; the prototype captured with the identical routine (stardust/.work/cart/filled-session.mjs). No checkout started, no form submitted, cart never modified afterwards (hover/disclosure pokes only).",
+    "liveCaptures": ["stardust/.work/cart/filled-live-1440.png", "stardust/.work/cart/filled-live-360.png"],
+    "protoCaptures": ["stardust/.work/cart/filled-proto-1440.png", "stardust/.work/cart/filled-proto-360.png"],
+    "1440": {
+      "docHeight": "1383 live = 1383 build (Δh 0)",
+      "pixel": 0.02,
+      "crop": { "header y0+111": 0.01, "cart y111+450": 0.06, "footer y1175+208": 0.0 },
+      "scrollWidth": 1440
+    },
+    "360": {
+      "docHeight": "1605 live = 1605 build (Δh 0)",
+      "pixel": 0.13,
+      "crop": { "header y0+103": 0.2, "cart y103+545": 0.21, "footer y1272+333": 0.22 },
+      "scrollWidth": 360
+    },
+    "iterations": "2 (first capture 0.09% / 0.19%: line image 118x148 because the generic td padding out-ranked the media cell reset; fixed to 120x150)",
+    "recreated": "title 'Cart' + count bubble, line item (4:5 cover image 120px / 15cqi, title, unit price, 105x36 / 126x46 quantity stepper with disabled minus, remove icon, line total), container-query row layout >= 720px, Rabatt disclosure + code form, Geschätzter Gesamtbetrag €129,99 EUR, tax note, Auschecken button, Shop Pay + PayPal wallet look (R-02/R-04), grey summary panel extended to the viewport edge >= 750 (subgrid rows), header count bubble 1. No order-notes field exists on the live cart."
+  },
+  "residuals": [
+    {
+      "id": "R-cart-1",
+      "breakpoint": 360,
+      "probe": "chrome-parity header icons",
+      "cause": "live-artifact",
+      "detail": "Same as R-index-1; header crop 99.85% (empty) / 99.80% (filled).",
+      "justified": true
+    },
+    {
+      "id": "R-cart-2",
+      "breakpoint": "1440, 360",
+      "probe": "content-diff 🟡 (19)",
+      "cause": "non-content",
+      "detail": "Live inline <style>/<script>/JSON-LD, display:none chrome labels (Suche, Konto, Mehr, Keine Ergebnisse gefunden), theme text-block wrappers (editable count 11 vs 4), canon aria-label Konto. All authored copy present.",
+      "justified": true
+    },
+    {
+      "id": "R-cart-3",
+      "breakpoint": "all",
+      "probe": "header markup",
+      "cause": "canon",
+      "detail": "On /cart the header cart action is a[href=/cart] with a hidden 'Warenkorb' label (no drawer) and the bubble text is 10px/400; the prototypes patch the canon markup in build.mjs and compensate the font in shop-cart.css — two canon requests filed. The copied canon header script still binds the drawer to the link (a click opens the drawer and then navigates); Phase 5 shop-header JS renders the plain link on /cart.",
+      "justified": true
+    },
+    {
+      "id": "R-cart-4",
+      "breakpoint": "all",
+      "probe": "filled-state wallets",
+      "cause": "platform-delta (register R-02/R-04)",
+      "detail": "Shop Pay (closed shadow root, logo pierced via CDP) and PayPal (iframe, same wordmark as the PDP) are recreated as links to cart.checkoutUrl with the live look (#5433eb / #ffc439, 52px, radius 14px, logos 51x20 / 75.75x24).",
+      "justified": true
+    },
+    {
+      "id": "R-cart-5",
+      "breakpoint": "all",
+      "probe": "filled-state header drawer",
+      "cause": "static prototype",
+      "detail": "The canon cart drawer portal still holds its empty-state content in cart-filled-proposed.html; it is not opened on /cart (link, not drawer). Phase 5 renders the drawer from the same Storefront cart.",
+      "justified": true
+    }
+  ],
+  "motion": {
+    "observed": [
+      "empty: 'Weiter einkaufen' hover background #000 -> #262626 + 0px inset box-shadow colour, 125ms ease-in-out (1440, 360)",
+      "empty: login link hover colour -> rgb(0 0 0 / 70%), color + text-decoration-color 125ms",
+      "filled: Auschecken hover background + box-shadow 125ms",
+      "filled: remove hover — lid translate(-1.5px, 1.5px) rotate(-15deg), can translateY(1.5px), transform 125ms",
+      "filled: Rabatt summary hover colour -> rgb(0 0 0 / 80%), no transition",
+      "filled: Rabatt click — disclosure content block-size + opacity transitions, open height 103.19px",
+      "header scroll morph dead (canon)"
+    ],
+    "implemented": [
+      "all of the above in shop-cart.css (CSS only, no script): .shop-cart .shop-button--primary box-shadow colour, link transitions, remove-icon transforms, summary hover colour, disclosure block-size/opacity with @starting-style"
+    ],
+    "dead": [
+      "filled: quantity + hover, line title hover, Shop Pay / PayPal hover (no change on live)",
+      "header scroll morph"
+    ],
+    "summary": "empty 1440/360: 5 parity, 0 missing (motion-compare); filled 1440/360: 4 parity, 0 diff, 4 dead on live (stardust/.work/cart/filled-motion-compare.mjs — motion-observe cannot carry the cart session)",
+    "evidence": [
+      "stardust/replica/motion/cart-compare-1440.txt",
+      "stardust/replica/motion/cart-compare-360.txt",
+      "stardust/replica/motion/cart-filled-compare-1440.txt",
+      "stardust/replica/motion/cart-filled-compare-360.txt"
+    ],
+    "prototypeScript": "none of its own (header script copied verbatim from index-proposed.html)"
+  },
+  "canonRequests": [
+    "products-trail-running-shoes, cart: shop-header nav-link colour + home-only h1/aria-current (already filed)",
+    "cart: shop-header cart action is a[href=/cart] on /cart (new)",
+    "cart: shop-header cart-count 10px / 400 (new)"
+  ],
+  "files": [
+    "blocks/shop-cart/shop-cart.css",
+    "stardust/prototypes/cart-proposed.html",
+    "stardust/prototypes/cart-filled-proposed.html",
+    "stardust/.work/cart/build.mjs (prototype assembly), main-empty.html, main-filled.html"
+  ]
+}

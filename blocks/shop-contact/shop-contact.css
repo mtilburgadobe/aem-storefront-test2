@@ -1,0 +1,173 @@
+/*
+ * shop-contact: page heading + contact form (Horizon "main-page" title section + "contact-form" section).
+ *
+ * DOM contract (block JS must produce exactly this):
+ *
+ * Authoring (AEM): row 1 = rich text (the heading, any intro paragraphs). Optional key/value rows
+ * override the field strings; the live strings are the defaults:
+ *   name "Name" · email "E-Mail-Adresse" · phone "Telefonnummer" · comment "Kommentar" · submit "Submit"
+ *
+ * div.shop-contact
+ *   div.shop-contact__header                           [AEM-authored] row 1 content, moved as is
+ *     h1.shop-contact__heading                         "Kontakt"  (h2 preset: 48px / 36px, centred)
+ *     p …                                              optional intro text (none live)
+ *   div.shop-contact__body
+ *     form.shop-contact__form#ContactForm[method=post][action=https://t8bnc1-5b.myshopify.com/contact]
+ *         [accept-charset=UTF-8]                       [posted to Shopify] native POST, no JS submit
+ *       input[type=hidden][name=form_type][value=contact]      [posted to Shopify]
+ *       input[type=hidden][name=utf8][value=✓]                 [posted to Shopify]
+ *       div.shop-contact__row                          (stacked < 750px, side by side >= 750px)
+ *         label.shop-visually-hidden[for=ContactForm-name]     [AEM config] "Name"
+ *         input.shop-contact__input#ContactForm-name[type=text][name=contact[name]]
+ *             [autocomplete=name][placeholder=<label>]         [posted to Shopify]
+ *         label.shop-visually-hidden[for=ContactForm-email]    [AEM config] "E-Mail-Adresse" + span[aria-hidden=true] "*"
+ *         input.shop-contact__input#ContactForm-email[type=email][name=contact[email]]
+ *             [autocomplete=email][spellcheck=false][autocapitalize=off][aria-required=true]
+ *             [placeholder=<label>]                            [posted to Shopify]
+ *       label.shop-visually-hidden[for=ContactForm-phone]      [AEM config] "Telefonnummer"
+ *       input.shop-contact__input#ContactForm-phone[type=tel][name=contact[phone]]
+ *           [autocomplete=tel][pattern=[0-9\-]*][placeholder=<label>]   [posted to Shopify]
+ *       label.shop-visually-hidden[for=ContactForm-body]       [AEM config] "Kommentar"
+ *       textarea.shop-contact__input.shop-contact__input--textarea#ContactForm-body[rows=10]
+ *           [name=contact[body]][placeholder=<label>]          [posted to Shopify]
+ *       button.shop-button.shop-button--primary.shop-contact__submit[type=submit]   [AEM config] "Submit"
+ *
+ * No Shopify data is read: the only Shopify contact is the native form POST (Shopify answers with
+ * its own /contact confirmation page). No script: interaction is CSS only (input focus outline, button
+ * hover #262626 + its 0px inset box-shadow colour, 125ms, both observed live).
+ *
+ * Values lifted from the theme: page-width-content (42rem = 672px heading column), contact-form
+ * size-style 50% (100% < 750px), gap var(--gap-md) 0.9rem, input padding var(--padding-lg)
+ * var(--padding-xl) = 16px 20px, 1px input border, input font max(1rem, 100%) <= 1200px,
+ * focus outline 1.5px currentcolor at 0.2em, placeholder rgb(51 51 51 / 0.6).
+ */
+
+.shop-contact {
+  padding-inline: var(--shop-gutter);
+}
+
+.shop-contact .shop-contact__header {
+  display: flex;
+  flex-direction: column;
+  gap: max(24px, calc(32px * var(--shop-spacing-scale)));
+  max-width: 672px;
+  margin-inline: auto;
+  padding-block: max(20px, calc(40px * var(--shop-spacing-scale))) 0;
+  text-align: center;
+}
+
+.shop-contact .shop-contact__header h1 {
+  font-size: var(--shop-font-size-h2);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-contact .shop-contact__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: max(20px, calc(32px * var(--shop-spacing-scale))) max(20px, calc(84px * var(--shop-spacing-scale)));
+}
+
+.shop-contact .shop-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14.4px;
+  width: 100%;
+  margin: 0; /* UA quirks-mode form margin (local dev pages have no doctype) */
+}
+
+.shop-contact .shop-contact__row {
+  display: flex;
+  flex-direction: column;
+  gap: 14.4px;
+}
+
+.shop-contact .shop-contact__input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 16px 20px;
+  overflow: hidden;
+  border: 1px solid var(--shop-color-border);
+  border-radius: var(--shop-radius-input);
+  background-color: #fff;
+  color: var(--shop-color-input-text);
+  font-size: 16px;
+  line-height: var(--shop-line-height-paragraph);
+  text-overflow: ellipsis;
+  -webkit-font-smoothing: antialiased;
+}
+
+.shop-contact .shop-contact__input:hover {
+  border: 1px solid var(--shop-color-border);
+}
+
+.shop-contact .shop-contact__input:focus-visible {
+  outline: 1.5px solid currentcolor;
+  outline-offset: 0.2em;
+}
+
+.shop-contact .shop-contact__input::placeholder {
+  color: rgb(51 51 51 / 60%);
+  opacity: 1;
+}
+
+.shop-contact .shop-contact__input:not(:placeholder-shown)::placeholder {
+  opacity: 0;
+}
+
+.shop-contact .shop-contact__input--textarea {
+  min-height: 55px;
+  resize: vertical;
+}
+
+/* after Shopify's redirect (?contact_posted=true): theme .contact-form__success, first form child
+   div.shop-contact__success[tabindex=-1] > svg (checkmark 20px) + "Danke, dass du uns kontaktiert hast. …" */
+.shop-contact .shop-contact__success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shop-contact .shop-contact__success-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.shop-contact .shop-contact__success:focus {
+  outline: none;
+}
+
+.shop-contact .shop-contact__submit {
+  min-width: max-content;
+  box-shadow: inset 0 0 0 0 var(--shop-color-primary-button-bg);
+}
+
+/* live: the theme's 0px inset "button border" follows the hover colour (motion-observe: box-shadow transition 125ms) */
+.shop-contact .shop-contact__submit:hover {
+  box-shadow: inset 0 0 0 0 var(--shop-color-primary-button-hover-bg);
+}
+
+.shop-contact .shop-contact__submit:focus-visible {
+  outline: 1.5px solid var(--shop-color-foreground);
+  outline-offset: 0.2em;
+}
+
+@media (min-width: 750px) {
+  .shop-contact .shop-contact__form {
+    width: 50%;
+  }
+
+  .shop-contact .shop-contact__row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* the theme drops inputs to 16px only up to 1200px (iOS zoom guard); above it they follow the 14px body */
+@media (min-width: 1201px) {
+  .shop-contact .shop-contact__input {
+    font-size: var(--shop-font-size-paragraph);
+  }
+}

@@ -1,0 +1,510 @@
+{
+  "url": "https://t8bnc1-5b.myshopify.com/",
+  "width": 1440,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 508,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 508,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 508,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 500,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 307,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".search-action--hidden-on-drawer button",
+      "frames": [
+        {
+          "t": 16641.09999999404,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 16843.30000001192,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 17045.30000001192,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 17248.70000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": "button.header-actions__action:has(cart-icon)",
+      "frames": [
+        {
+          "t": 18268.20000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 18470.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 18673.09999999404,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 18874.80000001192,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".dropdown-localization__button",
+      "frames": [
+        {
+          "t": 19885,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 20086.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 20289.30000001192,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 20491.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [
+    {
+      "sel": ".product-card",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "transform 0.25s ease-out, box-shadow 0.25s ease-out"
+        },
+        "subs": [
+          {
+            "el": "a.product-card__link",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+          },
+          {
+            "el": "a.contents",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+          },
+          {
+            "el": "img.product-media__image",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "span.svg-wrapper.add-to-cart-icon",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "span.svg-wrapper.add-to-cart__added-icon",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "transform 0.25s ease-out, box-shadow 0.25s ease-out"
+        },
+        "subs": [
+          {
+            "el": "a.product-card__link",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+          },
+          {
+            "el": "a.contents",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+          },
+          {
+            "el": "img.product-media__image",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "span.svg-wrapper.add-to-cart-icon",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "span.svg-wrapper.add-to-cart__added-icon",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [
+      {
+        "name": "search-element-slide-in-bottom",
+        "el": "html > body.page-width-narrow.card-hover-effect-none > dialog-component.search-modal > dialog.search-modal__content.dialog-modal",
+        "txt": "Suche\n    \n    \n      \n        \n          \n       ",
+        "y": 0
+      },
+      {
+        "name": "backdropFilter",
+        "el": "html > body.page-width-narrow.card-hover-effect-none > dialog-component.search-modal > dialog.search-modal__content.dialog-modal",
+        "txt": "Suche\n    \n    \n      \n        \n          \n       ",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.predictive-search-dropdown > div.predictive-search-results__inner > div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product",
+        "txt": "Road Bike Helmet\n    \n  \n  \n      \n      \n\n       ",
+        "y": 0
+      },
+      {
+        "name": "fadeIn",
+        "el": "div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product > product-component.resource-card__wrapper > div.resource-card",
+        "txt": "Road Bike Helmet\n    \n  \n  \n      \n      \n\n       ",
+        "y": 0
+      },
+      {
+        "name": "fadeIn",
+        "el": "div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product > product-component.resource-card__wrapper > div.resource-card",
+        "txt": "Road Running Shoes\n    \n  \n  \n      \n      \n\n     ",
+        "y": 0
+      },
+      {
+        "name": "fadeIn",
+        "el": "div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product > product-component.resource-card__wrapper > div.resource-card",
+        "txt": "Running Shorts\n    \n  \n  \n      \n      \n\n        \n",
+        "y": 0
+      },
+      {
+        "name": "fadeIn",
+        "el": "div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product > product-component.resource-card__wrapper > div.resource-card",
+        "txt": "Trail Running Shoes\n    \n  \n  \n      \n      \n\n    ",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.predictive-search-dropdown > div.predictive-search-results__inner > div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product",
+        "txt": "Road Running Shoes\n    \n  \n  \n      \n      \n\n     ",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.predictive-search-dropdown > div.predictive-search-results__inner > div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product",
+        "txt": "Running Shorts\n    \n  \n  \n      \n      \n\n        \n",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.predictive-search-dropdown > div.predictive-search-results__inner > div.predictive-search-results__products > ul.predictive-search-results__list.predictive-search-results__wrapper-products.list-unstyled > li.predictive-search-results__card.predictive-search-results__card--product",
+        "txt": "Trail Running Shoes\n    \n  \n  \n      \n      \n\n    ",
+        "y": 0
+      },
+      {
+        "name": "drawer-slide-in",
+        "el": "html > body.page-width-narrow.card-hover-effect-none > div.shopify-section > theme-drawer > dialog.theme-drawer__dialog.color-custom-drawer.theme-drawer__dialog--opening",
+        "txt": "Dein Warenkorb ist leer\n      \n\n      \n        \n\n\n",
+        "y": 0
+      }
+    ],
+    "transitions": [
+      {
+        "prop": "margin-right",
+        "el": "html > body.page-width-narrow.card-hover-effect-none > div.page-wrapper.page-wrapper--drawer-open",
+        "y": 0,
+        "dur": "0.125s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.header__column.header__column--right > dropdown-localization-component.dropdown-localization.mobile:hidden > button.button.dropdown-localization__button.localization-selector > span.svg-wrapper.icon-caret > svg",
+        "y": 0,
+        "dur": "0.125s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.header__row.header__row--top.color-#ffffff > div.header__columns.spacing-style > div.header__column.header__column--right > dropdown-localization-component.dropdown-localization.mobile:hidden > div.localization-wrapper.right-bound.color-custom-popover",
+        "y": 0,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "translate",
+        "el": "div.header__row.header__row--top.color-#ffffff > div.header__columns.spacing-style > div.header__column.header__column--right > dropdown-localization-component.dropdown-localization.mobile:hidden > div.localization-wrapper.right-bound.color-custom-popover",
+        "y": 0,
+        "dur": "0.3s"
+      }
+    ],
+    "classMutations": [
+      {
+        "added": [
+          "theme-drawer__dialog--opening"
+        ],
+        "el": "html > body.page-width-narrow.card-hover-effect-none > div.shopify-section > theme-drawer > dialog.theme-drawer__dialog.color-custom-drawer.theme-drawer__dialog--opening",
+        "y": 0
+      },
+      {
+        "added": [
+          "page-wrapper--drawer-open"
+        ],
+        "el": "html > body.page-width-narrow.card-hover-effect-none > div.page-wrapper.page-wrapper--drawer-open",
+        "y": 0
+      }
+    ]
+  }
+}

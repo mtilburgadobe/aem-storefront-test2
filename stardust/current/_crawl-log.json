@@ -1,0 +1,896 @@
+{
+  "discovery": {
+    "fetchTechnique": "headless",
+    "count": 22,
+    "concurrency": 4
+  },
+  "consent": {
+    "method": "auto"
+  },
+  "favicon": null,
+  "crawl": {
+    "failures": []
+  },
+  "captureGaps": {
+    "roots": [],
+    "detail": "uncaptured first-level targets: none (no locale root captured)"
+  },
+  "dynamicSurface": {
+    "pages": 22,
+    "pagesWithSameSiteData": 22,
+    "pagesWithSearchForm": 1,
+    "pagesHydrated": 22,
+    "truncatedPages": 0,
+    "endpoints": [
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+        "query": [],
+        "resourceType": "other",
+        "contentType": "application/speculationrules+json",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "otlp-http-production.shopifysvc.com",
+        "path": "/v1/metrics",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "otlp-http-production.shopifysvc.com",
+        "path": "/v1/logs",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://otlp-http-production.shopifysvc.com/v1/logs",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "monorail-edge.shopifysvc.com",
+        "path": "/v1/produce",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "sameSite": false,
+        "example": "https://monorail-edge.shopifysvc.com/v1/produce",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/api/2026-01/graphql.json",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/api/collect",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/api/collect",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "error-analytics-sessions-production.shopifysvc.com",
+        "path": "/",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": null,
+        "sameSite": false,
+        "example": "https://error-analytics-sessions-production.shopifysvc.com/",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/.well-known/shopify/fec/produce",
+        "query": [],
+        "resourceType": "ping",
+        "contentType": "application/json",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/fec/produce",
+        "pages": 18,
+        "examples": [
+          "collections-frontpage",
+          "index",
+          "collections-all"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/search",
+        "query": [
+          "q",
+          "resources[type]",
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/search",
+        "pages": 8,
+        "examples": [
+          "products-trail-running-shoes",
+          "products-road-running-shoes",
+          "products-running-shorts"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "error-analytics-sessions-production.shopifysvc.com",
+        "path": "/observeonly",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "sameSite": false,
+        "example": "https://error-analytics-sessions-production.shopifysvc.com/observeonly",
+        "pages": 4,
+        "examples": [
+          "products-trail-running-shoes",
+          "products-road-running-shoes",
+          "products-running-shorts"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/recommendations/products",
+        "query": [
+          "intent",
+          "limit",
+          "product_id",
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/recommendations/products",
+        "pages": 4,
+        "examples": [
+          "products-trail-running-shoes",
+          "products-road-running-shoes",
+          "products-running-shorts"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "www.paypal.com",
+        "path": "/xoplatform/logger/api/logger",
+        "query": [
+          "disableSetCookie"
+        ],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://www.paypal.com/xoplatform/logger/api/logger",
+        "pages": 4,
+        "examples": [
+          "products-trail-running-shoes",
+          "products-road-running-shoes",
+          "products-running-shorts"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections",
+        "pages": 1,
+        "examples": [
+          "collections"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/frontpage",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/frontpage",
+        "pages": 1,
+        "examples": [
+          "collections-frontpage"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/",
+        "pages": 1,
+        "examples": [
+          "index"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/all",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/all",
+        "pages": 1,
+        "examples": [
+          "collections-all"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/running",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/running",
+        "pages": 1,
+        "examples": [
+          "collections-running"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/cycling",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/cycling",
+        "pages": 1,
+        "examples": [
+          "collections-cycling"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/team-sports",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/team-sports",
+        "pages": 1,
+        "examples": [
+          "collections-team-sports"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/fitness-training",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/fitness-training",
+        "pages": 1,
+        "examples": [
+          "collections-fitness-training"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/camping-hiking",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/camping-hiking",
+        "pages": 1,
+        "examples": [
+          "collections-camping-hiking"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/water-sports",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/water-sports",
+        "pages": 1,
+        "examples": [
+          "collections-water-sports"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/winter-sports",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/winter-sports",
+        "pages": 1,
+        "examples": [
+          "collections-winter-sports"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/golf",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/golf",
+        "pages": 1,
+        "examples": [
+          "collections-golf"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/tennis-racquet-sports",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/tennis-racquet-sports",
+        "pages": 1,
+        "examples": [
+          "collections-tennis-racquet-sports"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/fan-gear-apparel",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/fan-gear-apparel",
+        "pages": 1,
+        "examples": [
+          "collections-fan-gear-apparel"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/products/trail-running-shoes",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+        "pages": 1,
+        "examples": [
+          "products-trail-running-shoes"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/products/road-running-shoes",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/products/road-running-shoes",
+        "pages": 1,
+        "examples": [
+          "products-road-running-shoes"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/products/running-shorts",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/products/running-shorts",
+        "pages": 1,
+        "examples": [
+          "products-running-shorts"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/products/road-bike-helmet",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/products/road-bike-helmet",
+        "pages": 1,
+        "examples": [
+          "products-road-bike-helmet"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/cart",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/cart",
+        "pages": 1,
+        "examples": [
+          "cart"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/pages/contact",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/pages/contact",
+        "pages": 1,
+        "examples": [
+          "pages-contact"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/policies/privacy-policy",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "sameSite": true,
+        "example": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+        "pages": 1,
+        "examples": [
+          "policies-privacy-policy"
+        ]
+      }
+    ],
+    "thirdPartyScriptHosts": [
+      {
+        "host": "cdn.shopify.com",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "host": "www.paypal.com",
+        "pages": 4,
+        "examples": [
+          "products-trail-running-shoes",
+          "products-road-running-shoes",
+          "products-running-shorts"
+        ]
+      }
+    ],
+    "frameworkHints": [
+      {
+        "hint": "shopify",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      }
+    ],
+    "globalState": [
+      {
+        "name": "Shopify",
+        "pages": 22,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      }
+    ],
+    "formTargets": [
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+        "method": "post",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [],
+        "pages": 33,
+        "examples": [
+          "collections-frontpage",
+          "index",
+          "index"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/contact",
+        "method": "post",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "contact[email]"
+        ],
+        "pages": 23,
+        "examples": [
+          "collections",
+          "collections-frontpage",
+          "index"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/frontpage",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "filter.v.availability",
+          "filter.v.price.gte",
+          "filter.v.price.lte",
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-frontpage"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/all",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "filter.v.availability",
+          "filter.v.price.gte",
+          "filter.v.price.lte",
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-all"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/running",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-running"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/cycling",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-cycling"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/team-sports",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-team-sports"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/fitness-training",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-fitness-training"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/camping-hiking",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-camping-hiking"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/water-sports",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-water-sports"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/winter-sports",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-winter-sports"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/golf",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-golf"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/tennis-racquet-sports",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-tennis-racquet-sports"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/fan-gear-apparel",
+        "method": "get",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "sort_by",
+          "grid"
+        ],
+        "pages": 1,
+        "examples": [
+          "collections-fan-gear-apparel"
+        ]
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/search",
+        "method": "get",
+        "sameOrigin": true,
+        "search": true,
+        "fieldNames": [
+          "q"
+        ],
+        "pages": 1,
+        "examples": [
+          "search"
+        ]
+      }
+    ]
+  },
+  "visionCheck": [
+    {
+      "slug": "index",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "collections-all",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "collections",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "products-trail-running-shoes",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "search",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "cart",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "pages-contact",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "collections-running",
+      "verdict": "ok",
+      "notes": "thumbnail matches record; rendered storefront, no interstitial"
+    },
+    {
+      "slug": "*",
+      "verdict": "recaptured",
+      "notes": "first crawl screenshots were viewport-only (900px) because the theme scrolls inside .page-wrapper at >=990px; recaptured with capture normalization (register R1)"
+    }
+  ],
+  "siblingCandidates": [
+    {
+      "origin": "https://shopify.com/110471348549/account",
+      "confidence": "n/a",
+      "evidence": "hosted customer account (redirect target of /account)",
+      "decision": "excluded — hosted Shopify flow, linked not migrated"
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-10-10T14:50:00Z",
+    "source": "https://t8bnc1-5b.myshopify.com (Shopify Horizon theme, t/1)",
+    "evidence": [
+      "stardust/current/_computed-styles.json",
+      "stardust/current/css/inline-index.css :root",
+      "stardust/current/css/base.css"
+    ]
+  },
+  "name": "Mein Shop — current state (Shopify Horizon)",
+  "colors": {
+    "background": "#ffffff",
+    "foreground": "#000000",
+    "border": "#000000",
+    "input-border": "#dfdfdf",
+    "input-text": "#333333",
+    "primary-button-bg": "#000000",
+    "primary-button-text": "#ffffff",
+    "primary-button-hover-bg": "#262626",
+    "secondary-button-border": "#000000",
+    "secondary-button-hover-bg": "rgba(0,0,0,0.15)",
+    "variant-hover-bg": "#f2f2f2",
+    "popover-border": "#dfdfdf",
+    "error": "#8b0000",
+    "success": "#006400",
+    "instock": "#3ed660",
+    "lowstock": "#ee9441",
+    "outofstock": "#c8c8c8",
+    "muted-text": "rgba(0,0,0,0.6)",
+    "card-media-bg": "#f2f2f2"
+  },
+  "typography": {
+    "family": "Inter, sans-serif",
+    "weights": {
+      "body": 400,
+      "subheading": 500,
+      "heading": 700
+    },
+    "paragraph": {
+      "size": "0.875rem",
+      "lineHeight": 1.6
+    },
+    "h1": {
+      "size": "clamp(3rem, 5.6vw, 3.5rem)",
+      "weight": 700,
+      "lineHeight": 1
+    },
+    "h2": {
+      "size": "clamp(2.25rem, 4.8vw, 3rem)",
+      "weight": 700,
+      "lineHeight": 1
+    },
+    "h3": {
+      "size": "2rem",
+      "weight": 700,
+      "lineHeight": 1.1
+    },
+    "h4": {
+      "size": "1.5rem",
+      "weight": 700,
+      "lineHeight": 1
+    },
+    "h5": {
+      "size": "0.875rem",
+      "weight": 500,
+      "lineHeight": 1.2
+    },
+    "h6": {
+      "size": "0.75rem",
+      "weight": 500,
+      "lineHeight": 1.2
+    },
+    "menu": {
+      "sm": "0.875rem",
+      "md": "1rem",
+      "xl": "1.25rem",
+      "2xl": "1.75rem"
+    }
+  },
+  "rounded": {
+    "xs": "0.2rem",
+    "sm": "0.6rem",
+    "md": "0.8rem",
+    "lg": "1rem",
+    "buttons": "14px",
+    "inputs": "4px",
+    "pills": "40px",
+    "popover": "14px",
+    "variant-swatch": "32px"
+  },
+  "spacing": {
+    "padding": {
+      "xs": "0.5rem",
+      "sm": "0.7rem",
+      "md": "0.8rem",
+      "lg": "1rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "4xl": "2rem",
+      "5xl": "3rem",
+      "6xl": "4rem"
+    },
+    "gap": {
+      "xs": "0.5rem",
+      "sm": "0.7rem",
+      "md": "0.9rem",
+      "lg": "1rem",
+      "xl": "1.25rem",
+      "2xl": "2rem",
+      "3xl": "3rem"
+    },
+    "pageWidth": {
+      "narrow": "90rem",
+      "normal": "120rem"
+    }
+  },
+  "components": {
+    "button-primary": {
+      "bg": "#000000",
+      "text": "#ffffff",
+      "radius": "14px",
+      "padding": "16px 24px",
+      "hoverBg": "#262626"
+    },
+    "button-secondary": {
+      "bg": "transparent",
+      "text": "#000000",
+      "border": "1px solid #000000",
+      "radius": "14px"
+    },
+    "input": {
+      "border": "1px #dfdfdf (box-shadow)",
+      "radius": "4px",
+      "padding": "0.8rem"
+    },
+    "product-card": {
+      "media": "square, #f2f2f2 surround",
+      "title": "0.875rem",
+      "price": "0.875rem"
+    }
+  },
+  "extensions": {
+    "breakpoints": {
+      "source": [
+        750,
+        990
+      ],
+      "target": null,
+      "containerMaxWidth": "1440px",
+      "probeWidth": 2560,
+      "shellMaxWidth": "1440px",
+      "caps": [
+        {
+          "kind": "shell",
+          "px": 1440,
+          "via": "other",
+          "selector": "div.shopify-section > collection-component > results-list.section.product-grid-container > div.collection-wrapper.grid",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/collections/all",
+            "https://t8bnc1-5b.myshopify.com/collections"
+          ]
+        },
+        {
+          "kind": "shell",
+          "px": 585,
+          "via": "max-width",
+          "selector": "#MainContent > div.shopify-policy__container",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/policies/privacy-policy"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 1440,
+          "via": "other",
+          "selector": "section.shopify-section.hero-wrapper > div.hero > div.hero__container.spacing-style > div.hero__content-wrapper.layout-panel-flex",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/",
+            "https://t8bnc1-5b.myshopify.com/collections/all",
+            "https://t8bnc1-5b.myshopify.com/collections",
+            "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+            "https://t8bnc1-5b.myshopify.com/search",
+            "https://t8bnc1-5b.myshopify.com/cart",
+            "https://t8bnc1-5b.myshopify.com/pages/contact"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 672,
+          "via": "fixed",
+          "selector": "#MainContent > div.shopify-section.section-wrapper > div.section.page-width-content > div.spacing-style.layout-panel-flex",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/pages/contact"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 600,
+          "via": "fixed",
+          "selector": "div.hero > div.hero__container.spacing-style > div.hero__content-wrapper.layout-panel-flex > div.spacing-style.text-block",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/",
+            "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 521,
+          "via": "fixed",
+          "selector": "div > div > p > strong",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/policies/privacy-policy"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 490,
+          "via": "fixed",
+          "selector": "cart-items-component.cart-items-component > div.section.section--page-width > div.cart-page.spacing-style > div.cart-page__items",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/cart"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 436,
+          "via": "fixed",
+          "selector": "div.rte > div > p > a",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/policies/privacy-policy"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 354,
+          "via": "other",
+          "selector": "div.product-card__content.layout-panel-flex > div.card-gallery.spacing-style > a.contents > div.product-media-container.media-fit",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/",
+            "https://t8bnc1-5b.myshopify.com/collections/all",
+            "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+            "https://t8bnc1-5b.myshopify.com/cart"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 276,
+          "via": "other",
+          "selector": "div.product-card__content.layout-panel-flex > div.card-gallery.spacing-style > a.contents > div.product-media-container.media-fit",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/collections/all",
+            "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+            "https://t8bnc1-5b.myshopify.com/search",
+            "https://t8bnc1-5b.myshopify.com/cart"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 252,
+          "via": "fixed",
+          "selector": "div.shopify-section.ui-test-collection-list > div.section.section--page-width > div.section-resource-list__content > div.group-block.group-block--height-fit",
+          "pages": [
+            "https://t8bnc1-5b.myshopify.com/collections"
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/",
+          "section": 0,
+          "selector": "#MainContent > section.shopify-section.hero-wrapper",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-section.ui-test-product-list",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/collections/all",
+          "section": 0,
+          "selector": "#MainContent > div.shopify-section.section-wrapper",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/collections/all",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-section",
+          "px": 360
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/collections",
+          "section": 0,
+          "selector": "#MainContent > div.shopify-section.ui-test-collection-list > div.section-background",
+          "px": null
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/collections",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-section.ui-test-collection-list > div.section.section--page-width",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+          "section": 0,
+          "selector": "#MainContent > div.shopify-section",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-section",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/search",
+          "section": 0,
+          "selector": "#MainContent > div.shopify-section",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/search",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-section",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/cart",
+          "section": 0,
+          "selector": "#MainContent > div.shopify-section",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/cart",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-section.ui-test-product-list",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/pages/contact",
+          "section": 0,
+          "selector": "#MainContent > div.shopify-section.section-wrapper",
+          "px": 672
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/pages/contact",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-section.section-wrapper",
+          "px": 1440
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+          "section": 0,
+          "selector": "#MainContent > div.shopify-policy__container > div.shopify-policy__title",
+          "px": null
+        },
+        {
+          "url": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+          "section": 1,
+          "selector": "#MainContent > div.shopify-policy__container > div.shopify-policy__body",
+          "px": 521
+        }
+      ],
+      "capRegister": [
+        "contentMaxWidth differs between archetypes: 1440 (https://t8bnc1-5b.myshopify.com/), 1440 (https://t8bnc1-5b.myshopify.com/collections/all), 1440 (https://t8bnc1-5b.myshopify.com/collections), 1440 (https://t8bnc1-5b.myshopify.com/products/trail-running-shoes), 1440 (https://t8bnc1-5b.myshopify.com/search), 1440 (https://t8bnc1-5b.myshopify.com/cart), 1440 (https://t8bnc1-5b.myshopify.com/pages/contact), 585 (https://t8bnc1-5b.myshopify.com/policies/privacy-policy) — decide per template in the inconsistency register",
+        "shellMaxWidth differs between archetypes: fluid (https://t8bnc1-5b.myshopify.com/), 1440 (https://t8bnc1-5b.myshopify.com/collections/all), 1440 (https://t8bnc1-5b.myshopify.com/collections), fluid (https://t8bnc1-5b.myshopify.com/products/trail-running-shoes), fluid (https://t8bnc1-5b.myshopify.com/search), fluid (https://t8bnc1-5b.myshopify.com/cart), fluid (https://t8bnc1-5b.myshopify.com/pages/contact), 585 (https://t8bnc1-5b.myshopify.com/policies/privacy-policy)",
+        "module cap 672px on a single section (#MainContent > div.shopify-section.section-wrapper > div.section.page-width-content > div.spacing-style.layout-panel-flex, https://t8bnc1-5b.myshopify.com/pages/contact) — intent or mistake? register it",
+        "module cap 521px on a single section (div > div > p > strong, https://t8bnc1-5b.myshopify.com/policies/privacy-policy) — intent or mistake? register it"
+      ],
+      "capProvenance": {
+        "writtenBy": "skills/replica/scripts/cap-probe.mjs",
+        "writtenAt": "2026-10-10T14:44:02.093Z",
+        "baseWidth": 1440,
+        "urls": [
+          "https://t8bnc1-5b.myshopify.com/",
+          "https://t8bnc1-5b.myshopify.com/collections/all",
+          "https://t8bnc1-5b.myshopify.com/collections",
+          "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+          "https://t8bnc1-5b.myshopify.com/search",
+          "https://t8bnc1-5b.myshopify.com/cart",
+          "https://t8bnc1-5b.myshopify.com/pages/contact",
+          "https://t8bnc1-5b.myshopify.com/policies/privacy-policy"
+        ]
+      }
+    },
+    "voice": {
+      "language": "de",
+      "currency": "EUR",
+      "headline": "Browse our latest products",
+      "ctas": [
+        "Shop all",
+        "In den Warenkorb legen",
+        "Mit PayPal zahlen",
+        "Weiter einkaufen",
+        "Submit"
+      ]
+    },
+    "systemComponents": [
+      "announcement-bar",
+      "header (logo + menu + localization + search + account + cart)",
+      "menu-drawer (mobile)",
+      "search-modal",
+      "cart-drawer",
+      "footer (newsletter + copyright + policies)"
+    ],
+    "modules": []
+  }
+}

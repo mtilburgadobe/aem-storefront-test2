@@ -1,0 +1,293 @@
+{
+  "url": "https://t8bnc1-5b.myshopify.com/collections/all",
+  "width": 360,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 249,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 268,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 268,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 268,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 268,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".facets-toggle__button",
+      "frames": [
+        {
+          "t": 16255.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 16458.20000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 16660.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 16862.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".facets-mobile-wrapper .column-options__option:nth-of-type(1)",
+      "frames": [
+        {
+          "t": 17871.600000023842,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 18073.70000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 18275.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 18477.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [
+      {
+        "name": "drawer-slide-in",
+        "el": "collection-component > results-list.section.product-grid-container.color-custom-template--32544931774789__main > div.collection-wrapper.grid.gap-style > theme-drawer.facets-block-wrapper.facets-block-wrapper--vertical.color-custom-drawer > dialog.theme-drawer__dialog.theme-drawer__dialog--opening",
+        "txt": "Filtern\n    \n            \n              0\n        ",
+        "y": 0
+      }
+    ],
+    "transitions": [
+      {
+        "prop": "outline-color",
+        "el": "dialog.theme-drawer__dialog.theme-drawer__dialog--opening > facets-form-component.facets.facets--drawer.facets__form-wrapper > form.facets__form > div.theme-drawer__header > button.theme-drawer__close-button",
+        "y": 0,
+        "dur": "0.15s"
+      },
+      {
+        "prop": "background-color",
+        "el": "div.facets-mobile-wrapper.facets-controls-wrapper > div.column-options-wrapper > fieldset.column-options > label.column-options__option > span.column-picker.column-picker-mobile--single",
+        "y": 0,
+        "dur": "0.125s, 0.125s"
+      },
+      {
+        "prop": "color",
+        "el": "div.facets-mobile-wrapper.facets-controls-wrapper > div.column-options-wrapper > fieldset.column-options > label.column-options__option > span.column-picker.column-picker-mobile--single",
+        "y": 0,
+        "dur": "0.125s, 0.125s"
+      },
+      {
+        "prop": "background-color",
+        "el": "div.facets-mobile-wrapper.facets-controls-wrapper > div.column-options-wrapper > fieldset.column-options > label.column-options__option > span.column-picker.column-picker-mobile--double",
+        "y": 0,
+        "dur": "0.125s, 0.125s"
+      },
+      {
+        "prop": "color",
+        "el": "div.facets-mobile-wrapper.facets-controls-wrapper > div.column-options-wrapper > fieldset.column-options > label.column-options__option > span.column-picker.column-picker-mobile--double",
+        "y": 0,
+        "dur": "0.125s, 0.125s"
+      }
+    ],
+    "classMutations": [
+      {
+        "added": [
+          "theme-drawer__dialog--opening"
+        ],
+        "el": "collection-component > results-list.section.product-grid-container.color-custom-template--32544931774789__main > div.collection-wrapper.grid.gap-style > theme-drawer.facets-block-wrapper.facets-block-wrapper--vertical.color-custom-drawer > dialog.theme-drawer__dialog.theme-drawer__dialog--opening",
+        "y": 0
+      }
+    ]
+  }
+}

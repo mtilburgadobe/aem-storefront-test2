@@ -1,0 +1,8 @@
+/*
+ * shop-policy: Shopify policy body (shop.<policy>.body), rendered as default-content-like markup
+ * (p, h2, ul > li, strong, a). All of its styling lives in styles/shopify-policy.css
+ * (body.shopify.shop-policy main .shop-policy …), loaded on every policy page.
+ */
+.shop-policy {
+  min-width: 0;
+}

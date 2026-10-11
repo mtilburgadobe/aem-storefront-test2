@@ -1,0 +1,184 @@
+/*
+ * shop-product-grid: heading + grid of product cards (Horizon "product list" section).
+ *
+ * DOM contract (block JS must produce exactly this; data comes from the Storefront API):
+ *
+ * div.shop-product-grid
+ *   div.shop-product-grid__header
+ *     h3.shop-product-grid__heading                 "Produkte"  (h4 preset, 24px)
+ *   ul.shop-product-grid__list
+ *     li.shop-product-grid__item                    (one per product)
+ *       div.shop-product-grid__card
+ *         a.shop-product-grid__link[href][aria-label=<title>]   (empty overlay: the whole card is clickable)
+ *         div.shop-product-grid__media
+ *           a[href=/products/<handle>][aria-label=<title>]
+ *             img.shop-product-grid__image[width][height]   (CDN srcset, sizes "(min-width: 750px) 25vw, 100vw")
+ *           button.shop-product-grid__quick-add[type=button]
+ *             svg.shop-product-grid__quick-add-icon · span.shop-product-grid__quick-add-text "Hinzufügen"
+ *             · span.shop-product-grid__quick-add-added > svg (checkmark burst, shown after a successful add)
+ *         h3.shop-product-grid__zoom-title           <title>  (zoomed-out grid view only; hidden on the home grid)
+ *         a.shop-product-grid__title-link[href]
+ *           p.shop-product-grid__title[role=heading]  <title>
+ *         div.shop-product-grid__price > span.shop-product-grid__amount  "€99,99"
+ *
+ * Media keeps each image's intrinsic ratio (width/height attributes), as live does.
+ * Quick-add: 36px circle 12.8px from the media's bottom-right, opacity 0 until the card is
+ * hovered / focused (theme rule product-card:is(:hover,:focus-within)); hidden below 750px.
+ */
+
+.shop-product-grid {
+  display: grid;
+  gap: 24px;
+  padding: calc(48px * var(--shop-spacing-scale)) var(--shop-gutter);
+}
+
+.shop-product-grid .shop-product-grid__header {
+  display: flex;
+  align-items: last baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.shop-product-grid .shop-product-grid__heading {
+  max-width: min(100%, 780px);
+  margin: 0;
+  font-size: var(--shop-font-size-h4);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-product-grid .shop-product-grid__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-product-grid .shop-product-grid__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.shop-product-grid .shop-product-grid__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.shop-product-grid .shop-product-grid__media {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-product-grid .shop-product-grid__zoom-title {
+  display: none;
+}
+
+.shop-product-grid .shop-product-grid__media a {
+  display: block;
+}
+
+.shop-product-grid .shop-product-grid__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.shop-product-grid .shop-product-grid__quick-add {
+  position: absolute;
+  right: 12.8px;
+  bottom: 12.8px;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 2px solid rgb(0 0 0 / 15%);
+  border-radius: 50px;
+  background-color: #fff;
+  color: var(--shop-color-foreground);
+  opacity: 0;
+  cursor: pointer;
+  transition:
+    opacity var(--shop-animation-speed) var(--shop-ease-out-cubic),
+    scale var(--shop-animation-speed) var(--shop-ease-out-cubic);
+}
+
+.shop-product-grid .shop-product-grid__quick-add-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.shop-product-grid .shop-product-grid__quick-add-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.shop-product-grid .shop-product-grid__quick-add-added {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  translate: -50% -50%;
+}
+
+.shop-product-grid .shop-product-grid__quick-add-added svg {
+  width: 22px;
+  height: 22px;
+  opacity: 0;
+}
+
+.shop-product-grid .shop-product-grid__quick-add[data-added] .shop-product-grid__quick-add-added svg {
+  opacity: 1;
+}
+
+.shop-product-grid .shop-product-grid__card:is(:hover, :focus-within) .shop-product-grid__quick-add {
+  opacity: 1;
+}
+
+.shop-product-grid .shop-product-grid__title-link {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding-top: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.shop-product-grid .shop-product-grid__title {
+  max-width: min(100%, 455px);
+  margin: 0;
+}
+
+.shop-product-grid .shop-product-grid__price {
+  font-size: var(--shop-font-size-h6);
+  font-weight: var(--shop-font-weight-subheading);
+  line-height: var(--shop-line-height-display-loose);
+}
+
+@media (min-width: 750px) {
+  .shop-product-grid {
+    gap: 28px;
+  }
+
+  .shop-product-grid .shop-product-grid__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 8px;
+  }
+
+  .shop-product-grid .shop-product-grid__quick-add {
+    display: flex;
+  }
+}

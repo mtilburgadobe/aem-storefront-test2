@@ -1,0 +1,287 @@
+{
+  "url": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+  "width": 360,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1126,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 2324,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 3524,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 4717,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 5923,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 7124,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 6993,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 6306,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 5729,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 5217,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 4718,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 4210,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 3682,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 3120,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 2497,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1765,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1065,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 305,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 41,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [],
+  "hoverSamples": [
+    {
+      "sel": "main p a",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+        },
+        "subs": []
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+        },
+        "subs": []
+      }
+    }
+  ],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [],
+    "transitions": [],
+    "classMutations": []
+  }
+}

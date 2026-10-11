@@ -1,0 +1,9 @@
+hover:checkout: parity — live 1 changed / events [transitionstart background-color, transitionstart box-shadow]; build 1 changed / events [transitionstart background-color, transitionstart box-shadow]
+hover:remove: parity — live 2 changed / events [transitionstart transform, transitionstart transform]; build 2 changed / events [transitionstart transform, transitionstart transform]
+hover:discount: parity — live 3 changed / events []; build 3 changed / events []
+hover:plus: dead on live (build also inert)
+hover:title: dead on live (build also inert)
+hover:shop: dead on live (build also inert)
+hover:paypal: dead on live (build also inert)
+click:discount: parity — live 0 changed / events [transitionstart height, transitionstart opacity] / open height 103.1875; build 0 changed / events [transitionstart height, transitionstart opacity] / open height 103.1875
+summary @360: 4 parity, 0 diff, 4 dead on live

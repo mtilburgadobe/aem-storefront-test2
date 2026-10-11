@@ -1,0 +1,982 @@
+/*
+ * shop-product: product detail page (Horizon "product information" + "product recommendations").
+ *
+ * Data sources
+ *   [SF]  Shopify Storefront API at runtime: product(handle) { title, descriptionHtml,
+ *         featuredImage, images/media, priceRange / selected variant price, compareAtPrice,
+ *         variants (id, availableForSale) } and productRecommendations(productId).
+ *   [AEM] authored in the block table: "You may also like" heading; button/link labels are the
+ *         block's German UI strings (In den Warenkorb legen, Mit PayPal zahlen,
+ *         Weitere Bezahlmöglichkeiten, Menge verringern / erhöhen, Anzahl).
+ *   [URL] the product handle = last path segment of /products/<handle>.
+ *
+ * DOM contract (block JS must produce exactly this):
+ *
+ * div.shop-product
+ *   div.shop-product__sticky[data-stuck=true|false]          fixed quick-add bar ([SF] image/title/price)
+ *     div.shop-product__sticky-image > img                     [SF] featured image, width=120
+ *     div.shop-product__sticky-info > p.shop-product__sticky-title          [SF] title
+ *     div.shop-product__sticky-price > span.shop-product__amount            [SF] price "€129,99"
+ *     button.shop-product__add.shop-product__sticky-button[type=button]
+ *       span.shop-product__add-text > svg(cart-plus) · span.shop-product__add-label
+ *         > span "In den Warenkorb legen" · span.shop-product__add-qty[hidden] " (<n>)"
+ *       span.shop-product__add-added > svg.shop-product__burst            (see burst below)
+ *   a.shop-product__skip[href=#shop-product-details]           "Zu Produktinformationen springen"
+ *   div.shop-product__information                              (page grid)
+ *     div.shop-product__grid
+ *       div.shop-product__media
+ *         div.shop-product__gallery                            (sticky >= 750)
+ *           ul.shop-product__gallery-list                      (< 750 scroll-snap slider, >= 750 2-col grid)
+ *             li.shop-product__gallery-item                    one per [SF] image (sole item spans 2 cols)
+ *               button.shop-product__zoom-button[aria-label="Medien <n> zoomen"]
+ *               div.shop-product__gallery-media > img.shop-product__image[width][height]
+ *                 (CDN srcset 240…3840w, sizes "(min-width: 95rem) 65rem, (min-width: 750px)
+ *                  calc(100vw - 25rem - 40px - 24px - 40px), 100vw"; first image fetchpriority=high)
+ *         dialog.shop-product__zoom                            full-screen zoom (showModal)
+ *           button.shop-product__zoom-close[aria-label=Schließen] > svg
+ *           div.shop-product__zoom-thumbnails                  thumbnail rail, one button > img per [SF] image
+ *             when > 1 image (empty for a single image; it still slides in, as live)
+ *           ul.shop-product__zoom-list > li > img (sizes 100vw)
+ *       div.shop-product__details#shop-product-details        (sticky >= 750)
+ *         div.shop-product__details-inner
+ *           div.shop-product__view-title > a[href=/products/<handle>?variant=<id>]  [SF] title (display:none;
+ *             the theme's quick-add "view product" link, kept for parity)
+ *           div.shop-product__heading
+ *             h1.shop-product__title.shop-h3                   [SF] title
+ *             div.shop-product__price > span.shop-product__amount   [SF] price (+ s.compare-at if any)
+ *           div.shop-product__divider > span
+ *           form.shop-product__form                            hidden input[name=id] = [SF] variant id
+ *             div.shop-product__buttons
+ *               div.shop-product__quantity
+ *                 button.shop-product__quantity-button--minus[disabled at 1]  span.shop-visually-hidden + svg
+ *                 input.shop-product__quantity-input[type=number][min=1][value=1][aria-label=Anzahl]
+ *                 button.shop-product__quantity-button--plus   span.shop-visually-hidden + svg
+ *               button.shop-product__add.shop-product__add--main[type=submit]
+ *                 span.shop-product__add-icon > svg(cart-plus) · "In den Warenkorb legen"
+ *                 span.shop-product__add-added > svg.shop-product__burst
+ *               div.shop-product__express
+ *                 button.shop-product__paypal[type=button][aria-label="Mit PayPal zahlen"]   (register R-02)
+ *                   span "Mit" · svg.shop-product__paypal-logo (PayPal wordmark) · span "zahlen"
+ *                 a.shop-product__more-options[href=#]  "Weitere Bezahlmöglichkeiten"       (register R-03)
+ *           div.shop-product__description                      [SF] descriptionHtml (h2, p, ul, p)
+ *   div.shop-product__recommendations.shop-product-grid        canon product-grid markup, verbatim
+ *     div.shop-product-grid__header > h3.shop-product-grid__heading   [AEM] "You may also like"
+ *     ul.shop-product-grid__list > li.shop-product-grid__item × n     [SF] productRecommendations (live: 3)
+ *   (the block JS loads /blocks/shop-product-grid/shop-product-grid.css for the cards)
+ *
+ * burst: svg.shop-product__burst[viewBox="0 0 24 24"] > g.shop-product__burst-check
+ *   (circle.shop-product__burst-ring + path.shop-product__burst-tick) · g.shop-product__burst-lines
+ *   > g[style=--index:0…7] > line.shop-product__burst-line
+ *
+ * Behaviour (observed live, reproduced by the prototype's inline script; Phase 5 block JS):
+ *   - quantity stepper: −/+ change the input (min 1, minus disabled + opacity .5 at 1); the sticky
+ *     button shows " (<n>)" when n > 1.
+ *   - add to cart (main + sticky): [SF] cartCreate / cartLinesAdd, then button[data-added] for the
+ *     checkmark burst (removed after the animation + 800ms), a fly-to-cart chip from the media to the
+ *     header cart icon (.shop-product__fly, 0.6s main / 0.8s sticky); the drawer does NOT open (live).
+ *   - sticky bar: shown ([data-stuck=true]) when the buy buttons scroll out above the viewport,
+ *     hidden again when they return or when the footer comes within 200px (two IntersectionObservers,
+ *     the theme's state machine).
+ *   - zoom: zoom button opens the dialog inside document.startViewTransition, the clicked image and
+ *     the zoomed image share view-transition-name gallery-item-open (root set to none for the
+ *     transition, as the theme's :root rule); click anywhere / close button closes it.
+ *   - PayPal + "Weitere Bezahlmöglichkeiten": cartCreate with the variant + quantity, then
+ *     location = cart.checkoutUrl (register R-02 / R-03).
+ *
+ * Sibling check (live /products/<handle>.js, 2026-10-10; stardust/.work/pdp/siblings.txt):
+ *   handle               price    imgs  ratio        variants          description [SF]
+ *   trail-running-shoes  €129,99  1     1184x1184    1 (Default Title) 498 chars: h2, p, ul>li×4, p
+ *   road-running-shoes   €119,99  1     1728x2160    1 (Default Title) 492 chars: h2, p, ul>li×4, p
+ *   running-shorts        €44,99  1     1728x2160    1 (Default Title) 487 chars: h2, p, ul>li×5, p
+ *   road-bike-helmet      €99,99  1     2104x2328    1 (Default Title) 542 chars: h2, p, ul>li×5, p
+ *   All available, no compare-at price, no option picker (Default Title only → the block renders
+ *   no variant picker; the hidden id input carries the single variant). The only layout driver
+ *   that varies is the image ratio: set --shop-product-media-ratio = width/height of the first
+ *   image (360: gallery height follows it, live details y 501 helmet / 553 shorts; ≥ 750 the
+ *   max(500px, 100vh − header) cap makes it 883×832 for all four, measured live). The details
+ *   column height follows the description (live 1440: 649 trail / 671 shorts / 767 helmet).
+ */
+
+/* ---------- information grid ---------- */
+.shop-product .shop-product__information {
+  position: relative;
+}
+
+.shop-product .shop-product__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.shop-product .shop-product__media {
+  min-width: 0;
+}
+
+.shop-product .shop-product__gallery {
+  position: relative;
+}
+
+.shop-product .shop-product__gallery-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+
+.shop-product .shop-product__gallery-item {
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+/* --shop-product-media-ratio: first [SF] image width / height (theme --gallery-aspect-ratio) */
+.shop-product .shop-product__gallery-media {
+  display: flex;
+  flex-shrink: 0;
+  width: round(up, 100%, 1px); /* theme --slide-width */
+  aspect-ratio: var(--shop-product-media-ratio, 1);
+}
+
+.shop-product .shop-product__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: inherit;
+  object-fit: contain;
+  object-position: center center;
+  background-color: var(--shop-color-background);
+}
+
+.shop-product .shop-product__zoom-button {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.shop-product .shop-product__details {
+  display: flex;
+  align-self: start;
+  justify-content: center;
+  padding-inline: var(--shop-gutter);
+}
+
+.shop-product .shop-product__details-inner {
+  display: flex;
+  flex-direction: column;
+  gap: max(24px, calc(28px * var(--shop-spacing-scale)));
+  width: 100%;
+  padding-block: max(20px, calc(24px * var(--shop-spacing-scale)));
+}
+
+.shop-product .shop-product__view-title {
+  display: none;
+}
+
+.shop-product .shop-product__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.shop-product .shop-product__title {
+  width: 100%;
+  margin: 0;
+}
+
+.shop-product .shop-product__price {
+  display: flex;
+  width: 100%;
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+/* [SF] compare-at price (theme .compare-at-price); no product has one today */
+.shop-product .shop-product__compare-at {
+  margin-inline-start: 8px;
+  color: rgb(var(--shop-color-foreground-rgb) / 80%);
+  text-decoration-line: line-through;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: rgb(var(--shop-color-foreground-rgb) / 30%);
+}
+
+/* variant picker, only when > 1 variant (theme variant-option--buttons); none live today:
+   div.shop-product__variant-picker > fieldset.shop-product__variant-option > legend
+   + label.shop-product__variant-label > input[type=radio] + span.shop-product__variant-text */
+.shop-product .shop-product__variant-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.shop-product .shop-product__variant-option {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11.2px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.shop-product .shop-product__variant-legend {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.shop-product .shop-product__variant-label {
+  position: relative;
+  display: flex;
+  flex: 0 0 3.25em;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+  min-height: 3.25em;
+  padding: 11.2px 16px;
+  overflow: clip;
+  border: 1px solid var(--shop-color-border);
+  border-radius: var(--shop-radius-button);
+  background-color: #fff;
+  color: var(--shop-color-foreground);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.shop-product .shop-product__variant-label input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.shop-product .shop-product__variant-label:has(:checked) {
+  border-color: var(--shop-color-foreground);
+  background-color: var(--shop-color-foreground);
+  color: var(--shop-color-background);
+}
+
+.shop-product .shop-product__variant-label:has([data-option-available='false']) .shop-product__variant-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.shop-product .shop-product__variant-label:has(:focus-visible) {
+  outline: 1.5px solid var(--shop-color-foreground);
+  outline-offset: 0.2em;
+}
+
+.shop-product .shop-product__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-product .shop-product__divider span {
+  flex-basis: 100%;
+  border-bottom: 1px solid var(--shop-color-border);
+}
+
+/* ---------- buy buttons ---------- */
+.shop-product .shop-product__form {
+  margin: 0;
+}
+
+.shop-product .shop-product__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5.6px;
+}
+
+.shop-product .shop-product__buttons > :not(.shop-product__quantity) {
+  flex: 1 1 51%;
+  min-width: fit-content;
+}
+
+.shop-product .shop-product__quantity {
+  display: flex;
+  flex: 0 0 126px;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  border: 1px solid var(--shop-color-border);
+  border-radius: var(--shop-radius-button);
+  background-color: #fff;
+  color: var(--shop-color-input-text);
+}
+
+.shop-product .shop-product__quantity-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--shop-touch-target);
+  height: var(--shop-touch-target);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--shop-color-input-text);
+  cursor: pointer;
+  transition:
+    color var(--shop-animation-speed) ease-in-out,
+    box-shadow var(--shop-animation-speed) ease-in-out,
+    background-color var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-product .shop-product__quantity-button--minus {
+  border-radius: var(--shop-radius-button) 0 0 var(--shop-radius-button);
+}
+
+.shop-product .shop-product__quantity-button--plus {
+  border-radius: 0 var(--shop-radius-button) var(--shop-radius-button) 0;
+}
+
+.shop-product .shop-product__quantity-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.shop-product .shop-product__quantity-button svg {
+  width: 13.6px;
+  height: 13.6px;
+}
+
+.shop-product .shop-product__quantity-input {
+  width: 36px;
+  margin: 0;
+  padding: 1px 0;
+  border: 0;
+  background: transparent;
+  color: var(--shop-color-input-text);
+  font-size: var(--shop-font-size-paragraph);
+  line-height: var(--shop-line-height-paragraph);
+  text-align: center;
+  appearance: textfield;
+  outline: none;
+}
+
+.shop-product .shop-product__quantity-input::-webkit-inner-spin-button,
+.shop-product .shop-product__quantity-input::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+/* add to cart (main + sticky), checkmark burst lifted from the theme's add-to-cart-button */
+.shop-product .shop-product__add {
+  --shop-atc-text-speed: 0.26;
+  --shop-atc-base-delay: calc(var(--shop-atc-text-speed) * 0.25);
+  --shop-atc-tick-speed: 0.1;
+  --shop-atc-ring-speed: 0.2;
+  --shop-atc-check-speed: 0.2;
+  --shop-atc-burst-speed: 0.32;
+  --shop-atc-step-delay: 3;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8px;
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding: 16px 24px;
+  border: 0;
+  border-radius: var(--shop-radius-button);
+  background-color: var(--shop-color-primary-button-bg);
+  color: var(--shop-color-primary-button-text);
+  box-shadow: inset 0 0 0 0 var(--shop-color-primary-button-bg);
+  font-size: var(--shop-font-size-paragraph);
+  font-weight: var(--shop-font-weight-body);
+  line-height: var(--shop-line-height-paragraph);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, box-shadow, background-color, scale, translate;
+  transition-duration: var(--shop-animation-speed);
+  transition-timing-function: var(--shop-ease-out-cubic);
+}
+
+.shop-product .shop-product__add:active {
+  scale: 0.99;
+  translate: 0 1px;
+}
+
+.shop-product .shop-product__add-icon,
+.shop-product .shop-product__add-text > svg {
+  display: flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.shop-product .shop-product__add-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.8px;
+  clip-path: circle(100% at 50% 50%);
+  transition-property: clip-path, opacity, filter, translate;
+  transition-duration: calc(var(--shop-atc-text-speed) * 0.6s), calc(var(--shop-atc-text-speed) * 1s);
+  transition-timing-function: ease-out;
+}
+
+.shop-product .shop-product__add-added {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  translate: -50% -50%;
+}
+
+.shop-product .shop-product__add[data-added] .shop-product__add-added {
+  color: var(--shop-color-primary-button-text);
+  animation-name: atc-slide;
+}
+
+.shop-product .shop-product__add[data-added] {
+  color: transparent;
+}
+
+.shop-product .shop-product__add[data-added] .shop-product__add-text {
+  clip-path: circle(0% at 50% 50%);
+  filter: blur(2px);
+  opacity: 0;
+  translate: 0 4px;
+}
+
+.shop-product .shop-product__burst {
+  width: 30px;
+  height: 30px;
+  overflow: visible;
+  opacity: 0;
+}
+
+.shop-product .shop-product__burst :is(.shop-product__burst-ring, .shop-product__burst-line, .shop-product__burst-check, .shop-product__burst-lines, .shop-product__burst-tick) {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.shop-product .shop-product__burst-lines {
+  rotate: 20deg;
+}
+
+.shop-product .shop-product__burst-lines g {
+  transform-origin: center;
+  rotate: calc(var(--index) * 45deg);
+}
+
+.shop-product .shop-product__burst-check {
+  opacity: 0.2;
+  scale: 0.8;
+  filter: blur(2px);
+  transform: translateZ(0);
+}
+
+.shop-product .shop-product__burst-line {
+  stroke-dasharray: 1.5 1.5;
+  stroke-dashoffset: -1.5;
+  translate: 0 -180%;
+}
+
+.shop-product .shop-product__add[data-added] .shop-product__burst {
+  opacity: 1;
+}
+
+.shop-product .shop-product__add[data-added] .shop-product__burst-check {
+  opacity: 1;
+  scale: 1;
+  filter: blur(0);
+  transition: opacity, scale, filter;
+  transition-duration: calc(var(--shop-atc-check-speed) * 1s);
+  transition-delay: calc(var(--shop-atc-base-delay) * 1s);
+  transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.shop-product .shop-product__add[data-added] .shop-product__burst-tick {
+  scale: 1.75;
+  transition: scale calc(var(--shop-atc-tick-speed) * 1s) ease-out;
+  transition-delay: calc((var(--shop-atc-base-delay) + (var(--shop-atc-check-speed) * (var(--shop-atc-step-delay) * 1.1))) * 1s);
+}
+
+.shop-product .shop-product__add[data-added] .shop-product__burst-ring {
+  opacity: 0;
+  scale: 1;
+  transition: opacity, scale;
+  transition-duration: calc(var(--shop-atc-ring-speed) * 1s);
+  transition-delay: calc((var(--shop-atc-base-delay) + (var(--shop-atc-check-speed) * var(--shop-atc-step-delay))) * 1s);
+  transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.shop-product .shop-product__add[data-added] .shop-product__burst-line {
+  stroke-dashoffset: 1.5;
+  transition: stroke-dashoffset calc(var(--shop-atc-burst-speed) * 1s) var(--shop-ease-out-cubic);
+  transition-delay: calc((var(--shop-atc-base-delay) + (var(--shop-atc-check-speed) * var(--shop-atc-step-delay))) * 1s);
+}
+
+/* theme keyframe; the added-state runs it with the default 0s duration (fires, no visible motion) */
+@keyframes atc-slide {
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* sold-out state ([SF] availableForSale false): theme disabled add-to-cart */
+.shop-product .shop-product__add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* PayPal express button (register R-02: same look, hosted-checkout handoff) */
+.shop-product .shop-product__express {
+  display: block;
+}
+
+.shop-product .shop-product__paypal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding: 0 17px;
+  border: 0;
+  border-radius: var(--shop-radius-button);
+  background-color: #ffc439;
+  color: #2c2e2f;
+  font-family: system-ui, -apple-system, roboto, 'Segoe UI', helvetica-neue, helvetica, arial, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.shop-product .shop-product__paypal span {
+  display: block;
+  translate: 0 -1px;
+}
+
+.shop-product .shop-product__paypal-logo {
+  display: block;
+  width: 75.75px;
+  height: 24px;
+}
+
+.shop-product .shop-product__more-options {
+  display: block;
+  margin-top: 11.667px;
+  color: var(--shop-color-foreground);
+  font-size: 11.667px;
+  line-height: 18.667px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 1.458px;
+  transition:
+    text-decoration-color var(--shop-animation-speed) ease-in-out,
+    color var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-product .shop-product__more-options:hover {
+  color: var(--shop-color-foreground);
+  text-decoration: underline;
+}
+
+/* ---------- description (theme rte text block) ---------- */
+.shop-product .shop-product__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-product .shop-product__description :is(h1, h2, h3, h4, h5, h6, p, ul, ol, li) {
+  width: 100%;
+  text-wrap: pretty;
+}
+
+.shop-product .shop-product__description h2 {
+  margin-block: 0 0.25em;
+}
+
+.shop-product .shop-product__description p {
+  margin-block: 7px;
+}
+
+.shop-product .shop-product__description ul {
+  margin: 0 0 14px;
+  padding-left: 21px;
+  list-style: disc;
+}
+
+.shop-product .shop-product__description > :first-child {
+  margin-top: 0;
+}
+
+.shop-product .shop-product__description > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- recommendations (canon product grid; theme resource-list gap 12px, card gap 8px) ---------- */
+.shop-product .shop-product__recommendations .shop-product-grid__list {
+  column-gap: 12px;
+}
+
+.shop-product .shop-product__recommendations .shop-product-grid__card {
+  gap: 8px;
+  padding-bottom: 8px;
+}
+
+/* ---------- header nav on a page with no current link (canon request filed) ----------
+   live: the theme subdues the other links only while one link is current, hovered or focused;
+   on the PDP none is current, so at rest every link renders full foreground. */
+@media (min-width: 750px) {
+  body.shopify:has(.shop-product) .shop-header .shop-header__menu:not(:has([aria-current='page'], li:hover, li:focus-within)) .shop-header__link {
+    color: var(--shop-color-foreground);
+  }
+}
+
+/* ---------- skip link ---------- */
+.shop-product .shop-product__skip:focus-visible {
+  position: absolute !important;
+  z-index: var(--shop-layer-temporary);
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 16px 24px;
+  overflow: visible;
+  clip-path: none;
+  background: var(--shop-color-background);
+}
+
+/* ---------- sticky quick-add bar ---------- */
+.shop-product .shop-product__sticky {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: calc(var(--shop-layer-sticky) - 1);
+  display: flex;
+  align-items: center;
+  gap: 14.4px;
+  width: 100%;
+  padding: 11.2px;
+  border-radius: 0;
+  background-color: var(--shop-color-background);
+  box-shadow: var(--shop-shadow-popover);
+  opacity: 0;
+  transform: translate(-50%) translateY(calc(100% + 40px));
+  transition-behavior: allow-discrete;
+  transition-property: transform, opacity, display;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.shop-product .shop-product__sticky::before {
+  --shop-sticky-border: 1px;
+
+  content: '';
+  position: absolute;
+  inset: calc(var(--shop-sticky-border) * -1);
+  z-index: -1;
+  border: var(--shop-sticky-border) solid #0000;
+  border-radius: inherit;
+  background: linear-gradient(var(--shop-color-background) 0 100%), linear-gradient(#00000026 0 100%);
+  background-clip: content-box, border-box;
+  backdrop-filter: blur(20px) saturate(180%) brightness(1.5);
+}
+
+.shop-product .shop-product__sticky[data-stuck='true'] {
+  opacity: 1;
+  transform: translate(-50%) translateY(0);
+}
+
+.shop-product .shop-product__sticky-image {
+  flex-shrink: 0;
+  height: 52px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--shop-radius-button);
+}
+
+.shop-product .shop-product__sticky-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-product .shop-product__sticky-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-product .shop-product__sticky-title {
+  overflow: hidden;
+  margin: 0;
+  font-size: var(--shop-font-size-paragraph);
+  line-height: var(--shop-line-height-paragraph);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.shop-product .shop-product__sticky-button {
+  flex: 0 0 auto;
+  width: 52px;
+  padding: 16px;
+}
+
+.shop-product .shop-product__sticky-button .shop-product__add-label {
+  display: none;
+}
+
+/* fly-to-cart chip (theme fly-to-cart--main / --sticky) */
+.shop-product-fly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  width: var(--width, 40px);
+  height: var(--height, 40px);
+  overflow: hidden;
+  border-radius: var(--shop-radius-button);
+  background-color: var(--shop-color-foreground);
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  pointer-events: none;
+  translate: var(--start-x, 0) var(--start-y, 0);
+  transform: translate(-50%, -50%);
+  animation-name: travel-x, travel-y, travel-scale;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.7, -5, 0.98, 0.5), cubic-bezier(0.15, 0.57, 0.9, 1.05), cubic-bezier(0.85, 0.05, 0.96, 1);
+  animation-fill-mode: both;
+  animation-composition: accumulate;
+}
+
+.shop-product-fly--sticky {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.98, -0.1, 0.92, 0.5), cubic-bezier(0.14, 0.56, 0.92, 1.04), cubic-bezier(0.86, 0.08, 0.98, 0.98);
+}
+
+@keyframes travel-x {
+  to {
+    translate: var(--travel-x, 0) 0;
+  }
+}
+
+@keyframes travel-y {
+  to {
+    translate: 0 var(--travel-y, 0);
+  }
+}
+
+@keyframes travel-scale {
+  0% {
+    opacity: var(--start-opacity, 1);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  100% {
+    border-radius: 50%;
+    opacity: 1;
+    transform: translate(-50%, calc(-50% + 10px)) scale(0.25);
+  }
+}
+
+/* ---------- zoom dialog ---------- */
+.shop-product .shop-product__zoom {
+  --shop-spring-d220-easing: linear(0, 0.0093 1.37%, 0.0696 4.12%, 0.4667 15.09%, 0.6322 20.58%, 0.6986 23.32%, 0.7793 27.44%, 0.8219 30.18%, 0.8721, 0.9089 38.42%, 0.9427, 0.9644, 0.978 54.88%, 0.9881 61.74%, 0.9944 69.97%, 0.998 80.95%, 0.9996 98.78%);
+
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  border: 0;
+  background-color: var(--shop-color-background);
+  cursor: zoom-out;
+  view-transition-name: zoom-dialog-ui;
+}
+
+.shop-product .shop-product__zoom::backdrop {
+  background: transparent;
+}
+
+.shop-product .shop-product__zoom-thumbnails {
+  position: relative;
+  display: inline-flex;
+  gap: 8px;
+  margin-inline: auto;
+  padding: 16px;
+  overflow-x: auto;
+  opacity: 0;
+  scrollbar-width: none;
+  animation: shop-product-thumbnails-slide-in-bottom calc(var(--shop-animation-speed) * 0.75) ease-in-out forwards;
+  animation-delay: calc(var(--shop-animation-speed) * 1.5);
+}
+
+/* theme thumbnailsSlideInBottom / thumbnailsSlideInTop, renamed for the kebab-case keyframe rule */
+@keyframes shop-product-thumbnails-slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shop-product-thumbnails-slide-in-top {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-50% + 16px));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+.shop-product .shop-product__zoom-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-product .shop-product__zoom-list img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shop-product .shop-product__zoom-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--shop-touch-target);
+  height: var(--shop-touch-target);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+.shop-product .shop-product__zoom-close svg {
+  width: 13.6px;
+  height: 13.6px;
+}
+
+/* ---------- >= 750px: two columns, sticky media + buy box ---------- */
+@media (min-width: 750px) {
+  .shop-product .shop-product__information {
+    padding-inline: var(--shop-gutter);
+  }
+
+  .shop-product .shop-product__grid {
+    grid-template-columns: minmax(0, 1fr) min(50vw, 400px);
+  }
+
+  .shop-product .shop-product__media {
+    padding-right: 24px;
+  }
+
+  .shop-product .shop-product__gallery {
+    position: sticky;
+    top: 0;
+  }
+
+  .shop-product .shop-product__gallery-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+    overflow: visible;
+  }
+
+  .shop-product .shop-product__gallery-item:only-child {
+    grid-column: span 2;
+  }
+
+  .shop-product .shop-product__gallery-media {
+    /* theme: max(500px, 100vh - --header-height); the theme measures the header row in whole px */
+    max-height: max(500px, calc(100vh - round(down, var(--shop-header-row-height), 1px)));
+    margin-inline: auto;
+  }
+
+  .shop-product .shop-product__details {
+    position: sticky;
+    top: var(--shop-header-row-height);
+    padding-inline: 24px 0;
+  }
+
+  .shop-product .shop-product__buttons {
+    gap: 11.2px;
+  }
+
+  .shop-product .shop-product__zoom-thumbnails {
+    position: fixed;
+    inset: 50% 16px auto auto;
+    z-index: 2;
+    flex-direction: column;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    animation: shop-product-thumbnails-slide-in-top 0.3818s var(--shop-spring-d220-easing) forwards;
+    animation-delay: calc(0.3818s * 0.5);
+  }
+
+  .shop-product .shop-product__sticky {
+    bottom: 20px;
+    width: 600px;
+    border-radius: 25.2px;
+  }
+
+  .shop-product .shop-product__sticky::before {
+    --shop-sticky-border: 2px;
+  }
+
+  .shop-product .shop-product__sticky-button {
+    width: auto;
+    padding: 16px 24px;
+  }
+
+  .shop-product .shop-product__sticky-button .shop-product__add-label {
+    display: inline;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shop-product .shop-product__grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
