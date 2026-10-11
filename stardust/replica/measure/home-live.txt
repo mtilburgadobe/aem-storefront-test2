@@ -1,0 +1,130 @@
+measure  https://t8bnc1-5b.myshopify.com/
+  widths 1440, 360 · 21 selector(s) · 24 props · first match
+
+@ 1440px
+  root  scrollWidth  1440  viewport 1440  scrollHeight   1408
+  .announcement-bar
+       x     0  y      0  w  1440  h    43  vis  "Welcome to our store"
+      display: grid; position: relative; boxSizing: border-box; width: 1440px; height: 43px; maxWidth: none; margin: 0px; padding: 15px 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: ; boxShadow: none; opacity: 1; objectFit: fill
+  .header__row--top
+       x     0  y     43  w  1440  h    68  vis  "Mein Shop Startseite Katalog Kontakt EU…"
+      display: grid; position: relative; boxSizing: border-box; width: 1440px; height: 68.375px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: ; boxShadow: none; opacity: 1; objectFit: fill
+  .header__columns
+       x    40  y     43  w  1360  h    68  vis  "Mein Shop Startseite Katalog Kontakt EU…"
+      display: grid; position: static; boxSizing: border-box; width: 1360px; height: 68.375px; maxWidth: none; margin: 0px; padding: 11.2px 0px; gap: 20px; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .header-logo
+       x    40  y     54  w    82  h    46  vis  "Mein Shop"
+      display: flex; position: static; boxSizing: border-box; width: 82px; height: 46px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 16px; fontWeight: 600; lineHeight: 25.6px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .menu-list__link [1 of 4]
+       x   132  y     54  w    85  h    46  vis  "Startseite"
+      display: flex; position: static; boxSizing: border-box; width: 85.375px; height: 46px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 23.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .header-actions__action [1 of 5]
+       x     0  y      0  w     0  h     0  hid  "Suche"
+      display: flex; position: static; boxSizing: border-box; width: auto; height: auto; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: normal; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .hero__container
+       x     0  y    111  w  1440  h   474  vis  "Browse our latest products Shop all"
+      display: grid; position: relative; boxSizing: border-box; width: 1440px; height: 474px; maxWidth: none; margin: 0px; padding: 100px 0px 72px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .hero__content-wrapper .text-block p
+       x   420  y    387  w   600  h    48  vis  "Browse our latest products"
+      display: block; position: static; boxSizing: border-box; width: 600px; height: 48px; maxWidth: min(100%, 1560px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(255, 255, 255); fontFamily: Inter, sans-serif; fontSize: 48px; fontWeight: 700; lineHeight: 48px; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 0px; border: 0px none rgb(255, 255, 255); boxShadow: none; opacity: 1; objectFit: fill
+  .hero .button-custom
+       x   670  y    459  w   100  h    54  vis  "Shop all"
+      display: grid; position: static; boxSizing: border-box; width: 100px; height: 54.3906px; maxWidth: none; margin: 0px; padding: 16px 24px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(255, 255, 255); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 14px; border: 0px none rgb(255, 255, 255); boxShadow: rgb(255, 255, 255) 0px 0px 0px 1px inset; opacity: 1; objectFit: fill
+  .section-resource-list__header h3
+       x    40  y    633  w   104  h    24  vis  "Produkte"
+      display: block; position: static; boxSizing: border-box; width: 104px; height: 24px; maxWidth: min(100%, 780px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 24px; fontWeight: 700; lineHeight: 24px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .resource-list--grid
+       x    40  y    685  w  1360  h   466  vis  "Hinzufügen Road Bike Helmet €99,99 Hinz…"
+      display: grid; position: static; boxSizing: border-box; width: 1360px; height: 466.281px; maxWidth: none; margin: 0px; padding: 0px; gap: 24px 8px; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .resource-list__item [1 of 4]
+       x    40  y    685  w   334  h   466  vis  "Hinzufügen Road Bike Helmet €99,99"
+      display: block; position: static; boxSizing: border-box; width: 334px; height: 466.281px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .product-media-container [1 of 4]
+       x    40  y    685  w   334  h   370  vis  ""
+      display: flex; position: relative; boxSizing: border-box; width: 334px; height: 369.547px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .product-card p[role=heading] [1 of 4]
+       x    40  y   1063  w   334  h    22  vis  "Road Bike Helmet"
+      display: block; position: static; boxSizing: border-box; width: 334px; height: 22.3906px; maxWidth: min(100%, 455px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .product-card .price [1 of 4]
+       x    40  y   1088  w    44  h    15  vis  "€99,99"
+      display: inline; position: static; boxSizing: border-box; width: auto; height: auto; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 12px; fontWeight: 500; lineHeight: 14.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .quick-add__button [1 of 4]
+       x   325  y   1006  w    36  h    36  vis  "Hinzufügen"
+      display: flex; position: absolute; boxSizing: border-box; width: 36px; height: 36px; maxWidth: calc(100% - 12.8px); margin: 0px; padding: 0px; gap: 0px; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 100%); color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 50px; border: 2px solid rgba(0, 0, 0, 0.15); boxShadow: rgb(0, 0, 0) 0px 0px 0px 0px inset; opacity: 0; objectFit: fill
+  footer
+       x     0  y   1200  w  1440  h   208  vis  "Join our email list Get exclusive deals…"
+      display: block; position: static; boxSizing: border-box; width: 1440px; height: 208.188px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .email-signup__heading   no match
+  footer h2
+       x    40  y   1230  w   670  h    24  vis  "Join our email list"
+      display: block; position: static; boxSizing: border-box; width: 670px; height: 24px; maxWidth: min(100%, 780px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 24px; fontWeight: 700; lineHeight: 24px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .email-signup__input
+       x   731  y   1231  w   610  h    58  vis  ""
+      display: block; position: static; boxSizing: border-box; width: 610px; height: 58px; maxWidth: none; margin: 0px; padding: 16px 28px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(51, 51, 51); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(51, 51, 51); boxShadow: none; opacity: 1; objectFit: fill
+  footer .footer-utilities
+       x     0  y   1320  w  1440  h    88  vis  "© 2026 Mein Shop, Powered by Shopify Ge…"
+      display: block; position: relative; boxSizing: border-box; width: 1440px; height: 88.1875px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+
+@ 360px
+  root  scrollWidth   360  viewport 360  scrollHeight   1358
+  .announcement-bar
+       x     0  y      0  w   360  h    43  vis  "Welcome to our store"
+      display: grid; position: relative; boxSizing: border-box; width: 360px; height: 43px; maxWidth: none; margin: 0px; padding: 15px 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: ; boxShadow: none; opacity: 1; objectFit: fill
+  .header__row--top
+       x     0  y     43  w   360  h    60  vis  "Mein Shop"
+      display: grid; position: relative; boxSizing: border-box; width: 360px; height: 60px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: ; boxShadow: none; opacity: 1; objectFit: fill
+  .header__columns
+       x     0  y     43  w   360  h    60  vis  "Mein Shop"
+      display: grid; position: static; boxSizing: border-box; width: 360px; height: 60px; maxWidth: none; margin: 0px; padding: 0px 16px; gap: 20px 0px; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .header-logo
+       x   104  y     43  w   152  h    60  vis  "Mein Shop"
+      display: flex; position: static; boxSizing: border-box; width: 152px; height: 60px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 16px; fontWeight: 600; lineHeight: 25.6px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .menu-list__link [1 of 4]
+       x     0  y      0  w     0  h     0  hid  "Startseite"
+      display: flex; position: static; boxSizing: border-box; width: auto; height: 100%; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 23.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .header-actions__action [1 of 5]
+       x    60  y     51  w    44  h    44  vis  ""
+      display: flex; position: static; boxSizing: border-box; width: 44px; height: 44px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: normal; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .hero__container
+       x     0  y    103  w   360  h   297  vis  "Browse our latest products Shop all"
+      display: grid; position: relative; boxSizing: border-box; width: 360px; height: 297px; maxWidth: none; margin: 0px; padding: 70px 0px 50.4px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .hero__content-wrapper .text-block p
+       x    16  y    199  w   328  h    72  vis  "Browse our latest products"
+      display: block; position: static; boxSizing: border-box; width: 328px; height: 72px; maxWidth: min(100%, 1170px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(255, 255, 255); fontFamily: Inter, sans-serif; fontSize: 36px; fontWeight: 700; lineHeight: 36px; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 0px; border: 0px none rgb(255, 255, 255); boxShadow: none; opacity: 1; objectFit: fill
+  .hero .button-custom
+       x   130  y    295  w   100  h    54  vis  "Shop all"
+      display: grid; position: static; boxSizing: border-box; width: 100px; height: 54.3906px; maxWidth: none; margin: 0px; padding: 16px 24px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(255, 255, 255); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 14px; border: 0px none rgb(255, 255, 255); boxShadow: rgb(255, 255, 255) 0px 0px 0px 1px inset; opacity: 1; objectFit: fill
+  .section-resource-list__header h3
+       x    16  y    434  w   104  h    24  vis  "Produkte"
+      display: block; position: static; boxSizing: border-box; width: 104px; height: 24px; maxWidth: min(100%, 780px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 24px; fontWeight: 700; lineHeight: 24px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .resource-list--grid
+       x    16  y    482  w   328  h   510  vis  "Road Bike Helmet €99,99 Road Running Sh…"
+      display: grid; position: static; boxSizing: border-box; width: 328px; height: 509.562px; maxWidth: none; margin: 0px; padding: 0px; gap: 12px 8px; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .resource-list__item [1 of 4]
+       x    16  y    482  w   160  h   249  vis  "Road Bike Helmet €99,99"
+      display: block; position: static; boxSizing: border-box; width: 160px; height: 248.781px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .product-media-container [1 of 4]
+       x    16  y    482  w   160  h   177  vis  ""
+      display: flex; position: relative; boxSizing: border-box; width: 160px; height: 177.031px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .product-card p[role=heading] [1 of 4]
+       x    16  y    667  w   160  h    22  vis  "Road Bike Helmet"
+      display: block; position: static; boxSizing: border-box; width: 160px; height: 22.3906px; maxWidth: min(100%, 455px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .product-card .price [1 of 4]
+       x    16  y    692  w    44  h    15  vis  "€99,99"
+      display: inline; position: static; boxSizing: border-box; width: auto; height: auto; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 12px; fontWeight: 500; lineHeight: 14.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .quick-add__button [1 of 4]
+       x     0  y      0  w     0  h     0  hid  "Hinzufügen"
+      display: none; position: absolute; boxSizing: border-box; width: 36px; height: 36px; maxWidth: calc(100% - 11.2px); margin: 0px; padding: 0px; gap: 0px; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: linear-gradient(rgb(255, 255, 255) 0px, rgb(255, 255, 255) 100%); color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: center; borderRadius: 50px; border: 2px solid rgba(0, 0, 0, 0.15); boxShadow: rgb(0, 0, 0) 0px 0px 0px 0px inset; opacity: 0; objectFit: fill
+  footer
+       x     0  y   1025  w   360  h   334  vis  "Join our email list Get exclusive deals…"
+      display: block; position: static; boxSizing: border-box; width: 360px; height: 333.562px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .email-signup__heading   no match
+  footer h2
+       x    16  y   1046  w   328  h    24  vis  "Join our email list"
+      display: block; position: static; boxSizing: border-box; width: 328px; height: 24px; maxWidth: min(100%, 780px); margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 24px; fontWeight: 700; lineHeight: 24px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill
+  .email-signup__input
+       x    17  y   1142  w   268  h    58  vis  ""
+      display: block; position: static; boxSizing: border-box; width: 268px; height: 58px; maxWidth: none; margin: 0px; padding: 16px 28px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(51, 51, 51); fontFamily: Inter, sans-serif; fontSize: 16px; fontWeight: 400; lineHeight: 25.6px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(51, 51, 51); boxShadow: none; opacity: 1; objectFit: fill
+  footer .footer-utilities
+       x     0  y   1222  w   360  h   137  vis  "© 2026 Mein Shop, Powered by Shopify Ge…"
+      display: block; position: relative; boxSizing: border-box; width: 360px; height: 136.781px; maxWidth: none; margin: 0px; padding: 0px; gap: normal; backgroundColor: rgba(0, 0, 0, 0); backgroundImage: none; color: rgb(0, 0, 0); fontFamily: Inter, sans-serif; fontSize: 14px; fontWeight: 400; lineHeight: 22.4px; letterSpacing: normal; textTransform: none; textAlign: start; borderRadius: 0px; border: 0px none rgb(0, 0, 0); boxShadow: none; opacity: 1; objectFit: fill

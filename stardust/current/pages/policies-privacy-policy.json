@@ -1,0 +1,524 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-10-10T14:39:40.734Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "policies-privacy-policy",
+  "url": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-10-10T14:39:40.734Z",
+  "finalUrl": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+  "title": "Datenschutzerklärung – Mein Shop",
+  "description": null,
+  "og": {
+    "title": "Datenschutzerklärung",
+    "description": "Mein Shop",
+    "image": null,
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Datenschutzerklärung"
+    },
+    {
+      "tag": "h2",
+      "text": "Welche personenbezogenen Daten erfassen oder verarbeiten wir?"
+    },
+    {
+      "tag": "h2",
+      "text": "Quellen von personenbezogenen Daten"
+    },
+    {
+      "tag": "h2",
+      "text": "Wie verwenden wir Ihre personenbezogene Daten?"
+    },
+    {
+      "tag": "h2",
+      "text": "Wie geben wir personenbezogene Daten weiter?"
+    },
+    {
+      "tag": "h2",
+      "text": "Beziehung mit Shopify"
+    },
+    {
+      "tag": "h2",
+      "text": "Websites und Links von Drittanbietern"
+    },
+    {
+      "tag": "h2",
+      "text": "Daten von Kindern"
+    },
+    {
+      "tag": "h2",
+      "text": "Sicherheit und Aufbewahrung Ihrer Daten"
+    },
+    {
+      "tag": "h2",
+      "text": "Ihre Rechte und Möglichkeiten"
+    },
+    {
+      "tag": "h2",
+      "text": "Beschwerden"
+    },
+    {
+      "tag": "h2",
+      "text": "Internationale Übertragungen"
+    },
+    {
+      "tag": "h2",
+      "text": "Änderungen an dieser Datenschutzerklärung"
+    },
+    {
+      "tag": "h2",
+      "text": "Kontakt"
+    },
+    {
+      "tag": "h2",
+      "text": "Join our email list"
+    }
+  ],
+  "body": [
+    "Letzte Fassung: 10. Oktober 2026",
+    "Mein Shop betreibt diesen Shop und diese Website, einschließlich aller zugehörigen Informationen, Inhalte, Funktionen, Tools, Produkte und Services, um Ihnen als Kunde ein individuelles Einkaufserlebnis bereitzustellen (die „Services“). Mein Shop basiert auf Shopify, wodurch wir in der Lage sind, Ihnen die Services bereitzustellen. In dieser Datenschutzerklärung wird beschrieben, wie wir personenbezogene Daten erfassen, verwenden oder weitergeben, wenn Sie die Website besuchen, nutzen oder einen Kauf oder eine andere Transaktion unter Verwendung der Services tätigen oder anderweitig mit uns kommunizieren. Wenn es einen Konflikt zwischen unseren allgemeinen Geschäftsbedingungen und dieser Datenschutzerklärung gibt, hat diese Datenschutzerklärung Vorrang in Bezug auf die Erfassung, Verarbeitung und Weitergabe Ihrer personenbezogenen Daten.",
+    "Lesen Sie sich diese Datenschutzerklärung bitte sorgfältig durch. Indem Sie einen der Services nutzen und darauf zugreifen, bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen haben und mit der Erfassung, Verwendung und Weitergabe Ihrer Daten, wie in dieser Datenschutzerklärung beschrieben, einverstanden sind.",
+    "Wenn wir den Begriff „personenbezogene Daten“ verwenden, beziehen wir uns auf Informationen, die Sie oder eine andere Person identifizieren oder unmittelbar mit Ihnen in Verbindung gebracht werden können. Personenbezogene Daten umfassen keine Informationen, die anonym erfasst oder so anonymisiert wurden, dass eine Identifizierung oder eine Zuordnung zu Ihrer Person nicht möglich ist. Je nachdem, wie Sie mit den Services interagieren, wo Sie wohnen und wie es das geltende Recht erlaubt oder vorschreibt, können wir die folgenden Kategorien personenbezogener Daten erfassen oder verarbeiten, einschließlich der aus diesen personenbezogenen Daten gezogenen Rückschlüsse:",
+    "Kontaktdaten einschließlich Name, Postanschrift, Rechnungsadresse, Lieferadresse, Telefonnummer und E-Mail-Adresse.",
+    "Finanzdaten einschließlich Kredit-, Debitkarten- und Finanzkontonummern, Zahlungskarteninformationen, Finanzkontoinformationen, Transaktionsdetails, Zahlungsart, Zahlungsbestätigung und andere Zahlungsdetails.",
+    "Kontoinformationen darunter Benutzername, Passwort, Sicherheitsfragen, Konfigurationen und Einstellungen.",
+    "Transaktionsinformationen einschließlich der Artikel, die Sie sich ansehen, in den Warenkorb legen, auf die Wunschliste setzen oder kaufen, zurückgeben, umtauschen oder stornieren, sowie Ihre vergangenen Transaktionen.",
+    "Kommunikation mit uns einschließlich der Informationen, die Sie bei der Kommunikation mit uns angeben, beispielsweise wenn Sie eine Anfrage an den Kundensupport senden.",
+    "Geräteinformationen einschließlich Informationen über Gerät, Browser oder Netzwerkverbindung, IP-Adresse und andere eindeutige Identifikatoren.",
+    "Nutzungsinformationen einschließlich Informationen über Ihre Interaktion mit den Services, auch darüber, wie und wann Sie mit den Services interagieren oder sie durchsuchen.",
+    "Wir können personenbezogene Daten über die folgenden Quellen erfassen:",
+    "Direkt von Ihnen Wir erfassen die Daten unter anderem, wenn Sie ein Konto erstellen, die Services aufrufen oder nutzen, mit uns kommunizieren oder uns anderweitig Ihre personenbezogenen Daten zur Verfügung stellen.",
+    "Automatisch über die Services Wir erfassen die Daten unter anderem von Ihrem Gerät oder wenn Sie unsere Produkte oder Services nutzen oder unsere Website besuchen sowie über die Verwendung von Cookies und ähnlichen Technologien.",
+    "Von unseren Dienstanbietern Wir erfassen die Daten unter anderem, wenn wir die Dienstanbieter beauftragen, bestimmte Technologien zu aktivieren, und wenn sie Ihre personenbezogenen Daten in unserem Auftrag erfassen oder verarbeiten.",
+    "Von unseren Partnern und anderen Drittanbietern",
+    "Je nachdem, wie Sie mit uns interagieren oder welche der Services Sie nutzen, können wir personenbezogene Daten für die folgenden Zwecke verwenden:",
+    "Bereitstellung, Anpassung und Verbesserung der Services. Wir verwenden Ihre personenbezogenen Daten, um Ihnen die Services bereitzustellen. Das umfasst unter anderem die Erfüllung unseres Vertrags mit Ihnen, die Verarbeitung Ihrer Zahlungen, die Ausführung Ihrer Bestellungen, die Speicherung Ihrer Konfigurationen und der Artikel, für die Sie sich interessieren, die Versendung von Benachrichtigungen im Zusammenhang mit Ihrem Konto, die Erstellung, Pflege und sonstige Verwaltung Ihres Kontos, die Organisation des Versands, die Erleichterung von Rückgaben und Umtausch, die Möglichkeit, dass Sie Bewertungen abgeben, und die Schaffung eines individuellen Einkaufserlebnisses für Sie, indem wir Ihnen beispielsweise Produkte empfehlen, die sich an Ihren Käufen orientieren. Dazu kann auch die Verwendung Ihrer personenbezogenen Daten gehören, um die Services besser anzupassen und zu verbessern.",
+    "Marketing und Werbung. Wir verwenden Ihre personenbezogenen Daten für Marketing- und Werbezwecke, um beispielsweise Marketing- und Werbemitteilungen per E-Mail, SMS oder Post zu versenden und Ihnen online Werbung für Produkte oder Leistungen für die Services oder andere Websites anzuzeigen, auch auf der Grundlage von Artikeln, die Sie zuvor gekauft oder in Ihren Warenkorb gelegt haben, sowie anderen Aktivitäten in Bezug auf die Services.",
+    "Sicherheit und Betrugsprävention. Wir verwenden Ihre personenbezogenen Daten, um Ihr Konto zu authentifizieren, ein sicheres Zahlungs- und Einkaufserlebnis bereitzustellen, mögliche betrügerische, illegale, unsichere oder böswillige Aktivitäten aufzudecken, zu untersuchen oder Maßnahmen zu ergreifen, die öffentliche Sicherheit zu schützen und für die Sicherheit unserer Services zu sorgen. Wenn Sie sich entscheiden, die Services zu nutzen und ein Konto zu registrieren, sind Sie dafür verantwortlich, Ihre Kontoanmeldedaten zu schützen. Wir empfehlen dringend, dass Sie Ihren Benutzernamen, Ihr Passwort oder andere Zugangsdaten nicht an andere Personen weiterzugeben.",
+    "Kommunikation mit Ihnen. Wir verwenden Ihre personenbezogenen Daten, um Ihnen Kundensupport und effektive Services bereitzustellen, zeitnah auf Ihre Anfragen zu reagieren und unsere Geschäftsbeziehung mit Ihnen aufrechtzuerhalten.",
+    "Rechtliche Gründe. Wir verwenden Ihre personenbezogenen Daten, um geltendes Recht einzuhalten oder auf rechtmäßige Verfahrensschritte zu reagieren, einschließlich Anfragen von Strafverfolgungs- oder Aufsichtsbehörden, um zivilrechtliche Ermittlungen, potenzielle oder konkrete Rechtsstreitigkeiten oder andere kontradiktorische Verfahren zu untersuchen oder daran teilzunehmen und um potenzielle Verstöße gegen unsere Bedingungen oder Richtlinien zu untersuchen oder die Bedingungen und Richtlinien durchzusetzen.",
+    "Unter bestimmten Umständen können wir Ihre personenbezogenen Daten für legitime Zwecke gemäß dieser Datenschutzerklärung an Dritte weitergeben. Solche Umstände können Folgendes umfassen:",
+    "Bei Shopify sind dies Anbieter und andere Dritte, die in unserem Auftrag Services erbringen (z. B. IT-Management, Zahlungsabwicklung, Datenanalyse, Kundensupport, Cloud-Speicher, Fulfillment und Versand).",
+    "Wir geben personenbezogene Daten an Geschäfts- und Marketingpartner weiter, die für Sie Marketingservices erbringen und Ihnen Werbung anzeigen. Wir nutzen Shopify beispielsweise, um personalisierte Werbung mit Services von Drittanbietern zu unterstützen, die auf Ihren Online-Aktivitäten bei verschiedenen Händlern und Websites basieren. Unsere Geschäfts- und Marketingpartner verwenden Ihre Daten gemäß ihren eigenen Datenschutzerklärungen. Je nach Ihrem Wohnort haben Sie möglicherweise das Recht, uns anzuweisen, keine Informationen über Sie weiterzugeben, um Ihnen gezielte Werbung und Marketing auf der Grundlage Ihrer Online-Aktivitäten bei verschiedenen Händlern und Websites anzuzeigen.",
+    "Wenn Sie uns auffordern oder anderweitig Ihre Zustimmung geben, bestimmte Informationen an Dritte weiterzugeben, beispielsweise um Ihnen Produkte zu liefern, oder wenn Sie Social-Media-Widgets oder Login-Integrationen nutzen.",
+    "Wir geben personenbezogene Daten an unsere Affiliates oder anderweitig innerhalb unserer Unternehmensgruppe weiter.",
+    "Im Zusammenhang mit einer geschäftlichen Transaktion wie einer Fusion oder Insolvenz, zur Einhaltung geltender gesetzlicher Verpflichtungen (einschließlich der Reaktion auf Vorladungen, Durchsuchungsbeschlüsse und ähnliche Anfragen), zur Durchsetzung geltender Servicebedingungen oder Richtlinien und zum Schutz oder zur Verteidigung der Services, unserer Rechte und der Rechte unserer Nutzer oder anderer.",
+    "Die Services werden von Shopify gehostet, wobei Shopify personenbezogene Daten über Ihren Zugriff auf die Services und deren Nutzung erfasst und verarbeitet, um Ihnen die Services bereitzustellen und zu verbessern. Daten, die Sie an die Services übermitteln, werden an Shopify sowie an Dritte weitergegeben, die sich möglicherweise in anderen Ländern als dem Land Ihres Wohnsitzes befinden, um die Services für Sie bereitzustellen und zu verbessern. Um unser Geschäft zu schützen, zu erweitern und zu verbessern, verwenden wir außerdem bestimmte erweiterte Shopify-Funktionen, die Daten und Informationen aus Ihren Interaktionen mit unserem Shop, mit anderen Händlern und mit Shopify einbeziehen. Um diese erweiterten Funktionen bereitzustellen, kann Shopify personenbezogene Daten verwenden, die über Ihre Interaktionen mit unserem Shop, anderen Händlern und Shopify erfasst wurden. Unter diesen Umständen ist Shopify für die Verarbeitung Ihrer personenbezogenen Daten verantwortlich, einschließlich der Beantwortung Ihrer Anfragen zur Ausübung Ihrer Rechte bezüglich der Verwendung Ihrer personenbezogenen Daten für diese Zwecke. Weitere Informationen darüber, wie Shopify Ihre personenbezogenen Daten verwendet und welche Rechte Sie haben, finden Sie in der Shopify Datenschutzrichtlinie für Verbraucher . Abhängig davon, wo Sie Ihren Wohnsitz haben, können Sie hier bestimmte Rechte in Bezug auf Ihre hier aufgeführten personenbezogenen Daten ausüben Link zum Shopify-Datenschutzportal.",
+    "Die Services können Links zu Websites oder anderen Online-Plattformen bereitstellen, die von Drittanbietern betrieben werden. Wenn Sie Links zu Websites folgen, die keine Affiliate-Websites sind oder nicht von uns kontrolliert werden, sollten Sie deren Datenschutz- und Sicherheitsrichtlinien sowie sonstige Geschäftsbedingungen überprüfen. Wir übernehmen keine Garantie und sind nicht verantwortlich für den Datenschutz oder die Sicherheit solcher Websites, einschließlich der Genauigkeit, Vollständigkeit oder Zuverlässigkeit der auf diesen Websites befindlichen Informationen. Informationen, die Sie an öffentlichen oder halböffentlichen Orten bereitstellen, einschließlich der Informationen, die Sie auf Social Networking-Plattformen von Drittanbietern weitergeben, können auch von anderen Nutzern der Services und/oder Nutzern dieser Drittanbieter-Plattformen eingesehen werden, ohne Einschränkungen in Bezug auf deren Nutzung durch uns oder durch einen Drittanbieter. Die Aufnahme solcher Links durch uns bedeutet nicht, dass wir die Inhalte dieser Plattformen oder deren Eigentümer oder Betreiber unterstützen, es sei denn, dies ist in den Services ausdrücklich erwähnt.",
+    "Die Services sind nicht für die Nutzung durch Kinder gedacht, und wir erfassen wissentlich keine personenbezogenen Daten von Kindern, die in Ihrem Land noch nicht volljährig sind. Wenn Sie die Eltern oder der Vormund eines Kindes sind, das uns seine personenbezogenen Daten zur Verfügung gestellt hat, können Sie sich über die unten angegebenen Kontaktdaten mit uns in Verbindung setzen, um die Löschung dieser Daten zu verlangen. Zum Zeitpunkt des Inkrafttretens dieser Datenschutzerklärung haben wir keine Kenntnis davon, dass wir personenbezogene Daten von Personen unter 16 Jahren „weitergeben“ oder „verkaufen“ (gemäß der Definition dieser Begriffe im geltenden Recht).",
+    "Bitte beachten Sie, dass keine Sicherheitsmaßnahmen perfekt oder undurchdringlich sind, und wir daher keine „perfekte Sicherheit“ garantieren können. Zudem können auch Informationen, die Sie uns senden, während der Übertragung Risiken ausgesetzt sein. Wir empfehlen Ihnen, bei der Übermittlung sensibler oder vertraulicher Informationen an uns keine unsicheren Kanäle zu verwenden.",
+    "Wie lange wir Ihre personenbezogenen Daten aufbewahren, hängt von verschiedenen Faktoren ab. Dazu gehören beispielsweise die Frage, ob wir die Daten benötigen, um Ihr Konto zu verwalten, Ihnen Services zur Verfügung zu stellen, rechtlichen Verpflichtungen nachzukommen, Streitigkeiten beizulegen oder andere geltende Verträge und Richtlinien durchzusetzen.",
+    "Je nachdem, wo sich Ihr Wohnsitz befindet, haben Sie möglicherweise einige oder alle der unten aufgeführten Rechte in Bezug auf Ihre personenbezogene Daten. Diese Rechte sind jedoch nicht absolut, gelten möglicherweise nur unter bestimmten Umständen, und in bestimmten Fällen können wir Ihre Anfrage im gesetzlich zulässigen Rahmen ablehnen.",
+    "Recht auf Zugang/Auskunft. Sie haben möglicherweise das Recht, Einsicht in die personenbezogenen Daten zu verlangen, die wir über Sie gespeichert haben.",
+    "Recht auf Löschung. Sie haben möglicherweise das Recht, von uns die Löschung der über Sie gespeicherten personenbezogenen Daten zu verlangen.",
+    "Recht auf Berichtigung. Sie haben möglicherweise das Recht, von uns die Berichtigung fehlerhafter personenbezogenen Daten zu verlangen, die wir über Sie gespeichert haben.",
+    "Recht auf Datenübertragbarkeit. Sie haben möglicherweise das Recht, eine Kopie der personenbezogenen Daten, die wir über Sie gespeichert haben, zu erhalten und zu verlangen, dass wir sie unter bestimmten Umständen und mit bestimmten Ausnahmen an einen Dritten weitergeben.",
+    "Verwaltung von Kommunikationseinstellungen. Wir können Ihnen Werbe-E-Mails zusenden. Sie können dem Erhalt dieser E-Mails jederzeit widersprechen, indem Sie die Option zum Abbestellen nutzen, die in unseren E-Mails an Sie enthalten ist. Wenn Sie sich dagegen entscheiden, können wir Ihnen weiterhin nicht werbliche E-Mails schicken, z. B. über Ihr Konto oder über Bestellungen, die Sie getätigt haben.",
+    "Wenn Sie sich Ihr Wohnsitz im Vereinigten Königreich oder im Europäischen Wirtschaftsraum befindet, können Sie vorbehaltlich der Ausnahmen und Beschränkungen durch das lokale Recht zusätzlich zu den oben genannten Rechten die folgenden Rechte ausüben:",
+    "Recht auf Widerspruch und Recht auf Einschränkung der Verarbeitung. Sie haben möglicherweise das Recht, von uns zu verlangen, dass wir die Verarbeitung personenbezogener Daten für bestimmte Zwecke einstellen oder einschränken.",
+    "Widerruf der Einwilligung. Sofern wir uns auf eine Einwilligung zur Verarbeitung Ihrer personenbezogenen Daten stützen, haben Sie das Recht, diese Einwilligung zu widerrufen. Wenn Sie Ihre Einwilligung widerrufen, hat dies keinen Einfluss auf die Rechtmäßigkeit der Verarbeitung, die auf Ihrer Einwilligung vor dem Widerruf beruht.",
+    "Sie können diese Rechte ausüben, wenn dies in den Services entsprechend angegeben ist, oder indem Sie sich über die unten angegebenen Kontaktdaten mit uns in Verbindung setzen. Mehr Informationen darüber, wie Shopify Ihre personenbezogenen Daten verwendet und welche Rechte Sie haben, einschließlich der Rechte in Bezug auf die von Shopify verarbeiteten Daten, finden Sie unter https://privacy.shopify.com/en.",
+    "Durch die Ausübung dieser Rechte entstehen Ihnen keinerlei Nachteile. Sofern dies nach geltendem Recht zulässig oder erforderlich ist, müssen wir möglicherweise Ihre Identität überprüfen, bevor wir Ihre Anfragen verarbeiten können. In Übereinstimmung mit geltenden Gesetzen können Sie einen Bevollmächtigten benennen, der in Ihrem Namen Anfragen zur Ausübung Ihrer Rechte stellt. Bevor wir eine solche Anfrage von einem Vertreter annehmen, verlangen wir von diesem den Nachweis, dass Sie ihn bevollmächtigt haben, in Ihrem Namen zu handeln. Dabei kann es erforderlich sein, dass Sie Ihre Identität direkt uns gegenüber bestätigen müssen. Wir werden Ihre Anfrage im Rahmen des geltenden Rechts zügig beantworten.",
+    "Wenn Sie Beschwerden darüber haben, wie wir Ihre personenbezogenen Daten verarbeiten, wenden Sie sich bitte über die unten angegebenen Kontaktdaten an uns. Je nachdem, wo sich Ihr Wohnsitz befindet, haben Sie das Recht, gegen unsere Entscheidung Einspruch zu erheben, indem Sie sich unter den unten angegebenen Kontaktdaten an uns wenden oder Ihre Beschwerde bei der zuständigen Datenschutzbehörde einreichen. Für den Europäischen Wirtschaftsraum gibt es eine Liste der zuständigen Datenschutzaufsichtsbehörden. Wenn Sie sich abrufen möchten, haben Sie hier die Möglichkeit dazu.",
+    "Beachten Sie, dass wir Ihre personenbezogenen Daten möglicherweise außerhalb des Landes, in dem sich Ihr Wohnsitz befindet, übertragen, speichern und verarbeiten.",
+    "Wenn wir Ihre personenbezogenen Daten außerhalb des Europäischen Wirtschaftsraums oder des Vereinigten Königreichs übermitteln, stützen wir uns auf anerkannte Übermittlungsmechanismen wie die Standardvertragsklauseln der Europäischen Kommission oder gleichwertige Verträge, die von der jeweils zuständigen Behörde des Vereinigten Königreichs herausgegeben werden, es sei denn, die Datenübermittlung erfolgt in ein Land, das nachweislich ein angemessenes Schutzniveau bietet.",
+    "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren, um beispielsweise Änderungen unserer Verfahrensweisen zu berücksichtigen, oder aus anderen betrieblichen, rechtlichen oder regulatorischen Gründen. Wir veröffentlichen die überarbeitete Datenschutzerklärung auf dieser Website, passen das Datum der „Letzten Fassung“ entsprechend an und machen die nach geltendem Recht erforderliche Mitteilung.",
+    "Sollten Sie Fragen zu unseren Datenschutzverfahren oder dieser Datenschutzerklärung haben, oder wenn Sie eines der Ihnen zustehenden Rechte ausüben möchten, wenden Sie sich bitte telefonisch unter , per E-Mail unter mtilburg@gmail.com oder per Post an Jurastraße 11, 79639 Grenzach-Wyhlen, Deutschland an uns. Im Sinne der geltenden Datenschutzgesetze sind wir der Datenverantwortliche für Ihre personenbezogenen Daten."
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Mein Shop",
+      "href": "/"
+    },
+    {
+      "label": "Startseite",
+      "href": "/"
+    },
+    {
+      "label": "Katalog",
+      "href": "/collections/all"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/pages/contact"
+    },
+    {
+      "label": "EUR Region- und Sprachwahl",
+      "href": null
+    },
+    {
+      "label": "Suche",
+      "href": null
+    },
+    {
+      "label": "Warenkorb 0",
+      "href": null
+    },
+    {
+      "label": "Shopify Datenschutzrichtlinie für Verbraucher",
+      "href": "https://www.shopify.com/legal/privacy/app-users"
+    },
+    {
+      "label": "Link zum Shopify-Datenschutzportal",
+      "href": "https://privacy.shopify.com/en"
+    },
+    {
+      "label": "haben Sie hier die Möglichkeit dazu",
+      "href": "https://edpb.europa.eu/about-edpb/about-edpb/members"
+    },
+    {
+      "label": "Mein Shop",
+      "href": "/"
+    },
+    {
+      "label": "Geschäftsbedingungen und Richtlinien",
+      "href": null
+    }
+  ],
+  "links": [
+    "https://t8bnc1-5b.myshopify.com/policies/privacy-policy#MainContent",
+    "https://t8bnc1-5b.myshopify.com/",
+    "https://t8bnc1-5b.myshopify.com/collections/all",
+    "https://t8bnc1-5b.myshopify.com/pages/contact",
+    "https://t8bnc1-5b.myshopify.com/products/road-bike-helmet",
+    "https://t8bnc1-5b.myshopify.com/products/road-running-shoes",
+    "https://t8bnc1-5b.myshopify.com/products/running-shorts",
+    "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+    "https://www.shopify.com/legal/privacy/app-users",
+    "https://privacy.shopify.com/en",
+    "https://edpb.europa.eu/about-edpb/about-edpb/members",
+    "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+    "https://t8bnc1-5b.myshopify.com/customer_authentication/redirect?locale=de&region_country=DE",
+    "https://t8bnc1-5b.myshopify.com/products/road-bike-helmet?_pos=1&_sid=24bb15498&_ss=r"
+  ],
+  "media": {
+    "imgs": [],
+    "allImgCount": 9,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--hover-transition-duration": ".25s",
+    "--hover-transition-timing": "ease-out",
+    "--submenu-animation-speed": ".36s",
+    "--safe-area-inset-top": "0px",
+    "--safe-area-inset-right": "0px",
+    "--safe-area-inset-bottom": "0px",
+    "--safe-area-inset-left": "0px",
+    "--sidebar-width": "25rem",
+    "--theme-drawer-width": "30rem",
+    "--narrow-content-width": "36rem",
+    "--normal-content-width": "42rem",
+    "--narrow-page-width": "90rem",
+    "--normal-page-width": "120rem",
+    "--wide-page-width": "150rem",
+    "--section-height-small": "50svh",
+    "--section-height-medium": "65svh",
+    "--section-height-large": "80svh",
+    "--color-background": "#ffffff",
+    "--color-background-rgb": "255 255 255",
+    "--color-foreground": "#000000",
+    "--color-foreground-rgb": "0 0 0",
+    "--color-border": "#000000",
+    "--color-border-rgb": "0 0 0",
+    "--palette-lightest": "#ffffff",
+    "--palette-lightest-rgb": "255 255 255",
+    "--palette-darkest": "#000000",
+    "--palette-darkest-rgb": "0 0 0",
+    "--opacity-5-15": "0.05",
+    "--opacity-10-25": "0.1",
+    "--opacity-35-55": "0.35",
+    "--opacity-40-60": "0.4",
+    "--opacity-30-60": "0.3",
+    "--opacity-60": "0.6",
+    "--color-primary-button-text": "rgb(255 255 255 / 1.0)",
+    "--color-primary-button-background": "rgb(0 0 0 / 1.0)",
+    "--color-primary-button-border": "rgb(0 0 0 / 1.0)",
+    "--color-primary-button-focus-outline": "rgb(0 0 0)",
+    "--color-primary-button-hover-text": "rgb(255 255 255 / 1.0)",
+    "--color-primary-button-hover-background": "#262626",
+    "--color-primary-button-hover-border": "#262626",
+    "--color-secondary-button-text": "rgb(0 0 0 / 1.0)",
+    "--color-secondary-button-background": "rgb(0 0 0 / 0.0)",
+    "--color-secondary-button-border": "rgb(0 0 0 / 1.0)",
+    "--color-secondary-button-hover-text": "rgb(0 0 0 / 1.0)",
+    "--color-secondary-button-hover-background": "rgba(0, 0, 0, 0.15)",
+    "--color-secondary-button-hover-border": "#262626",
+    "--color-input-background": "rgb(255 255 255 / 1.0)",
+    "--color-input-text": "rgb(51 51 51 / 1.0)",
+    "--color-input-text-rgb": "51 51 51",
+    "--color-input-border": "rgb(223 223 223 / 1.0)",
+    "--color-variant-background": "rgb(255 255 255 / 1.0)",
+    "--color-variant-border": "rgb(223 223 223 / 1.0)",
+    "--color-variant-text": "rgb(0 0 0 / 1.0)",
+    "--color-variant-text-rgb": "0 0 0",
+    "--color-variant-hover-background": "#f2f2f2",
+    "--color-variant-hover-text": "rgb(0 0 0 / 1.0)",
+    "--color-variant-hover-border": "#d2d2d2",
+    "--color-selected-variant-background": "rgb(0 0 0 / 1.0)",
+    "--color-selected-variant-border": "rgb(0 0 0 / 1.0)",
+    "--color-selected-variant-text": "rgb(255 255 255 / 1.0)",
+    "--color-selected-variant-text-rgb": "255 255 255",
+    "--color-selected-variant-hover-background": "#262626",
+    "--color-selected-variant-hover-text": "rgb(255 255 255 / 1.0)",
+    "--color-selected-variant-hover-border": "#262626",
+    "--input-disabled-background-color": "rgb(0 0 0 / 0.1)",
+    "--input-disabled-border-color": "rgb(0 0 0 / 0.05)",
+    "--input-disabled-text-color": "rgb(0 0 0 / 0.5)",
+    "--color-foreground-muted": "rgb(0 0 0 / 0.6)",
+    "--color-foreground-subdued": "rgb(0 0 0 / 0.8)",
+    "--color-popover-shadow-rgb": "0 0 0",
+    "--shadow-blur": "20px",
+    "--shadow-popover": "0px 4px 20px rgb(0 0 0 / 0.15)",
+    "--text-align-default": "start"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 15,
+    "mainTextLen": 18552,
+    "realImageCount": 0,
+    "trackingOnlyMedia": true,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "dynamic": {
+    "endpoints": [
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+        "query": [],
+        "resourceType": "other",
+        "contentType": "application/speculationrules+json",
+        "status": 200,
+        "bytes": 567,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "monorail-edge.shopifysvc.com",
+        "path": "/v1/produce",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 200,
+        "bytes": null,
+        "hits": 4,
+        "example": "https://monorail-edge.shopifysvc.com/v1/produce",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "otlp-http-production.shopifysvc.com",
+        "path": "/v1/metrics",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": 21,
+        "hits": 9,
+        "example": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/api/2026-01/graphql.json",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": null,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "otlp-http-production.shopifysvc.com",
+        "path": "/v1/logs",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": 21,
+        "hits": 4,
+        "example": "https://otlp-http-production.shopifysvc.com/v1/logs",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/api/collect",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 204,
+        "bytes": null,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/api/collect",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 200,
+        "bytes": null,
+        "hits": 4,
+        "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+        "sameSite": true
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/policies/privacy-policy",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "status": 200,
+        "bytes": 18969,
+        "hits": 2,
+        "example": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "error-analytics-sessions-production.shopifysvc.com",
+        "path": "/",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": null,
+        "status": 202,
+        "bytes": null,
+        "hits": 1,
+        "example": "https://error-analytics-sessions-production.shopifysvc.com/",
+        "sameSite": false
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/search",
+        "query": [
+          "q",
+          "resources[type]",
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "status": 200,
+        "bytes": 5047,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/search",
+        "sameSite": true
+      }
+    ],
+    "thirdPartyScriptHosts": [
+      {
+        "host": "cdn.shopify.com",
+        "count": 79
+      }
+    ],
+    "truncated": false,
+    "inlineData": [
+      {
+        "id": "shopify-features",
+        "type": "application/json",
+        "bytes": 189,
+        "topLevelKeys": [
+          "accessToken",
+          "betas",
+          "domain",
+          "predictiveSearch",
+          "shopId",
+          "locale"
+        ]
+      },
+      {
+        "id": "shop-js-analytics",
+        "type": "application/json",
+        "bytes": 21,
+        "topLevelKeys": [
+          "pageType"
+        ]
+      },
+      {
+        "id": "shopify-customer-account-data",
+        "type": "application/json",
+        "bytes": 2238,
+        "topLevelKeys": [
+          "customer",
+          "shop",
+          "visitor"
+        ]
+      }
+    ],
+    "globalState": [
+      "Shopify"
+    ],
+    "frameworkHints": [
+      "shopify"
+    ],
+    "forms": [
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/contact",
+        "hasAction": true,
+        "method": "post",
+        "sameOrigin": true,
+        "fieldCount": 1,
+        "fieldNames": [
+          "contact[email]"
+        ],
+        "search": false
+      }
+    ],
+    "ariaLiveRegions": 0,
+    "triggers": [
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      },
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      },
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      },
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      }
+    ],
+    "mediaIds": [],
+    "summary": {
+      "sameSiteEndpoints": 6,
+      "thirdPartyEndpoints": 4,
+      "thirdPartyScriptHosts": 1,
+      "inlineDataBlobs": 3,
+      "forms": 1,
+      "searchForms": 0,
+      "hydrated": true
+    }
+  },
+  "screenshot": "assets/screenshots/policies-privacy-policy.png",
+  "renderedHtml": "pages/policies-privacy-policy.html"
+}

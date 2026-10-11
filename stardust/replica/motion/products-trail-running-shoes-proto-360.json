@@ -1,0 +1,397 @@
+{
+  "url": "http://localhost:8791/stardust/prototypes/products-trail-running-shoes-proposed.html",
+  "width": 360,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1200,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 181,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1281,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1200,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 800,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 500,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 300,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".shop-product__quantity-button--plus",
+      "frames": [
+        {
+          "t": 8605.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 8807.300000011921,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 9009.09999999404,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 9211.199999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".shop-product__add--main",
+      "frames": [
+        {
+          "t": 10218.09999999404,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10421.199999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10623.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10824.800000011921,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [
+      {
+        "name": "atc-slide",
+        "el": "div.shop-product__details-inner > form.shop-product__form > div.shop-product__buttons > button.shop-product__add.shop-product__add--main > span.shop-product__add-added",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "travel-x",
+        "el": "html > body.shopify.appear > div.shop-product-fly",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "travel-y",
+        "el": "html > body.shopify.appear > div.shop-product-fly",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "travel-scale",
+        "el": "html > body.shopify.appear > div.shop-product-fly",
+        "txt": "",
+        "y": 239
+      }
+    ],
+    "transitions": [
+      {
+        "prop": "opacity",
+        "el": "main > div.section > div.shop-product-wrapper > div.shop-product.block > div.shop-product__sticky",
+        "y": 800,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "main > div.section > div.shop-product-wrapper > div.shop-product.block > div.shop-product__sticky",
+        "y": 800,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "color",
+        "el": "div.shop-product__details > div.shop-product__details-inner > form.shop-product__form > div.shop-product__buttons > button.shop-product__add.shop-product__add--main",
+        "y": 239,
+        "dur": "0.125s"
+      },
+      {
+        "prop": "filter",
+        "el": "div.shop-product__buttons > button.shop-product__add.shop-product__add--main > span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-check",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.shop-product__buttons > button.shop-product__add.shop-product__add--main > span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-check",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "scale",
+        "el": "div.shop-product__buttons > button.shop-product__add.shop-product__add--main > span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-check",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "opacity",
+        "el": "button.shop-product__add.shop-product__add--main > span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-check > circle.shop-product__burst-ring",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "scale",
+        "el": "button.shop-product__add.shop-product__add--main > span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-check > circle.shop-product__burst-ring",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-lines > g > line.shop-product__burst-line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "scale",
+        "el": "button.shop-product__add.shop-product__add--main > span.shop-product__add-added > svg.shop-product__burst > g.shop-product__burst-check > path.shop-product__burst-tick",
+        "y": 239,
+        "dur": "0.1s"
+      }
+    ],
+    "classMutations": []
+  }
+}

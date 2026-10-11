@@ -1,0 +1,223 @@
+/*
+ * shop-search: search page (Horizon "search" template) — heading, search field with icon and reset,
+ * then either the default product grid (no query) or the results (facet bar + grid, composed from
+ * the shop-collection block markup with modifier --search).
+ *
+ * Data sources: [S] = Shopify Storefront API at runtime, [A] = AEM-authored block table,
+ * [U] = the URL (?q=…).
+ *
+ * DOM contract (block JS must produce exactly this):
+ *
+ * div.shop-search[data-state=default|results]
+ *   div.shop-search__header
+ *     h3.shop-search__heading                 [A] "Suche" (no query) / "Suchergebnisse" (with query)   (h2 preset)
+ *     form.shop-search__form[action=/search][role=search]
+ *       div.shop-search__field
+ *         label.shop-visually-hidden[for] "Suchen"
+ *         span.shop-search__icon > svg        (magnifier)
+ *         input[type=hidden][name=type][value=product]
+ *         input.shop-search__input[type=search][name=q][placeholder=Suchen][value=<q>]   [U]
+ *         a.shop-search__reset[href=/search?type=product&q=][aria-label="Suche zurücksetzen"]
+ *           span.shop-search__reset-icon > svg + span.shop-visually-hidden "Löschen"   (shown only while the input has a value)
+ *   state=default:
+ *     div.shop-search__results.shop-product-grid#shop-search-results
+ *       a.shop-search__skip "Zur Ergebnisliste springen"
+ *       div.shop-product-grid__header > h4.shop-product-grid__heading "Produkte"   [A]
+ *       ul.shop-product-grid__list > li.shop-product-grid__item …   [S] products(first: n) — shop-product-grid card markup
+ *   state=results:
+ *     div.shop-collection.shop-collection--search[data-state=results|empty][data-view]   (no header; see shop-collection.css)
+ *       facet bar / mobile bar / drawer                                    [S] search(query).productFilters, totalCount
+ *       div.shop-collection__results.shop-product-grid > ul.shop-product-grid__list   [S] search(query: q, types: PRODUCT)
+ *       sort options: Relevanz (default) · Preis (aufsteigend) · Preis (absteigend)
+ *
+ * Behaviour: submitting the form navigates to /search?q=…; the reset link clears it
+ * (opacity 0.125s, as live). Results-state interactions are shop-collection's.
+ */
+
+/* canon compensation (stardust/replica/canon-requests.md): live dims nav links only while one
+   is active or hovered; the search page has no active nav item */
+body.shopify:has(.shop-search) .shop-header .shop-header__menu:not(:has([aria-current='page'], li:hover, li:focus-within)) .shop-header__link {
+  color: var(--shop-color-foreground);
+}
+
+.shop-search .shop-search__header {
+  padding: calc(40px * var(--shop-spacing-scale)) var(--shop-gutter) 0;
+}
+
+.shop-search .shop-search__heading {
+  font-size: var(--shop-font-size-h2);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-search .shop-search__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.shop-search .shop-search__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 24px 0 12.8px;
+  background-color: var(--shop-color-background);
+}
+
+.shop-search .shop-search__input {
+  width: 100%;
+  padding: 16px 44.8px;
+  overflow: hidden;
+  border: 1px solid var(--shop-color-border);
+  border-radius: var(--shop-radius-input);
+  background-color: #fff;
+  color: var(--shop-color-input-text);
+  font-size: 16px;
+  line-height: var(--shop-line-height-paragraph);
+  text-overflow: ellipsis;
+  outline: none;
+  appearance: none;
+}
+
+/* theme base.css *:focus-visible (fires on click / typing in the field, measured live) */
+.shop-search .shop-search__input:focus-visible {
+  outline: 1.5px solid currentcolor;
+  outline-offset: 0.2em;
+}
+
+.shop-search .shop-search__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.shop-search .shop-search__input::placeholder {
+  color: var(--shop-color-input-placeholder);
+}
+
+.shop-search .shop-search__icon,
+.shop-search .shop-search__reset {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--shop-color-input-text);
+}
+
+.shop-search .shop-search__icon {
+  left: 12.8px;
+}
+
+.shop-search .shop-search__icon svg,
+.shop-search .shop-search__reset svg {
+  width: 22px;
+  height: 22px;
+}
+
+.shop-search .shop-search__reset {
+  right: 12.8px;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity var(--shop-animation-speed) ease-in-out,
+    visibility var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-search .shop-search__field:has(.shop-search__input:not(:placeholder-shown)) .shop-search__reset {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.shop-search .shop-search__reset-icon {
+  display: flex;
+  transition: transform var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-search .shop-search__reset:active .shop-search__reset-icon {
+  transform: scale(0.9);
+}
+
+/* default state: "Produkte" + product grid (shop-product-grid cards) */
+.shop-search .shop-search__results.shop-product-grid {
+  position: relative;
+  display: block;
+  padding: 40px 0;
+}
+
+.shop-search .shop-search__skip {
+  position: absolute;
+  left: -99999px;
+}
+
+.shop-search .shop-search__skip:focus {
+  left: var(--shop-gutter);
+  z-index: var(--shop-layer-temporary);
+  padding: 16px 24px;
+  border-radius: var(--shop-radius-button);
+  background: var(--shop-color-background);
+  box-shadow: inset 0 0 0 1px var(--shop-color-foreground);
+}
+
+/* live h4 "Produkte" margin-bottom computes to 31.92px at every width (measure.mjs 1440 / 360) */
+.shop-search .shop-search__results .shop-product-grid__header {
+  margin: 0 0 31.92px var(--shop-gutter);
+}
+
+.shop-search .shop-search__results .shop-product-grid__heading {
+  max-width: none;
+}
+
+.shop-search .shop-search__results .shop-product-grid__list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shop-search .shop-search__results .shop-product-grid__title-link,
+.shop-search .shop-search__results .shop-product-grid__price {
+  padding-inline: 8px;
+}
+
+/* theme media container: --slide-width round(up, 100%, 1px) (canon request filed) */
+.shop-search .shop-search__results .shop-product-grid__media > a {
+  width: round(up, 100%, 1px);
+}
+
+@media (min-width: 750px) {
+  .shop-search .shop-search__field {
+    width: 50%;
+  }
+
+  .shop-search .shop-search__input {
+    padding-inline: 54px;
+    font-size: var(--shop-font-size-paragraph);
+  }
+
+  .shop-search .shop-search__icon {
+    left: 16px;
+  }
+
+  .shop-search .shop-search__reset {
+    right: 16px;
+  }
+
+  .shop-search .shop-search__results.shop-product-grid {
+    padding-inline: var(--shop-gutter);
+  }
+
+  .shop-search .shop-search__results .shop-product-grid__header {
+    margin-left: 0;
+  }
+
+  .shop-search .shop-search__results .shop-product-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px 16px;
+  }
+
+  .shop-search .shop-search__results .shop-product-grid__title-link,
+  .shop-search .shop-search__results .shop-product-grid__price {
+    padding-inline: 0;
+  }
+}

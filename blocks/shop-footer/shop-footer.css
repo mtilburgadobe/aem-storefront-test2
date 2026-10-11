@@ -1,0 +1,223 @@
+/*
+ * shop-footer: email signup row + utilities row (copyright, policies popover).
+ *
+ * DOM contract (block JS must produce exactly this):
+ *
+ * div.shop-footer
+ *   div.shop-footer__signup
+ *     div.shop-footer__intro
+ *       h2.shop-footer__heading              "Join our email list"
+ *       p.shop-footer__text                  "Get exclusive deals and early access to new products."
+ *     form.shop-footer__form[method=post][action=<shop origin>/contact][accept-charset=UTF-8]
+ *       input[type=hidden] x 3                form_type=customer, utf8=✓, contact[tags]=newsletter
+ *       div.shop-footer__field
+ *         label.shop-visually-hidden[for]    "E-Mail"
+ *         input.shop-footer__input[type=email][name=contact[email]][placeholder=E-Mail-Adresse][required]
+ *         button.shop-footer__submit[type=submit][aria-label=Registrieren] > svg (arrow 20×20 viewBox)
+ *   div.shop-footer__utilities
+ *     div.shop-footer__utilities-inner
+ *       div.shop-footer__copyright           "© 2026 " a[href=/] "Mein Shop" ", Powered by Shopify"
+ *       div.shop-footer__policies
+ *         button.shop-footer__policies-trigger[popovertarget=shop-footer-policies]
+ *           > span                           "Geschäftsbedingungen und Richtlinien" (authored text
+ *                                            moved in; @ew-exempt EW7 in shop-footer.js)
+ *         div.shop-footer__policies-popover#shop-footer-policies[popover]
+ *           ul > li > a[href=/policies/privacy-policy] "Datenschutzerklärung"
+ *       div.shop-footer__social              (empty; keeps the mobile column gap like live)
+ *
+ * Behaviour: the policies popover uses the native popover attribute (live: popover="auto");
+ * no other motion fired in the footer.
+ */
+
+.shop-footer {
+  background-color: var(--shop-color-background);
+  color: var(--shop-color-foreground);
+}
+
+/* ---------- signup row ---------- */
+.shop-footer .shop-footer__signup {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  padding: calc(30px * var(--shop-spacing-scale)) var(--shop-gutter);
+}
+
+.shop-footer .shop-footer__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+}
+
+.shop-footer .shop-footer__heading {
+  width: 100%;
+  max-width: min(100%, 780px);
+  margin: 0;
+  font-size: var(--shop-font-size-h4);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-footer .shop-footer__text {
+  width: 100%;
+  max-width: min(100%, 455px);
+  margin: 0;
+}
+
+.shop-footer .shop-footer__form {
+  display: flex;
+  margin: 0;
+}
+
+.shop-footer .shop-footer__field {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  border: 1px solid var(--shop-color-border);
+  border-radius: var(--shop-radius-pill);
+  background-color: #fff;
+}
+
+.shop-footer .shop-footer__input {
+  flex: 1;
+  min-width: 0;
+  height: 58px;
+  padding: 16px 28px;
+  border: 0;
+  border-radius: var(--shop-radius-pill);
+  background: transparent;
+  color: var(--shop-color-input-text);
+  font-size: 16px;
+  line-height: 1.6;
+  outline: none;
+}
+
+.shop-footer .shop-footer__input::placeholder {
+  color: var(--shop-color-input-placeholder);
+}
+
+.shop-footer .shop-footer__submit {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--shop-radius-pill);
+  background: transparent;
+  color: var(--shop-color-input-text);
+  cursor: pointer;
+}
+
+.shop-footer .shop-footer__submit svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- utilities row ---------- */
+.shop-footer .shop-footer__utilities {
+  padding-inline: var(--shop-gutter);
+}
+
+.shop-footer .shop-footer__utilities-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 0 calc(48px * var(--shop-spacing-scale));
+  border-top: 1px solid var(--shop-color-border);
+  color: var(--shop-color-muted);
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+.shop-footer .shop-footer__copyright {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.shop-footer .shop-footer__policies {
+  position: relative;
+  line-height: 0;
+}
+
+.shop-footer .shop-footer__policies-trigger {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--shop-color-muted);
+  font-size: 12px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.shop-footer .shop-footer__policies-popover {
+  inset: auto;
+  margin: 0;
+  padding: 8px 12px;
+  border: var(--shop-border-popover);
+  border-radius: var(--shop-radius-popover);
+  background-color: var(--shop-color-background);
+  box-shadow: var(--shop-shadow-popover);
+}
+
+.shop-footer .shop-footer__policies-popover ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-footer .shop-footer__policies-popover a {
+  color: var(--shop-color-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.shop-footer .shop-footer__copyright a {
+  color: var(--shop-color-muted);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.9px;
+  text-underline-offset: 1.5px;
+  transition: text-decoration-color var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-footer .shop-footer__copyright a:hover {
+  text-decoration-color: currentcolor;
+}
+
+@media (min-width: 750px) {
+  .shop-footer .shop-footer__signup {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shop-footer .shop-footer__input {
+    font-size: var(--shop-font-size-paragraph);
+  }
+
+  .shop-footer .shop-footer__utilities-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
+    text-align: start;
+  }
+
+  .shop-footer .shop-footer__utilities-inner > * {
+    justify-self: start;
+  }
+
+  .shop-footer .shop-footer__utilities-inner > :nth-child(2) {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .shop-footer .shop-footer__utilities-inner > :nth-child(3) {
+    justify-self: end;
+    text-align: end;
+  }
+}

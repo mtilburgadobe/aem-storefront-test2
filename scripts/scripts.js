@@ -3,6 +3,7 @@ import {
   loadFooter,
   decorateIcons,
   decorateBlocks,
+  decorateSections,
   decorateTemplateAndTheme,
   waitForFirstImage,
   loadSection,
@@ -11,16 +12,21 @@ import {
   buildBlock,
 } from './aem.js';
 import {
-  loadCommerceEager,
-  loadCommerceLazy,
-  initializeCommerce,
-  applyTemplates,
-  decorateLinks,
-  loadErrorPage,
-  decorateSections,
-  IS_UE,
-  IS_DA,
-} from './commerce.js';
+  isShopifyPage,
+  loadShopifyEager,
+  loadShopifyLazy,
+  loadShopifyDelayed,
+} from './shopify/page.js';
+
+/*
+ * Shopify pages (metadata `template: shopify`) never load the Adobe Commerce
+ * configuration, initializers or drop-ins: commerce.js is only imported on
+ * every other page.
+ */
+const IS_SHOPIFY = isShopifyPage();
+const commerce = IS_SHOPIFY ? null : await import('./commerce.js');
+const IS_UE = window.location.hostname.includes('ue.da.live');
+const IS_DA = new URL(window.location.href).searchParams.has('dapreview');
 
 /*
  * Trusted Types default policy.
@@ -185,10 +191,11 @@ function decorateButtons(main) {
  * @param {Element} main The main element
  */
 export function decorateMain(main) {
-  decorateLinks(main);
+  if (commerce) commerce.decorateLinks(main);
   decorateIcons(main);
   buildAutoBlocks(main);
-  decorateSections(main);
+  if (commerce) commerce.decorateSections(main);
+  else decorateSections(main);
   decorateBlocks(main);
   decorateButtons(main);
 }
@@ -198,19 +205,24 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
+  if (IS_SHOPIFY) {
+    await loadShopifyEager(doc, decorateMain);
+    return;
+  }
+
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
 
   const main = doc.querySelector('main');
   if (main) {
     try {
-      await initializeCommerce();
+      await commerce.initializeCommerce();
       decorateMain(main);
-      applyTemplates(doc);
-      await loadCommerceEager();
+      commerce.applyTemplates(doc);
+      await commerce.loadCommerceEager();
     } catch (e) {
       console.error('Error initializing commerce configuration:', e);
-      loadErrorPage(418);
+      commerce.loadErrorPage(418);
     }
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
@@ -231,6 +243,11 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  if (IS_SHOPIFY) {
+    await loadShopifyLazy(doc);
+    return;
+  }
+
   loadHeader(doc.querySelector('header'));
 
   const main = doc.querySelector('main');
@@ -242,7 +259,7 @@ async function loadLazy(doc) {
 
   loadFooter(doc.querySelector('footer'));
 
-  loadCommerceLazy();
+  commerce.loadCommerceLazy();
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
@@ -253,6 +270,10 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
+  if (IS_SHOPIFY) {
+    loadShopifyDelayed();
+    return;
+  }
   window.setTimeout(() => import('./delayed.js'), 3000);
   // load anything that can be postponed to the latest here
 }

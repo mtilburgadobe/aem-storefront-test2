@@ -1,0 +1,89 @@
+/*
+ * shop-hero: full-bleed image hero with a solid overlay, centred heading and an
+ * outlined white button (Horizon "hero" section, home page).
+ *
+ * DOM contract (block JS must produce exactly this):
+ *
+ * div.shop-hero
+ *   div.shop-hero__media
+ *     picture > img.shop-hero__image          (authored image; object-fit cover, 100% 50%)
+ *   div.shop-hero__overlay                    (solid rgb(18 18 18 / 40%))
+ *   div.shop-hero__content
+ *     p.shop-hero__heading                    "Browse our latest products"  (h2 preset, white)
+ *     a.shop-button.shop-hero__button[href]   "Shop all"
+ *
+ * Height model (lifted, not resolved): min-height = theme --section-height-medium
+ * (400px / 55svh >= 640px / 65svh >= 960px) minus the header group height,
+ * padding 100px / 72px scaled by --shop-spacing-scale (0.7 below 750px).
+ */
+
+.shop-hero {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  min-height: calc(var(--shop-section-height-medium) - var(--shop-header-group-height));
+  padding: calc(100px * var(--shop-spacing-scale)) var(--shop-gutter) calc(72px * var(--shop-spacing-scale));
+  overflow: hidden;
+  color: #fff;
+}
+
+.shop-hero .shop-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.shop-hero .shop-hero__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.shop-hero .shop-hero__image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+.shop-hero .shop-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--shop-color-overlay);
+}
+
+.shop-hero .shop-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.shop-hero .shop-hero__heading {
+  width: fit-content;
+  max-width: min(100%, 32.5em);
+  margin: 0;
+  color: #fff;
+  font-size: var(--shop-font-size-h2);
+  font-weight: var(--shop-font-weight-heading);
+  line-height: var(--shop-line-height-display-tight);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.shop-hero .shop-hero__button,
+.shop-hero .shop-hero__button:hover {
+  color: #fff;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.shop-hero .shop-hero__button:hover {
+  background-color: rgb(255 255 255 / 15%);
+}

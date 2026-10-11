@@ -1,0 +1,434 @@
+/*
+ * Mein Shop canon: global styles for Shopify-backed pages (Horizon theme replica).
+ *
+ * Scope: every rule starts with body.shopify, so non-Shopify (Adobe Commerce) pages
+ * are untouched. Values are lifted from the live theme's :root tokens
+ * (stardust/current/css/inline-index.css) and computed measurements; the theme's
+ * rem is 16px, but styles/styles.css sets html { font-size: 62.5% }, so every
+ * length here is authored in px.
+ *
+ * Breakpoints are the theme's own switch points: 750px and 990px (min-width).
+ *
+ * Canon API for blocks
+ *   custom properties  --shop-*  (on body.shopify, see the token block below)
+ *   page grid          padding-inline: var(--shop-gutter) on a full-width element
+ *                      (content column max 1440px, side margin 16px / 40px >= 750px)
+ *   type presets       .shop-h1 … .shop-h6, .shop-paragraph
+ *   buttons            .shop-button + --primary | --secondary
+ *   inputs             .shop-input (4px radius, 1px #dfdfdf ring)
+ *   utility            .shop-visually-hidden
+ */
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-normal-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-normal-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-normal-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-italic-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-italic-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-italic-700.woff2') format('woff2');
+}
+
+/* ---------- tokens ---------- */
+body.shopify {
+  /* fonts */
+  --shop-font-family: inter, sans-serif;
+  --shop-font-weight-body: 400;
+  --shop-font-weight-subheading: 500;
+  --shop-font-weight-heading: 700;
+
+  /* type scale (theme presets, rem → px) */
+  --shop-font-size-paragraph: 14px;
+  --shop-line-height-paragraph: 1.6;
+  --shop-font-size-h1: clamp(48px, 5.6vw, 56px);
+  --shop-font-size-h2: clamp(36px, 4.8vw, 48px);
+  --shop-font-size-h3: 32px;
+  --shop-font-size-h4: 24px;
+  --shop-font-size-h5: 14px;
+  --shop-font-size-h6: 12px;
+  --shop-line-height-display-tight: 1;
+  --shop-line-height-display-normal: 1.1;
+  --shop-line-height-display-loose: 1.2;
+  --shop-menu-font-size: 14px;
+  --shop-menu-line-height: calc(1.1 + 0.5 * (16 / 14));
+
+  /* colour */
+  --shop-color-background: #fff;
+  --shop-color-foreground: #000;
+  --shop-color-foreground-rgb: 0 0 0;
+  --shop-color-subdued: rgb(0 0 0 / 80%);
+  --shop-color-muted: rgb(0 0 0 / 60%);
+  --shop-color-border: #dfdfdf;
+  --shop-color-input-text: #333;
+  --shop-color-input-placeholder: rgb(51 51 51 / 70%);
+  --shop-color-primary-button-bg: #000;
+  --shop-color-primary-button-text: #fff;
+  --shop-color-primary-button-hover-bg: #262626;
+  --shop-color-secondary-button-text: #000;
+  --shop-color-secondary-button-border: #000;
+  --shop-color-secondary-button-hover-bg: rgb(0 0 0 / 15%);
+  --shop-color-overlay: rgb(18 18 18 / 40%);
+  --shop-backdrop: rgb(0 0 0 / 15%);
+
+  /* shape */
+  --shop-radius-button: 14px;
+  --shop-radius-input: 4px;
+  --shop-radius-popover: 14px;
+  --shop-radius-pill: 100px;
+  --shop-border-popover: 1px solid var(--shop-color-border);
+  --shop-shadow-popover: 0 4px 20px rgb(0 0 0 / 15%);
+  --shop-icon-stroke-width: 1.5px;
+
+  /* buttons */
+  --shop-button-padding-block: 16px;
+  --shop-button-padding-inline: 24px;
+  --shop-touch-target: 44px;
+
+  /* layout: the theme's "narrow" page width (90rem content) */
+  --shop-content-width: 1440px;
+  --shop-page-margin: 16px;
+  --shop-gutter: max(var(--shop-page-margin), calc((100% - var(--shop-content-width)) / 2));
+
+  /* spacing scale: section paddings are multiplied by 0.7 below 750px */
+  --shop-spacing-scale: 0.7;
+
+  /* chrome heights (announcement bar 12px text + 2 × 15px padding + 1px divider) */
+  --shop-announcement-height: 43px;
+  --shop-header-row-height: 60px;
+  --shop-header-group-height: calc(var(--shop-announcement-height) + var(--shop-header-row-height));
+
+  /* section heights (theme --section-height-medium) */
+  --shop-section-height-medium: 400px;
+
+  /* motion */
+  --shop-ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+  --shop-animation-speed: 0.125s;
+  --shop-drawer-speed: 0.2s;
+  --shop-drawer-width: 480px;
+
+  /* layers */
+  --shop-layer-sticky: 8;
+  --shop-layer-overlay: 16;
+  --shop-layer-menu-drawer: 18;
+  --shop-layer-temporary: 20;
+}
+
+@media (min-width: 640px) {
+  body.shopify {
+    --shop-section-height-medium: 55svh;
+  }
+}
+
+@media (min-width: 750px) {
+  body.shopify {
+    --shop-page-margin: 40px;
+    --shop-spacing-scale: 1;
+    --shop-header-row-height: 68.375px;
+    --shop-header-group-height: 111px; /* theme measures the group height in whole px */
+  }
+}
+
+@media (min-width: 960px) {
+  body.shopify {
+    --shop-section-height-medium: 65svh;
+  }
+}
+
+/* ---------- resets of the boilerplate (styles/styles.css) ---------- */
+body.shopify,
+body.shopify *,
+body.shopify *::before,
+body.shopify *::after {
+  box-sizing: border-box;
+}
+
+/* live .page-wrapper: a min-height 100dvh flex column with the content flex: 1, so short pages
+   pin the footer to the viewport bottom (canon request collections-running) */
+body.shopify.appear {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  margin: 0;
+  background-color: var(--shop-color-background);
+  color: var(--shop-color-foreground);
+  font-family: var(--shop-font-family);
+  font-size: var(--shop-font-size-paragraph);
+  font-weight: var(--shop-font-weight-body);
+  line-height: var(--shop-line-height-paragraph);
+  letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.shopify header {
+  height: auto;
+}
+
+body.shopify > main {
+  flex: 1 0 auto;
+}
+
+/* sticky header row (live: top -1px); the announcement bar sits before <header> and scrolls away */
+body.shopify > header {
+  position: sticky;
+  top: -1px;
+  z-index: var(--shop-layer-menu-drawer);
+}
+
+body.shopify h1,
+body.shopify h2,
+body.shopify h3,
+body.shopify h4,
+body.shopify h5,
+body.shopify h6 {
+  margin: 0;
+  scroll-margin: 0;
+  font-family: var(--shop-font-family);
+  font-weight: var(--shop-font-weight-heading);
+  letter-spacing: normal;
+}
+
+body.shopify p,
+body.shopify dl,
+body.shopify ol,
+body.shopify ul,
+body.shopify pre,
+body.shopify blockquote {
+  margin: 0;
+}
+
+body.shopify a {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-decoration: none;
+}
+
+/* neutralise the boilerplate hover (brand colour + underline); blocks style their own :hover */
+body.shopify a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.shopify button,
+body.shopify input,
+body.shopify textarea,
+body.shopify select {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+body.shopify input,
+body.shopify input:hover,
+body.shopify textarea,
+body.shopify select {
+  border: 0;
+}
+
+body.shopify main > div,
+body.shopify main > .section {
+  margin: 0;
+}
+
+body.shopify main > .section > div {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.shopify main img {
+  max-width: 100%;
+}
+
+body.shopify svg {
+  display: block;
+}
+
+/* ---------- type presets ---------- */
+
+/* theme text blocks: headings balance their lines, paragraphs wrap "pretty" */
+body.shopify :is(h1, h2, h3, h4, h5, h6, .shop-h1, .shop-h2, .shop-h3, .shop-h4, .shop-h5, .shop-h6) {
+  text-wrap: balance;
+}
+
+body.shopify p {
+  text-wrap: pretty;
+}
+
+body.shopify h1,
+body.shopify .shop-h1 {
+  font-size: var(--shop-font-size-h1);
+  line-height: var(--shop-line-height-display-tight);
+  font-weight: var(--shop-font-weight-heading);
+}
+
+body.shopify h2,
+body.shopify .shop-h2 {
+  font-size: var(--shop-font-size-h2);
+  line-height: var(--shop-line-height-display-tight);
+  font-weight: var(--shop-font-weight-heading);
+}
+
+body.shopify h3,
+body.shopify .shop-h3 {
+  font-size: var(--shop-font-size-h3);
+  line-height: var(--shop-line-height-display-normal);
+  font-weight: var(--shop-font-weight-heading);
+}
+
+body.shopify h4,
+body.shopify .shop-h4 {
+  font-size: var(--shop-font-size-h4);
+  line-height: var(--shop-line-height-display-tight);
+  font-weight: var(--shop-font-weight-heading);
+}
+
+body.shopify h5,
+body.shopify .shop-h5 {
+  font-size: var(--shop-font-size-h5);
+  line-height: var(--shop-line-height-display-loose);
+  font-weight: var(--shop-font-weight-subheading);
+}
+
+body.shopify h6,
+body.shopify .shop-h6 {
+  font-size: var(--shop-font-size-h6);
+  line-height: var(--shop-line-height-display-loose);
+  font-weight: var(--shop-font-weight-subheading);
+}
+
+body.shopify .shop-paragraph {
+  font-size: var(--shop-font-size-paragraph);
+  line-height: var(--shop-line-height-paragraph);
+  font-weight: var(--shop-font-weight-body);
+}
+
+body.shopify .shop-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- buttons ---------- */
+body.shopify .shop-button {
+  display: inline-grid;
+  place-items: center;
+  width: fit-content;
+  margin: 0;
+  padding: var(--shop-button-padding-block) var(--shop-button-padding-inline);
+  border: 0;
+  border-radius: var(--shop-radius-button);
+  font-family: var(--shop-font-family);
+  font-size: var(--shop-font-size-paragraph);
+  font-weight: var(--shop-font-weight-body);
+  line-height: var(--shop-line-height-paragraph);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color var(--shop-animation-speed) ease-in-out,
+    background-color var(--shop-animation-speed) ease-in-out,
+    box-shadow var(--shop-animation-speed) ease-in-out;
+}
+
+/* the theme's 0px inset "button border" follows the button colour, so the observed
+   box-shadow transition fires on hover (canon request pages-contact) */
+body.shopify .shop-button--primary {
+  background-color: var(--shop-color-primary-button-bg);
+  color: var(--shop-color-primary-button-text);
+  box-shadow: inset 0 0 0 0 var(--shop-color-primary-button-bg);
+}
+
+body.shopify .shop-button--primary:hover {
+  background-color: var(--shop-color-primary-button-hover-bg);
+  color: var(--shop-color-primary-button-text);
+  box-shadow: inset 0 0 0 0 var(--shop-color-primary-button-hover-bg);
+}
+
+body.shopify .shop-button--secondary {
+  background-color: transparent;
+  color: var(--shop-color-secondary-button-text);
+  box-shadow: inset 0 0 0 1px var(--shop-color-secondary-button-border);
+}
+
+body.shopify .shop-button--secondary:hover {
+  background-color: var(--shop-color-secondary-button-hover-bg);
+  color: var(--shop-color-secondary-button-text);
+}
+
+/* ---------- inputs ---------- */
+body.shopify .shop-input {
+  width: 100%;
+  padding: 12.8px;
+  border: 0;
+  border-radius: var(--shop-radius-input);
+  background-color: #fff;
+  color: var(--shop-color-input-text);
+  box-shadow: 0 0 0 1px var(--shop-color-border);
+  font-size: var(--shop-font-size-paragraph);
+  line-height: var(--shop-line-height-paragraph);
+  outline: none;
+}
+
+body.shopify .shop-input:focus-visible {
+  box-shadow: 0 0 0 1.5px var(--shop-color-input-text);
+}
+
+body.shopify .shop-input::placeholder {
+  color: var(--shop-color-input-placeholder);
+}
+
+/* ---------- open-drawer state (cart drawer pushes the page at >= 750px) ---------- */
+@media (min-width: 750px) {
+  body.shopify {
+    transition: margin-right var(--shop-animation-speed) var(--shop-ease-out-cubic);
+  }
+
+  body.shopify.shop-drawer-open {
+    margin-right: var(--shop-drawer-width);
+  }
+}

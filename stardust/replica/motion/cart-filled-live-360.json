@@ -1,0 +1,53 @@
+{
+ "hover:checkout": {
+  "changed": [
+   "t=none c=rgb(255, 255, 255) bg=rgb(0, 0, 0) bs=rgb(0, 0, 0) 0px 0px 0px 0px inset o=1 td=none/rgb(255, 255, 255)  ->  t=none c=rgb(255, 255, 255) bg=rgb(38, 38, 38) bs=rgb(38, 38, 38) 0px 0px 0px 0px inset o=1 td=none/rgb(255, 255, 255)"
+  ],
+  "events": [
+   "transitionstart background-color on button.cart__checkout-button 0",
+   "transitionstart box-shadow on button.cart__checkout-button 0"
+  ]
+ },
+ "hover:remove": {
+  "changed": [
+   "path t=none c=rgb(0, 0, 0) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgb(0, 0, 0)  ->  path t=matrix(1, 0, 0, 1, 0, 1.5) c=rgb(0, 0, 0) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgb(0, 0, 0)",
+   "path t=none c=rgb(0, 0, 0) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgb(0, 0, 0)  ->  path t=matrix(0.965926, -0.258819, 0.258819, 0.965926, -1.5, 1.5) c=rgb(0, 0, 0) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgb(0, 0, 0)"
+  ],
+  "events": [
+   "transitionstart transform on path.remove-icon-bottom 0",
+   "transitionstart transform on path.remove-icon-top 0"
+  ]
+ },
+ "hover:discount": {
+  "changed": [
+   "t=none c=rgb(0, 0, 0) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgb(0, 0, 0)  ->  t=none c=rgba(0, 0, 0, 0.8) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgba(0, 0, 0, 0.8)",
+   "path t=none c=rgb(0, 0, 0) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgb(0, 0, 0)  ->  path t=none c=rgba(0, 0, 0, 0.8) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgba(0, 0, 0, 0.8)",
+   "path t=none c=rgb(0, 0, 0) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgb(0, 0, 0)  ->  path t=none c=rgba(0, 0, 0, 0.8) bg=rgba(0, 0, 0, 0) bs=none o=1 td=none/rgba(0, 0, 0, 0.8)"
+  ],
+  "events": []
+ },
+ "hover:plus": {
+  "changed": [],
+  "events": []
+ },
+ "hover:title": {
+  "changed": [],
+  "events": []
+ },
+ "hover:shop": {
+  "changed": [],
+  "events": []
+ },
+ "hover:paypal": {
+  "changed": [],
+  "events": []
+ },
+ "click:discount": {
+  "events": [
+   "transitionstart height on div.details-content 0",
+   "transitionstart opacity on div.details-content 0"
+  ],
+  "open": true,
+  "height": 103.1875
+ }
+}

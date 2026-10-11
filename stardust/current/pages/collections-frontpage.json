@@ -1,0 +1,453 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-10-10T14:38:30.561Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "collections-frontpage",
+  "url": "https://t8bnc1-5b.myshopify.com/collections/frontpage",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-10-10T14:38:30.561Z",
+  "finalUrl": "https://t8bnc1-5b.myshopify.com/collections/frontpage",
+  "title": "Startseite – Mein Shop",
+  "description": null,
+  "og": {
+    "title": "Startseite",
+    "description": "Mein Shop",
+    "image": null,
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Startseite"
+    },
+    {
+      "tag": "h2",
+      "text": "Join our email list"
+    }
+  ],
+  "body": [
+    "Auf Lager",
+    "Nicht vorrätig",
+    "Hinzufügen Trail Running Shoes Trail Running Shoes €129,99",
+    "Trail Running Shoes"
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Mein Shop",
+      "href": "/"
+    },
+    {
+      "label": "Startseite",
+      "href": "/"
+    },
+    {
+      "label": "Katalog",
+      "href": "/collections/all"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/pages/contact"
+    },
+    {
+      "label": "EUR Region- und Sprachwahl",
+      "href": null
+    },
+    {
+      "label": "Suche",
+      "href": null
+    },
+    {
+      "label": "Warenkorb 0",
+      "href": null
+    },
+    {
+      "label": "Sortieren Am relevantesten",
+      "href": null
+    },
+    {
+      "label": "Mein Shop",
+      "href": "/"
+    },
+    {
+      "label": "Geschäftsbedingungen und Richtlinien",
+      "href": null
+    }
+  ],
+  "links": [
+    "https://t8bnc1-5b.myshopify.com/collections/frontpage#MainContent",
+    "https://t8bnc1-5b.myshopify.com/",
+    "https://t8bnc1-5b.myshopify.com/collections/all",
+    "https://t8bnc1-5b.myshopify.com/pages/contact",
+    "https://t8bnc1-5b.myshopify.com/products/road-bike-helmet",
+    "https://t8bnc1-5b.myshopify.com/products/road-running-shoes",
+    "https://t8bnc1-5b.myshopify.com/products/running-shorts",
+    "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+    "https://t8bnc1-5b.myshopify.com/collections/frontpage#ResultsList",
+    "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+    "https://t8bnc1-5b.myshopify.com/customer_authentication/redirect?locale=de&region_country=DE"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&width=352",
+        "alt": "Trail Running Shoes",
+        "w": 288,
+        "h": 288
+      },
+      {
+        "src": "https://t8bnc1-5b.myshopify.com/cdn/shop/files/NIKE_ZOOMX_ZEGAMA_TRAIL_2.avif?v=1791630992&width=352",
+        "alt": "",
+        "w": 1440,
+        "h": 1440
+      }
+    ],
+    "allImgCount": 9,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--hover-transition-duration": ".25s",
+    "--hover-transition-timing": "ease-out",
+    "--submenu-animation-speed": ".36s",
+    "--safe-area-inset-top": "0px",
+    "--safe-area-inset-right": "0px",
+    "--safe-area-inset-bottom": "0px",
+    "--safe-area-inset-left": "0px",
+    "--sidebar-width": "25rem",
+    "--theme-drawer-width": "30rem",
+    "--narrow-content-width": "36rem",
+    "--normal-content-width": "42rem",
+    "--narrow-page-width": "90rem",
+    "--normal-page-width": "120rem",
+    "--wide-page-width": "150rem",
+    "--section-height-small": "50svh",
+    "--section-height-medium": "65svh",
+    "--section-height-large": "80svh",
+    "--color-background": "#ffffff",
+    "--color-background-rgb": "255 255 255",
+    "--color-foreground": "#000000",
+    "--color-foreground-rgb": "0 0 0",
+    "--color-border": "#000000",
+    "--color-border-rgb": "0 0 0",
+    "--palette-lightest": "#ffffff",
+    "--palette-lightest-rgb": "255 255 255",
+    "--palette-darkest": "#000000",
+    "--palette-darkest-rgb": "0 0 0",
+    "--opacity-5-15": "0.05",
+    "--opacity-10-25": "0.1",
+    "--opacity-35-55": "0.35",
+    "--opacity-40-60": "0.4",
+    "--opacity-30-60": "0.3",
+    "--opacity-60": "0.6",
+    "--color-primary-button-text": "rgb(255 255 255 / 1.0)",
+    "--color-primary-button-background": "rgb(0 0 0 / 1.0)",
+    "--color-primary-button-border": "rgb(0 0 0 / 1.0)",
+    "--color-primary-button-focus-outline": "rgb(0 0 0)",
+    "--color-primary-button-hover-text": "rgb(255 255 255 / 1.0)",
+    "--color-primary-button-hover-background": "#262626",
+    "--color-primary-button-hover-border": "#262626",
+    "--color-secondary-button-text": "rgb(0 0 0 / 1.0)",
+    "--color-secondary-button-background": "rgb(0 0 0 / 0.0)",
+    "--color-secondary-button-border": "rgb(0 0 0 / 1.0)",
+    "--color-secondary-button-hover-text": "rgb(0 0 0 / 1.0)",
+    "--color-secondary-button-hover-background": "rgba(0, 0, 0, 0.15)",
+    "--color-secondary-button-hover-border": "#262626",
+    "--color-input-background": "rgb(255 255 255 / 1.0)",
+    "--color-input-text": "rgb(51 51 51 / 1.0)",
+    "--color-input-text-rgb": "51 51 51",
+    "--color-input-border": "rgb(223 223 223 / 1.0)",
+    "--color-variant-background": "rgb(255 255 255 / 1.0)",
+    "--color-variant-border": "rgb(223 223 223 / 1.0)",
+    "--color-variant-text": "rgb(0 0 0 / 1.0)",
+    "--color-variant-text-rgb": "0 0 0",
+    "--color-variant-hover-background": "#f2f2f2",
+    "--color-variant-hover-text": "rgb(0 0 0 / 1.0)",
+    "--color-variant-hover-border": "#d2d2d2",
+    "--color-selected-variant-background": "rgb(0 0 0 / 1.0)",
+    "--color-selected-variant-border": "rgb(0 0 0 / 1.0)",
+    "--color-selected-variant-text": "rgb(255 255 255 / 1.0)",
+    "--color-selected-variant-text-rgb": "255 255 255",
+    "--color-selected-variant-hover-background": "#262626",
+    "--color-selected-variant-hover-text": "rgb(255 255 255 / 1.0)",
+    "--color-selected-variant-hover-border": "#262626",
+    "--input-disabled-background-color": "rgb(0 0 0 / 0.1)",
+    "--input-disabled-border-color": "rgb(0 0 0 / 0.05)",
+    "--input-disabled-text-color": "rgb(0 0 0 / 0.5)",
+    "--color-foreground-muted": "rgb(0 0 0 / 0.6)",
+    "--color-foreground-subdued": "rgb(0 0 0 / 0.8)",
+    "--color-popover-shadow-rgb": "0 0 0",
+    "--shadow-blur": "20px",
+    "--shadow-popover": "0px 4px 20px rgb(0 0 0 / 0.15)",
+    "--text-align-default": "start"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 2,
+    "mainTextLen": 7048,
+    "realImageCount": 2,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "dynamic": {
+    "endpoints": [
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+        "query": [],
+        "resourceType": "other",
+        "contentType": "application/speculationrules+json",
+        "status": 200,
+        "bytes": 567,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/cdn/shopifycloud/storefront/assets/storefront/horizon.specrules-5654ba2e.json",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "otlp-http-production.shopifysvc.com",
+        "path": "/v1/logs",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": 21,
+        "hits": 3,
+        "example": "https://otlp-http-production.shopifysvc.com/v1/logs",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "otlp-http-production.shopifysvc.com",
+        "path": "/v1/metrics",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": 21,
+        "hits": 15,
+        "example": "https://otlp-http-production.shopifysvc.com/v1/metrics",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "monorail-edge.shopifysvc.com",
+        "path": "/v1/produce",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 200,
+        "bytes": null,
+        "hits": 4,
+        "example": "https://monorail-edge.shopifysvc.com/v1/produce",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/.well-known/shopify/monorail/unstable/produce_batch",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 200,
+        "bytes": null,
+        "hits": 5,
+        "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/monorail/unstable/produce_batch",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/api/2026-01/graphql.json",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": null,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/api/2026-01/graphql.json",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/.well-known/shopify/fec/produce",
+        "query": [],
+        "resourceType": "ping",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": null,
+        "hits": 2,
+        "example": "https://t8bnc1-5b.myshopify.com/.well-known/shopify/fec/produce",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/api/collect",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 204,
+        "bytes": null,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/api/collect",
+        "sameSite": true
+      },
+      {
+        "method": "GET",
+        "host": "t8bnc1-5b.myshopify.com",
+        "path": "/collections/frontpage",
+        "query": [
+          "section_id"
+        ],
+        "resourceType": "fetch",
+        "contentType": "text/html",
+        "status": 200,
+        "bytes": 18969,
+        "hits": 1,
+        "example": "https://t8bnc1-5b.myshopify.com/collections/frontpage",
+        "sameSite": true
+      },
+      {
+        "method": "POST",
+        "host": "error-analytics-sessions-production.shopifysvc.com",
+        "path": "/",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": null,
+        "status": 202,
+        "bytes": null,
+        "hits": 1,
+        "example": "https://error-analytics-sessions-production.shopifysvc.com/",
+        "sameSite": false
+      }
+    ],
+    "thirdPartyScriptHosts": [
+      {
+        "host": "cdn.shopify.com",
+        "count": 80
+      }
+    ],
+    "truncated": false,
+    "inlineData": [
+      {
+        "id": "shopify-features",
+        "type": "application/json",
+        "bytes": 189,
+        "topLevelKeys": [
+          "accessToken",
+          "betas",
+          "domain",
+          "predictiveSearch",
+          "shopId",
+          "locale"
+        ]
+      },
+      {
+        "id": "shop-js-analytics",
+        "type": "application/json",
+        "bytes": 25,
+        "topLevelKeys": [
+          "pageType"
+        ]
+      },
+      {
+        "id": "shopify-customer-account-data",
+        "type": "application/json",
+        "bytes": 2238,
+        "topLevelKeys": [
+          "customer",
+          "shop",
+          "visitor"
+        ]
+      }
+    ],
+    "globalState": [
+      "Shopify"
+    ],
+    "frameworkHints": [
+      "shopify"
+    ],
+    "forms": [
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/collections/frontpage",
+        "hasAction": true,
+        "method": "get",
+        "sameOrigin": true,
+        "fieldCount": 16,
+        "fieldNames": [
+          "filter.v.availability",
+          "filter.v.price.gte",
+          "filter.v.price.lte",
+          "sort_by",
+          "grid"
+        ],
+        "search": false
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/cart/add",
+        "hasAction": true,
+        "method": "post",
+        "sameOrigin": true,
+        "fieldCount": 0,
+        "fieldNames": [],
+        "search": false
+      },
+      {
+        "action": "https://t8bnc1-5b.myshopify.com/contact",
+        "hasAction": true,
+        "method": "post",
+        "sameOrigin": true,
+        "fieldCount": 1,
+        "fieldNames": [
+          "contact[email]"
+        ],
+        "search": false
+      }
+    ],
+    "ariaLiveRegions": 1,
+    "triggers": [
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      },
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      },
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      },
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      },
+      {
+        "marker": "aria-haspopup",
+        "href": null
+      }
+    ],
+    "mediaIds": [],
+    "summary": {
+      "sameSiteEndpoints": 6,
+      "thirdPartyEndpoints": 4,
+      "thirdPartyScriptHosts": 1,
+      "inlineDataBlobs": 3,
+      "forms": 3,
+      "searchForms": 0,
+      "hydrated": true
+    }
+  },
+  "screenshot": "assets/screenshots/collections-frontpage.png",
+  "renderedHtml": "pages/collections-frontpage.html"
+}

@@ -1,0 +1,121 @@
+{
+  "archetype": "products-trail-running-shoes",
+  "prototype": "stardust/prototypes/products-trail-running-shoes-proposed.html",
+  "block": "blocks/shop-product/shop-product.css",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 3,
+    "360": 2
+  },
+  "iterationNote": "1440: iter1 (1.17%) -> iter2 (0.25%) -> final --full (0.85%, settle re-capture 0.60%); 360: iter1 (0.17%) -> iter2 -> final --full (0.17%). iter1b logs = iter1 re-run after the first capture died. Evidence stardust/replica/gates/products-trail-running-shoes-<w>/, logs stardust/.work/replica/bg/pdp-*.log",
+  "gates": {
+    "1440": {
+      "pixel": 0.85,
+      "pixelSettle": 0.6,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "quiet",
+      "chromeCrop": { "header": 0.0 },
+      "expressCrop": "0.67% (y329+83: PayPal + Weitere Bezahlmöglichkeiten, boxes identical 429x52 / 429x19; glyph sub-pixel offset only)"
+    },
+    "360": {
+      "pixel": 0.17,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360)",
+      "chromeParity": "4 deltas = canon live artifact R-index-1 (closed drawer <details> checkmark)",
+      "chromeCrop": { "header": 0.15, "footer": 1.13 },
+      "expressCrop": "0.00% (y721+83, boxes identical 328x52 / 328x19)"
+    }
+  },
+  "capProbe": "PASS at 2560 (0 of 4 rows failed; module rows advisory: live 2 sections vs build 4 incl. the fixed sticky bar + skip link) — stardust/replica/gates/products-trail-running-shoes-2560/cap-iter.json",
+  "siblingCheck": {
+    "source": "live /products/<handle>.js 2026-10-10, stardust/.work/pdp/siblings.txt",
+    "result": "all four products: 1 image, 1 variant (Default Title, no picker), no compare-at, available, description h2+p+ul(4-5 li)+p (487-542 chars). Only the image ratio varies (1:1, 4:5, 4:5, 2104x2328) -> --shop-product-media-ratio; >= 750 the max(500px,100vh-header) cap gives 883x832 for all (measured live helmet + shorts). Recorded in the shop-product.css DOM contract."
+  },
+  "residuals": [
+    {
+      "id": "R-pdp-1",
+      "breakpoint": 1440,
+      "probe": "pixel band y1500-1778 3.8%",
+      "cause": "live capture artifact",
+      "detail": "live.png caught the fixed quick-add bar (.sticky-add-to-cart__bar) in the last stitched chunk; its observer state flips during the capture's frozen-timer scroll replay (stitch-trace: live stuck=true at y=0 after freeze). Settled state at the page bottom is stuck=false on both sides (stitch-trace after settle). Rest of the page 0.0-0.5% per band.",
+      "justified": true
+    },
+    {
+      "id": "R-pdp-2",
+      "breakpoint": 360,
+      "probe": "chrome-parity header icons",
+      "cause": "live-artifact",
+      "detail": "Same as R-index-1; header crop 99.85% match.",
+      "justified": true
+    },
+    {
+      "id": "R-pdp-3",
+      "breakpoint": "1440, 360",
+      "probe": "content-diff 🟡 (35)",
+      "cause": "non-content",
+      "detail": "Live inline <style>/<script>/JSON-LD, PayPal iframe CSS, hidden 'Schließen' labels and the 7th img (zoom-dialog duplicate); build EXTRA 'Mit' = the PayPal label recreated as text+SVG (live renders it inside the PayPal iframe, R-02).",
+      "justified": true
+    },
+    {
+      "id": "R-pdp-4",
+      "breakpoint": "all",
+      "probe": "register text",
+      "cause": "naming",
+      "detail": "Register R-03 is titled 'Weitere Zahlungsoptionen' but the live link text is 'Weitere Bezahlmöglichkeiten' (all four PDPs); the prototype uses the live text verbatim. Look verified by crop (above).",
+      "justified": true
+    },
+    {
+      "id": "R-pdp-5",
+      "breakpoint": 1440,
+      "probe": "motion keyframe name",
+      "cause": "lint rename",
+      "detail": "Live zoom thumbnails animate with camelCase thumbnailsSlideInTop; the build uses shop-product-thumbnails-slide-in-top (kebab-case keyframe lint), same element, duration and easing — reported MISSING+EXTRA by name only.",
+      "justified": true
+    },
+    {
+      "id": "R-pdp-6",
+      "breakpoint": 360,
+      "probe": "motion after add-to-cart",
+      "cause": "canon (shop-header)",
+      "detail": "cart-icon--has-cart, cart-bubble--animating, grow, move-and-fade and the view transition named sticky-header all run on the header cart icon (y=239); canon request already filed (cart bubble). The PDP block only emits the fly chip.",
+      "justified": true
+    }
+  ],
+  "motion": {
+    "observed": [
+      "add-to-cart (main + sticky): atc-slide, checkmark burst (stroke-dashoffset 320ms x8, scale 200ms, filter 200ms, colour 125ms), fly-to-cart chip travel-x / travel-y / travel-scale",
+      "zoom button: dialog opens in a view transition (gallery-item-open group, fade-in/out, plus-lighter), thumbnails slide in from the top",
+      "sticky quick-add bar: data-stuck toggles when the buy buttons leave the viewport / footer within 200px (opacity + transform 300ms)",
+      "quantity +/-: value change only (no animated frames); minus disabled + opacity .5 at 1",
+      "after ATC at 360: header cart bubble grow / move-and-fade (canon)"
+    ],
+    "implemented": [
+      "quantity stepper, sticky bar state machine (two IntersectionObservers), ATC burst + fly chip, zoom dialog with startViewTransition — inline script in the prototype, documented in the shop-product.css DOM contract",
+      "PayPal / Weitere Bezahlmöglichkeiten look (R-02/R-03), click inert in the prototype (Phase 5: cartCreate -> checkoutUrl)"
+    ],
+    "dead": [
+      "header scroll morph",
+      "hover diffs on ATC, quantity +, more-options, gallery item (none measured on live)",
+      "drawer does NOT open after ATC on live (bubble only)"
+    ],
+    "summary": "1440: 6 parity, 1 missing/1 extra = rename (R-pdp-5); 1440 ATC: 10 parity, 0 missing; 360: 10 parity, 8 missing = header bubble/view transition (canon, R-pdp-6)",
+    "evidence": [
+      "stardust/replica/motion/products-trail-running-shoes-compare-1440.txt",
+      "stardust/replica/motion/products-trail-running-shoes-compare-1440-atc.txt",
+      "stardust/replica/motion/products-trail-running-shoes-compare-360.txt"
+    ]
+  },
+  "canonRequests": [
+    "products-trail-running-shoes, cart: shop-header nav-link colour + home-only h1/aria-current (filed)",
+    "products-trail-running-shoes: shop-header cart bubble after ATC (filed)"
+  ],
+  "files": [
+    "blocks/shop-product/shop-product.css",
+    "stardust/prototypes/products-trail-running-shoes-proposed.html"
+  ]
+}

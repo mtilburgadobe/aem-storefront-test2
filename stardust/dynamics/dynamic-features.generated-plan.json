@@ -1,0 +1,484 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:dynamics plan",
+  "writtenAt": "2026-10-10T14:49:24.181Z",
+  "input": "stardust/current/_dynamics.json",
+  "target": null,
+  "migrated": null
+ },
+ "rows": [
+  {
+   "id": "a-first-party-api-post-api-2026-01-graphql-json",
+   "class": "A",
+   "feature": "first-party API POST /api/2026-01/graphql.json",
+   "pages": 8,
+   "probed": 8,
+   "reach": {
+    "pages": 22,
+    "of": 22
+   },
+   "evidence": [
+    "POST /api/2026-01/graphql.json → 200"
+   ],
+   "pattern": "off-origin-data",
+   "disposition": "data-fed",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "off-origin data",
+   "decision": "which tier for the target host; consumer on the migrated pages?"
+  },
+  {
+   "id": "a-first-party-api-post-api-collect",
+   "class": "A",
+   "feature": "first-party API POST /api/collect",
+   "pages": 8,
+   "probed": 8,
+   "reach": {
+    "pages": 22,
+    "of": 22
+   },
+   "evidence": [
+    "POST /api/collect → 204"
+   ],
+   "pattern": "off-origin-data",
+   "disposition": "data-fed",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "off-origin data",
+   "decision": "which tier for the target host; consumer on the migrated pages?"
+  },
+  {
+   "id": "a-cms-app-settings-object-shopify",
+   "class": "A",
+   "feature": "CMS / app settings object Shopify",
+   "pages": 8,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "shopJsCdnBaseUrl",
+    "ce_forms",
+    "analytics"
+   ],
+   "pattern": "read-settings",
+   "disposition": "static-snapshot",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "— (keys name endpoints, ids, vendors)"
+  },
+  {
+   "id": "a-first-party-api-post-well-known-shopify-fec-produce",
+   "class": "A",
+   "feature": "first-party API POST /.well-known/shopify/fec/produce",
+   "pages": 4,
+   "probed": 8,
+   "reach": {
+    "pages": 18,
+    "of": 22
+   },
+   "evidence": [
+    "POST /.well-known/shopify/fec/produce → 200"
+   ],
+   "pattern": "off-origin-data",
+   "disposition": "data-fed",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "off-origin data",
+   "decision": "which tier for the target host; consumer on the migrated pages?"
+  },
+  {
+   "id": "a-first-party-api-post-api-event-collect",
+   "class": "A",
+   "feature": "first-party API POST /api/event/collect",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "POST /api/event/collect → 200"
+   ],
+   "pattern": "off-origin-data",
+   "disposition": "data-fed",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "off-origin data",
+   "decision": "which tier for the target host; consumer on the migrated pages?"
+  },
+  {
+   "id": "cr-client-rendered-slot-product-recommendations",
+   "class": "CR",
+   "feature": "client-rendered slot product-recommendations",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "data-url=/recommendations/products?limit=4"
+   ],
+   "pattern": "settled-dom-snapshot",
+   "disposition": "static-snapshot",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "capture",
+   "decision": "inspect the consumer"
+  },
+  {
+   "id": "f-form-contact-form-origin-contact-1-fields",
+   "class": "F",
+   "feature": "form \"contact_form\" → origin /contact (1 fields)",
+   "pages": 8,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "email:contact[email]",
+    "form_type,utf8"
+   ],
+   "pattern": "forms",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "forms",
+   "decision": "production endpoint; interim capture ships now"
+  },
+  {
+   "id": "f-form-facetfiltersform-template-32544931774789-main-desktop",
+   "class": "F",
+   "feature": "form \"FacetFiltersForm--template--32544931774789__main-desktop\" → origin /collections/all (16 fields)",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "checkbox:filter.v.availability,checkbox:filter.v.availability,text:filter.v.price.gte,text:filter.v.price.lte,select:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by"
+   ],
+   "pattern": "forms",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "forms",
+   "decision": "production endpoint; interim capture ships now"
+  },
+  {
+   "id": "f-form-facetfiltersform-template-32544931774789-main-overflo",
+   "class": "F",
+   "feature": "form \"FacetFiltersForm--template--32544931774789__main-overflow\" → origin /collections/all (14 fields)",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "checkbox:filter.v.availability,checkbox:filter.v.availability,text:filter.v.price.gte,text:filter.v.price.lte,select:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by,radio:sort_by"
+   ],
+   "pattern": "forms",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "forms",
+   "decision": "production endpoint; interim capture ships now"
+  },
+  {
+   "id": "f-form-ref-node-origin-cart-add-1-fields",
+   "class": "F",
+   "feature": "form \"ref: <Node>\" → origin /cart/add (1 fields)",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "number:quantity",
+    "form_type,utf8,id,product-id,section-id"
+   ],
+   "pattern": "forms",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "forms",
+   "decision": "production endpoint; interim capture ships now"
+  },
+  {
+   "id": "f-form-contactform-aqytpbfn3u0liefnct-contact-form-uwickq-or",
+   "class": "F",
+   "feature": "form \"ContactForm-AQytPbFN3U0lieFNCT__contact_form_UwiCkQ\" → origin /contact (4 fields)",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "text:contact[name],email:contact[email],tel:contact[phone],textarea:contact[body]",
+    "form_type,utf8,contact[id]"
+   ],
+   "pattern": "forms",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "forms",
+   "decision": "production endpoint; interim capture ships now"
+  },
+  {
+   "id": "i18n-locale-variants-en",
+   "class": "I18N",
+   "feature": "locale variants en",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "https://privacy.shopify.com/en"
+   ],
+   "pattern": "locale-tree",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "locale wave",
+   "decision": "scope of the locale trees"
+  },
+  {
+   "id": "l-listing-candidate-11-cards",
+   "class": "L",
+   "feature": "listing candidate \n  (11 cards)",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [],
+   "pattern": "listing-index-backed",
+   "disposition": "index-backed",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "listings",
+   "decision": "index-driven or editorially curated?"
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-chrome-only-theme-drawer-conte",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup (chrome only) → theme-drawer:content",
+   "pages": 6,
+   "probed": 8,
+   "reach": {
+    "pages": 99,
+    "of": 22
+   },
+   "evidence": [
+    "Suche",
+    "Mehr",
+    "Warenkorb 0"
+   ],
+   "pattern": "chrome-interaction",
+   "disposition": "rebuild-native",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "interactive",
+   "decision": "none (motion-observe evidence)"
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-theme-drawer-content",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup → theme-drawer:content",
+   "pages": 1,
+   "probed": 8,
+   "reach": {
+    "pages": 99,
+    "of": 22
+   },
+   "evidence": [
+    "Suche",
+    "Mehr",
+    "Warenkorb 0"
+   ],
+   "pattern": "modal-loader",
+   "disposition": "rebuild-native",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "interactive",
+   "decision": "none"
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-chrome-only-target-outside-dom",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup (chrome only) → target outside DOM at capture",
+   "pages": 1,
+   "probed": 8,
+   "reach": {
+    "pages": 99,
+    "of": 22
+   },
+   "evidence": [
+    "Suche",
+    "Mehr"
+   ],
+   "pattern": "chrome-interaction",
+   "disposition": "rebuild-native",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "interactive",
+   "decision": "none (motion-observe evidence)"
+  },
+  {
+   "id": "s-site-search-form-search",
+   "class": "S",
+   "feature": "site search form → /search",
+   "pages": 8,
+   "probed": 8,
+   "reach": {
+    "pages": 1,
+    "of": 22
+   },
+   "evidence": [
+    "search:q"
+   ],
+   "pattern": "search-index-backed",
+   "disposition": "index-backed",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "search",
+   "decision": "none (corpus = the migrated pages; second corpora stay out)"
+  },
+  {
+   "id": "s-first-party-api-get-search",
+   "class": "S",
+   "feature": "first-party API GET /search",
+   "pages": 2,
+   "probed": 8,
+   "reach": {
+    "pages": 8,
+    "of": 22
+   },
+   "evidence": [
+    "GET /search?q,resources[type],section_id → 200",
+    "GET /search?section_id → 200"
+   ],
+   "pattern": "off-origin-data",
+   "disposition": "data-fed",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "off-origin data",
+   "decision": "datasource ownership / same-origin routing on production"
+  },
+  {
+   "id": "t-unknown-third-party-host-shop-app",
+   "class": "T",
+   "feature": "unknown third-party host shop.app",
+   "pages": 8,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "shop.app"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-www-paypalobjects-com",
+   "class": "T",
+   "feature": "unknown third-party host www.paypalobjects.com",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "www.paypalobjects.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "v-iframe-without-src-runtime-injected-embed",
+   "class": "V",
+   "feature": "iframe without src (runtime-injected embed)",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "PayPal-paypal",
+    "0×0"
+   ],
+   "pattern": "embed-passthrough",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-human-capture",
+   "status": "pending",
+   "phase": "embeds",
+   "decision": "resolve the runtime src from a rendered capture"
+  },
+  {
+   "id": "x-commerce-platform",
+   "class": "X",
+   "feature": "commerce: platform",
+   "pages": 8,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "cdn.shopify.com",
+    "otlp-http-production.shopifysvc.com",
+    "monorail-edge.shopifysvc.com",
+    "error-analytics-sessions-production.shopifysvc.com"
+   ],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  },
+  {
+   "id": "x-commerce-signals-cart-true-prices-4",
+   "class": "X",
+   "feature": "commerce signals (cart: true, prices: 4)",
+   "pages": 4,
+   "probed": 8,
+   "reach": null,
+   "evidence": [],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  },
+  {
+   "id": "x-commerce-signals-cart-true-prices-0",
+   "class": "X",
+   "feature": "commerce signals (cart: true, prices: 0)",
+   "pages": 3,
+   "probed": 8,
+   "reach": null,
+   "evidence": [],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  },
+  {
+   "id": "x-commerce-payments",
+   "class": "X",
+   "feature": "commerce: payments",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [
+    "www.paypal.com"
+   ],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  },
+  {
+   "id": "x-commerce-signals-cart-true-prices-5",
+   "class": "X",
+   "feature": "commerce signals (cart: true, prices: 5)",
+   "pages": 1,
+   "probed": 8,
+   "reach": null,
+   "evidence": [],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  }
+ ]
+}

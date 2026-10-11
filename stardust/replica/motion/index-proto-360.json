@@ -1,0 +1,414 @@
+{
+  "url": "http://localhost:8791/stardust/prototypes/index-proposed.html",
+  "width": 360,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 458,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 458,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 458,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 458,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 300,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".shop-header__menu-toggle",
+      "frames": [
+        {
+          "t": 8183.4000000059605,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 8389.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 8592.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 8843.199999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".shop-header__action--search-mobile",
+      "frames": [
+        {
+          "t": 9876.90000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10081.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10343.699999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10572.299999982119,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".shop-header__action--cart",
+      "frames": [
+        {
+          "t": 11579,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 11780.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 11982.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 12244.199999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [
+      {
+        "name": "menu-drawer-nav-open",
+        "el": "div.shop-header__drawer > div.shop-header__drawer-main > nav.shop-header__drawer-nav > ul > li",
+        "txt": "Startseite",
+        "y": 0
+      },
+      {
+        "name": "menu-drawer-nav-open",
+        "el": "div.shop-header__drawer > div.shop-header__drawer-main > nav.shop-header__drawer-nav > ul > li",
+        "txt": "Katalog",
+        "y": 0
+      },
+      {
+        "name": "menu-drawer-nav-open",
+        "el": "div.shop-header__drawer > div.shop-header__drawer-main > nav.shop-header__drawer-nav > ul > li",
+        "txt": "Kontakt",
+        "y": 0
+      },
+      {
+        "name": "menu-drawer-nav-open",
+        "el": "header.shop-header-wrapper > div.shop-header.block > div.shop-header__drawer > div.shop-header__drawer-main > div.shop-header__drawer-utility",
+        "txt": "EUR",
+        "y": 0
+      },
+      {
+        "name": "menu-drawer-nav-open",
+        "el": "header.shop-header-wrapper > div.shop-header.block > div.shop-header__drawer > div.shop-header__drawer-main > ul.shop-header__featured",
+        "txt": "Road Bike Helmet\n              \n              Road",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "div.shop-header__drawer > div.shop-header__drawer-main > ul.shop-header__featured > li > div.shop-header-resource",
+        "txt": "Road Bike Helmet\n              \n              Road",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "div.shop-header__drawer > div.shop-header__drawer-main > ul.shop-header__featured > li > div.shop-header-resource",
+        "txt": "Road Running Shoes\n              \n              Ro",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "div.shop-header__drawer > div.shop-header__drawer-main > ul.shop-header__featured > li > div.shop-header-resource",
+        "txt": "Running Shorts\n              \n              Runnin",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "div.shop-header__drawer > div.shop-header__drawer-main > ul.shop-header__featured > li > div.shop-header-resource",
+        "txt": "Trail Running Shoes\n              \n              T",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-in-bottom",
+        "el": "html > body.shopify.appear > div.shop-header-search > div.shop-header-search__panel",
+        "txt": "Suchen\n          \n          \n          \n        \n ",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Road Bike Helmet\n              \n              Road",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Road Bike Helmet\n              \n              Road",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Road Running Shoes\n              \n              Ro",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Road Running Shoes\n              \n              Ro",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Running Shorts\n              \n              Runnin",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Running Shorts\n              \n              Runnin",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Trail Running Shoes\n              \n              T",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Trail Running Shoes\n              \n              T",
+        "y": 0
+      },
+      {
+        "name": "drawer-slide-in",
+        "el": "html > body.shopify.appear.shop-drawer-open > div.shop-header-cart",
+        "txt": "Dein Warenkorb ist leer\n      Hast du ein Konto? L",
+        "y": 0
+      }
+    ],
+    "transitions": [],
+    "classMutations": [
+      {
+        "added": [
+          "shop-drawer-open"
+        ],
+        "el": "html > body.shopify.appear.shop-drawer-open",
+        "y": 0
+      },
+      {
+        "added": [
+          "shop-drawer-open"
+        ],
+        "el": "html > body.shopify.appear.shop-drawer-open",
+        "y": 0
+      }
+    ]
+  }
+}

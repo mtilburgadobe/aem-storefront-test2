@@ -1,0 +1,516 @@
+{
+  "url": "http://localhost:8791/stardust/prototypes/index-proposed.html",
+  "width": 1440,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 508,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 508,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 508,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 500,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 300,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".shop-header__action--search-desktop",
+      "frames": [
+        {
+          "t": 8866.09999999404,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 9070.699999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 9294.699999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 9497.90000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".shop-header__action--cart",
+      "frames": [
+        {
+          "t": 10504.199999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10705.800000011921,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10907.800000011921,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 11109.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".shop-header__currency",
+      "frames": [
+        {
+          "t": 12115.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 12317.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 12519.59999999404,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 12721.09999999404,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [
+    {
+      "sel": ".shop-product-grid__card",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all"
+        },
+        "subs": [
+          {
+            "el": "a.shop-product-grid__link",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "a.",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "img.shop-product-grid__image",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "svg.[object.SVGAnimatedString]",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "h3.shop-product-grid__zoom-title",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all"
+        },
+        "subs": [
+          {
+            "el": "a.shop-product-grid__link",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "a.",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "img.shop-product-grid__image",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "svg.[object.SVGAnimatedString]",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          },
+          {
+            "el": "h3.shop-product-grid__zoom-title",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [
+      {
+        "name": "shop-header-backdrop-in",
+        "el": "html > body.shopify.appear > div.shop-header-search > div.shop-header-search__backdrop",
+        "txt": "",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-in-bottom",
+        "el": "html > body.shopify.appear > div.shop-header-search > div.shop-header-search__panel",
+        "txt": "Suchen\n          \n          \n          \n        \n ",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Road Bike Helmet\n              \n              Road",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Road Bike Helmet\n              \n              Road",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Road Running Shoes\n              \n              Ro",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Road Running Shoes\n              \n              Ro",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Running Shorts\n              \n              Runnin",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Running Shorts\n              \n              Runnin",
+        "y": 0
+      },
+      {
+        "name": "search-element-slide-up",
+        "el": "div.shop-header-search__panel > form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li",
+        "txt": "Trail Running Shoes\n              \n              T",
+        "y": 0
+      },
+      {
+        "name": "shop-header-fade-in",
+        "el": "form.shop-header-search__form > div.shop-header-search__results > ul.shop-header-search__list > li > div.shop-header-resource",
+        "txt": "Trail Running Shoes\n              \n              T",
+        "y": 0
+      },
+      {
+        "name": "drawer-slide-in",
+        "el": "html > body.shopify.appear.shop-drawer-open > div.shop-header-cart",
+        "txt": "Dein Warenkorb ist leer\n      Hast du ein Konto? L",
+        "y": 0
+      }
+    ],
+    "transitions": [
+      {
+        "prop": "margin-right",
+        "el": "html > body.shopify.appear.shop-drawer-open",
+        "y": 0,
+        "dur": "0.125s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.shop-header.block > div.shop-header__row > div.shop-header__localization > button.shop-header__currency > svg.shop-header__caret",
+        "y": 0,
+        "dur": "0.125s"
+      },
+      {
+        "prop": "opacity",
+        "el": "header.shop-header-wrapper > div.shop-header.block > div.shop-header__row > div.shop-header__localization > div.shop-header__localization-panel",
+        "y": 0,
+        "dur": "0.3s, 0.3s"
+      },
+      {
+        "prop": "translate",
+        "el": "header.shop-header-wrapper > div.shop-header.block > div.shop-header__row > div.shop-header__localization > div.shop-header__localization-panel",
+        "y": 0,
+        "dur": "0.3s, 0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "ul.shop-product-grid__list > li.shop-product-grid__item > div.shop-product-grid__card > div.shop-product-grid__media > button.shop-product-grid__quick-add",
+        "y": 358,
+        "dur": "0.125s, 0.125s"
+      }
+    ],
+    "classMutations": [
+      {
+        "added": [
+          "shop-drawer-open"
+        ],
+        "el": "html > body.shopify.appear.shop-drawer-open",
+        "y": 0
+      },
+      {
+        "added": [
+          "shop-drawer-open"
+        ],
+        "el": "html > body.shopify.appear.shop-drawer-open",
+        "y": 0
+      }
+    ]
+  }
+}

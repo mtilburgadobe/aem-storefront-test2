@@ -1,0 +1,100 @@
+{
+  "archetype": "policies-privacy-policy",
+  "prototype": "stardust/prototypes/policies-privacy-policy-proposed.html",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 2,
+    "360": 2
+  },
+  "iterationNote": "a pre-gate flow probe fixed the rte margins (p 1em block margins collapsing, title gap not collapsing, last child flush); iter1 + final --full round per breakpoint, one fix between them (header nav colour with no active link). Evidence stardust/replica/gates/policies-privacy-policy-<w>/",
+  "gates": {
+    "1440": {
+      "pixel": 0.0,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "header quiet; footer 4 deltas = live lazy-render artifact R-policy-2"
+    },
+    "360": {
+      "pixel": 14.93,
+      "heightDelta": -4250,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360; live overflows +177px)",
+      "chromeParity": "header 4 = R-index-1 artifact; footer 7 = the R-policy-1 height shift"
+    }
+  },
+  "capProbe": "PASS at 2560 (0 of 4 rows failed; advisory: live 2 vs build 41 top-level sections because default-content children are counted) — stardust/replica/gates/policies-privacy-policy-2560/cap-iter.json",
+  "contentCounts": {
+    "h1": "1/1",
+    "h2": "13/13",
+    "p": "21/21",
+    "ul": "6/6",
+    "li": "28/28",
+    "strong": "24/24",
+    "a": "3/3",
+    "textChars": "18554/18554 (whitespace-normalised, identical)"
+  },
+  "residuals": [
+    {
+      "id": "R-policy-1",
+      "breakpoint": 360,
+      "probe": "pixel 14.93% + height delta -4250px",
+      "cause": "live-defect / hard overflow assert",
+      "detail": "Live /policies/privacy-policy overflows at 360 (scrollWidth 537): .shopify-policy__container is a fit-content flex item whose min-content is the unbreakable 48px h1 'Datenschutzerklärung' (497px), so the whole 497px text column runs off-screen. The build caps the column at the viewport (no horizontal overflow is a hard assert), the h1 breaks via overflow-wrap as it does live at 1440, and the text reflows to 320px, hence +4250px. Proposed register entry R-05 appended to canon-requests.md for the orchestrator. 1440 is pixel-identical.",
+      "justified": true
+    },
+    {
+      "id": "R-policy-2",
+      "breakpoint": 1440,
+      "probe": "chrome-parity footer Δh +60",
+      "cause": "live-artifact",
+      "detail": "The live newsletter footer section renders 60px until scrolled into view and 120px after (probe stardust/.work/contact-policy/ft.mjs); chrome-parity measures without scrolling on the 8.6k page. Stitched capture: identical height, 0.00% diff.",
+      "justified": true
+    },
+    {
+      "id": "R-policy-3",
+      "breakpoint": "1440, 360",
+      "probe": "content-diff 🟡 (17)",
+      "cause": "non-content",
+      "detail": "Inline style/script text and display:none chrome labels only (as R-index-3); main 89/89 text nodes, 14/14 headings, 41/41 editable texts.",
+      "justified": true
+    },
+    {
+      "id": "R-policy-4",
+      "breakpoint": "all",
+      "probe": "markup",
+      "cause": "platform-delta",
+      "detail": "The rte's anonymous nested <div> (around the 'Ihre Rechte' lists) is flattened: EDS default content has no divs; it carries no styling, so layout is unchanged.",
+      "justified": true
+    }
+  ],
+  "motion": {
+    "observed": [
+      "rte link hover: color -> rgb(0 0 0 / 70%), text-decoration-color + color transition 0.125s ease-in-out (direct hover probe; motion-observe's hover probe reads it dead on the long live page)",
+      "header scroll morph dead"
+    ],
+    "implemented": [
+      "link hover colour + 0.125s transitions (styles/shopify-policy.css)",
+      "header nav full-colour state with no active link (compensation; canon request filed)"
+    ],
+    "dead": [
+      "header scroll morph"
+    ],
+    "evidence": [
+      "stardust/replica/motion/policies-privacy-policy-live-1440.json",
+      "stardust/replica/motion/policies-privacy-policy-proto-1440.json",
+      "stardust/replica/motion/policies-privacy-policy-compare-1440.txt",
+      "stardust/replica/motion/policies-privacy-policy-live-360.json",
+      "stardust/replica/motion/policies-privacy-policy-proto-360.json",
+      "stardust/replica/motion/policies-privacy-policy-compare-360.txt",
+      "stardust/.work/contact-policy/hov.mjs"
+    ],
+    "prototypeScript": "none of its own"
+  },
+  "files": [
+    "styles/shopify-policy.css",
+    "stardust/prototypes/policies-privacy-policy-proposed.html"
+  ]
+}

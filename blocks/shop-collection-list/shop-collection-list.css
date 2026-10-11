@@ -1,0 +1,90 @@
+/*
+ * shop-collection-list: "Collections" page (Horizon "collection list" section) — heading + grid of
+ * collection tiles (image or theme placeholder illustration + title), in Shopify's collection order.
+ *
+ * Data sources: [S] = Shopify Storefront API at runtime, [A] = AEM-authored block table.
+ *
+ * DOM contract (block JS must produce exactly this):
+ *
+ * div.shop-collection-list
+ *   h1.shop-collection-list__heading                     [A] block row 1, "Collections" (h2 preset)
+ *   ul.shop-collection-list__list                         [S] collections(first: 250, sortKey: TITLE)
+ *     li.shop-collection-list__item                       (one per collection; 11 today)
+ *       div.shop-collection-list__card
+ *         a.shop-collection-list__link[href=/collections/<handle>]   (empty overlay: whole tile clickable)
+ *           span.shop-visually-hidden <title>
+ *         div.shop-collection-list__media
+ *           img.shop-collection-list__image[width][height][alt]   [S] collection.image (CDN srcset, sizes "(min-width: 750px) 33vw, 100vw")
+ *           | svg.shop-collection-list__placeholder[aria-hidden]   theme placeholder when collection.image is null
+ *               (4 illustrations used in rotation: index % 4 → apparel-1, -2, -3, -4; preserveAspectRatio xMidYMid slice)
+ *         p.shop-collection-list__title                   [S] collection.title
+ *
+ * Tiles are square (media aspect-ratio 1, image object-fit cover). No hover motion fired live.
+ */
+
+/* canon compensation (stardust/replica/canon-requests.md): live dims nav links only while one
+   is active or hovered; this page has no active nav item */
+body.shopify:has(.shop-collection-list) .shop-header .shop-header__menu:not(:has([aria-current='page'], li:hover, li:focus-within)) .shop-header__link {
+  color: var(--shop-color-foreground);
+}
+
+.shop-collection-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(48px * var(--shop-spacing-scale) + 28px);
+  padding: calc(48px * var(--shop-spacing-scale)) var(--shop-gutter);
+}
+
+.shop-collection-list .shop-collection-list__heading {
+  font-size: var(--shop-font-size-h2);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-collection-list .shop-collection-list__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-collection-list .shop-collection-list__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.shop-collection-list .shop-collection-list__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.shop-collection-list .shop-collection-list__media {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.shop-collection-list .shop-collection-list__image,
+.shop-collection-list .shop-collection-list__placeholder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-collection-list .shop-collection-list__title {
+  margin: 0;
+}
+
+@media (min-width: 750px) {
+  .shop-collection-list .shop-collection-list__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+}

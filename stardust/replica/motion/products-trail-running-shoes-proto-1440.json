@@ -1,0 +1,448 @@
+{
+  "url": "http://localhost:8791/stardust/prototypes/products-trail-running-shoes-proposed.html",
+  "width": 1440,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 878,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 878,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 800,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 500,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 300,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shop-header-wrapper",
+      "position": "sticky",
+      "height": "68.375px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".shop-product__quantity-button--plus",
+      "frames": [
+        {
+          "t": 8195.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 8397.90000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 8599.800000011921,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 8801.699999988079,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".shop-product__zoom-button",
+      "frames": [
+        {
+          "t": 9809.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10011.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10213.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 10415.300000011921,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [
+    {
+      "sel": ".shop-product__add--main",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 0, 0)",
+          "boxShadow": "rgb(0, 0, 0) 0px 0px 0px 0px inset",
+          "opacity": "1",
+          "transition": "color 0.125s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.125s cubic-bezier(0.33, 1, 0.68, 1), background-color 0.125s cubic-bezier(0.33, 1, 0.68, 1), scale 0.125s cubic-bezier(0.33, 1, 0.68, 1), translate 0.125s cubic-bezier(0.33, 1, 0.68, 1)"
+        },
+        "subs": [
+          {
+            "el": "span.shop-product__add-icon",
+            "transform": "none",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(0, 0, 0)",
+          "boxShadow": "rgb(0, 0, 0) 0px 0px 0px 0px inset",
+          "opacity": "1",
+          "transition": "color 0.125s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.125s cubic-bezier(0.33, 1, 0.68, 1), background-color 0.125s cubic-bezier(0.33, 1, 0.68, 1), scale 0.125s cubic-bezier(0.33, 1, 0.68, 1), translate 0.125s cubic-bezier(0.33, 1, 0.68, 1)"
+        },
+        "subs": [
+          {
+            "el": "span.shop-product__add-icon",
+            "transform": "none",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      }
+    },
+    {
+      "sel": ".shop-product__quantity-button--plus",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(51, 51, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.125s ease-in-out, box-shadow 0.125s ease-in-out, background-color 0.125s ease-in-out"
+        },
+        "subs": []
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(51, 51, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "color 0.125s ease-in-out, box-shadow 0.125s ease-in-out, background-color 0.125s ease-in-out"
+        },
+        "subs": []
+      }
+    },
+    {
+      "sel": ".shop-product__more-options",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+        },
+        "subs": []
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "text-decoration-color 0.125s ease-in-out, color 0.125s ease-in-out"
+        },
+        "subs": []
+      }
+    },
+    {
+      "sel": ".shop-product__gallery-item",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all"
+        },
+        "subs": [
+          {
+            "el": "img.shop-product__image",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(0, 0, 0)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all"
+        },
+        "subs": [
+          {
+            "el": "img.shop-product__image",
+            "transform": "none",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "boxShadow": "none",
+            "opacity": "1",
+            "transition": "all"
+          }
+        ]
+      }
+    }
+  ],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [
+      {
+        "name": "-ua-view-transition-group-anim-gallery-item-open",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 77
+      },
+      {
+        "name": "-ua-view-transition-fade-in",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 77
+      },
+      {
+        "name": "-ua-mix-blend-mode-plus-lighter",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 77
+      },
+      {
+        "name": "-ua-view-transition-fade-out",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 77
+      },
+      {
+        "name": "-ua-mix-blend-mode-plus-lighter",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 77
+      },
+      {
+        "name": "-ua-view-transition-fade-in",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 77
+      },
+      {
+        "name": "shop-product-thumbnails-slide-in-top",
+        "el": "div.shop-product__information > div.shop-product__grid > div.shop-product__media > dialog.shop-product__zoom > div.shop-product__zoom-thumbnails",
+        "txt": "",
+        "y": 77
+      }
+    ],
+    "transitions": [
+      {
+        "prop": "opacity",
+        "el": "main > div.section > div.shop-product-wrapper > div.shop-product.block > div.shop-product__sticky",
+        "y": 500,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "main > div.section > div.shop-product-wrapper > div.shop-product.block > div.shop-product__sticky",
+        "y": 500,
+        "dur": "0.3s"
+      }
+    ],
+    "classMutations": []
+  }
+}

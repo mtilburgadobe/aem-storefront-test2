@@ -1,0 +1,6 @@
+motion header scroll-morph: dead on live — not required (header static across the scroll traversal on both sides)
+motion widget #ContactForm-name: dead on live — not required (no sampled change across the frames (track/scroll/box/indicator))
+motion hover main button[type=submit]: build lacks self.boxShadow (live changes self.background, self.boxShadow; 125ms)
+motion transition background-color: parity (1 event(s) on live, 1 on build, 125ms)
+motion transition box-shadow: MISSING on build (1 event(s) on live, 125ms)
+motion summary: 1 parity, 1 missing, 0 extra, 0 advisory (1 out of tolerance, 2 dead or unobserved on live — not required; tolerance 150ms / 8px)

@@ -1,0 +1,116 @@
+{
+  "archetype": "collections-all",
+  "liveUrl": "https://t8bnc1-5b.myshopify.com/collections/all",
+  "block": "shop-collection",
+  "prototype": "stardust/prototypes/collections-all-proposed.html",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 3,
+    "360": 3
+  },
+  "iterationNote": "fix rounds iter1, iter1b, iter2, then --full final (killed mid-probe by the service restart, re-run) and a --full final2 after the cap-probe fix (header + results wrapper capped at the content width, skip link moved into the body). Evidence stardust/replica/gates/collections-all-<w>/ (*-final2.*).",
+  "gates": {
+    "1440": {
+      "pixel": 0.02,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "quiet"
+    },
+    "360": {
+      "pixel": 0.09,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360)",
+      "chromeParity": "4 deltas = canon live artifact R-index-1 (closed drawer <details> checkmark icon)"
+    }
+  },
+  "capProbe": "PASS at 2560 (0 of 3 rows failed: wrapper 1440 = 1440, module rows 1440 = 1440, 360 = 362) — stardust/replica/gates/collections-all-2560/cap-iter.json",
+  "residuals": [
+    {
+      "id": "R-call-1",
+      "breakpoint": 360,
+      "probe": "chrome-parity header icons",
+      "cause": "live-artifact",
+      "detail": "Same as R-index-1: live's closed menu drawer localization <details> reports an extra 14px checkmark box, shifting icon pairing. Page pixel diff 0.09 %.",
+      "justified": true
+    },
+    {
+      "id": "R-call-2",
+      "breakpoint": 360,
+      "probe": "visual-diff advisory FLUSH-LEFT TEXT",
+      "cause": "matches-live",
+      "detail": "Card titles at left 8px: the live mobile grid is full-bleed with 8px text padding; live reports the same two flush-left <p> at 8px.",
+      "justified": true
+    },
+    {
+      "id": "R-call-3",
+      "breakpoint": "1440, 360",
+      "probe": "content-diff yellow (59)",
+      "cause": "non-content",
+      "detail": "Live inline <style>/<script>/JSON-LD text and display:none chrome labels; 0 structural.",
+      "justified": true
+    },
+    {
+      "id": "R-call-4",
+      "breakpoint": 1440,
+      "probe": "motion-compare entrance fadeInUp vs fade-in-up",
+      "cause": "naming",
+      "detail": "Same keyframe (opacity 0 -> 1, translateY 10px -> 0, 0.125s, delay 0.15s on ::view-transition-new(product-grid)), renamed to kebab-case per the canon keyframe rule / stylelint.",
+      "justified": true
+    },
+    {
+      "id": "R-call-5",
+      "breakpoint": 360,
+      "probe": "motion-compare class theme-drawer__dialog--opening",
+      "cause": "mechanism",
+      "detail": "Live triggers the filter drawer animation with a class; the build uses the [hidden] attribute state (canon: states are attributes). The animation it triggers, drawer-slide-in, is in parity.",
+      "justified": true
+    },
+    {
+      "id": "R-call-6",
+      "breakpoint": "all",
+      "probe": "stylelint",
+      "cause": "lint",
+      "detail": "8 no-descending-specificity reports in blocks/shop-collection/shop-collection.css (pre-existing; different elements, no cascade conflict). Reorder or disable the rule in Phase 5 before npm run lint.",
+      "justified": false
+    }
+  ],
+  "motion": {
+    "observed": [
+      "facet summary hover: caret colour rgb(0 0 0 / 50%) -> #000, 125ms ease-in-out",
+      "facet / sort <details> open: panel grid-template-rows + opacity 200ms, caret rotate transform 125ms",
+      "grid-density toggle (desktop): product-grid view transition with named groups product-grid, footer, product-card-<id> (no root group), new grid fade-in-up after 0.15s",
+      "mobile filter toggle: drawer-slide-in; close button outline-color 150ms",
+      "mobile column toggle: no transition (switches instantly)",
+      "header scroll morph dead (canon)"
+    ],
+    "implemented": [
+      "caret hover colour transition (CSS)",
+      "exclusive <details name> dropdowns with outside-click / Escape close (inline script -> Phase 5 JS)",
+      "startViewTransition({types:['product-grid']}) with view-transition-name product-card-<data-product-id>; :active-view-transition-type(product-grid) names grid + footer, root none (CSS + script)",
+      "filter drawer open/close with drawer-slide-in (CSS + script)"
+    ],
+    "dead": [
+      "facet / sort / column widget pokes (no sampled track/box change on live)",
+      "product card hover (live probe selector not found; canon card has no hover motion)",
+      "header scroll morph"
+    ],
+    "compare": "1440: 15 parity, 1 missing + 1 extra (fadeInUp rename); 360: 4 parity, 1 class missing (R-call-5)",
+    "evidence": [
+      "stardust/replica/motion/collections-all-live-1440.json",
+      "stardust/replica/motion/collections-all-proto-1440.json",
+      "stardust/replica/motion/collections-all-compare-1440.txt",
+      "stardust/replica/motion/collections-all-live-360.json",
+      "stardust/replica/motion/collections-all-proto-360.json",
+      "stardust/replica/motion/collections-all-compare-360.txt"
+    ],
+    "prototypeScript": "inline shop-collection script (documented in the shop-collection.css DOM-contract Behaviour paragraph)"
+  },
+  "files": [
+    "blocks/shop-collection/shop-collection.css",
+    "stardust/prototypes/collections-all-proposed.html"
+  ]
+}

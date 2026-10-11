@@ -1,0 +1,73 @@
+{
+  "archetype": "collections-running",
+  "variantOf": "collections-all (empty state of shop-collection)",
+  "liveUrl": "https://t8bnc1-5b.myshopify.com/collections/running",
+  "block": "shop-collection",
+  "prototype": "stardust/prototypes/collections-running-proposed.html",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 3,
+    "360": 3
+  },
+  "iterationNote": "fix rounds iter1, iter1b, iter2 (shared shop-collection.css), then --full final (1440; 360 killed by the restart, re-run) and --full final2 after the cap-probe fix. Evidence stardust/replica/gates/collections-running-<w>/ (*-final2.*).",
+  "gates": {
+    "1440": {
+      "pixel": 0.02,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "quiet"
+    },
+    "360": {
+      "pixel": 0.22,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360)",
+      "chromeParity": "4 deltas = canon live artifact R-index-1"
+    }
+  },
+  "capProbe": "PASS at 2560 (0 of 3 rows failed: content cap 1440 = 1440, both module rows 1440 = 1440; was FAIL 575/455 before the header/body cap) — stardust/replica/gates/collections-running-2560/cap-iter.json",
+  "residuals": [
+    {
+      "id": "R-crun-1",
+      "breakpoint": 360,
+      "probe": "chrome-parity header icons",
+      "cause": "live-artifact",
+      "detail": "Same as R-index-1.",
+      "justified": true
+    },
+    {
+      "id": "R-crun-2",
+      "breakpoint": 1440,
+      "probe": "footer pinned to viewport bottom",
+      "cause": "canon-gap",
+      "detail": "Live page-wrapper is a min-height:100dvh flex column; compensated in shop-collection.css via body.shopify:has(.shop-collection) (canon request filed earlier).",
+      "justified": true
+    },
+    {
+      "id": "R-crun-3",
+      "breakpoint": "1440, 360",
+      "probe": "content-diff yellow (57)",
+      "cause": "non-content",
+      "detail": "Live inline style/script/JSON-LD text and hidden chrome labels; 0 structural.",
+      "justified": true
+    }
+  ],
+  "motion": {
+    "observed": [
+      "not observed separately: same block, same inline script and same facet bar / drawer as collections-all (the empty state has no grid, so no grid-density transition)"
+    ],
+    "implemented": [
+      "shared shop-collection behaviour (see progress-collections-all.json)"
+    ],
+    "dead": [
+      "header scroll morph (canon)"
+    ]
+  },
+  "files": [
+    "blocks/shop-collection/shop-collection.css",
+    "stardust/prototypes/collections-running-proposed.html"
+  ]
+}

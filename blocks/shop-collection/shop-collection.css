@@ -1,0 +1,834 @@
+/*
+ * shop-collection: collection page (Horizon "main-collection" + facets) — title, description,
+ * facet bar (Verfügbarkeit / Preis dropdowns, product count, Sortieren, grid-density toggle),
+ * mobile filter drawer, product grid (shop-product-grid card markup) or the empty state.
+ * Also composed by shop-search for its results state (modifier --search).
+ *
+ * Data sources: [S] = Shopify Storefront API at runtime, [A] = AEM-authored block table
+ * (row "collection" = handle, e.g. "all" / "running"; optional row "source" = "search").
+ *
+ * DOM contract (block JS must produce exactly this):
+ *
+ * div.shop-collection[data-state=results|empty][data-view=default|zoom-out|mobile-single]
+ *     (.shop-collection--search on the search page)
+ *   div.shop-collection__header                               (omitted on the search page; capped content column)
+ *     h1.shop-collection__title                               [S] collection.title  (h2 preset)
+ *     div.shop-collection__description > p                   [S] collection.descriptionHtml (omitted when empty)
+ *   div.shop-collection__body                                 (capped content column >= 750px, as live's collection-wrapper)
+ *     a.shop-collection__skip[href=#shop-collection-results]   "Zur Ergebnisliste springen" (off-screen until focused;
+ *                                                             first child of the body, as live's results-list)
+ *     form.shop-collection__bar[action=/collections/<handle>] (>= 750px; hidden below)
+ *       h3.shop-visually-hidden "Aktive Filter:"
+ *       div.shop-collection__filters                           [S] collection.products.filters (omitted when 0 products)
+ *         details.shop-collection__facet[name=shop-collection-facet]   one per filter
+ *           summary.shop-collection__summary > span.shop-collection__label <filter.label> + span.shop-collection__icon-caret > svg
+ *           div.shop-collection__panel.shop-collection__panel--list    (LIST filter, e.g. availability)
+ *             ul.shop-collection__options > li > label.shop-collection__checkbox
+ *               > input[type=checkbox][name=filter.v.availability][value][disabled? when count 0]
+ *               + svg.shop-collection__check + span.shop-collection__checkbox-text <value.label>
+ *           div.shop-collection__panel.shop-collection__panel--price  (PRICE_RANGE filter)
+ *             div.shop-collection__price-fields
+ *               div.shop-collection__price-field > input.shop-collection__price-input[name=filter.v.price.gte][placeholder=0] + label "€"
+ *               span.shop-collection__price-sep "bis"
+ *               div.shop-collection__price-field > input…[name=filter.v.price.lte][placeholder=<max>] + label "€"
+ *             p.shop-collection__price-max "Der höchste Preis ist " + bdi <max price>   [S]
+ *       span.shop-collection__count[role=status]               [S] "<n> Artikel"
+ *       details.shop-collection__sort[name=shop-collection-facet]
+ *         summary.shop-collection__summary > span.shop-collection__label "Sortieren" + span.shop-collection__icon-caret > svg
+ *         div.shop-collection__panel.shop-collection__panel--sort[role=listbox]
+ *           div.shop-collection__sort-options
+ *             label.shop-collection__sort-option > input[type=radio][name=sort_by][value] + svg.shop-collection__check
+ *               + span <label>        (9 Shopify sort keys; checked = current sort, default title-ascending)
+ *       fieldset.shop-collection__columns > legend.shop-visually-hidden "Spaltenraster"
+ *         label.shop-collection__column > input[type=radio][name=grid][value=default|zoom-out][aria-label] + span.shop-collection__column-icon > svg
+ *     div.shop-collection__mobile-bar                           (< 750px)
+ *       button.shop-collection__filter-toggle[aria-controls=shop-collection-drawer] > svg + "Filtern"
+ *       fieldset.shop-collection__columns (name=grid-mobile, values mobile-single | default)
+ *     div.shop-collection__drawer#shop-collection-drawer[role=dialog][hidden]   (mobile filter drawer)
+ *       div.shop-collection__drawer-header > h2 "Filtern" + span.shop-collection__badge[hidden] "0" + button.shop-collection__drawer-close
+ *       form.shop-collection__drawer-body  (same facets as the bar, open; then div.shop-collection__drawer-sort >
+ *         label "Sortieren" + span.shop-collection__select > select[name=sort_by] + svg caret)
+ *         details.shop-collection__sort.shop-collection__drawer-sort-menu[hidden] > summary (label + span.shop-collection__status
+ *           <current sort> + caret)   — the theme's vertical-layout sort; never shown in the mobile drawer
+ *       div.shop-collection__drawer-actions > button.shop-button.shop-button--primary "<n> Artikel ansehen"   [S] count
+ *     div.shop-collection__results.shop-product-grid#shop-collection-results   (state=results)
+ *       ul.shop-product-grid__list > li.shop-product-grid__item[data-product-id] …   [S] product cards — markup of
+ *         shop-product-grid; data-product-id = numeric product.id (names the card's view transition)
+ *     div.shop-collection__empty                                (state=empty)
+ *       h2.shop-collection__empty-title "Keine Produkte gefunden."
+ *       p "Versuche, weniger Filter zu verwenden oder " a.shop-collection__empty-link[href=/collections/<handle>] "alle Filter zu löschen" "."
+ *
+ * Behaviour (Phase 5 JS, mirrored by the prototype's inline script): facet / sort <details> are
+ * exclusive (name attribute), close on outside click / Escape; toggling the desktop grid radio
+ * sets data-view (zoom-out = auto-fill minmax(100px) tiles with h3 titles only) inside
+ * document.startViewTransition({ types: ['product-grid'] }) with view-transition-name
+ * product-card-<id> on each li for the transition (as live); the mobile radio (mobile-single =
+ * one column) switches without a transition (none fired live at 360);
+ * the filter toggle opens the drawer (drawer-slide-in), close / Escape closes it.
+ * Facet and sort changes re-query the Storefront API (live reloads the section).
+ */
+
+/* canon compensation (stardust/replica/canon-requests.md): the live .page-wrapper is a
+   min-height 100dvh flex column with main flex: 1, so a short page (empty collection) keeps
+   the footer at the viewport bottom */
+body.shopify.appear:has(.shop-collection) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+body.shopify:has(.shop-collection) > main {
+  flex: 1 0 auto;
+}
+
+/* canon compensation: live dims nav links only while one is active or hovered */
+body.shopify:has(.shop-collection) .shop-header .shop-header__menu:not(:has([aria-current='page'], li:hover, li:focus-within)) .shop-header__link {
+  color: var(--shop-color-foreground);
+}
+
+.shop-collection {
+  position: relative;
+}
+
+.shop-collection .shop-collection__skip {
+  position: absolute;
+  left: -99999px;
+}
+
+.shop-collection .shop-collection__skip:focus {
+  left: var(--shop-gutter);
+  z-index: var(--shop-layer-temporary);
+  padding: 16px 24px;
+  border-radius: var(--shop-radius-button);
+  background: var(--shop-color-background);
+  box-shadow: inset 0 0 0 1px var(--shop-color-foreground);
+}
+
+/* ---------- header: title + description ---------- */
+.shop-collection .shop-collection__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: calc(48px * var(--shop-spacing-scale)) var(--shop-gutter);
+}
+
+.shop-collection .shop-collection__title {
+  max-width: 100%;
+  font-size: var(--shop-font-size-h2);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-collection .shop-collection__description {
+  max-width: min(100%, 455px);
+}
+
+/* content column: live caps the title row (section--page-width) at the content width, so the
+   header is a capped box rather than a full-bleed padded one (same px at every width ≤ 1520) */
+.shop-collection:not(.shop-collection--search) .shop-collection__header {
+  width: min(var(--shop-content-width), 100% - 2 * var(--shop-page-margin));
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+/* ---------- body ---------- */
+.shop-collection .shop-collection__body {
+  padding-bottom: 32px;
+}
+
+.shop-collection.shop-collection--search .shop-collection__body {
+  padding-block: 40px;
+}
+
+/* ---------- desktop facet bar ---------- */
+.shop-collection .shop-collection__bar {
+  display: none;
+}
+
+.shop-collection .shop-collection__filters {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  max-width: 60%;
+}
+
+.shop-collection .shop-collection__facet,
+.shop-collection .shop-collection__sort {
+  position: relative;
+}
+
+.shop-collection .shop-collection__summary {
+  display: flex;
+  align-items: center;
+  height: var(--shop-touch-target);
+  padding: 11.2px 0;
+  color: var(--shop-color-subdued);
+  list-style: none;
+  cursor: pointer;
+}
+
+.shop-collection .shop-collection__summary::-webkit-details-marker {
+  display: none;
+}
+
+.shop-collection .shop-collection__label {
+  margin-inline-end: 4.8px;
+  color: var(--shop-color-foreground);
+  white-space: nowrap;
+}
+
+.shop-collection .shop-collection__icon-caret {
+  display: flex;
+  width: 13.6px;
+  color: rgb(var(--shop-color-foreground-rgb) / 50%);
+  transition: color var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-collection .shop-collection__icon-caret svg {
+  width: 13.6px;
+  height: 20px;
+  transition: transform var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-collection .shop-collection__summary:hover .shop-collection__icon-caret {
+  color: var(--shop-color-foreground);
+}
+
+.shop-collection .shop-collection__panel {
+  position: absolute;
+  top: 40px;
+  z-index: var(--shop-layer-overlay);
+  width: max-content;
+  min-width: 120px;
+  border: var(--shop-border-popover);
+  border-radius: var(--shop-radius-popover);
+  background-color: var(--shop-color-background);
+  box-shadow: var(--shop-shadow-popover);
+  color: var(--shop-color-foreground);
+}
+
+.shop-collection .shop-collection__panel--list {
+  padding: 12.8px;
+}
+
+.shop-collection .shop-collection__options {
+  display: flex;
+  flex-direction: column;
+  gap: 11.2px;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-collection .shop-collection__options > li {
+  display: flex;
+}
+
+.shop-collection .shop-collection__checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: var(--shop-touch-target);
+  line-height: 16px;
+  color: var(--shop-color-subdued);
+  cursor: pointer;
+}
+
+.shop-collection .shop-collection__checkbox input {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.shop-collection .shop-collection__checkbox .shop-collection__check {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(0 0 0 / 35%);
+  border-radius: 5px;
+  background-color: var(--shop-color-background);
+  color: var(--shop-color-background);
+}
+
+/* (ordered by specificity for no-descending-specificity: sort-option and drawer sizes) */
+.shop-collection .shop-collection__sort-option .shop-collection__check {
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__checkbox {
+  line-height: 22px;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__checkbox .shop-collection__check {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+}
+
+.shop-collection .shop-collection__checkbox .shop-collection__check path {
+  opacity: 0;
+  transition: opacity var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-collection .shop-collection__checkbox input:checked + .shop-collection__check {
+  border-color: var(--shop-color-foreground);
+  background-color: var(--shop-color-foreground);
+}
+
+.shop-collection .shop-collection__checkbox input:checked + .shop-collection__check path {
+  opacity: 1;
+}
+
+.shop-collection .shop-collection__checkbox input:disabled + .shop-collection__check {
+  border-color: rgb(0 0 0 / 5%);
+  background-color: rgb(0 0 0 / 10%);
+}
+
+.shop-collection .shop-collection__checkbox:has(input:disabled) {
+  color: rgb(0 0 0 / 50%);
+  cursor: default;
+}
+
+.shop-collection .shop-collection__checkbox-text {
+  padding-inline-start: 6px;
+  white-space: nowrap;
+}
+
+/* price range */
+.shop-collection .shop-collection__panel--price {
+  width: 362px;
+  padding: 0;
+}
+
+.shop-collection .shop-collection__price-fields {
+  display: flex;
+  gap: 13.2px;
+  padding: 14.8px 13.8px 13.8px;
+}
+
+.shop-collection .shop-collection__price-field {
+  position: relative;
+  flex: 1 1 0;
+}
+
+.shop-collection .shop-collection__price-input {
+  width: 100%;
+  height: 48px;
+  padding: 12.8px 12.8px 12.8px 32px;
+  border-radius: var(--shop-radius-input);
+  background-color: #fff;
+  box-shadow: 0 0 0 1px var(--shop-color-border);
+  color: var(--shop-color-input-text);
+  font-size: var(--shop-font-size-paragraph);
+  line-height: var(--shop-line-height-paragraph);
+  text-align: end;
+  outline: none;
+}
+
+.shop-collection .shop-collection__price-input::placeholder {
+  color: rgb(51 51 51 / 60%);
+}
+
+.shop-collection .shop-collection__price-field label {
+  position: absolute;
+  inset: 0 auto 0 0;
+  padding: 12.8px;
+  color: rgb(51 51 51 / 60%);
+}
+
+.shop-collection .shop-collection__price-sep {
+  display: flex;
+  align-items: center;
+}
+
+.shop-collection .shop-collection__price-max {
+  padding: 0 12.8px 8px;
+  color: var(--shop-color-muted);
+}
+
+/* sort */
+.shop-collection .shop-collection__panel--sort {
+  right: 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition:
+    grid-template-rows 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+
+@starting-style {
+  .shop-collection .shop-collection__panel--sort {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+}
+
+.shop-collection .shop-collection__sort-options {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 9.1px;
+  overflow: clip;
+}
+
+.shop-collection .shop-collection__sort-option {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 4.8px;
+  align-items: center;
+  min-width: 180px;
+  padding: 4px 9.1px 4px 4px;
+  cursor: pointer;
+}
+
+.shop-collection .shop-collection__sort-option:hover {
+  border-radius: 7px;
+  background-color: rgb(var(--shop-color-foreground-rgb) / 8%);
+}
+
+.shop-collection .shop-collection__sort-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shop-collection .shop-collection__sort-option:has(input:checked) {
+  font-weight: var(--shop-font-weight-subheading);
+}
+
+.shop-collection .shop-collection__sort-option input:checked + .shop-collection__check {
+  visibility: visible;
+}
+
+.shop-collection .shop-collection__count {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: var(--shop-touch-target);
+  margin-inline-start: auto;
+  color: var(--shop-color-subdued);
+}
+
+/* column (grid density) picker */
+.shop-collection .shop-collection__columns {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: var(--shop-touch-target);
+  margin: 0 -3px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.shop-collection .shop-collection__column {
+  position: relative;
+  display: flex;
+}
+
+.shop-collection .shop-collection__column input {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.shop-collection .shop-collection__column-icon {
+  padding: 4px;
+  border-radius: 3.2px;
+  color: rgb(var(--shop-color-foreground-rgb) / 50%);
+  transition:
+    background-color var(--shop-animation-speed) ease,
+    color var(--shop-animation-speed) ease;
+}
+
+.shop-collection .shop-collection__column-icon svg {
+  width: 20px;
+  height: auto;
+}
+
+.shop-collection .shop-collection__column:hover .shop-collection__column-icon {
+  background-color: rgb(var(--shop-color-foreground-rgb) / 5%);
+}
+
+.shop-collection .shop-collection__column input:checked ~ .shop-collection__column-icon {
+  background-color: rgb(var(--shop-color-foreground-rgb) / 5%);
+  color: var(--shop-color-foreground);
+}
+
+/* ---------- mobile bar ---------- */
+.shop-collection .shop-collection__mobile-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--shop-touch-target);
+  margin-bottom: 8px;
+  padding-inline: var(--shop-gutter);
+}
+
+.shop-collection .shop-collection__mobile-bar:has(> :only-child) {
+  justify-content: space-between;
+}
+
+.shop-collection.shop-collection[data-state='empty'] .shop-collection__mobile-bar {
+  justify-content: space-between;
+}
+
+.shop-collection .shop-collection__filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-inline-start: -3px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--shop-color-foreground);
+  cursor: pointer;
+}
+
+.shop-collection .shop-collection__filter-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- mobile filter drawer ---------- */
+.shop-collection .shop-collection__drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: var(--shop-layer-temporary);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--shop-drawer-width);
+  height: 100dvh;
+  border-left: 1px solid var(--shop-color-border);
+  background-color: var(--shop-color-background);
+  animation: drawer-slide-in var(--shop-animation-speed) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shop-collection .shop-collection__drawer[hidden] {
+  display: none;
+}
+
+.shop-collection .shop-collection__drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.shop-collection .shop-collection__drawer-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--shop-font-size-h4);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-collection .shop-collection__badge {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6.5px;
+  border-radius: 16px;
+  background-color: rgb(0 0 0 / 10%);
+  font-size: 13px;
+  font-weight: var(--shop-font-weight-body);
+  line-height: 1;
+}
+
+.shop-collection .shop-collection__drawer-close {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgb(0 0 0 / 6%);
+  border-radius: 34px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 6%);
+  cursor: pointer;
+  transition: outline-color 0.15s ease;
+}
+
+.shop-collection .shop-collection__drawer-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.shop-collection .shop-collection__drawer-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__filters {
+  display: block;
+  max-width: none;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__facet {
+  margin: 0 20px;
+  border-top: 1px solid var(--shop-color-border);
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__summary {
+  justify-content: space-between;
+  height: auto;
+  color: var(--shop-color-foreground);
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__panel {
+  position: static;
+  width: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__panel--list {
+  padding: 8px 0 19.2px;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__options {
+  gap: 22px;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__checkbox-text {
+  padding-inline-start: 8px;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__panel--price {
+  width: auto;
+  padding-bottom: 9px;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__price-fields {
+  padding: 9px 1px 1px;
+}
+
+.shop-collection .shop-collection__drawer-body .shop-collection__price-max {
+  padding: 8px 0 11.2px;
+}
+
+.shop-collection .shop-collection__drawer-sort {
+  display: flex;
+  align-items: center;
+  gap: 18.4px;
+  padding: 11.2px 0 11.2px 18.2px;
+  border-top: 1px solid var(--shop-color-border);
+  margin-inline: 1px 13px;
+}
+
+.shop-collection .shop-collection__drawer-sort label {
+  font-size: 24px;
+  line-height: 38.4px;
+}
+
+.shop-collection .shop-collection__select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 14px;
+}
+
+.shop-collection .shop-collection__select select {
+  padding: 0 9.6px 0 0;
+  border: 0;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 25.6px;
+  text-align: end;
+  appearance: none;
+}
+
+.shop-collection .shop-collection__select svg {
+  width: 7.7px;
+  height: 13px;
+  pointer-events: none;
+}
+
+/* open facet / sort caret (kept after the other block svg rules: no-descending-specificity) */
+.shop-collection details[open] > .shop-collection__summary .shop-collection__icon-caret svg {
+  transform: rotate(180deg);
+}
+
+.shop-collection .shop-collection__drawer-actions {
+  padding: 8px 16px 12.8px;
+  background-color: var(--shop-color-background);
+}
+
+.shop-collection .shop-collection__drawer-actions .shop-button {
+  width: 100%;
+}
+
+/* ---------- results grid (cards = shop-product-grid markup) ---------- */
+.shop-collection .shop-collection__results.shop-product-grid {
+  display: block;
+  padding: 0;
+}
+
+.shop-collection .shop-collection__results .shop-product-grid__list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shop-collection .shop-collection__results .shop-product-grid__title-link,
+.shop-collection .shop-collection__results .shop-product-grid__price {
+  padding-inline: 8px;
+}
+
+/* theme media container: --slide-width round(up, 100%, 1px) (canon request filed) */
+.shop-collection .shop-collection__results .shop-product-grid__media > a {
+  width: round(up, 100%, 1px);
+}
+
+.shop-collection[data-view='mobile-single'] .shop-collection__results .shop-product-grid__list {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* desktop grid-density toggle: live runs a "product-grid" view transition (named grid, card and
+   footer groups, no root group; the new grid fades in up after 0.15s) */
+:root:active-view-transition-type(product-grid) {
+  view-transition-name: none;
+}
+
+:root:active-view-transition-type(product-grid) .shop-collection .shop-collection__results .shop-product-grid__list {
+  view-transition-name: product-grid;
+}
+
+:root:active-view-transition-type(product-grid) body.shopify:has(.shop-collection) > footer {
+  view-transition-name: footer;
+}
+
+::view-transition-new(product-grid) {
+  animation-name: fade-in-up;
+  animation-duration: var(--shop-animation-speed);
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.15s;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- empty state ---------- */
+.shop-collection .shop-collection__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11.2px;
+  padding: 64px var(--shop-gutter);
+  text-align: center;
+}
+
+.shop-collection .shop-collection__empty-title {
+  font-size: var(--shop-font-size-h2);
+  line-height: var(--shop-line-height-display-tight);
+}
+
+.shop-collection .shop-collection__empty p {
+  margin-top: 14px;
+}
+
+.shop-collection .shop-collection__empty .shop-collection__empty-link {
+  text-decoration: underline;
+}
+
+.shop-collection .shop-collection__empty .shop-collection__empty-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 750px) {
+  .shop-collection .shop-collection__bar {
+    position: relative;
+    z-index: var(--shop-layer-overlay);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0 20px;
+    margin-bottom: 8px;
+    padding: 8px var(--shop-gutter);
+  }
+
+  .shop-collection .shop-collection__mobile-bar,
+  .shop-collection .shop-collection__drawer {
+    display: none;
+  }
+
+  .shop-collection .shop-collection__columns {
+    gap: 4.8px;
+  }
+
+  .shop-collection .shop-collection__results.shop-product-grid {
+    padding-inline: var(--shop-gutter);
+  }
+
+  /* live caps the results wrapper (collection-wrapper: facet bar + grid) at the content width;
+     below 750 the grid runs full-bleed on live, so the cap starts here */
+  .shop-collection:not(.shop-collection--search) .shop-collection__body {
+    width: min(var(--shop-content-width), 100% - 2 * var(--shop-page-margin));
+    margin-inline: auto;
+  }
+
+  .shop-collection:not(.shop-collection--search) .shop-collection__body > :is(.shop-collection__bar, .shop-collection__results, .shop-collection__empty) {
+    padding-inline: 0;
+  }
+
+  .shop-collection .shop-collection__results .shop-product-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px 16px;
+  }
+
+  .shop-collection .shop-collection__results .shop-product-grid__title-link,
+  .shop-collection .shop-collection__results .shop-product-grid__price {
+    padding-inline: 0;
+  }
+
+  .shop-collection[data-view='mobile-single'] .shop-collection__results .shop-product-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  /* zoomed-out grid: small tiles, image + h3 title only */
+  .shop-collection[data-view='zoom-out'] .shop-collection__results .shop-product-grid__list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .shop-collection[data-view='zoom-out'] .shop-product-grid__card {
+    gap: 8px;
+  }
+
+  .shop-collection[data-view='zoom-out'] .shop-product-grid__card > :is(.shop-product-grid__title-link, .shop-product-grid__price),
+  .shop-collection[data-view='zoom-out'] .shop-product-grid__quick-add {
+    display: none;
+  }
+
+  .shop-collection[data-view='zoom-out'] .shop-product-grid .shop-product-grid__zoom-title {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: var(--shop-font-weight-body);
+    line-height: 1.3;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}

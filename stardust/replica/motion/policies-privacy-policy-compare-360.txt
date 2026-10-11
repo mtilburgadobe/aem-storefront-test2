@@ -1,0 +1,3 @@
+motion header scroll-morph: dead on live — not required (header static across the scroll traversal on both sides)
+motion hover main p a: extra on build — advisory (no hover diff on live; build changes self.color — live mechanics may be invisible to the hover probe (pseudo-element underlines, text-decoration, border-color) — confirm on the element before treating it as invented)
+motion summary: 0 parity, 0 missing, 0 extra, 1 advisory (0 out of tolerance, 1 dead or unobserved on live — not required; tolerance 150ms / 8px)

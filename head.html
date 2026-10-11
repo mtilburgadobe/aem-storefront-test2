@@ -43,17 +43,30 @@
 
 <script nonce="aem" src="/scripts/aem.js" type="module"></script>
 <script nonce="aem" src="/scripts/scripts.js" type="module"></script>
-<script nonce="aem" src="/scripts/commerce.js" type="module"></script>
-
-<link rel="modulepreload" href="/scripts/__dropins__/tools/lib/aem/configs.js" />
-<link rel="modulepreload" href="/scripts/initializers/index.js" />
-<link rel="modulepreload" href="/scripts/initializers/auth.js" />
-<link rel="modulepreload" href="/scripts/initializers/personalization.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/storefront-auth/api.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/tools/event-bus.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/tools/fetch-graphql.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/tools/initializer.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/tools/preact.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/tools/preact-compat.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/tools/preact-hooks.js" />
-<link rel="modulepreload" href="/scripts/__dropins__/tools/components.js" />
+<script nonce="aem" type="module">
+    // Adobe Commerce bootstraps only on non-Shopify pages (metadata template: shopify).
+    const template = document.querySelector('meta[name="template" i]')?.content || '';
+    const isShopify = template.split(',').some((t) => t.trim().toLowerCase() === 'shopify');
+    if (!isShopify) {
+      [
+        '/scripts/__dropins__/tools/lib/aem/configs.js',
+        '/scripts/initializers/index.js',
+        '/scripts/initializers/auth.js',
+        '/scripts/initializers/personalization.js',
+        '/scripts/__dropins__/storefront-auth/api.js',
+        '/scripts/__dropins__/tools/event-bus.js',
+        '/scripts/__dropins__/tools/fetch-graphql.js',
+        '/scripts/__dropins__/tools/initializer.js',
+        '/scripts/__dropins__/tools/preact.js',
+        '/scripts/__dropins__/tools/preact-compat.js',
+        '/scripts/__dropins__/tools/preact-hooks.js',
+        '/scripts/__dropins__/tools/components.js',
+      ].forEach((href) => {
+        const link = document.createElement('link');
+        link.rel = 'modulepreload';
+        link.href = href;
+        document.head.append(link);
+      });
+      import('/scripts/commerce.js');
+    }
+</script>

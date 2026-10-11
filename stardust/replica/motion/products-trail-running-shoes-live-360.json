@@ -1,0 +1,538 @@
+{
+  "url": "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+  "width": 360,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1126,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 580,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1053,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 1200,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 855,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 538,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 311,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 200,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 150,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 120,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 90,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 60,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 30,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    },
+    {
+      "y": 0,
+      "cls": "shopify-section shopify-section-group-header-group header-section",
+      "position": "sticky",
+      "height": "60px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": "0px",
+      "bodyPadTop": "0px",
+      "headerCount": 1
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".quantity-plus",
+      "frames": [
+        {
+          "t": 21813.70000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 22017.20000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 22219.5,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 22421.90000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    },
+    {
+      "sel": ".product-form-buttons .add-to-cart-button",
+      "frames": [
+        {
+          "t": 23432.40000000596,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 23633.600000023842,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 23837.20000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 24039.20000001788,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [
+      {
+        "name": "atc-slide",
+        "el": "div.product-form-buttons.spacing-style.product-form-buttons--stacked > span > add-to-cart-component > button.button.add-to-cart-button.button > span.add-to-cart__added",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "travel-x",
+        "el": "html > body.page-width-narrow.card-hover-effect-none > fly-to-cart.fly-to-cart--main",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "travel-y",
+        "el": "html > body.page-width-narrow.card-hover-effect-none > fly-to-cart.fly-to-cart--main",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "travel-scale",
+        "el": "html > body.page-width-narrow.card-hover-effect-none > fly-to-cart.fly-to-cart--main",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "grow",
+        "el": "header-actions > button.header-actions__action.button-unstyled > cart-icon.header-actions__cart-icon.header-actions__cart-icon--has-cart > div.cart-bubble.cart-bubble--animating > span.cart-bubble__background",
+        "txt": "",
+        "y": 239
+      },
+      {
+        "name": "move-and-fade",
+        "el": "header-actions > button.header-actions__action.button-unstyled > cart-icon.header-actions__cart-icon.header-actions__cart-icon--has-cart > div.cart-bubble.cart-bubble--animating > span.cart-bubble__text",
+        "txt": "2",
+        "y": 239
+      },
+      {
+        "name": "-ua-view-transition-group-anim-sticky-header",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 239
+      },
+      {
+        "name": "-ua-view-transition-fade-in",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 239
+      },
+      {
+        "name": "-ua-mix-blend-mode-plus-lighter",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 239
+      },
+      {
+        "name": "-ua-view-transition-fade-out",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 239
+      },
+      {
+        "name": "-ua-mix-blend-mode-plus-lighter",
+        "el": "html",
+        "txt": "Trail Running Shoes – Grip & Cushion for Off-Road ",
+        "y": 239
+      }
+    ],
+    "transitions": [
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 983,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 983,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 1076,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 1076,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 668,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 668,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 580,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 580,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 1000,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 1000,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 1094,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 1094,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 873,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 873,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "opacity",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 625,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "transform",
+        "el": "div.page-wrapper > main.content-for-layout > div.shopify-section > sticky-add-to-cart.sticky-add-to-cart > div.sticky-add-to-cart__bar.color-custom-popover",
+        "y": 625,
+        "dur": "0.3s"
+      },
+      {
+        "prop": "color",
+        "el": "form.shopify-product-form > div.product-form-buttons.spacing-style.product-form-buttons--stacked > span > add-to-cart-component > button.button.add-to-cart-button.button",
+        "y": 239,
+        "dur": "0.125s"
+      },
+      {
+        "prop": "filter",
+        "el": "button.button.add-to-cart-button.button > span.add-to-cart__added > span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.check",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "opacity",
+        "el": "button.button.add-to-cart-button.button > span.add-to-cart__added > span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.check",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "scale",
+        "el": "button.button.add-to-cart-button.button > span.add-to-cart__added > span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.check",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "opacity",
+        "el": "span.add-to-cart__added > span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.check > circle.ring",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "scale",
+        "el": "span.add-to-cart__added > span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.check > circle.ring",
+        "y": 239,
+        "dur": "0.2s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "stroke-dashoffset",
+        "el": "span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.burst > g > line.line",
+        "y": 239,
+        "dur": "0.32s"
+      },
+      {
+        "prop": "scale",
+        "el": "span.add-to-cart__added > span.svg-wrapper.add-to-cart__added-icon > svg.checkmark-burst > g.check > path.tick",
+        "y": 239,
+        "dur": "0.1s"
+      }
+    ],
+    "classMutations": [
+      {
+        "added": [
+          "header-actions__cart-icon--has-cart"
+        ],
+        "el": "div.header__columns.spacing-style > div.header__column.header__column--right > header-actions > button.header-actions__action.button-unstyled > cart-icon.header-actions__cart-icon.header-actions__cart-icon--has-cart",
+        "y": 239
+      },
+      {
+        "added": [
+          "cart-bubble--animating"
+        ],
+        "el": "div.header__column.header__column--right > header-actions > button.header-actions__action.button-unstyled > cart-icon.header-actions__cart-icon.header-actions__cart-icon--has-cart > div.cart-bubble.cart-bubble--animating",
+        "y": 239
+      }
+    ]
+  }
+}

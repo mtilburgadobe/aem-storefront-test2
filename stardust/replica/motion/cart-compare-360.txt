@@ -1,0 +1,7 @@
+motion header scroll-morph: dead on live — not required (header static across the scroll traversal on both sides)
+motion hover .cart-items__empty-button → .shop-cart__continue: parity (self.background, self.boxShadow; 125ms; paired by order)
+motion hover .cart-items__wrapper p a → .shop-cart__empty p a: parity (self.color; 125ms; paired by order)
+motion transition background-color: parity (2 event(s) on live, 2 on build, 125ms)
+motion transition box-shadow: parity (2 event(s) on live, 2 on build, 125ms)
+motion transition color: parity (1 event(s) on live, 1 on build, 125ms)
+motion summary: 5 parity, 0 missing, 0 extra, 0 advisory (0 out of tolerance, 1 dead or unobserved on live — not required; tolerance 150ms / 8px)

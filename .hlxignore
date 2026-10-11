@@ -14,3 +14,7 @@ tools/picker/src/*
 tools/pdp-metadata/*
 plugins/experimentation/documentation/images/*
 _*.json
+stardust/
+tools/importer/
+DESIGN.json
+docs/

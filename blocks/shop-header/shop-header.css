@@ -1,0 +1,1133 @@
+/*
+ * shop-header: sticky header row + menu drawer + localization popover, plus three
+ * body-level portals the block JS creates: announcement bar (before <header>),
+ * search modal and cart drawer (end of <body>), exactly where the live theme renders them.
+ *
+ * DOM contract (block JS must produce exactly this; states are attributes):
+ *
+ * aside.shop-header-announcement                     (inserted before <header>)
+ *   p.shop-header-announcement__text                 "Welcome to our store"
+ *
+ * header > div.shop-header
+ *   h1.shop-visually-hidden                          [SF] shop.name, HOME PAGE ONLY (live: the page h1
+ *                                                    is the content title everywhere else)
+ *   div.shop-header__row
+ *     button.shop-header__menu-toggle                aria-label="Menü" aria-expanded aria-controls=shop-header-drawer   (< 750px)
+ *       span.shop-header__menu-icon--open > svg (hamburger) · span.shop-header__menu-icon--close > svg (x, shown when expanded)
+ *     button.shop-header__action.shop-header__action--search.shop-header__action--search-mobile  aria-label="Suchen"    (< 750px)
+ *     a.shop-header__logo[href=/] > span             "Mein Shop"
+ *     nav.shop-header__nav[aria-label=Primär] > ul.shop-header__menu > li                                                (>= 750px)
+ *       a.shop-header__link[aria-current=page]? > span.shop-header__link-title
+ *         (aria-current on the link whose path is the current page, nav + drawer; none on
+ *          /products/*, /collections, /search, /cart, /policies/*. Links render full foreground
+ *          and dim to subdued only while an item is hovered / focused or one is current)
+ *     div.shop-header__localization                                                                                      (>= 750px)
+ *       button.shop-header__currency                 aria-expanded aria-controls=shop-header-localization
+ *         span "EUR" · span.shop-visually-hidden "Region- und Sprachwahl" · svg.shop-header__caret
+ *       div.shop-header__localization-panel#shop-header-localization[hidden]
+ *         form.shop-header__localization-form[aria-label="Region und Sprache"]  (see COUNTRY LIST)
+ *     button.shop-header__action.shop-header__action--search.shop-header__action--search-desktop aria-label="Suchen"   (>= 750px)
+ *     a.shop-header__action.shop-header__action--account[href=<shop origin>/account][aria-label=Konto] > svg
+ *     button.shop-header__action.shop-header__action--cart  aria-label="Warenkorb" aria-controls=shop-header-cart
+ *       svg + span.shop-header__cart-count[hidden]   (item count bubble, [SF] cart.totalQuantity, 10px/400;
+ *                                                    [data-animating] while the count grows)
+ *     ON /cart instead: a.shop-header__action.shop-header__action--cart[href=/cart][aria-label=Warenkorb]
+ *       > span[hidden] "Warenkorb" + svg + span.shop-header__cart-count   (no drawer opens)
+ *   div.shop-header__drawer#shop-header-drawer       (closed: no attribute; open: [data-open])
+ *     div.shop-header__drawer-main
+ *       button.shop-header__drawer-close             aria-label="Schließen"
+ *       nav.shop-header__drawer-nav[aria-label=Primär] > ul > li > a.shop-header__drawer-link > span
+ *       div.shop-header__drawer-utility > button.shop-header__drawer-currency  "EUR" + caret (opens the submenu)
+ *       ul.shop-header__featured > li > RESOURCE CARD
+ *     div.shop-header__drawer-submenu[hidden]
+ *       div.shop-header__drawer-submenu-bar
+ *         button.shop-header__drawer-back aria-label="Zurück zum Hauptmenü" · span.shop-header__drawer-title "Region und Sprache"
+ *         · button.shop-header__drawer-close aria-label="Schließen"
+ *       form.shop-header__localization-form[aria-label="Region und Sprache"]  (see COUNTRY LIST)
+ *   div.shop-header__backdrop                        (visible while the drawer is open)
+ *
+ * COUNTRY LIST: h2.shop-visually-hidden "Land/Region" · ul.shop-header__countries[role=listbox]
+ *   > li.shop-header__country[role=option][aria-label][aria-current=true]? > svg.shop-header__country-check + span + span[hidden] " EUR €"
+ * RESOURCE CARD: div.shop-header-resource > a.shop-header-resource__link[href] > span.shop-visually-hidden <title>
+ *   · div.shop-header-resource__media > img · div.shop-header-resource__content > p.shop-header-resource__title + span.shop-header-resource__price
+ *
+ * div.shop-header-search#shop-header-search[role=dialog][hidden]     (end of <body>)
+ *   div.shop-header-search__backdrop
+ *   div.shop-header-search__panel > form.shop-header-search__form[action=/search]
+ *     div.shop-header-search__bar > label.shop-visually-hidden + input.shop-header-search__input[name=q] + svg + button.shop-header-search__close
+ *     div.shop-header-search__results
+ *       empty query: h4.shop-header-search__title "Produkte" + ul.shop-header-search__list > li > RESOURCE CARD
+ *                    ([SF] first 4 products of the `all` catalog)
+ *       query:       [SF] predictiveSearch, in this order, each only when non-empty:
+ *                    h4 "Vorschläge" + ul.shop-header-search__queries > li > a.shop-header-search__query[href=/search?q=]
+ *                    h4 "Produkte" + ul.shop-header-search__list > li > RESOURCE CARD
+ *                    h4 "Kollektionen" + ul.shop-header-search__list.shop-header-search__list--collections
+ *                    nothing found: p.shop-header-search__empty
+ *     div.shop-visually-hidden[role=status]          "<n> Suchergebnisse für „q“ gefunden"
+ * div.shop-header-cart#shop-header-cart[role=dialog][hidden][data-state=empty|filled]  (end of <body>)
+ *   div.shop-header-cart__header > button.shop-header-cart__close
+ *   empty:  div.shop-header-cart__content > h2.shop-header-cart__title + p (a "Logge dich ein") + a.shop-button.shop-button--primary
+ *   filled: div.shop-header-cart__content
+ *     div.shop-header-cart__title-row > h2.shop-header-cart__title "Cart" + span.shop-header-cart__bubble
+ *       > span.shop-header-cart__bubble-count + span.shop-visually-hidden
+ *     div.shop-header-cart__items > ul.shop-header-cart__lines > li.shop-header-cart__line[data-line-id]
+ *       a.shop-header-cart__line-media[href=/products/<handle>?variant=<id>] > img (&width=250, 4:5 cover)
+ *       div.shop-header-cart__line-details
+ *         a.shop-header-cart__line-title · p.shop-header-cart__line-options? (non-default variant)
+ *         p.shop-header-cart__line-unit-price > span.shop-visually-hidden "Preis" + span
+ *         div.shop-header-cart__line-quantity
+ *           div.shop-header-cart__quantity > button--minus[disabled at 1] · input[type=number] · button--plus
+ *           button.shop-header-cart__remove[aria-label="Entferne <title>"]
+ *       span.shop-header-cart__line-price            [SF] line total
+ *     div.shop-header-cart__summary
+ *       div.shop-header-cart__total > span.shop-header-cart__total-label + span.shop-header-cart__total-value
+ *       p.shop-header-cart__tax-note > small
+ *       a.shop-button.shop-button--primary.shop-header-cart__checkout[href=<[SF] checkoutUrl>] "Auschecken"
+ *   (stepper / remove call updateLine like the cart page; [aria-busy] while a mutation runs)
+ *
+ * Behaviour (observed live with motion-observe click pokes; block JS reproduces it):
+ *   menu toggle  → drawer[data-open] + .shop-header[data-overlay=menu]: drawer shows (no slide fired live),
+ *                  items run menu-drawer-nav-open 0.2s (-8px → 0), resource cards fade in 0.15s
+ *   search       → search portal [hidden] removed: panel search-element-slide-in-bottom 0.3s, results
+ *                  search-element-slide-up 0.15s, backdrop brightness 1 → .75 (0.125s)
+ *   cart         → cart portal [hidden] removed (drawer-slide-in 0.125s) + body.shop-drawer-open;
+ *                  also on document `shop:open-cart` (quick add / PDP add to cart), never on /cart
+ *                  (>= 750px the page is pushed 480px, margin-right transition 0.125s)
+ *   currency     → localization panel [hidden] removed, caret flips (transform 0.125s), panel opacity +
+ *                  translate transitions 0.3s (@starting-style)
+ *   close buttons, backdrops and Escape restore the closed state.
+ * Sticky: body.shopify > header is position: sticky, top -1px (styles/shopify.css); no scroll morph fired.
+ */
+
+/* ---------- announcement bar (portal before <header>) ---------- */
+.shop-header-announcement {
+  padding: 15px var(--shop-gutter);
+  border-bottom: 1px solid var(--shop-color-border);
+  background-color: var(--shop-color-background);
+  color: var(--shop-color-foreground);
+}
+
+.shop-header-announcement .shop-header-announcement__text {
+  margin: 0;
+  font-size: var(--shop-font-size-h6);
+  font-weight: var(--shop-font-weight-subheading);
+  line-height: 1;
+  text-align: center;
+}
+
+/* ---------- header row ---------- */
+.shop-header {
+  position: relative;
+  background-color: var(--shop-color-background);
+  color: var(--shop-color-foreground);
+}
+
+.shop-header svg {
+  flex: none;
+}
+
+.shop-header .shop-header__row {
+  display: grid;
+  grid-template-areas: 'menu search logo account cart';
+  grid-template-columns: 44px 44px 1fr 44px 44px;
+  align-items: center;
+  height: var(--shop-header-row-height);
+  padding-inline: var(--shop-page-margin);
+}
+
+.shop-header .shop-header__menu-toggle {
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45.6px;
+  height: 45.6px;
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.shop-header .shop-header__menu-icon {
+  display: flex;
+}
+
+.shop-header .shop-header__menu-icon svg {
+  width: 13.6px;
+  height: 20px;
+}
+
+.shop-header .shop-header__menu-icon--close,
+.shop-header .shop-header__menu-toggle[aria-expanded='true'] .shop-header__menu-icon--open {
+  display: none;
+}
+
+.shop-header .shop-header__menu-toggle[aria-expanded='true'] .shop-header__menu-icon--close {
+  display: flex;
+}
+
+.shop-header .shop-header__logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--shop-color-foreground);
+  text-decoration: none;
+}
+
+.shop-header .shop-header__nav,
+.shop-header .shop-header__localization,
+.shop-header .shop-header__action.shop-header__action--search-desktop {
+  display: none;
+}
+
+.shop-header .shop-header__action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--shop-touch-target);
+  height: var(--shop-touch-target);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.shop-header .shop-header__action--search {
+  grid-area: search;
+}
+
+.shop-header .shop-header__action--account {
+  grid-area: account;
+}
+
+.shop-header .shop-header__action--cart {
+  grid-area: cart;
+}
+
+.shop-header .shop-header__action--search svg,
+.shop-header .shop-header__action--cart svg {
+  width: 22px;
+  height: 22px;
+}
+
+.shop-header .shop-header__action--account svg {
+  width: 15px;
+  height: 17px;
+}
+
+.shop-header .shop-header__cart-count {
+  position: absolute;
+  top: 4.5px;
+  left: 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--shop-color-foreground);
+  color: #fff;
+  font-size: 10px;
+  font-weight: var(--shop-font-weight-body);
+  line-height: 1;
+}
+
+/* count grew (live cart-bubble--animating: background grow + text move-and-fade) */
+.shop-header .shop-header__cart-count[data-animating] {
+  animation: grow var(--shop-animation-speed) var(--shop-ease-out-cubic);
+}
+
+@media (min-width: 750px) {
+  .shop-header .shop-header__row {
+    display: flex;
+    padding: 11.2px var(--shop-gutter);
+  }
+
+  .shop-header .shop-header__menu-toggle,
+  .shop-header .shop-header__action.shop-header__action--search-mobile {
+    display: none;
+  }
+
+  .shop-header .shop-header__logo {
+    height: 46px;
+  }
+
+  .shop-header .shop-header__nav {
+    display: flex;
+    height: 46px;
+    margin-inline-start: 10px;
+  }
+
+  .shop-header .shop-header__menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .shop-header .shop-header__menu li {
+    display: flex;
+    align-items: center;
+  }
+
+  .shop-header .shop-header__link {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    font-size: var(--shop-menu-font-size);
+    line-height: var(--shop-menu-line-height);
+    color: var(--shop-color-foreground);
+    text-decoration: none;
+    transition: color var(--shop-animation-speed) ease-in-out;
+  }
+
+  .shop-header .shop-header__link-title {
+    padding: 0 11.2px;
+  }
+
+  /* theme: links dim only while an item is hovered / focused or one is current; the hovered
+     item stays full, the current one stays full while nothing is hovered */
+  .shop-header .shop-header__menu:has(li:hover, li:focus-within, [aria-current='page']) .shop-header__link {
+    color: var(--shop-color-subdued);
+  }
+
+  .shop-header .shop-header__menu:not(:has(li:hover)) .shop-header__link[aria-current='page'],
+  .shop-header .shop-header__menu li:is(:hover, :focus-within) .shop-header__link {
+    color: var(--shop-color-foreground);
+  }
+
+  .shop-header .shop-header__localization {
+    position: relative;
+    display: flex;
+    margin-inline-start: auto;
+  }
+
+  .shop-header .shop-header__action.shop-header__action--search-desktop {
+    display: flex;
+    margin-inline: 5.6px -2.4px;
+  }
+}
+
+/* ---------- localization (currency) button + popover ---------- */
+.shop-header .shop-header__currency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 46px;
+  margin: 0 -4px;
+  padding: 16px 4px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: var(--shop-menu-font-size);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.shop-header .shop-header__caret {
+  width: 13.6px;
+  height: 22px;
+  transition: transform var(--shop-animation-speed) var(--shop-ease-out-cubic);
+}
+
+.shop-header .shop-header__currency[aria-expanded='true'] .shop-header__caret {
+  transform: rotate(180deg);
+}
+
+.shop-header .shop-header__localization-panel {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  z-index: 13;
+  min-width: 143px;
+  padding: 8px 0;
+  border: var(--shop-border-popover);
+  border-radius: var(--shop-radius-popover);
+  background-color: var(--shop-color-background);
+  box-shadow: var(--shop-shadow-popover);
+  transition:
+    opacity 0.3s var(--shop-ease-out-cubic),
+    translate 0.3s var(--shop-ease-out-cubic);
+}
+
+@starting-style {
+  .shop-header .shop-header__localization-panel {
+    opacity: 0;
+    translate: 0 -8px;
+  }
+}
+
+.shop-header .shop-header__localization-form {
+  margin: 0;
+}
+
+.shop-header .shop-header__countries {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-header .shop-header__country {
+  display: flex;
+  align-items: center;
+  gap: 11.2px;
+  margin: 0 8px 2px;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: var(--shop-font-weight-subheading);
+  cursor: pointer;
+}
+
+.shop-header .shop-header__country-check {
+  width: 13.6px;
+  height: 13.6px;
+  visibility: hidden;
+}
+
+.shop-header .shop-header__country[aria-current='true'] {
+  background-color: rgb(0 0 0 / 10%);
+}
+
+.shop-header .shop-header__country[aria-current='true'] .shop-header__country-check {
+  visibility: visible;
+}
+
+/* ---------- menu drawer (< 750px trigger) ---------- */
+.shop-header .shop-header__drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--shop-layer-menu-drawer);
+  display: none;
+  width: 95vw;
+  max-width: 500px;
+  height: 100dvh;
+  overflow-y: auto;
+  background-color: var(--shop-color-background);
+}
+
+.shop-header .shop-header__drawer[data-open] {
+  display: flex;
+}
+
+.shop-header .shop-header__drawer-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.shop-header .shop-header__drawer-close,
+.shop-header .shop-header__drawer-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 16px;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.shop-header .shop-header__drawer-close svg,
+.shop-header .shop-header__drawer-back svg {
+  width: 13.6px;
+  height: 13.6px;
+}
+
+.shop-header .shop-header__drawer-back svg {
+  transform: rotate(90deg);
+}
+
+.shop-header .shop-header__drawer-nav ul {
+  margin: 0 0 8px;
+  padding: 0 18.2px;
+  list-style: none;
+}
+
+.shop-header .shop-header__drawer-nav li {
+  margin-bottom: 12.8px;
+}
+
+.shop-header .shop-header__drawer-link {
+  display: flex;
+  padding: 4px 0;
+  font-size: 28px;
+  line-height: calc(1.1 + 0.5 * (16 / 28));
+  color: var(--shop-color-foreground);
+  text-decoration: none;
+}
+
+.shop-header .shop-header__drawer-utility {
+  display: flex;
+  margin: auto 0 11.2px 20px;
+}
+
+.shop-header .shop-header__drawer-currency {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: 12px;
+  font-weight: var(--shop-font-weight-subheading);
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.shop-header .shop-header__drawer-currency svg {
+  width: 13.6px;
+  height: 13.6px;
+  transform: rotate(-90deg);
+}
+
+.shop-header .shop-header__featured {
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 0 20px 16px;
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-width: none;
+}
+
+.shop-header .shop-header__featured li {
+  flex: 0 0 35%;
+}
+
+.shop-header .shop-header__drawer[data-open] :is(.shop-header__drawer-nav li, .shop-header__drawer-utility, .shop-header__featured) {
+  animation: menu-drawer-nav-open var(--shop-drawer-speed) ease-in-out;
+}
+
+.shop-header .shop-header__drawer-submenu {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--shop-color-background);
+}
+
+.shop-header .shop-header__drawer-submenu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shop-header .shop-header__drawer-title {
+  font-size: 14px;
+  font-weight: var(--shop-font-weight-subheading);
+}
+
+/* ---------- backdrop (menu drawer) ---------- */
+.shop-header .shop-header__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--shop-layer-overlay);
+  display: none;
+  backdrop-filter: brightness(0.75);
+}
+
+.shop-header[data-overlay='menu'] .shop-header__backdrop {
+  display: block;
+}
+
+/* ---------- resource card (drawer featured products + search results) ---------- */
+:is(.shop-header, .shop-header-search) .shop-header-resource {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: shop-header-fade-in 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+:is(.shop-header, .shop-header-search) .shop-header-resource__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+:is(.shop-header, .shop-header-search) .shop-header-resource__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+:is(.shop-header, .shop-header-search) .shop-header-resource__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+:is(.shop-header, .shop-header-search) .shop-header-resource__title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+:is(.shop-header, .shop-header-search) .shop-header-resource__price {
+  font-size: 14px;
+  font-weight: var(--shop-font-weight-subheading);
+  line-height: 1.6;
+}
+
+/* ---------- search modal (portal) ---------- */
+.shop-header-search {
+  position: fixed;
+  inset: 0;
+  z-index: var(--shop-layer-temporary);
+  color: var(--shop-color-foreground);
+}
+
+.shop-header-search .shop-header-search__backdrop {
+  display: none;
+}
+
+.shop-header-search .shop-header-search__panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  border: var(--shop-border-popover);
+  background-color: var(--shop-color-background);
+  animation: search-element-slide-in-bottom 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+.shop-header-search .shop-header-search__form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin: 0;
+}
+
+.shop-header-search .shop-header-search__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 4px 0;
+  border-bottom: 1px solid var(--shop-color-border);
+}
+
+.shop-header-search .shop-header-search__bar > svg {
+  position: absolute;
+  left: 13.8px;
+  width: 22px;
+  height: 22px;
+  color: var(--shop-color-muted);
+}
+
+.shop-header-search .shop-header-search__input {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  padding: 11.2px 0 11.2px 40px;
+  border: 0;
+  border-radius: var(--shop-radius-input);
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--shop-color-foreground);
+  outline: none;
+  appearance: none;
+}
+
+.shop-header-search .shop-header-search__input::placeholder {
+  color: var(--shop-color-muted);
+}
+
+.shop-header-search .shop-header-search__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40.6px;
+  height: 44px;
+  margin-left: 11.2px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--shop-radius-button);
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.shop-header-search .shop-header-search__close svg {
+  width: 13.6px;
+  height: 13.6px;
+}
+
+.shop-header-search .shop-header-search__results {
+  padding: 16px 20px;
+  overflow-y: auto;
+}
+
+.shop-header-search .shop-header-search__title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: var(--shop-font-weight-subheading);
+  line-height: 1;
+}
+
+.shop-header-search .shop-header-search__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14.4px;
+  margin: 0;
+  padding: 1px 0 11.2px;
+  list-style: none;
+}
+
+.shop-header-search .shop-header-search__list li {
+  animation: search-element-slide-up 0.15s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+@media (min-width: 750px) {
+  .shop-header-search .shop-header-search__backdrop {
+    position: fixed;
+    inset: 0;
+    display: block;
+    background: var(--shop-backdrop);
+    animation: shop-header-backdrop-in var(--shop-animation-speed) ease-in-out forwards;
+  }
+
+  .shop-header-search .shop-header-search__panel {
+    position: absolute;
+    top: 125.5px;
+    left: 50%;
+    width: min(66dvw, 672px);
+    height: auto;
+    max-height: calc(65dvh + 53px);
+    border-radius: var(--shop-radius-popover);
+    box-shadow: var(--shop-shadow-popover);
+    translate: -50% 0;
+  }
+
+  .shop-header-search .shop-header-search__list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ---------- cart drawer (portal) ---------- */
+.shop-header-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--shop-layer-temporary);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-left: 1px solid var(--shop-color-border);
+  background-color: var(--shop-color-background);
+  color: var(--shop-color-foreground);
+  animation: drawer-slide-in var(--shop-animation-speed) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shop-header-cart .shop-header-cart__header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.shop-header-cart .shop-header-cart__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgb(0 0 0 / 6%);
+  border-radius: 50%;
+  background-color: var(--shop-color-background);
+  color: rgb(0 0 0 / 50%);
+  cursor: pointer;
+}
+
+.shop-header-cart .shop-header-cart__close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.shop-header-cart .shop-header-cart__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.shop-header-cart .shop-header-cart__title {
+  margin: 0;
+  font-size: var(--shop-font-size-h4);
+  line-height: 1;
+}
+
+.shop-header-cart .shop-header-cart__content p {
+  margin: 0 0 14px;
+  text-wrap: wrap;
+}
+
+.shop-header-cart .shop-header-cart__content p a {
+  text-decoration: underline;
+}
+
+.shop-header-cart .shop-header-cart__content .shop-button {
+  margin-top: 12.8px;
+  padding: 16px 32px;
+  line-height: 1;
+}
+
+/* filled drawer (lines modelled on the shop-cart page, scoped to the drawer) */
+.shop-header-cart[data-state='filled'] .shop-header-cart__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.shop-header-cart[data-state='filled'] .shop-header-cart__content {
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 0;
+  text-align: start;
+}
+
+.shop-header-cart .shop-header-cart__title-row {
+  display: flex;
+  align-items: center;
+  min-height: 74px;
+  padding: 20px 74px 20px 20px;
+}
+
+.shop-header-cart .shop-header-cart__title-row .shop-header-cart__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 11.2px;
+}
+
+.shop-header-cart .shop-header-cart__bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgb(var(--shop-color-foreground-rgb) / 10%);
+}
+
+.shop-header-cart .shop-header-cart__bubble-count {
+  font-size: 13px;
+  font-weight: var(--shop-font-weight-body);
+  line-height: 1;
+}
+
+.shop-header-cart .shop-header-cart__items {
+  flex: 1;
+  min-height: 0;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.shop-header-cart .shop-header-cart__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0 0 20px;
+  list-style: none;
+}
+
+.shop-header-cart .shop-header-cart__line {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) auto;
+  column-gap: 14.4px;
+  align-items: start;
+}
+
+.shop-header-cart .shop-header-cart__line-media {
+  display: flex;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.shop-header-cart .shop-header-cart__line-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-header-cart .shop-header-cart__line-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  color: rgb(var(--shop-color-foreground-rgb) / 70%);
+}
+
+.shop-header-cart .shop-header-cart__line-details p {
+  margin: 0;
+}
+
+.shop-header-cart .shop-header-cart__line-details .shop-header-cart__line-title {
+  color: var(--shop-color-foreground);
+  font-size: 16px;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.shop-header-cart .shop-header-cart__line-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.shop-header-cart .shop-header-cart__quantity {
+  display: inline-flex;
+  align-items: center;
+  width: 126px;
+  height: 46px;
+  border: 1px solid var(--shop-color-border);
+  border-radius: var(--shop-radius-input);
+  background-color: #fff;
+  color: var(--shop-color-input-text);
+}
+
+.shop-header-cart .shop-header-cart__quantity-button,
+.shop-header-cart .shop-header-cart__remove {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--shop-touch-target);
+  height: var(--shop-touch-target);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--shop-color-input-text);
+  cursor: pointer;
+}
+
+.shop-header-cart .shop-header-cart__quantity-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.shop-header-cart .shop-header-cart__quantity-button svg {
+  width: 13.6px;
+  height: 13.6px;
+}
+
+.shop-header-cart .shop-header-cart__remove {
+  color: var(--shop-color-foreground);
+}
+
+.shop-header-cart .shop-header-cart__remove svg {
+  width: 20px;
+  height: 20px;
+}
+
+.shop-header-cart .shop-header-cart__remove path {
+  transition: transform var(--shop-animation-speed) ease-in-out;
+}
+
+.shop-header-cart .shop-header-cart__remove:hover .shop-header-cart__remove-top {
+  transform: translate(-1.5px, 1.5px) rotate(-15deg);
+}
+
+.shop-header-cart .shop-header-cart__remove:hover .shop-header-cart__remove-bottom {
+  transform: translateY(1.5px);
+}
+
+.shop-header-cart .shop-header-cart__quantity-input {
+  width: 36px;
+  padding: 1px 0;
+  border: 0;
+  background: transparent;
+  color: var(--shop-color-input-text);
+  font-size: var(--shop-font-size-paragraph);
+  line-height: var(--shop-line-height-paragraph);
+  text-align: center;
+  appearance: textfield;
+  outline: none;
+}
+
+.shop-header-cart .shop-header-cart__quantity-input::-webkit-inner-spin-button,
+.shop-header-cart .shop-header-cart__quantity-input::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.shop-header-cart .shop-header-cart__line-price {
+  font-size: var(--shop-font-size-paragraph);
+  text-align: end;
+}
+
+.shop-header-cart .shop-header-cart__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-top: 1px solid var(--shop-color-border);
+}
+
+.shop-header-cart .shop-header-cart__total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: var(--shop-font-weight-heading);
+}
+
+.shop-header-cart .shop-header-cart__summary .shop-header-cart__tax-note {
+  margin: 0;
+  color: rgb(var(--shop-color-foreground-rgb) / 70%);
+}
+
+.shop-header-cart .shop-header-cart__summary .shop-header-cart__checkout {
+  width: 100%;
+  margin-top: 8px;
+  padding: 16px 24px;
+  line-height: 1;
+}
+
+.shop-header-cart[aria-busy='true'] .shop-header-cart__items {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media (min-width: 750px) {
+  .shop-header-cart {
+    width: var(--shop-drawer-width);
+  }
+}
+
+/* query results: suggestions, collections, nothing found */
+.shop-header-search .shop-header-search__list + .shop-header-search__title,
+.shop-header-search .shop-header-search__queries + .shop-header-search__title {
+  margin-top: 16px;
+}
+
+.shop-header-search .shop-header-search__queries {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop-header-search .shop-header-search__query {
+  color: var(--shop-color-foreground);
+  text-decoration: none;
+}
+
+.shop-header-search .shop-header-search__query:hover {
+  text-decoration: underline;
+}
+
+.shop-header-search .shop-header-search__empty {
+  margin: 0;
+}
+
+/* closed panels: author display rules above lose to [hidden] here */
+.shop-header .shop-header__localization-panel[hidden],
+.shop-header .shop-header__cart-count[hidden],
+.shop-header .shop-header__drawer-submenu[hidden],
+.shop-header-search[hidden],
+.shop-header-cart[hidden] {
+  display: none;
+}
+
+@keyframes menu-drawer-nav-open {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shop-header-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes shop-header-backdrop-in {
+  from {
+    backdrop-filter: brightness(1);
+  }
+
+  to {
+    backdrop-filter: brightness(0.75);
+  }
+}
+
+@keyframes search-element-slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes search-element-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawer-slide-in {
+  from {
+    right: calc(-1 * var(--shop-drawer-width));
+  }
+}

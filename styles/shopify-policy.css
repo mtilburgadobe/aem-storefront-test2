@@ -1,0 +1,118 @@
+/*
+ * Shopify policy pages (privacy policy, terms, refund, shipping …): DEFAULT CONTENT, no block.
+ * Loaded on pages whose template class is shop-policy (body.shopify.shop-policy).
+ *
+ * DOM contract (prototype: one default-content column; delivery: the h1 is authored default
+ * content and the body is Shopify data rendered by the shop-policy block right below it):
+ *
+ * main
+ *   div.section
+ *     div.default-content-wrapper                    narrow text column (Shopify policy container)
+ *       h1                                           [AEM] page title, centred ("Datenschutzerklärung")
+ *     div.shop-policy-wrapper > div.shop-policy      same column, continues the text
+ *       p · h2 · ul > li (strong, a[href])           [SF] shop.<policy>.body, sanitised
+ *
+ * scripts.js adds the template class to <body> (metadata "template: shopify, shop-policy") and
+ * loads this stylesheet; blocks/shop-policy/shop-policy.js inserts the body.
+ *
+ * Values lifted from the live policy page: container max-width 585px, padding 20px, centred;
+ * the theme .rte rules for headings (margin-block clamp(1.5rem, 3.3em, 2.5rem) 0.25em),
+ * paragraphs (1em block margins, collapsing), lists (1em below, 1.5em indent), last child flush, links (underline 0.075em at 0.125em,
+ * hover 70 %, 0.125s colour transition — confirmed by a direct hover probe; motion-observe's hover
+ * probe reads it dead on the long live page). Policy text wraps plainly (text-wrap: wrap) and breaks long words.
+ */
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy-wrapper) {
+  box-sizing: border-box;
+  max-width: 585px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-wrap: break-word;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) :is(h1, h2, h3, h4, h5, h6, p) {
+  text-wrap: wrap;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) :is(h2, h3, h4, h5, h6) {
+  margin-block: clamp(24px, 3.3em, 40px) 0.25em;
+}
+
+body.shopify.shop-policy main .default-content-wrapper > h1 {
+  margin: 0 0 0.25em;
+  text-align: center;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) > :first-child:is(p, h2, h3, h4, h5, h6) {
+  margin-block-start: 0;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) p {
+  margin-block: 1em;
+}
+
+/* live: the title sits in its own wrapper, so its 0.25em does not collapse with the first paragraph */
+body.shopify.shop-policy main .default-content-wrapper > h1 + * {
+  margin-block-start: 0;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) > :last-child {
+  margin-block-end: 0;
+}
+
+/* Phase 5: the policy body comes from Shopify (shop-policy block, next wrapper after the authored
+   h1); both wrappers form one text column, as the single live .shopify-policy__container */
+body.shopify.shop-policy main .default-content-wrapper:has(+ .shop-policy-wrapper) {
+  padding-bottom: 0;
+}
+
+body.shopify.shop-policy main .default-content-wrapper + .shop-policy-wrapper {
+  padding-top: 0;
+}
+
+body.shopify.shop-policy main .default-content-wrapper:has(+ .shop-policy-wrapper) > h1:last-child {
+  margin-block-end: 0.25em;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) :is(ul, ol) {
+  margin: 0 0 1em;
+  padding-inline-start: 1.5em;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) :is(ul, ol) :is(ul, ol) {
+  margin-block-end: 0;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) li {
+  margin: 0;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) strong {
+  font-weight: var(--shop-font-weight-heading);
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) :is(p, ul, ol) a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentcolor;
+  text-decoration-thickness: 0.075em;
+  text-underline-offset: 0.125em;
+  transition:
+    text-decoration-color var(--shop-animation-speed) ease-in-out,
+    color var(--shop-animation-speed) ease-in-out;
+}
+
+body.shopify.shop-policy main :is(.default-content-wrapper, .shop-policy) :is(p, ul, ol) a:hover {
+  color: rgb(var(--shop-color-foreground-rgb) / 70%);
+  text-decoration: underline;
+}
+
+/*
+ * Header nav colour with no current-page link (canon request filed): the theme dims the top-level
+ * links only while one is hovered or active, so on a policy page they all render full colour.
+ */
+@media (min-width: 750px) {
+  body.shopify.shop-policy .shop-header .shop-header__menu:not(:has(li:hover, [aria-current='page'])) .shop-header__link {
+    color: var(--shop-color-foreground);
+  }
+}

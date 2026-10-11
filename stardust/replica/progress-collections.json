@@ -1,0 +1,77 @@
+{
+  "archetype": "collections",
+  "liveUrl": "https://t8bnc1-5b.myshopify.com/collections",
+  "block": "shop-collection-list",
+  "prototype": "stardust/prototypes/collections-proposed.html",
+  "regime": "prototype",
+  "iterations": {
+    "1440": 1,
+    "360": 1
+  },
+  "iterationNote": "iter1 passed on pixels at both widths; one markup touch-up before the --full final round (killed by the restart, re-run). Evidence stardust/replica/gates/collections-<w>/ (*-final.*).",
+  "gates": {
+    "1440": {
+      "pixel": 0.01,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 1440)",
+      "chromeParity": "quiet"
+    },
+    "360": {
+      "pixel": 0.19,
+      "heightDelta": 0,
+      "structuralRed": 0,
+      "clipped": 0,
+      "overflow": "ok (scrollWidth 360)",
+      "chromeParity": "4 deltas = canon live artifact R-index-1"
+    }
+  },
+  "capProbe": "FAIL at 2560 (2 of 3 rows) — wrapper row PASS (1440 = 1440); both module rows fail only on section ORDER: live counts an empty div.section-background colour layer as section 1 (full-bleed) and its content column as section 2 (1440), the build has h1 (1440) + ul shell. See R-clist-1. stardust/replica/gates/collections-2560/cap-iter.json",
+  "residuals": [
+    {
+      "id": "R-clist-1",
+      "breakpoint": 2560,
+      "probe": "cap-probe module rows",
+      "cause": "live-artifact",
+      "detail": "Live /collections section = [div.section-background (empty colour layer, no text), div.section--page-width (heading 1440 + resource-list 1440)]. The build's caps are the same values (h1 1440 = live heading content 1440, ul shell 1440 = live resource-list shell 1440) but the probe pairs sections by order, so the empty live layer shifts both rows. Passing would need a fake empty full-bleed sibling div in the block; not added (DOM mimicry for an instrument). Orchestrator decision: accept or add the layer.",
+      "justified": true
+    },
+    {
+      "id": "R-clist-2",
+      "breakpoint": 360,
+      "probe": "pixel hot band y 1500-1814 (1.0 %)",
+      "cause": "canon-chrome-aa",
+      "detail": "Anti-aliasing on the canon footer e-mail field ring only; footer, input and main boxes are identical in position and size on both sides (measure.mjs 360). Page total 0.19 %.",
+      "justified": true
+    },
+    {
+      "id": "R-clist-3",
+      "breakpoint": "1440, 360",
+      "probe": "content-diff yellow (40)",
+      "cause": "non-content",
+      "detail": "Live inline style/script/JSON-LD text and hidden chrome labels; 0 structural.",
+      "justified": true
+    }
+  ],
+  "motion": {
+    "observed": [
+      "collection tile hover: no measured change on live",
+      "header scroll morph dead (canon)"
+    ],
+    "implemented": [],
+    "dead": [
+      "tile hover",
+      "header scroll morph"
+    ],
+    "evidence": [
+      "stardust/replica/motion/collections-live-1440.json",
+      "stardust/replica/motion/collections-proto-1440.json",
+      "stardust/replica/motion/collections-compare-1440.txt"
+    ]
+  },
+  "files": [
+    "blocks/shop-collection-list/shop-collection-list.css",
+    "stardust/prototypes/collections-proposed.html"
+  ]
+}

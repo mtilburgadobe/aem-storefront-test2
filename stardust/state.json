@@ -1,0 +1,523 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:replica",
+    "writtenAt": "2026-10-10T17:17:02Z",
+    "stardustVersion": "0.10.0"
+  },
+  "site": {
+    "originUrl": "https://t8bnc1-5b.myshopify.com",
+    "deployUrl": null,
+    "extractedAt": "2026-10-10T14:43:26.241Z",
+    "pageCap": 0,
+    "totalDiscovered": 22,
+    "crawled": 22,
+    "captureGaps": [],
+    "discoveryNote": "sitemap.xml (16 URLs) + Shopify storefront routes (/collections, /collections/all, /collections/frontpage, /search, /cart, /pages/contact, /policies/privacy-policy). /account and /account/login 302 to hosted Shopify customer accounts (shopify.com/110471348549/account) - not captured, hosted flow preserved by link. Other /policies/* return 404."
+  },
+  "direction": null,
+  "handsOff": true,
+  "flow": "replica",
+  "flowChosenAt": "2026-10-10T14:43:26.241Z",
+  "flowSource": "user-phrase",
+  "pages": [
+    {
+      "slug": "index",
+      "url": "https://t8bnc1-5b.myshopify.com/",
+      "title": "Mein Shop",
+      "type": "landing",
+      "template": "home",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:30.831Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T15:41:18Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T15:41:18Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/index.json",
+      "prototypePath": "stardust/prototypes/index-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-all",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/all",
+      "title": "Produkte – Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:31.276Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:01Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:01Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-all.json",
+      "prototypePath": "stardust/prototypes/collections-all-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "collections",
+      "url": "https://t8bnc1-5b.myshopify.com/collections",
+      "title": "Kollektionen – Mein Shop",
+      "type": "listing",
+      "template": "collection-list",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:30.280Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:01Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:01Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections.json",
+      "prototypePath": "stardust/prototypes/collections-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "products-trail-running-shoes",
+      "url": "https://t8bnc1-5b.myshopify.com/products/trail-running-shoes",
+      "title": "Trail Running Shoes – Grip & Cushion for Off-Road Runners – Mein Shop",
+      "type": "unique",
+      "template": "product",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:14.956Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:01Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:01Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/products-trail-running-shoes.json",
+      "prototypePath": "stardust/prototypes/products-trail-running-shoes-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "search",
+      "url": "https://t8bnc1-5b.myshopify.com/search",
+      "title": "Suchen – Mein Shop",
+      "type": "listing",
+      "template": "search",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:29.865Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:01Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:02Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/search.json",
+      "prototypePath": "stardust/prototypes/search-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "cart",
+      "url": "https://t8bnc1-5b.myshopify.com/cart",
+      "title": "Dein Warenkorb – Mein Shop",
+      "type": "unique",
+      "template": "cart",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:29.847Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:02Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:02Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/cart.json",
+      "prototypePath": "stardust/prototypes/cart-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "pages-contact",
+      "url": "https://t8bnc1-5b.myshopify.com/pages/contact",
+      "title": "Kontakt – Mein Shop",
+      "type": "form",
+      "template": "contact",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:38.558Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:02Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:02Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/pages-contact.json",
+      "prototypePath": "stardust/prototypes/pages-contact-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "policies-privacy-policy",
+      "url": "https://t8bnc1-5b.myshopify.com/policies/privacy-policy",
+      "title": "Datenschutzerklärung – Mein Shop",
+      "type": "static",
+      "template": "policy",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:40.734Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:02Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:02Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/policies-privacy-policy.json",
+      "prototypePath": "stardust/prototypes/policies-privacy-policy-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-camping-hiking",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/camping-hiking",
+      "title": "Camping & Hiking Gear - Shop Outdoor Adventure Equipment | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:59.626Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-camping-hiking.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-cycling",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/cycling",
+      "title": "Cycling Gear & Accessories - Shop Bikes & Equipment | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:45.627Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-cycling.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-fan-gear-apparel",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/fan-gear-apparel",
+      "title": "Fan Gear & Apparel - Shop Sports Jerseys, Hats & Fan Merchandise | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:14.213Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-fan-gear-apparel.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-fitness-training",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/fitness-training",
+      "title": "Fitness & Training Equipment - Shop Gym Gear & Workout Essentials | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:46.259Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-fitness-training.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-frontpage",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/frontpage",
+      "title": "Startseite – Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:30.561Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-frontpage.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-golf",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/golf",
+      "title": "Golf Equipment & Apparel - Shop Golf Clubs, Bags & Gear | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:00.629Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-golf.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-running",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/running",
+      "title": "Running Gear & Equipment - Shop Running Essentials | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "approved",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:45.251Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-10T17:17:01Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-10T17:17:01Z",
+          "approvedBy": "hands-off"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-running.json",
+      "prototypePath": "stardust/prototypes/collections-running-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-team-sports",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/team-sports",
+      "title": "Team Sports Equipment & Apparel - Shop All Team Sports | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:38:46.045Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-team-sports.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-tennis-racquet-sports",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/tennis-racquet-sports",
+      "title": "Tennis & Racquet Sports Gear - Shop Rackets, Shoes & Apparel | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:12.327Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-tennis-racquet-sports.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-water-sports",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/water-sports",
+      "title": "Water Sports Gear & Equipment - Shop Surfing, Kayaking & More | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:00.230Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-water-sports.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "collections-winter-sports",
+      "url": "https://t8bnc1-5b.myshopify.com/collections/winter-sports",
+      "title": "Winter Sports Gear - Shop Skiing, Snowboarding & Snow Equipment | Mein Shop",
+      "type": "listing",
+      "template": "collection",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:00.428Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/collections-winter-sports.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "products-road-bike-helmet",
+      "url": "https://t8bnc1-5b.myshopify.com/products/road-bike-helmet",
+      "title": "Road Bike Helmet – Aerodynamic & Ventilated Cycling Helmet – Mein Shop",
+      "type": "unique",
+      "template": "product",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:28.588Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/products-road-bike-helmet.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "products-road-running-shoes",
+      "url": "https://t8bnc1-5b.myshopify.com/products/road-running-shoes",
+      "title": "Road Running Shoes – Lightweight & Cushioned for Every Run – Mein Shop",
+      "type": "unique",
+      "template": "product",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:15.641Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/products-road-running-shoes.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "products-running-shorts",
+      "url": "https://t8bnc1-5b.myshopify.com/products/running-shorts",
+      "title": "Running Shorts – Lightweight & Quick-Dry for Every Runner – Mein Shop",
+      "type": "unique",
+      "template": "product",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-10T14:39:26.102Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/products-running-shorts.json",
+      "prototypePath": null,
+      "migratedPath": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+https://t8bnc1-5b.myshopify.com/
+https://t8bnc1-5b.myshopify.com/?eds-doc=nav
+https://t8bnc1-5b.myshopify.com/?eds-doc=footer
+https://t8bnc1-5b.myshopify.com/?eds-doc=shopify-config
