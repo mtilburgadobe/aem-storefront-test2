@@ -52,3 +52,12 @@ Hosted flows that are kept: checkout (`cart.checkoutUrl` on the shop domain), cu
 | `shop-cart` | labelled rows for every visible string |
 | `shop-contact` | heading / intro · optional label rows |
 | `shop-policy` | `policy` \| privacy-policy |
+
+## Operational notes
+
+- **Structured data.** Product pages add the boilerplate's Product JSON-LD (`script[type="application/ld+json"][data-name="product"]`, same shape as `blocks/product-details`), built at runtime from Shopify by `scripts/shopify/seo.js`: name, description (SEO description, else the plain description), image, brand (vendor), url/@id, productID (SKU, else the Shopify product id), and one Offer, or one per variant, with price, currency and availability.
+- **SEO metadata.** Each page's DA metadata (Title, Description) is the server-rendered SEO fallback, copied from the source page at import time. `shop-product` overwrites `document.title` and the description from Shopify's `product.seo` at runtime. Re-run the import (`tools/importer/import-shopify.js`) when SEO fields change in Shopify.
+- **New products and collections.** Each Shopify handle needs a thin-shell document (`/products/<handle>`, `/collections/<handle>`), produced by the import script, or a folder mapping that routes `/products/*` to one shell (the block falls back to the last URL segment when its row is empty).
+- **Public token.** `/shopify-config` ships with an empty `storefront-token`, so production browsers use Shopify's tokenless Storefront access. Enter the public Storefront API token there if you need token-only features or higher rate limits.
+- **Analytics.** No Shopify pixels or Adobe tags run on these pages yet (owner decision pending, see `stardust/dynamic-features.md` #12).
+- **Contact / newsletter.** Both are native form posts to Shopify's `/contact`. Shopify runs its bot check ("Verifying your connection") and its own confirmation on the shop domain. No live test submission was made.

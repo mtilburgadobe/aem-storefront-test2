@@ -1,12 +1,12 @@
 {
   "_provenance": {
     "writtenBy": "stardust:replica",
-    "writtenAt": "2026-10-10T17:17:02Z",
+    "writtenAt": "2026-10-11T05:14:12Z",
     "stardustVersion": "0.10.0"
   },
   "site": {
     "originUrl": "https://t8bnc1-5b.myshopify.com",
-    "deployUrl": null,
+    "deployUrl": "https://shopify-replica--aem-storefront-test2--mtilburgadobe.aem.page",
     "extractedAt": "2026-10-10T14:43:26.241Z",
     "pageCap": 0,
     "totalDiscovered": 22,
@@ -26,7 +26,7 @@
       "title": "Mein Shop",
       "type": "landing",
       "template": "home",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -40,13 +40,17 @@
           "status": "approved",
           "at": "2026-10-10T15:41:18Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:08Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/index.json",
       "prototypePath": "stardust/prototypes/index-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/index.plain.html"
     },
     {
       "slug": "collections-all",
@@ -54,7 +58,7 @@
       "title": "Produkte – Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -68,13 +72,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:01Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:08Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-all.json",
       "prototypePath": "stardust/prototypes/collections-all-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/collections/all.plain.html"
     },
     {
       "slug": "collections",
@@ -82,7 +90,7 @@
       "title": "Kollektionen – Mein Shop",
       "type": "listing",
       "template": "collection-list",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -96,13 +104,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:01Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:09Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections.json",
       "prototypePath": "stardust/prototypes/collections-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/collections.plain.html"
     },
     {
       "slug": "products-trail-running-shoes",
@@ -110,7 +122,7 @@
       "title": "Trail Running Shoes – Grip & Cushion for Off-Road Runners – Mein Shop",
       "type": "unique",
       "template": "product",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -124,13 +136,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:01Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:09Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/products-trail-running-shoes.json",
       "prototypePath": "stardust/prototypes/products-trail-running-shoes-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/products/trail-running-shoes.plain.html"
     },
     {
       "slug": "search",
@@ -138,7 +154,7 @@
       "title": "Suchen – Mein Shop",
       "type": "listing",
       "template": "search",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -152,13 +168,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:02Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:09Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/search.json",
       "prototypePath": "stardust/prototypes/search-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/search.plain.html"
     },
     {
       "slug": "cart",
@@ -166,7 +186,7 @@
       "title": "Dein Warenkorb – Mein Shop",
       "type": "unique",
       "template": "cart",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -180,13 +200,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:02Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:09Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/cart.json",
       "prototypePath": "stardust/prototypes/cart-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/cart.plain.html"
     },
     {
       "slug": "pages-contact",
@@ -194,7 +218,7 @@
       "title": "Kontakt – Mein Shop",
       "type": "form",
       "template": "contact",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -208,13 +232,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:02Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:09Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/pages-contact.json",
       "prototypePath": "stardust/prototypes/pages-contact-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/pages/contact.plain.html"
     },
     {
       "slug": "policies-privacy-policy",
@@ -222,7 +250,7 @@
       "title": "Datenschutzerklärung – Mein Shop",
       "type": "static",
       "template": "policy",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -236,13 +264,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:02Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:09Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/policies-privacy-policy.json",
       "prototypePath": "stardust/prototypes/policies-privacy-policy-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/policies/privacy-policy.plain.html"
     },
     {
       "slug": "collections-camping-hiking",
@@ -250,18 +282,22 @@
       "title": "Camping & Hiking Gear - Shop Outdoor Adventure Equipment | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:38:59.626Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:10Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-camping-hiking.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/camping-hiking.plain.html"
     },
     {
       "slug": "collections-cycling",
@@ -269,18 +305,22 @@
       "title": "Cycling Gear & Accessories - Shop Bikes & Equipment | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:38:45.627Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:10Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-cycling.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/cycling.plain.html"
     },
     {
       "slug": "collections-fan-gear-apparel",
@@ -288,18 +328,22 @@
       "title": "Fan Gear & Apparel - Shop Sports Jerseys, Hats & Fan Merchandise | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:14.213Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:10Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-fan-gear-apparel.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/fan-gear-apparel.plain.html"
     },
     {
       "slug": "collections-fitness-training",
@@ -307,18 +351,22 @@
       "title": "Fitness & Training Equipment - Shop Gym Gear & Workout Essentials | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:38:46.259Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:10Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-fitness-training.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/fitness-training.plain.html"
     },
     {
       "slug": "collections-frontpage",
@@ -326,18 +374,22 @@
       "title": "Startseite – Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:38:30.561Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:10Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-frontpage.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/frontpage.plain.html"
     },
     {
       "slug": "collections-golf",
@@ -345,18 +397,22 @@
       "title": "Golf Equipment & Apparel - Shop Golf Clubs, Bags & Gear | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:00.629Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:10Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-golf.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/golf.plain.html"
     },
     {
       "slug": "collections-running",
@@ -364,7 +420,7 @@
       "title": "Running Gear & Equipment - Shop Running Essentials | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "approved",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
@@ -378,13 +434,17 @@
           "status": "approved",
           "at": "2026-10-10T17:17:01Z",
           "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:11Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-running.json",
       "prototypePath": "stardust/prototypes/collections-running-proposed.html",
-      "migratedPath": null
+      "migratedPath": "content/collections/running.plain.html"
     },
     {
       "slug": "collections-team-sports",
@@ -392,18 +452,22 @@
       "title": "Team Sports Equipment & Apparel - Shop All Team Sports | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:38:46.045Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:11Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-team-sports.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/team-sports.plain.html"
     },
     {
       "slug": "collections-tennis-racquet-sports",
@@ -411,18 +475,22 @@
       "title": "Tennis & Racquet Sports Gear - Shop Rackets, Shoes & Apparel | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:12.327Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:11Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-tennis-racquet-sports.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/tennis-racquet-sports.plain.html"
     },
     {
       "slug": "collections-water-sports",
@@ -430,18 +498,22 @@
       "title": "Water Sports Gear & Equipment - Shop Surfing, Kayaking & More | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:00.230Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:11Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-water-sports.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/water-sports.plain.html"
     },
     {
       "slug": "collections-winter-sports",
@@ -449,18 +521,22 @@
       "title": "Winter Sports Gear - Shop Skiing, Snowboarding & Snow Equipment | Mein Shop",
       "type": "listing",
       "template": "collection",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:00.428Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:11Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/collections-winter-sports.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/collections/winter-sports.plain.html"
     },
     {
       "slug": "products-road-bike-helmet",
@@ -468,18 +544,22 @@
       "title": "Road Bike Helmet – Aerodynamic & Ventilated Cycling Helmet – Mein Shop",
       "type": "unique",
       "template": "product",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:28.588Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:11Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/products-road-bike-helmet.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/products/road-bike-helmet.plain.html"
     },
     {
       "slug": "products-road-running-shoes",
@@ -487,18 +567,22 @@
       "title": "Road Running Shoes – Lightweight & Cushioned for Every Run – Mein Shop",
       "type": "unique",
       "template": "product",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:15.641Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:12Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/products-road-running-shoes.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/products/road-running-shoes.plain.html"
     },
     {
       "slug": "products-running-shorts",
@@ -506,18 +590,22 @@
       "title": "Running Shorts – Lightweight & Quick-Dry for Every Runner – Mein Shop",
       "type": "unique",
       "template": "product",
-      "status": "extracted",
+      "status": "migrated",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-10T14:39:26.102Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-11T05:14:12Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/products-running-shorts.json",
       "prototypePath": null,
-      "migratedPath": null
+      "migratedPath": "content/products/running-shorts.plain.html"
     }
   ]
 }

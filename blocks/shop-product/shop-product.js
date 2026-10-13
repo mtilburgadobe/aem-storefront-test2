@@ -5,6 +5,7 @@ import {
   imageSrcset,
 } from '../../scripts/shopify/storefront.js';
 import { addToCart, buyNow } from '../../scripts/shopify/cart.js';
+import { productJsonLd, setJsonLd } from '../../scripts/shopify/seo.js';
 
 /*
  * shop-product: product detail page. DOM contract: the comment at the top of shop-product.css.
@@ -45,14 +46,14 @@ const PRODUCT_QUERY = `query Product($handle: String!, $country: CountryCode, $l
   @inContext(country: $country, language: $language) {
   shop { name }
   product(handle: $handle) {
-    id title handle descriptionHtml availableForSale
+    id title handle description descriptionHtml availableForSale vendor
     seo { title description }
     featuredImage { url altText width height }
     images(first: 50) { nodes { url altText width height } }
     options { name values }
     variants(first: 100) {
       nodes {
-        id title availableForSale
+        id title sku availableForSale
         price { amount currencyCode }
         compareAtPrice { amount currencyCode }
         selectedOptions { name value }
@@ -635,6 +636,7 @@ async function load(block, handle) {
     }
     render(block, product);
     updateSeo(product, shop);
+    setJsonLd(productJsonLd(product), 'product');
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('shop-product: product could not be loaded', e);
